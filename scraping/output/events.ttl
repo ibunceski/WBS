@@ -1,0 +1,30 @@
+@prefix mk: <http://macedonian-kg.mk/resource/> .
+@prefix mko: <http://macedonian-kg.mk/ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+
+mk:Q116520517 a mko:HistoricalEvent,
+        mko:IlindenEvent ;
+    rdfs:label "Kleisoura Battle, 1903"@mk ;
+    mko:partOf mk:Q1145682 ;
+    owl:sameAs wd:Q116520517 .
+
+mk:Q116520528 a mko:HistoricalEvent,
+        mko:IlindenEvent ;
+    rdfs:label "Bilishta Battle, 1903"@mk ;
+    mko:partOf mk:Q1145682 ;
+    owl:sameAs wd:Q116520528 .
+
+mk:Q116520576 a mko:HistoricalEvent,
+        mko:IlindenEvent ;
+    rdfs:label "Lokvata Battle"@mk ;
+    mko:partOf mk:Q1145682 ;
+    owl:sameAs wd:Q116520576 .
+
+mk:Q116613808 a mko:HistoricalEvent,
+        mko:IlindenEvent ;
+    rdfs:label "Bigla Battle, 1903"@mk ;
+    mko:partOf mk:Q1145682 ;
+    owl:sameAs wd:Q116613808 .
+

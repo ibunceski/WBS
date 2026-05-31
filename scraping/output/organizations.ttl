@@ -1,0 +1,44 @@
+@prefix mk: <http://macedonian-kg.mk/resource/> .
+@prefix mko: <http://macedonian-kg.mk/ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+mk:Q12280280 a mko:Organization ;
+    rdfs:label "Задгранично претставништво"@mk ;
+    mko:dissolutionDate "1928-01-01"^^xsd:date ;
+    mko:foundingDate "1896-01-01"^^xsd:date ;
+    rdfs:comment "Bulgarian revolutionary instituition"@en ;
+    owl:sameAs wd:Q12280280 .
+
+mk:Q12293031 a mko:Organization ;
+    rdfs:label "Зборна партизанска чета на МОО"@mk ;
+    owl:sameAs wd:Q12293031 .
+
+mk:Q1771831 a mko:Organization ;
+    rdfs:label "Крушевска Република"@mk ;
+    mko:dissolutionDate "1903-01-01"^^xsd:date ;
+    mko:foundingDate "1903-01-01"^^xsd:date ;
+    rdfs:comment "поранешна краткотрајна револуционерна држава во Македонија"@en ;
+    owl:sameAs wd:Q1771831 .
+
+mk:Q3404811 a mko:Organization ;
+    rdfs:label "Македонски научен институт"@mk ;
+    mko:foundingDate "1923-01-01"^^xsd:date ;
+    mko:headquarteredIn mk:Q472 ;
+    rdfs:comment "research institute in Bulgaria"@en ;
+    owl:sameAs wd:Q3404811 .
+
+mk:Q407408 a mko:Organization ;
+    rdfs:label "Македонско-одрински доброволни чети"@mk ;
+    rdfs:comment "volunteer corps of the Bulgarian Army during the Balkan Wars"@en ;
+    owl:sameAs wd:Q407408 .
+
+mk:Q488297 a mko:Organization ;
+    rdfs:label "Македонска револуционерна организација"@mk ;
+    mko:dissolutionDate "1934-01-01"^^xsd:date ;
+    mko:foundingDate "1893-01-01"^^xsd:date ;
+    rdfs:comment "revolutionary national liberation movement in Ottoman territories in Europe in the late 19th and early 20th centuries"@en ;
+    owl:sameAs wd:Q488297 .
+

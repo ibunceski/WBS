@@ -1,0 +1,13 @@
+@prefix mk: <http://macedonian-kg.mk/resource/> .
+@prefix mko: <http://macedonian-kg.mk/ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+mk:Q56751727 a mko:HistoricalDocument ;
+    rdfs:label "Declaration of Vasil Shinanov on joining the Ilinden organization with notes about his revolutionary activities"@mk ;
+    mko:authoredBy mk:Q47462142 ;
+    mko:dateCreated "1933-01-01"^^xsd:date ;
+    owl:sameAs wd:Q56751727 .
+
