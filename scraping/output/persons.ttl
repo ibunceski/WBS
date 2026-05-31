@@ -21,7 +21,6 @@ mk:Q100801656 a mko:IlindenFigure,
     mko:birthDate "1879-01-01"^^xsd:date ;
     mko:bornIn mk:Q2456798 ;
     mko:deathDate "1905-01-01"^^xsd:date ;
-    rdfs:comment "български революционер"@en ;
     owl:sameAs wd:Q100801656 .
 
 mk:Q101008746 a mko:IlindenFigure,
@@ -40,7 +39,6 @@ mk:Q105742071 a mko:IlindenFigure,
     mko:bornIn mk:Q929022 ;
     mko:deathDate "1955-01-01"^^xsd:date ;
     mko:occupation "трговец"@en ;
-    rdfs:comment "български търговец"@en ;
     owl:sameAs wd:Q105742071 .
 
 mk:Q106096774 a mko:IlindenFigure,
@@ -55,12 +53,11 @@ mk:Q106096774 a mko:IlindenFigure,
 
 mk:Q106096798 a mko:IlindenFigure,
         mko:Person ;
-    rdfs:label "Михаил Занешев"@mk ;
+    rdfs:label "Q106096798"@mk ;
     mko:birthDate "http://www.wikidata.org/.well-known/genid/8d2c8bf510dffbe2f1a4f94ec917bf46" ;
     mko:bornIn mk:Q209978 ;
     mko:deathDate "http://www.wikidata.org/.well-known/genid/3f5abe4b76da7dac373c2ec40e3c5026" ;
     mko:occupation "учител"@en ;
-    rdfs:comment "български просветен деец и революционер"@en ;
     owl:sameAs wd:Q106096798 .
 
 mk:Q106096936 a mko:IlindenFigure,
@@ -69,7 +66,6 @@ mk:Q106096936 a mko:IlindenFigure,
     mko:birthDate "http://www.wikidata.org/.well-known/genid/a71cb707288923f20be46f3ad68afc01" ;
     mko:bornIn mk:Q209978 ;
     mko:deathDate "1918-01-01"^^xsd:date ;
-    rdfs:comment "български общественик и революционер"@en ;
     owl:sameAs wd:Q106096936 .
 
 mk:Q106767366 a mko:IlindenFigure,
@@ -97,7 +93,6 @@ mk:Q107919499 a mko:IlindenFigure,
     mko:bornIn mk:Q157032 ;
     mko:deathDate "http://www.wikidata.org/.well-known/genid/5d3e37cbc8d281be290facb83f83fd3c" ;
     mko:occupation "учител"@en ;
-    rdfs:comment "българска учителка"@en ;
     owl:sameAs wd:Q107919499 .
 
 mk:Q107920095 a mko:IlindenFigure,
@@ -107,16 +102,14 @@ mk:Q107920095 a mko:IlindenFigure,
     mko:bornIn mk:Q36559 ;
     mko:deathDate "1947-01-07"^^xsd:date ;
     mko:occupation "учител"@en ;
-    rdfs:comment "български учител революционер"@en ;
     owl:sameAs wd:Q107920095 .
 
 mk:Q107985101 a mko:IlindenFigure,
         mko:Person ;
-    rdfs:label "Димитър Кърков"@mk ;
+    rdfs:label "Q107985101"@mk ;
     mko:birthDate "http://www.wikidata.org/.well-known/genid/98549b28d434351bafe1e53abf4aa4f1" ;
     mko:bornIn mk:Q3086039 ;
     mko:deathDate "http://www.wikidata.org/.well-known/genid/0ae1683627aa5961e12f3f56c7515dbb" ;
-    rdfs:comment "български революционер"@en ;
     owl:sameAs wd:Q107985101 .
 
 mk:Q108428958 a mko:IlindenFigure,
@@ -131,9 +124,8 @@ mk:Q108428958 a mko:IlindenFigure,
 
 mk:Q108570491 a mko:IlindenFigure,
         mko:Person ;
-    rdfs:label "Стою Курчистоев"@mk ;
+    rdfs:label "Q108570491"@mk ;
     mko:bornIn mk:Q3657743 ;
-    rdfs:comment "български революционер"@en ;
     owl:sameAs wd:Q108570491 .
 
 mk:Q108602031 a mko:IlindenFigure,
@@ -179,7 +171,6 @@ mk:Q111765627 a mko:IlindenFigure,
     mko:bornIn mk:Q406488 ;
     mko:deathDate "1942-05-02"^^xsd:date ;
     mko:occupation "револуционер"@en ;
-    rdfs:comment "български революционер"@en ;
     owl:sameAs wd:Q111765627 .
 
 mk:Q111969031 a mko:IlindenFigure,
@@ -238,13 +229,12 @@ mk:Q12272698 a mko:IlindenFigure,
 
 mk:Q12272768 a mko:IlindenFigure,
         mko:Person ;
-    rdfs:label "Ахил Карадимчев"@mk ;
+    rdfs:label "Q12272768"@mk ;
     mko:birthDate "1869-03-30"^^xsd:date ;
     mko:bornIn mk:Q1223508 ;
     mko:deathDate "1950-07-18"^^xsd:date ;
     mko:occupation "револуционер"@en,
         "свештеник"@en ;
-    rdfs:comment "български революционер и духовник"@en ;
     owl:sameAs wd:Q12272768 .
 
 mk:Q12273525 a mko:IlindenFigure,
@@ -262,7 +252,7 @@ mk:Q12273525 a mko:IlindenFigure,
 
 mk:Q12274589 a mko:IlindenFigure,
         mko:Person ;
-    rdfs:label "Вангю Макшут"@mk ;
+    rdfs:label "Q12274589"@mk ;
     mko:birthDate "http://www.wikidata.org/.well-known/genid/dc9e91b2a9e232a5eca7a484615ebfd2" ;
     mko:bornIn mk:Q157034 ;
     mko:deathDate "http://www.wikidata.org/.well-known/genid/b0683aee6f331539c176dc15f3d78b46" ;
@@ -277,7 +267,6 @@ mk:Q12274871 a mko:IlindenFigure,
     mko:bornIn mk:Q2418584 ;
     mko:deathDate "1953-09-07"^^xsd:date ;
     mko:occupation "наставник"@en ;
-    rdfs:comment "български учител, тюрколог-османист и революционер"@en ;
     owl:sameAs wd:Q12274871 .
 
 mk:Q12275513 a mko:IlindenFigure,
@@ -297,7 +286,6 @@ mk:Q12276479 a mko:IlindenFigure,
     mko:birthDate "1892-01-01"^^xsd:date ;
     mko:bornIn mk:Q939235 ;
     mko:deathDate "1958-01-01"^^xsd:date ;
-    rdfs:comment "български революционер"@en ;
     owl:sameAs wd:Q12276479 .
 
 mk:Q12276818 a mko:IlindenFigure,
@@ -323,12 +311,11 @@ mk:Q12280814 a mko:IlindenFigure,
 
 mk:Q12280940 a mko:IlindenFigure,
         mko:Person ;
-    rdfs:label "Иван Йосифчев"@mk ;
+    rdfs:label "Q12280940"@mk ;
     mko:birthDate "1873-01-23"^^xsd:date ;
     mko:bornIn mk:Q1223508 ;
     mko:deathDate "1955-01-01"^^xsd:date ;
     mko:occupation "револуционер"@en ;
-    rdfs:comment "български революционер"@en ;
     owl:sameAs wd:Q12280940 .
 
 mk:Q12280948 a mko:IlindenFigure,
@@ -352,17 +339,15 @@ mk:Q12281076 a mko:IlindenFigure,
     mko:occupation "Seraphic Doctor"@en,
         "општественик"@en,
         "револуционер"@en ;
-    rdfs:comment "български просветен деец, общественик и революционер"@en ;
     owl:sameAs wd:Q12281076 .
 
 mk:Q12281198 a mko:IlindenFigure,
         mko:Person ;
-    rdfs:label "Иван Сомов"@mk ;
+    rdfs:label "Q12281198"@mk ;
     mko:birthDate "http://www.wikidata.org/.well-known/genid/a6552e55ee402d2bf395302bde1f750d" ;
     mko:bornIn mk:Q2906105 ;
     mko:deathDate "1906-03-01"^^xsd:date ;
     mko:occupation "револуционер"@en ;
-    rdfs:comment "български революционер"@en ;
     owl:sameAs wd:Q12281198 .
 
 mk:Q12282072 a mko:IlindenFigure,
@@ -377,7 +362,7 @@ mk:Q12282072 a mko:IlindenFigure,
 
 mk:Q12284146 a mko:IlindenFigure,
         mko:Person ;
-    rdfs:label "Крум Чапрашиков"@mk ;
+    rdfs:label "Q12284146"@mk ;
     mko:birthDate "1882-07-06"^^xsd:date ;
     mko:bornIn mk:Q405279 ;
     mko:deathDate "1934-09-15"^^xsd:date ;
@@ -393,7 +378,6 @@ mk:Q12284834 a mko:IlindenFigure,
     mko:birthDate "1875-12-22"^^xsd:date ;
     mko:bornIn mk:Q406488 ;
     mko:deathDate "1959-08-08"^^xsd:date ;
-    rdfs:comment "български революционер"@en ;
     owl:sameAs wd:Q12284834 .
 
 mk:Q12286684 a mko:IlindenFigure,
@@ -403,12 +387,11 @@ mk:Q12286684 a mko:IlindenFigure,
     mko:bornIn mk:Q168057 ;
     mko:deathDate "1935-01-01"^^xsd:date ;
     mko:occupation "револуционер"@en ;
-    rdfs:comment "български революционер"@en ;
     owl:sameAs wd:Q12286684 .
 
 mk:Q12288530 a mko:IlindenFigure,
         mko:Person ;
-    rdfs:label "Никола Попстефанов"@mk ;
+    rdfs:label "Q12288530"@mk ;
     mko:birthDate "1884-02-23"^^xsd:date ;
     mko:bornIn mk:Q1223508 ;
     mko:deathDate "http://www.wikidata.org/.well-known/genid/9d0aa11a26f39e84409a24e7b1825890" ;
@@ -418,12 +401,11 @@ mk:Q12288530 a mko:IlindenFigure,
 
 mk:Q12288567 a mko:IlindenFigure,
         mko:Person ;
-    rdfs:label "Никола Стойков"@mk ;
+    rdfs:label "Q12288567"@mk ;
     mko:birthDate "1878-01-01"^^xsd:date ;
     mko:bornIn mk:Q157034 ;
     mko:deathDate "1932-01-01"^^xsd:date ;
     mko:occupation "револуционер"@en ;
-    rdfs:comment "български революционер"@en ;
     owl:sameAs wd:Q12288567 .
 
 mk:Q12289622 a mko:IlindenFigure,
@@ -472,7 +454,7 @@ mk:Q12296573 a mko:IlindenFigure,
 
 mk:Q12298246 a mko:IlindenFigure,
         mko:Person ;
-    rdfs:label "Христо Влахов"@mk ;
+    rdfs:label "Q12298246"@mk ;
     mko:birthDate "1871-03-25"^^xsd:date ;
     mko:bornIn mk:Q214347 ;
     mko:deathDate "1957-04-11"^^xsd:date ;
@@ -487,7 +469,6 @@ mk:Q12299762 a mko:IlindenFigure,
     mko:deathDate "1906-03-05"^^xsd:date ;
     mko:occupation "наставник"@en,
         "револуционер"@en ;
-    rdfs:comment "български революционер"@en ;
     owl:sameAs wd:Q12299762 .
 
 mk:Q123680926 a mko:IlindenFigure,
@@ -535,7 +516,6 @@ mk:Q136092650 a mko:IlindenFigure,
     rdfs:label "Boris Kyulyumov"@mk ;
     mko:bornIn mk:Q147243 ;
     mko:occupation "револуционер"@en ;
-    rdfs:comment "български общественик от Македония, деец на Вътрешната македонска революционна организация"@en ;
     owl:sameAs wd:Q136092650 .
 
 mk:Q136716664 a mko:IlindenFigure,
@@ -549,37 +529,33 @@ mk:Q136716664 a mko:IlindenFigure,
 
 mk:Q137269896 a mko:IlindenFigure,
         mko:Person ;
-    rdfs:label "Стефан Маджиров"@mk ;
+    rdfs:label "Q137269896"@mk ;
     mko:bornIn mk:Q804311 ;
     mko:occupation "револуционер"@en ;
-    rdfs:comment "български революционер, деец и четник на Вътрешната македонска революционна организация в Светиврачко"@en ;
     owl:sameAs wd:Q137269896 .
 
 mk:Q138017989 a mko:IlindenFigure,
         mko:Person ;
-    rdfs:label "Тодор Прошев"@mk ;
+    rdfs:label "Q138017989"@mk ;
     mko:occupation "револуционер"@en ;
-    rdfs:comment "български революционер, деец на Вътрешната македонска революционна организация"@en ;
     owl:sameAs wd:Q138017989 .
 
 mk:Q139387249 a mko:IlindenFigure,
         mko:Person ;
-    rdfs:label "Пара Пацулова"@mk ;
+    rdfs:label "Q139387249"@mk ;
     mko:bornIn mk:Q156858,
         mk:Q749618 ;
     mko:occupation "деец"@en,
         "револуционер"@en ;
-    rdfs:comment "българска революционерка, стружка деятелка на Вътрешната македоно-одринска революционна организация"@en ;
     owl:sameAs wd:Q139387249 .
 
 mk:Q139387287 a mko:IlindenFigure,
         mko:Person ;
-    rdfs:label "Мара Китанова"@mk ;
+    rdfs:label "Q139387287"@mk ;
     mko:bornIn mk:Q156858,
         mk:Q749618 ;
     mko:occupation "деец"@en,
         "револуционер"@en ;
-    rdfs:comment "българска революционерка, стружка деятелка на Вътрешната македоно-одринска революционна организация"@en ;
     owl:sameAs wd:Q139387287 .
 
 mk:Q19204142 a mko:IlindenFigure,
@@ -595,12 +571,11 @@ mk:Q19204142 a mko:IlindenFigure,
 
 mk:Q19204692 a mko:IlindenFigure,
         mko:Person ;
-    rdfs:label "Гьорче Браилов"@mk ;
+    rdfs:label "Q19204692"@mk ;
     mko:birthDate "http://www.wikidata.org/.well-known/genid/356353da9c07665f117f8d6cd4e96eef" ;
     mko:bornIn mk:Q2924182 ;
     mko:deathDate "http://www.wikidata.org/.well-known/genid/552757279ee559564b86888da9149751" ;
     mko:occupation "револуционер"@en ;
-    rdfs:comment "български революционер"@en ;
     owl:sameAs wd:Q19204692 .
 
 mk:Q22134319 a mko:IlindenFigure,
@@ -610,7 +585,6 @@ mk:Q22134319 a mko:IlindenFigure,
     mko:bornIn mk:Q214347 ;
     mko:deathDate "1965-01-01"^^xsd:date ;
     mko:occupation "револуционер"@en ;
-    rdfs:comment "български революционер"@en ;
     owl:sameAs wd:Q22134319 .
 
 mk:Q22674981 a mko:IlindenFigure,
@@ -620,7 +594,6 @@ mk:Q22674981 a mko:IlindenFigure,
     mko:bornIn mk:Q1223508 ;
     mko:deathDate "1963-05-06"^^xsd:date ;
     mko:occupation "револуционер"@en ;
-    rdfs:comment "български революционер"@en ;
     owl:sameAs wd:Q22674981 .
 
 mk:Q2497361 a mko:IlindenFigure,
@@ -646,12 +619,11 @@ mk:Q25894779 a mko:IlindenFigure,
 
 mk:Q28060025 a mko:IlindenFigure,
         mko:Person ;
-    rdfs:label "Ильо Златанов"@mk ;
+    rdfs:label "Q28060025"@mk ;
     mko:birthDate "1895-01-01"^^xsd:date ;
     mko:bornIn mk:Q3038111 ;
     mko:deathDate "1924-07-12"^^xsd:date ;
     mko:occupation "револуционер"@en ;
-    rdfs:comment "български революционер"@en ;
     owl:sameAs wd:Q28060025 .
 
 mk:Q28123773 a mko:IlindenFigure,
@@ -698,7 +670,7 @@ mk:Q30331915 a mko:IlindenFigure,
 
 mk:Q30334455 a mko:IlindenFigure,
         mko:Person ;
-    rdfs:label "Ефтим Лимончев"@mk ;
+    rdfs:label "Q30334455"@mk ;
     mko:birthDate "http://www.wikidata.org/.well-known/genid/2b4a576046e6e1ec0cc520698f665a32" ;
     mko:bornIn mk:Q1223508 ;
     mko:deathDate "http://www.wikidata.org/.well-known/genid/c0240f463cd65370f64175f49721932f" ;
@@ -714,7 +686,6 @@ mk:Q30349336 a mko:IlindenFigure,
     mko:bornIn mk:Q1223508 ;
     mko:deathDate "http://www.wikidata.org/.well-known/genid/240faa7b870181e2a2617300a0bd564e" ;
     mko:occupation "револуционер"@en ;
-    rdfs:comment "български революционер"@en ;
     owl:sameAs wd:Q30349336 .
 
 mk:Q3394958 a mko:IlindenFigure,
@@ -800,7 +771,7 @@ mk:Q37616218 a mko:IlindenFigure,
 
 mk:Q41793648 a mko:IlindenFigure,
         mko:Person ;
-    rdfs:label "Лазар Серафимов"@mk ;
+    rdfs:label "Q41793648"@mk ;
     mko:birthDate "1869-01-01"^^xsd:date ;
     mko:bornIn mk:Q157024 ;
     mko:deathDate "http://www.wikidata.org/.well-known/genid/5fb00792a259d8c978f1241b154eae01" ;
@@ -810,7 +781,7 @@ mk:Q41793648 a mko:IlindenFigure,
 
 mk:Q44820076 a mko:IlindenFigure,
         mko:Person ;
-    rdfs:label "Лазар Читкушев"@mk ;
+    rdfs:label "Q44820076"@mk ;
     mko:birthDate "http://www.wikidata.org/.well-known/genid/a519200cdc545ee172befef6356378a1" ;
     mko:bornIn mk:Q157050 ;
     mko:deathDate "http://www.wikidata.org/.well-known/genid/15d6655265b1fb37229382076d5b2924" ;
@@ -825,17 +796,15 @@ mk:Q47462142 a mko:IlindenFigure,
     mko:bornIn mk:Q3301467 ;
     mko:deathDate "http://www.wikidata.org/.well-known/genid/e93a8a418b0f1798f5905dc77f51b998" ;
     mko:occupation "револуционер"@en ;
-    rdfs:comment "български революционер, деец на Вътрешната македоно-одринска революционна организация"@en ;
     owl:sameAs wd:Q47462142 .
 
 mk:Q49025553 a mko:IlindenFigure,
         mko:Person ;
-    rdfs:label "Павел Калпакчиев"@mk ;
+    rdfs:label "Q49025553"@mk ;
     mko:birthDate "1867-06-01"^^xsd:date ;
     mko:bornIn mk:Q406064 ;
     mko:deathDate "1929-10-13"^^xsd:date ;
     mko:occupation "претприемач"@en ;
-    rdfs:comment "български индустриалец"@en ;
     owl:sameAs wd:Q49025553 .
 
 mk:Q50881875 a mko:IlindenFigure,
@@ -845,7 +814,6 @@ mk:Q50881875 a mko:IlindenFigure,
     mko:bornIn mk:Q147243 ;
     mko:deathDate "1967-01-01"^^xsd:date ;
     mko:occupation "учител"@en ;
-    rdfs:comment "българска учителка и революционерка"@en ;
     owl:sameAs wd:Q50881875 .
 
 mk:Q511357 a mko:IlindenFigure,
@@ -875,7 +843,6 @@ mk:Q52770208 a mko:IlindenFigure,
     mko:bornIn mk:Q459 ;
     mko:deathDate "http://www.wikidata.org/.well-known/genid/3f29668c1077ad6605813a7998eb9111" ;
     mko:occupation "трговец"@en ;
-    rdfs:comment "български търговец и революционер"@en ;
     owl:sameAs wd:Q52770208 .
 
 mk:Q52835489 a mko:IlindenFigure,
@@ -885,17 +852,15 @@ mk:Q52835489 a mko:IlindenFigure,
     mko:bornIn mk:Q3072798 ;
     mko:deathDate "1919-01-01"^^xsd:date ;
     mko:occupation "свештеник"@en ;
-    rdfs:comment "български духовник и революционер"@en ;
     owl:sameAs wd:Q52835489 .
 
 mk:Q55235056 a mko:IlindenFigure,
         mko:Person ;
-    rdfs:label "Тодор Богданов"@mk ;
+    rdfs:label "Q55235056"@mk ;
     mko:birthDate "http://www.wikidata.org/.well-known/genid/092090bf17d40e543c261e97d22b657e" ;
     mko:bornIn mk:Q157050 ;
     mko:deathDate "http://www.wikidata.org/.well-known/genid/d69405a0b1c6951e4e7074b2a6dbad6c" ;
     mko:occupation "револуционер"@en ;
-    rdfs:comment "български революционер"@en ;
     owl:sameAs wd:Q55235056 .
 
 mk:Q56042357 a mko:IlindenFigure,
@@ -915,7 +880,6 @@ mk:Q56150897 a mko:IlindenFigure,
     mko:bornIn mk:Q3074547 ;
     mko:deathDate "1953-12-21"^^xsd:date ;
     mko:occupation "револуционер"@en ;
-    rdfs:comment "български революционер"@en ;
     owl:sameAs wd:Q56150897 .
 
 mk:Q56162479 a mko:IlindenFigure,
@@ -925,7 +889,6 @@ mk:Q56162479 a mko:IlindenFigure,
     mko:bornIn mk:Q3074447 ;
     mko:deathDate "http://www.wikidata.org/.well-known/genid/54f0a13cb4bec3040104ad2f92578254" ;
     mko:occupation "револуционер"@en ;
-    rdfs:comment "български революционер"@en ;
     owl:sameAs wd:Q56162479 .
 
 mk:Q56177578 a mko:IlindenFigure,
@@ -945,7 +908,6 @@ mk:Q56178030 a mko:IlindenFigure,
     mko:bornIn mk:Q48814 ;
     mko:deathDate "1968-01-01"^^xsd:date ;
     mko:occupation "револуционер"@en ;
-    rdfs:comment "български революционер"@en ;
     owl:sameAs wd:Q56178030 .
 
 mk:Q56181262 a mko:IlindenFigure,
@@ -960,22 +922,20 @@ mk:Q56181262 a mko:IlindenFigure,
 
 mk:Q56218774 a mko:IlindenFigure,
         mko:Person ;
-    rdfs:label "Никола Върбата"@mk ;
+    rdfs:label "Q56218774"@mk ;
     mko:birthDate "http://www.wikidata.org/.well-known/genid/2eecc79ef0010e9a758adf212488fd91" ;
     mko:bornIn mk:Q2924818 ;
     mko:deathDate "http://www.wikidata.org/.well-known/genid/a3433165383a66361bc8dab0aca6d695" ;
     mko:occupation "револуционер"@en ;
-    rdfs:comment "български революционер"@en ;
     owl:sameAs wd:Q56218774 .
 
 mk:Q56218981 a mko:IlindenFigure,
         mko:Person ;
-    rdfs:label "Стоян Славовски"@mk ;
+    rdfs:label "Q56218981"@mk ;
     mko:birthDate "http://www.wikidata.org/.well-known/genid/70e61fcaceff8488b6ace7b3841655ae" ;
     mko:bornIn mk:Q515814 ;
     mko:deathDate "http://www.wikidata.org/.well-known/genid/d0e00f6a5d073c1895354c24105d9e4f" ;
     mko:occupation "револуционер"@en ;
-    rdfs:comment "български революционер"@en ;
     owl:sameAs wd:Q56218981 .
 
 mk:Q56254180 a mko:IlindenFigure,
@@ -985,17 +945,15 @@ mk:Q56254180 a mko:IlindenFigure,
     mko:bornIn mk:Q474643 ;
     mko:deathDate "1958-07-05"^^xsd:date ;
     mko:occupation "револуционер"@en ;
-    rdfs:comment "български революционер, деец на Вътрешната македоно-одринска революционна организация, емигрантски деец в Канада"@en ;
     owl:sameAs wd:Q56254180 .
 
 mk:Q56259310 a mko:IlindenFigure,
         mko:Person ;
-    rdfs:label "Христо Тасев"@mk ;
+    rdfs:label "Q56259310"@mk ;
     mko:birthDate "http://www.wikidata.org/.well-known/genid/f77e6b9a0d39ba649079cff6ac06a23e" ;
     mko:bornIn mk:Q3136266 ;
     mko:deathDate "http://www.wikidata.org/.well-known/genid/f38756ba6634c8cdf35fd58f1a43266e" ;
     mko:occupation "револуционер"@en ;
-    rdfs:comment "български революционер"@en ;
     owl:sameAs wd:Q56259310 .
 
 mk:Q56292308 a mko:IlindenFigure,
@@ -1015,7 +973,6 @@ mk:Q56349477 a mko:IlindenFigure,
     mko:bornIn mk:Q12249553 ;
     mko:deathDate "http://www.wikidata.org/.well-known/genid/95070eb8230cdbd6927e72e2e3732b90" ;
     mko:occupation "револуционер"@en ;
-    rdfs:comment "български революционер"@en ;
     owl:sameAs wd:Q56349477 .
 
 mk:Q56426085 a mko:IlindenFigure,
@@ -1030,17 +987,16 @@ mk:Q56426085 a mko:IlindenFigure,
 
 mk:Q56751512 a mko:IlindenFigure,
         mko:Person ;
-    rdfs:label "Наум Попйовчев"@mk ;
+    rdfs:label "Q56751512"@mk ;
     mko:birthDate "http://www.wikidata.org/.well-known/genid/aa7db32cc1efbc120f46a4808456b147" ;
     mko:bornIn mk:Q3299907 ;
     mko:deathDate "http://www.wikidata.org/.well-known/genid/9df7a6a4c78df61cf120b068a57576a7" ;
     mko:occupation "револуционер"@en ;
-    rdfs:comment "български революционер"@en ;
     owl:sameAs wd:Q56751512 .
 
 mk:Q57315608 a mko:IlindenFigure,
         mko:Person ;
-    rdfs:label "Ангел Трайчев"@mk ;
+    rdfs:label "Q57315608"@mk ;
     mko:birthDate "1887-01-01"^^xsd:date ;
     mko:bornIn mk:Q2884091 ;
     mko:deathDate "1921-04-01"^^xsd:date ;
@@ -1050,7 +1006,7 @@ mk:Q57315608 a mko:IlindenFigure,
 
 mk:Q57734722 a mko:IlindenFigure,
         mko:Person ;
-    rdfs:label "Георги Зердев"@mk ;
+    rdfs:label "Q57734722"@mk ;
     mko:birthDate "1877-10-26"^^xsd:date ;
     mko:bornIn mk:Q157032 ;
     mko:deathDate "http://www.wikidata.org/.well-known/genid/dc850f9d4a3b1cc596a58d5a213c05c3" ;
@@ -1060,22 +1016,20 @@ mk:Q57734722 a mko:IlindenFigure,
 
 mk:Q57778571 a mko:IlindenFigure,
         mko:Person ;
-    rdfs:label "Иван Берберов"@mk ;
+    rdfs:label "Q57778571"@mk ;
     mko:birthDate "http://www.wikidata.org/.well-known/genid/75e43571953fdd965d9006145997d3b1" ;
     mko:bornIn mk:Q406488 ;
     mko:deathDate "http://www.wikidata.org/.well-known/genid/d4b1f11710742c5b7f0898f1763fb4d9" ;
     mko:occupation "трговец"@en ;
-    rdfs:comment "български търговец и революционер"@en ;
     owl:sameAs wd:Q57778571 .
 
 mk:Q57833662 a mko:IlindenFigure,
         mko:Person ;
-    rdfs:label "Никола Дупков"@mk ;
+    rdfs:label "Q57833662"@mk ;
     mko:birthDate "http://www.wikidata.org/.well-known/genid/771cc41968ae986e3a56ed67c00b242a" ;
     mko:bornIn mk:Q214347 ;
     mko:deathDate "http://www.wikidata.org/.well-known/genid/d59ca25820a7775938c7f675f70f49a1" ;
     mko:occupation "учител"@en ;
-    rdfs:comment "български учител и революционер"@en ;
     owl:sameAs wd:Q57833662 .
 
 mk:Q57892698 a mko:IlindenFigure,
@@ -1084,7 +1038,6 @@ mk:Q57892698 a mko:IlindenFigure,
     mko:birthDate "http://www.wikidata.org/.well-known/genid/82c678eefd40156e4ef54fe32dd12d08" ;
     mko:bornIn mk:Q406488 ;
     mko:deathDate "http://www.wikidata.org/.well-known/genid/62907ac5290c20155860fb034d2c53cf" ;
-    rdfs:comment "българска общественичка и революционерка"@en ;
     owl:sameAs wd:Q57892698 .
 
 mk:Q59195628 a mko:IlindenFigure,
@@ -1109,12 +1062,11 @@ mk:Q59196391 a mko:IlindenFigure,
 
 mk:Q59219638 a mko:IlindenFigure,
         mko:Person ;
-    rdfs:label "Тушо Коцев"@mk ;
+    rdfs:label "Q59219638"@mk ;
     mko:birthDate "1885-01-01"^^xsd:date ;
     mko:bornIn mk:Q3073291 ;
     mko:deathDate "http://www.wikidata.org/.well-known/genid/8037e062c37a2eda4a683bcf5c3575f1" ;
     mko:occupation "револуционер"@en ;
-    rdfs:comment "български революционер"@en ;
     owl:sameAs wd:Q59219638 .
 
 mk:Q59262385 a mko:IlindenFigure,
@@ -1129,12 +1081,11 @@ mk:Q59262385 a mko:IlindenFigure,
 
 mk:Q59265158 a mko:IlindenFigure,
         mko:Person ;
-    rdfs:label "Лазар Христов"@mk ;
+    rdfs:label "Q59265158"@mk ;
     mko:birthDate "1885-01-01"^^xsd:date ;
     mko:bornIn mk:Q157050 ;
     mko:deathDate "http://www.wikidata.org/.well-known/genid/6f5f3df2650ad56abe021ee0e3b6c956" ;
     mko:occupation "револуционер"@en ;
-    rdfs:comment "български революционер"@en ;
     owl:sameAs wd:Q59265158 .
 
 mk:Q59681897 a mko:IlindenFigure,
@@ -1149,16 +1100,15 @@ mk:Q59681897 a mko:IlindenFigure,
 
 mk:Q59709314 a mko:IlindenFigure,
         mko:Person ;
-    rdfs:label "Иван Хаджигенчев"@mk ;
+    rdfs:label "Q59709314"@mk ;
     mko:birthDate "1876-10-13"^^xsd:date ;
     mko:bornIn mk:Q170415 ;
     mko:deathDate "1941-07-12"^^xsd:date ;
-    rdfs:comment "български революционер"@en ;
     owl:sameAs wd:Q59709314 .
 
 mk:Q59709512 a mko:IlindenFigure,
         mko:Person ;
-    rdfs:label "Иван Хаджистоенчев"@mk ;
+    rdfs:label "Q59709512"@mk ;
     mko:birthDate "1877-01-07"^^xsd:date ;
     mko:bornIn mk:Q170415 ;
     mko:deathDate "1902-08-02"^^xsd:date ;
@@ -1171,7 +1121,6 @@ mk:Q60332081 a mko:IlindenFigure,
     mko:bornIn mk:Q214347 ;
     mko:deathDate "1943-05-16"^^xsd:date ;
     mko:occupation "револуционер"@en ;
-    rdfs:comment "български общественик и революционер, деец на Вътрешната македоно-одринска революционна организация"@en ;
     owl:sameAs wd:Q60332081 .
 
 mk:Q60332448 a mko:IlindenFigure,
@@ -1207,22 +1156,20 @@ mk:Q60576567 a mko:IlindenFigure,
 
 mk:Q61090562 a mko:IlindenFigure,
         mko:Person ;
-    rdfs:label "Насте Бунгуров"@mk ;
+    rdfs:label "Q61090562"@mk ;
     mko:birthDate "http://www.wikidata.org/.well-known/genid/46f66a3e7fd70439afe646d995112347" ;
     mko:bornIn mk:Q158079 ;
     mko:deathDate "http://www.wikidata.org/.well-known/genid/2a5ad3941036d91a1b6082fd59c51001" ;
     mko:occupation "трговец"@en ;
-    rdfs:comment "български революционер"@en ;
     owl:sameAs wd:Q61090562 .
 
 mk:Q61090662 a mko:IlindenFigure,
         mko:Person ;
-    rdfs:label "Туше Балтов"@mk ;
+    rdfs:label "Q61090662"@mk ;
     mko:birthDate "1871-01-01"^^xsd:date ;
     mko:bornIn mk:Q214347 ;
     mko:deathDate "http://www.wikidata.org/.well-known/genid/8d62418a91962dc666934e4b87404618" ;
     mko:occupation "револуционер"@en ;
-    rdfs:comment "български революционер"@en ;
     owl:sameAs wd:Q61090662 .
 
 mk:Q61623441 a mko:IlindenFigure,
@@ -1232,7 +1179,6 @@ mk:Q61623441 a mko:IlindenFigure,
     mko:bornIn mk:Q12283266 ;
     mko:deathDate "1975-06-08"^^xsd:date ;
     mko:occupation "револуционер"@en ;
-    rdfs:comment "български революционер"@en ;
     owl:sameAs wd:Q61623441 .
 
 mk:Q61728945 a mko:IlindenFigure,
@@ -1242,17 +1188,15 @@ mk:Q61728945 a mko:IlindenFigure,
     mko:bornIn mk:Q2653902 ;
     mko:deathDate "1925-06-27"^^xsd:date ;
     mko:occupation "учител"@en ;
-    rdfs:comment "български учител"@en ;
     owl:sameAs wd:Q61728945 .
 
 mk:Q61871149 a mko:IlindenFigure,
         mko:Person ;
-    rdfs:label "Андрей Мицев"@mk ;
+    rdfs:label "Q61871149"@mk ;
     mko:birthDate "1883-01-01"^^xsd:date ;
     mko:bornIn mk:Q3118151 ;
     mko:deathDate "http://www.wikidata.org/.well-known/genid/70fa0799fdf3588ad543b7e9bbfc8f8f" ;
     mko:occupation "воено лице"@en ;
-    rdfs:comment "български революционер"@en ;
     owl:sameAs wd:Q61871149 .
 
 mk:Q61984927 a mko:IlindenFigure,
@@ -1277,7 +1221,7 @@ mk:Q63280034 a mko:IlindenFigure,
 
 mk:Q63280348 a mko:IlindenFigure,
         mko:Person ;
-    rdfs:label "Крум Сарджов"@mk ;
+    rdfs:label "Q63280348"@mk ;
     mko:birthDate "1894-01-01"^^xsd:date ;
     mko:bornIn mk:Q214347 ;
     mko:deathDate "http://www.wikidata.org/.well-known/genid/e007a7c8d9722513e3fd0279ba4d4fca" ;
@@ -1287,12 +1231,11 @@ mk:Q63280348 a mko:IlindenFigure,
 
 mk:Q64138923 a mko:IlindenFigure,
         mko:Person ;
-    rdfs:label "Стойо Смилков"@mk ;
+    rdfs:label "Q64138923"@mk ;
     mko:birthDate "1870-01-01"^^xsd:date ;
     mko:bornIn mk:Q11058060 ;
     mko:deathDate "1946-01-01"^^xsd:date ;
     mko:occupation "свештеник"@en ;
-    rdfs:comment "български свещеник и революционер"@en ;
     owl:sameAs wd:Q64138923 .
 
 mk:Q64358588 a mko:IlindenFigure,
@@ -1302,12 +1245,11 @@ mk:Q64358588 a mko:IlindenFigure,
     mko:bornIn mk:Q2467099 ;
     mko:deathDate "1939-01-01"^^xsd:date ;
     mko:occupation "учител"@en ;
-    rdfs:comment "български просветен деец"@en ;
     owl:sameAs wd:Q64358588 .
 
 mk:Q64441019 a mko:IlindenFigure,
         mko:Person ;
-    rdfs:label "Страхил Топуков"@mk ;
+    rdfs:label "Q64441019"@mk ;
     mko:birthDate "http://www.wikidata.org/.well-known/genid/e0371ee406fce5b5a3bfade0e03c7373" ;
     mko:bornIn mk:Q1977737 ;
     mko:deathDate "http://www.wikidata.org/.well-known/genid/3aabcd706ad13a21b9bf43a2b3bfb82a" ;
@@ -1317,12 +1259,11 @@ mk:Q64441019 a mko:IlindenFigure,
 
 mk:Q64441176 a mko:IlindenFigure,
         mko:Person ;
-    rdfs:label "Спиро Сарджов"@mk ;
+    rdfs:label "Q64441176"@mk ;
     mko:birthDate "http://www.wikidata.org/.well-known/genid/f6157a7be0a1fbb7e88851b7d495b4b0" ;
     mko:bornIn mk:Q1223508 ;
     mko:deathDate "http://www.wikidata.org/.well-known/genid/5ddac868b19669cfd05395431b470561" ;
     mko:occupation "револуционер"@en ;
-    rdfs:comment "български революционер"@en ;
     owl:sameAs wd:Q64441176 .
 
 mk:Q64585217 a mko:IlindenFigure,
@@ -1347,12 +1288,11 @@ mk:Q64711309 a mko:IlindenFigure,
 
 mk:Q64853411 a mko:IlindenFigure,
         mko:Person ;
-    rdfs:label "Константин Кюров"@mk ;
+    rdfs:label "Q64853411"@mk ;
     mko:birthDate "1863-01-01"^^xsd:date ;
     mko:bornIn mk:Q157034 ;
     mko:deathDate "http://www.wikidata.org/.well-known/genid/917dddce91855cdf216032e019d97874" ;
     mko:occupation "револуционер"@en ;
-    rdfs:comment "български революционер"@en ;
     owl:sameAs wd:Q64853411 .
 
 mk:Q64926370 a mko:IlindenFigure,
@@ -1367,22 +1307,20 @@ mk:Q64926370 a mko:IlindenFigure,
 
 mk:Q65028846 a mko:IlindenFigure,
         mko:Person ;
-    rdfs:label "Христо Узунов"@mk ;
+    rdfs:label "Q65028846"@mk ;
     mko:birthDate "http://www.wikidata.org/.well-known/genid/a8760e22220bf682132475a7fd00c43e" ;
     mko:bornIn mk:Q3395964 ;
     mko:deathDate "http://www.wikidata.org/.well-known/genid/51291e6c2d2f60fc3de9d82a9fc4d900" ;
     mko:occupation "револуционер"@en ;
-    rdfs:comment "български революционер"@en ;
     owl:sameAs wd:Q65028846 .
 
 mk:Q65028850 a mko:IlindenFigure,
         mko:Person ;
-    rdfs:label "Григор Гугушев"@mk ;
+    rdfs:label "Q65028850"@mk ;
     mko:birthDate "http://www.wikidata.org/.well-known/genid/05f574067aed43ae383661b99c9fb167" ;
     mko:bornIn mk:Q929022 ;
     mko:deathDate "http://www.wikidata.org/.well-known/genid/9046be10585bb9a3cf2badb9841c7912" ;
     mko:occupation "револуционер"@en ;
-    rdfs:comment "български революционер и общественик"@en ;
     owl:sameAs wd:Q65028850 .
 
 mk:Q65028868 a mko:IlindenFigure,
@@ -1437,32 +1375,29 @@ mk:Q65095550 a mko:IlindenFigure,
 
 mk:Q65920391 a mko:IlindenFigure,
         mko:Person ;
-    rdfs:label "Васил Саздов"@mk ;
+    rdfs:label "Q65920391"@mk ;
     mko:birthDate "1875-01-01"^^xsd:date ;
     mko:bornIn mk:Q158088 ;
     mko:deathDate "http://www.wikidata.org/.well-known/genid/426dbc73ae94abba276dd2d639eaa3a5" ;
     mko:occupation "револуционер"@en ;
-    rdfs:comment "български революционер"@en ;
     owl:sameAs wd:Q65920391 .
 
 mk:Q65924652 a mko:IlindenFigure,
         mko:Person ;
-    rdfs:label "Георги Титянов"@mk ;
+    rdfs:label "Q65924652"@mk ;
     mko:birthDate "1884-01-01"^^xsd:date ;
     mko:bornIn mk:Q12283266 ;
     mko:deathDate "1913-08-09"^^xsd:date ;
     mko:occupation "учител"@en ;
-    rdfs:comment "български революционер"@en ;
     owl:sameAs wd:Q65924652 .
 
 mk:Q66765325 a mko:IlindenFigure,
         mko:Person ;
-    rdfs:label "Илия Крантев"@mk ;
+    rdfs:label "Q66765325"@mk ;
     mko:birthDate "1873-01-01"^^xsd:date ;
     mko:bornIn mk:Q2989143 ;
     mko:deathDate "http://www.wikidata.org/.well-known/genid/04f9dfa7026cda841ba558b779f65ec0" ;
     mko:occupation "учител"@en ;
-    rdfs:comment "български учител и революционер"@en ;
     owl:sameAs wd:Q66765325 .
 
 mk:Q672922 a mko:IlindenFigure,
@@ -1499,7 +1434,6 @@ mk:Q71006684 a mko:IlindenFigure,
     mko:bornIn mk:Q189305 ;
     mko:deathDate "1913-07-04"^^xsd:date ;
     mko:occupation "револуционер"@en ;
-    rdfs:comment "български революционер"@en ;
     owl:sameAs wd:Q71006684 .
 
 mk:Q75557602 a mko:IlindenFigure,

@@ -193,7 +193,7 @@ WHERE {
   OPTIONAL { ?person wdt:P106 ?occupation }
 
   SERVICE wikibase:label {
-    bd:serviceParam wikibase:language "mk,en,bg,sr" .
+    bd:serviceParam wikibase:language "mk,en" .
   }
 }
 ORDER BY ?personLabel
