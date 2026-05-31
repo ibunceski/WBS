@@ -1,30 +1,64 @@
 @prefix mk: <http://macedonian-kg.mk/resource/> .
 @prefix mko: <http://macedonian-kg.mk/ontology#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time: <http://www.w3.org/2006/time#> .
 @prefix wd: <http://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-mk:Q116520517 a mko:HistoricalEvent,
-        mko:IlindenEvent ;
-    rdfs:label "Kleisoura Battle, 1903"@mk ;
-    mko:partOf mk:Q1145682 ;
-    owl:sameAs wd:Q116520517 .
+mk:Q1145682 a mko:HistoricalEvent ;
+    mko:endDate "1903-10-01"^^xsd:date ;
+    mko:partOf mk:MacedonianHistory1885_1910 ;
+    mko:startDate "1903-08-02"^^xsd:date ;
+    mko:tookPlaceIn mk:Q168501 ;
+    owl:sameAs wd:Q1145682 ;
+    time:hasTime [ a time:Interval ;
+            time:hasBeginning "1903-08-02"^^xsd:date ;
+            time:hasEnd "1903-10-01"^^xsd:date ] .
 
-mk:Q116520528 a mko:HistoricalEvent,
-        mko:IlindenEvent ;
-    rdfs:label "Bilishta Battle, 1903"@mk ;
-    mko:partOf mk:Q1145682 ;
-    owl:sameAs wd:Q116520528 .
+mk:Q1277369 a mko:HistoricalEvent ;
+    mko:endDate "1908-01-01"^^xsd:date ;
+    mko:partOf mk:MacedonianHistory1885_1910 ;
+    mko:startDate "1893-01-01"^^xsd:date ;
+    mko:tookPlaceIn mk:Q103251 ;
+    owl:sameAs wd:Q1277369 ;
+    time:hasTime [ a time:Interval ;
+            time:hasBeginning "1893-01-01"^^xsd:date ;
+            time:hasEnd "1908-01-01"^^xsd:date ] .
 
-mk:Q116520576 a mko:HistoricalEvent,
-        mko:IlindenEvent ;
-    rdfs:label "Lokvata Battle"@mk ;
-    mko:partOf mk:Q1145682 ;
-    owl:sameAs wd:Q116520576 .
+mk:Q1290184 a mko:HistoricalEvent ;
+    mko:endDate "1908-11-22"^^xsd:date ;
+    mko:partOf mk:MacedonianHistory1885_1910 ;
+    mko:startDate "1908-11-14"^^xsd:date ;
+    mko:tookPlaceIn mk:Q157246 ;
+    owl:sameAs wd:Q1290184 ;
+    time:hasTime [ a time:Interval ;
+            time:hasBeginning "1908-11-14"^^xsd:date ;
+            time:hasEnd "1908-11-22"^^xsd:date ] .
 
-mk:Q116613808 a mko:HistoricalEvent,
-        mko:IlindenEvent ;
-    rdfs:label "Bigla Battle, 1903"@mk ;
-    mko:partOf mk:Q1145682 ;
-    owl:sameAs wd:Q116613808 .
+mk:Q275683 a mko:HistoricalEvent ;
+    mko:partOf mk:MacedonianHistory1885_1910 ;
+    owl:sameAs wd:Q275683 .
+
+mk:Q31183905 a mko:HistoricalEvent ;
+    mko:partOf mk:MacedonianHistory1885_1910 ;
+    mko:tookPlaceIn mk:Q221 ;
+    owl:sameAs wd:Q31183905 .
+
+mk:Q3127176 a mko:HistoricalEvent ;
+    mko:partOf mk:MacedonianHistory1885_1910 ;
+    mko:startDate "1892-06-21"^^xsd:date ;
+    mko:tookPlaceIn mk:Q221 ;
+    owl:sameAs wd:Q3127176 ;
+    time:hasTime [ a time:Interval ;
+            time:hasBeginning "1892-06-21"^^xsd:date ] .
+
+mk:Q3401248 a mko:HistoricalEvent ;
+    mko:partOf mk:MacedonianHistory1885_1910 ;
+    mko:tookPlaceIn mk:Q157034 ;
+    owl:sameAs wd:Q3401248 .
+
+mk:Q4872396 a mko:HistoricalEvent ;
+    mko:partOf mk:MacedonianHistory1885_1910 ;
+    mko:tookPlaceIn mk:Q221 ;
+    owl:sameAs wd:Q4872396 .
 

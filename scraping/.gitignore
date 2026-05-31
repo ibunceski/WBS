@@ -1,0 +1,68 @@
+# Byte-compiled / optimized / DLL progress
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environments
+.venv/
+venv/
+ENV/
+env/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Scraping Data & Dumps (Prevents committing massive scraped datasets)
+*.csv
+*.json
+*.jsonl
+*.xml
+*.xlsx
+*.sqlite
+*.db
+outputs/
+data/
+
+# Logs (Scrapers generate A LOT of logs)
+*.log
+ghostdriver.log
+chromedriver.log
+geckodriver.log
+
+# OS & IDE specifics
+.DS_Store
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# Credentials & Environment Variables (CRITICAL for scraping proxies/API keys)
+.env
+.secrets
+secrets.*
+*.pem

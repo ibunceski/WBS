@@ -1,9 +1,71 @@
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
 @prefix mk: <http://macedonian-kg.mk/resource/> .
 @prefix mko: <http://macedonian-kg.mk/ontology#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time: <http://www.w3.org/2006/time#> .
 @prefix wd: <http://www.wikidata.org/entity/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+mko:authoredBy a owl:ObjectProperty ;
+    rdfs:label "authored by"@en .
+
+mko:birthDate a owl:DatatypeProperty ;
+    rdfs:label "birth date"@en ;
+    rdfs:range rdfs:Literal .
+
+mko:bornIn a owl:ObjectProperty ;
+    rdfs:label "born in"@en .
+
+mko:dateCreated a owl:DatatypeProperty ;
+    rdfs:label "date created"@en ;
+    rdfs:range rdfs:Literal .
+
+mko:deathDate a owl:DatatypeProperty ;
+    rdfs:label "death date"@en ;
+    rdfs:range rdfs:Literal .
+
+mko:dissolutionDate a owl:DatatypeProperty ;
+    rdfs:label "dissolution date"@en ;
+    rdfs:range rdfs:Literal .
+
+mko:endDate a owl:DatatypeProperty ;
+    rdfs:label "end date"@en ;
+    rdfs:range rdfs:Literal .
+
+mko:foundingDate a owl:DatatypeProperty ;
+    rdfs:label "founding date"@en ;
+    rdfs:range rdfs:Literal .
+
+mko:headquarteredIn a owl:ObjectProperty ;
+    rdfs:label "headquartered in"@en .
+
+mko:inLanguage a owl:DatatypeProperty ;
+    rdfs:label "in language"@en ;
+    rdfs:range xsd:string .
+
+mko:locatedInCountry a owl:ObjectProperty ;
+    rdfs:label "located in country"@en .
+
+mko:memberOf a owl:ObjectProperty ;
+    rdfs:label "member of"@en .
+
+mko:occupation a owl:DatatypeProperty ;
+    rdfs:label "occupation"@en ;
+    rdfs:range xsd:string .
+
+mko:partOf a owl:ObjectProperty ;
+    rdfs:label "part of"@en .
+
+mko:participatedIn a owl:ObjectProperty ;
+    rdfs:label "participated in"@en .
+
+mko:startDate a owl:DatatypeProperty ;
+    rdfs:label "start date"@en ;
+    rdfs:range rdfs:Literal .
+
+mko:tookPlaceIn a owl:ObjectProperty ;
+    rdfs:label "took place in"@en .
 
 mk:Q100320580 a mko:Person ;
     rdfs:label "Andon Kostov"@mk ;
@@ -12,6 +74,13 @@ mk:Q100320580 a mko:Person ;
     mko:deathDate "http://www.wikidata.org/.well-known/genid/d68d9494ef8a7021f2ff7ae0d494d73a" ;
     rdfs:comment "Bulgarian revolutionary"@en ;
     owl:sameAs wd:Q100320580 .
+
+mk:Q1003730 a mko:Organization ;
+    rdfs:label "Бугарска академија на науките"@mk ;
+    mko:foundingDate "1869-09-01"^^xsd:date ;
+    mko:headquarteredIn mk:Q472 ;
+    rdfs:comment "academy of sciences"@en ;
+    owl:sameAs wd:Q1003730 .
 
 mk:Q100730505 a mko:Person ;
     rdfs:label "Toma Kuyumdzhiev"@mk ;
@@ -350,6 +419,13 @@ mk:Q112653318 a mko:Person ;
     rdfs:comment "македонски револуционер"@en ;
     owl:sameAs wd:Q112653318 .
 
+mk:Q1132636 a mko:Organization ;
+    rdfs:label "Српска академија на науките и уметностите"@mk ;
+    mko:foundingDate "1841-11-07"^^xsd:date ;
+    mko:headquarteredIn mk:Q3711 ;
+    rdfs:comment "most prominent academic institution in Serbia"@en ;
+    owl:sameAs wd:Q1132636 .
+
 mk:Q114194093 a mko:Person ;
     rdfs:label "Kosta Nikolov"@mk ;
     mko:birthDate "1853-01-01"^^xsd:date ;
@@ -357,6 +433,18 @@ mk:Q114194093 a mko:Person ;
     mko:deathDate "1930-01-01"^^xsd:date ;
     rdfs:comment "Bulgarian revolutionary"@en ;
     owl:sameAs wd:Q114194093 .
+
+mk:Q1145682 a mko:HistoricalEvent ;
+    rdfs:label "Ilinden Uprising"@en ;
+    mko:endDate "1903-10-01"^^xsd:date,
+        "1903-10-03"^^xsd:date ;
+    mko:partOf mk:MacedonianHistory1885_1910 ;
+    mko:startDate "1903-08-02"^^xsd:date ;
+    mko:tookPlaceIn mk:Q168501 ;
+    owl:sameAs wd:Q1145682 ;
+    time:hasTime [ a time:Interval ;
+            time:hasBeginning "1903-08-02"^^xsd:date ;
+            time:hasEnd "1903-10-01"^^xsd:date ] .
 
 mk:Q116450544 a mko:Person ;
     rdfs:label "Димитар Тупаров"@mk ;
@@ -451,6 +539,30 @@ mk:Q121545925 a mko:Person ;
     mko:deathDate "1960-11-01"^^xsd:date ;
     rdfs:comment "Turkish intellectual historian and writer (1888–1960)"@en ;
     owl:sameAs wd:Q121545925 .
+
+mk:Q121930764 a mko:HistoricalDocument ;
+    rdfs:label "Q121930764"@mk ;
+    mko:authoredBy mk:Q1988099 ;
+    mko:dateCreated "1950-01-01"^^xsd:date ;
+    mko:inLanguage "чешки јазик"@en ;
+    rdfs:comment "book edition published in 1950"@en ;
+    owl:sameAs wd:Q121930764 .
+
+mk:Q121930766 a mko:HistoricalDocument ;
+    rdfs:label "Q121930766"@mk ;
+    mko:authoredBy mk:Q1988099 ;
+    mko:dateCreated "1949-01-01"^^xsd:date ;
+    mko:inLanguage "чешки јазик"@en ;
+    rdfs:comment "book edition published in 1949"@en ;
+    owl:sameAs wd:Q121930766 .
+
+mk:Q121987911 a mko:HistoricalDocument ;
+    rdfs:label "Q121987911"@mk ;
+    mko:authoredBy mk:Q1988099 ;
+    mko:dateCreated "1950-01-01"^^xsd:date ;
+    mko:inLanguage "чешки јазик"@en ;
+    rdfs:comment "book edition published in 1950"@en ;
+    owl:sameAs wd:Q121987911 .
 
 mk:Q1226062 a mko:Person ;
     rdfs:label "Димитрис Семсис"@mk ;
@@ -671,14 +783,6 @@ mk:Q12272177 a mko:Person ;
     mko:bornIn mk:Q157032 ;
     mko:occupation "револуционер"@en ;
     owl:sameAs wd:Q12272177 .
-
-mk:Q12272362 a mko:Person ;
-    rdfs:label "Арсени Костенцев"@mk ;
-    mko:birthDate "1842-08-15"^^xsd:date ;
-    mko:bornIn mk:Q147243 ;
-    mko:deathDate "1921-11-06"^^xsd:date ;
-    mko:occupation "писател"@en ;
-    owl:sameAs wd:Q12272362 .
 
 mk:Q12272371 a mko:Person ;
     rdfs:label "Q12272371"@mk ;
@@ -903,6 +1007,10 @@ mk:Q12273898 a mko:Person ;
     mko:deathDate "1983-09-01"^^xsd:date ;
     mko:occupation "воено лице"@en ;
     owl:sameAs wd:Q12273898 .
+
+mk:Q12274352 a mko:Organization ;
+    rdfs:label "Q12274352"@mk ;
+    owl:sameAs wd:Q12274352 .
 
 mk:Q12274580 a mko:Person ;
     rdfs:label "Evangelos Koukoudeas"@mk ;
@@ -2794,6 +2902,10 @@ mk:Q12295550 a mko:Person ;
     mko:occupation "револуционер"@en ;
     owl:sameAs wd:Q12295550 .
 
+mk:Q12295889 a mko:Organization ;
+    rdfs:label "Сојуз на македонските емигрантски организации"@mk ;
+    owl:sameAs wd:Q12295889 .
+
 mk:Q12295985 a mko:Person ;
     rdfs:label "Q12295985"@mk ;
     mko:birthDate "1872-10-14"^^xsd:date ;
@@ -2816,15 +2928,6 @@ mk:Q12296094 a mko:Person ;
     mko:deathDate "1915-11-15"^^xsd:date ;
     mko:occupation "револуционер"@en ;
     owl:sameAs wd:Q12296094 .
-
-mk:Q12296175 a mko:Person ;
-    rdfs:label "Theodor Capidan"@mk ;
-    mko:birthDate "1879-04-28"^^xsd:date ;
-    mko:bornIn mk:Q157032 ;
-    mko:deathDate "1953-09-01"^^xsd:date ;
-    mko:occupation "dialectologist"@en ;
-    rdfs:comment "Romanian linguist"@en ;
-    owl:sameAs wd:Q12296175 .
 
 mk:Q12296200 a mko:Person ;
     rdfs:label "Theodoros Modis"@mk ;
@@ -3193,6 +3296,16 @@ mk:Q12749584 a mko:Person ;
     rdfs:comment "Serbian diplomat"@en ;
     owl:sameAs wd:Q12749584 .
 
+mk:Q1277369 a mko:HistoricalEvent ;
+    mko:endDate "1908-01-01"^^xsd:date ;
+    mko:partOf mk:MacedonianHistory1885_1910 ;
+    mko:startDate "1893-01-01"^^xsd:date ;
+    mko:tookPlaceIn mk:Q103251 ;
+    owl:sameAs wd:Q1277369 ;
+    time:hasTime [ a time:Interval ;
+            time:hasBeginning "1893-01-01"^^xsd:date ;
+            time:hasEnd "1908-01-01"^^xsd:date ] .
+
 mk:Q1280960 a mko:Person ;
     rdfs:label "Венко Марковски"@mk ;
     mko:birthDate "1915-03-05"^^xsd:date ;
@@ -3218,6 +3331,16 @@ mk:Q12875512 a mko:Person ;
     mko:deathDate "1879-10-01"^^xsd:date ;
     mko:occupation "воено лице"@en ;
     owl:sameAs wd:Q12875512 .
+
+mk:Q1290184 a mko:HistoricalEvent ;
+    mko:endDate "1908-11-22"^^xsd:date ;
+    mko:partOf mk:MacedonianHistory1885_1910 ;
+    mko:startDate "1908-11-14"^^xsd:date ;
+    mko:tookPlaceIn mk:Q157246 ;
+    owl:sameAs wd:Q1290184 ;
+    time:hasTime [ a time:Interval ;
+            time:hasBeginning "1908-11-14"^^xsd:date ;
+            time:hasEnd "1908-11-22"^^xsd:date ] .
 
 mk:Q12904586 a mko:Person ;
     rdfs:label "Љубен Лапе"@mk ;
@@ -3263,6 +3386,12 @@ mk:Q13045607 a mko:Person ;
     mko:occupation "новинар"@en ;
     rdfs:comment "Albanian activist and educator (ca. 1870–1949)"@en ;
     owl:sameAs wd:Q13045607 .
+
+mk:Q130476196 a mko:HistoricalDocument ;
+    rdfs:label "Q130476196"@mk ;
+    mko:authoredBy mk:Q12296175 ;
+    mko:inLanguage "романски јазик"@en ;
+    owl:sameAs wd:Q130476196 .
 
 mk:Q131137820 a mko:Person ;
     rdfs:label "Panteley Yanev"@mk ;
@@ -3995,15 +4124,6 @@ mk:Q19612344 a mko:Person ;
     rdfs:comment "политичар"@en ;
     owl:sameAs wd:Q19612344 .
 
-mk:Q1988099 a mko:Person ;
-    rdfs:label "Тодор Павлов"@mk ;
-    mko:birthDate "1890-02-14"^^xsd:date ;
-    mko:bornIn mk:Q147243 ;
-    mko:deathDate "1977-05-08"^^xsd:date ;
-    mko:occupation "aesthetician"@en ;
-    rdfs:comment "Regent of Bulgaria (1890–1977)"@en ;
-    owl:sameAs wd:Q1988099 .
-
 mk:Q20499222 a mko:Person ;
     rdfs:label "Q20499222"@mk ;
     mko:birthDate "1864-01-01"^^xsd:date ;
@@ -4088,4 +4208,360 @@ mk:Q2351106 a mko:Person ;
     mko:occupation "политичар"@en ;
     rdfs:comment "политичар"@en ;
     owl:sameAs wd:Q2351106 .
+
+mk:Q2466285 a mko:Organization ;
+    rdfs:label "Македонска академија на науките и уметностите"@mk ;
+    mko:foundingDate "1967-01-01"^^xsd:date ;
+    mko:headquarteredIn mk:Q384 ;
+    rdfs:comment "национална академија на науките и уметностите на Македонија"@en ;
+    owl:sameAs wd:Q2466285 .
+
+mk:Q266063 a mko:Organization ;
+    rdfs:label "Словенечка академија на науките и уметностите"@mk ;
+    mko:foundingDate "1938-01-01"^^xsd:date ;
+    mko:headquarteredIn mk:Q437 ;
+    rdfs:comment "national academy of Slovenia"@en ;
+    owl:sameAs wd:Q266063 .
+
+mk:Q275683 a mko:HistoricalEvent ;
+    mko:partOf mk:MacedonianHistory1885_1910 ;
+    owl:sameAs wd:Q275683 .
+
+mk:Q31183905 a mko:HistoricalEvent ;
+    mko:partOf mk:MacedonianHistory1885_1910 ;
+    mko:tookPlaceIn mk:Q221 ;
+    owl:sameAs wd:Q31183905 .
+
+mk:Q3127176 a mko:HistoricalEvent ;
+    mko:partOf mk:MacedonianHistory1885_1910 ;
+    mko:startDate "1892-06-21"^^xsd:date ;
+    mko:tookPlaceIn mk:Q221 ;
+    owl:sameAs wd:Q3127176 ;
+    time:hasTime [ a time:Interval ;
+            time:hasBeginning "1892-06-21"^^xsd:date ] .
+
+mk:Q3396942 a mko:Organization ;
+    rdfs:label "Македонски комитет"@mk ;
+    mko:dissolutionDate "1905-01-01"^^xsd:date ;
+    mko:foundingDate "1895-01-01"^^xsd:date ;
+    rdfs:comment "Bulgarian revolutionary organization"@en ;
+    owl:sameAs wd:Q3396942 .
+
+mk:Q3401248 a mko:HistoricalEvent ;
+    mko:partOf mk:MacedonianHistory1885_1910 ;
+    mko:tookPlaceIn mk:Q157034 ;
+    owl:sameAs wd:Q3401248 .
+
+mk:Q396058 a mko:Organization ;
+    rdfs:label "Привремено претставништво на поранешната Внатрешна организација"@mk ;
+    mko:dissolutionDate "1920-01-01"^^xsd:date ;
+    mko:foundingDate "1919-01-01"^^xsd:date ;
+    rdfs:comment "organization"@en ;
+    owl:sameAs wd:Q396058 .
+
+mk:Q41726 a mko:Organization ;
+    rdfs:label "слободно ѕидарство"@mk ;
+    mko:foundingDate "1717-01-01"^^xsd:date ;
+    rdfs:comment "group of fraternal organizations"@en ;
+    owl:sameAs wd:Q41726 .
+
+mk:Q4872396 a mko:HistoricalEvent ;
+    mko:partOf mk:MacedonianHistory1885_1910 ;
+    mko:tookPlaceIn mk:Q221 ;
+    owl:sameAs wd:Q4872396 .
+
+mk:Q488297 a mko:Organization ;
+    rdfs:label "Македонска револуционерна организација"@mk ;
+    mko:dissolutionDate "1934-01-01"^^xsd:date ;
+    mko:foundingDate "1893-01-01"^^xsd:date ;
+    rdfs:comment "revolutionary national liberation movement in Ottoman territories in Europe in the late 19th and early 20th centuries"@en ;
+    owl:sameAs wd:Q488297 .
+
+mk:Q634186 a mko:Organization ;
+    rdfs:label "Филики Етерија"@mk ;
+    mko:dissolutionDate "1822-01-01"^^xsd:date ;
+    mko:foundingDate "1814-09-26"^^xsd:date ;
+    mko:headquarteredIn mk:Q406 ;
+    rdfs:comment "19th-century secret society opposing Ottoman rule in Greece"@en ;
+    owl:sameAs wd:Q634186 .
+
+mk:Q651690 a mko:Organization ;
+    rdfs:label "Полска академија на науките"@mk ;
+    mko:foundingDate "1951-10-30"^^xsd:date ;
+    mko:headquarteredIn mk:Q167566 ;
+    rdfs:comment "national academy of sciences for Poland"@en ;
+    owl:sameAs wd:Q651690 .
+
+mk:Q83172 a mko:Organization ;
+    rdfs:label "Руска академија на науките"@mk ;
+    mko:foundingDate "1724-02-08"^^xsd:date ;
+    mko:headquarteredIn mk:Q649 ;
+    rdfs:comment "academy of sciences"@en ;
+    owl:sameAs wd:Q83172 .
+
+mk:Q87902974 a mko:HistoricalDocument ;
+    rdfs:label "Q87902974"@mk ;
+    mko:authoredBy mk:Q12272362 ;
+    mko:dateCreated "1917-01-01"^^xsd:date ;
+    mko:inLanguage "бугарски јазик"@en ;
+    owl:sameAs wd:Q87902974 .
+
+mk:Q901677 a mko:Organization ;
+    rdfs:label "Романска академија"@mk ;
+    mko:foundingDate "1866-04-01"^^xsd:date ;
+    rdfs:comment "Romanian Academy of Sciences and Culture"@en ;
+    owl:sameAs wd:Q901677 .
+
+mko:Period a owl:Class ;
+    rdfs:label "Period"@en ;
+    rdfs:comment "A named historical interval"@en .
+
+mk:Q12272362 a mko:Person ;
+    rdfs:label "Арсени Костенцев"@mk ;
+    mko:birthDate "1842-08-15"^^xsd:date ;
+    mko:bornIn mk:Q147243 ;
+    mko:deathDate "1921-11-06"^^xsd:date ;
+    mko:occupation "писател"@en ;
+    owl:sameAs wd:Q12272362 .
+
+mk:Q12284481 a mko:Place ;
+    rdfs:label "Крчово"@mk ;
+    mko:locatedInCountry mk:Q41 ;
+    geo:asWKT "Point(23.57951 41.31403)" ;
+    rdfs:comment "village in Serres, Greece"@en ;
+    owl:sameAs wd:Q12284481 .
+
+mk:Q12296175 a mko:Person ;
+    rdfs:label "Theodor Capidan"@mk ;
+    mko:birthDate "1879-04-28"^^xsd:date ;
+    mko:bornIn mk:Q157032 ;
+    mko:deathDate "1953-09-01"^^xsd:date ;
+    mko:occupation "dialectologist"@en ;
+    rdfs:comment "Romanian linguist"@en ;
+    owl:sameAs wd:Q12296175 .
+
+mk:Q157034 a mko:Place ;
+    rdfs:label "Крушево"@mk ;
+    mko:locatedInCountry mk:Q221 ;
+    geo:asWKT "Point(21.248333333 41.37)" ;
+    rdfs:comment "град во Општина Крушево"@en ;
+    owl:sameAs wd:Q157034 .
+
+mk:Q162009 a mko:Place ;
+    rdfs:label "Македонски Брод"@mk ;
+    mko:locatedInCountry mk:Q221 ;
+    geo:asWKT "Point(21.215277777 41.513333333)" ;
+    rdfs:comment "град во Општина Македонски Брод"@en ;
+    owl:sameAs wd:Q162009 .
+
+mk:Q164741 a mko:Place ;
+    rdfs:label "Љубојно"@mk ;
+    mko:locatedInCountry mk:Q221 ;
+    geo:asWKT "Point(21.137777777 40.895)" ;
+    rdfs:comment "село во Општина Ресен"@en ;
+    owl:sameAs wd:Q164741 .
+
+mk:Q168501 a mko:Place ;
+    rdfs:label "Косовски Вилает"@mk ;
+    mko:locatedInCountry mk:Q12560 ;
+    rdfs:comment "првостепена османлиска покраина"@en ;
+    owl:sameAs wd:Q168501 .
+
+mk:Q3395964 a mko:Place ;
+    rdfs:label "Куфалово"@mk ;
+    mko:locatedInCountry mk:Q41 ;
+    geo:asWKT "Point(22.576666666 40.779166666)" ;
+    rdfs:comment "град во Солунско, Егејска Македонија, Грција"@en ;
+    owl:sameAs wd:Q3395964 .
+
+mk:Q36565 a mko:Place ;
+    rdfs:label "Горно Трогерци"@mk ;
+    mko:locatedInCountry mk:Q221 ;
+    geo:asWKT "Point(22.17 41.8578)" ;
+    rdfs:comment "село во Општина Карбинци"@en ;
+    owl:sameAs wd:Q36565 .
+
+mk:Q36567 a mko:Place ;
+    rdfs:label "Долно Трогерци"@mk ;
+    mko:locatedInCountry mk:Q221 ;
+    geo:asWKT "Point(22.1719 41.8383)" ;
+    rdfs:comment "село во Општина Карбинци"@en ;
+    owl:sameAs wd:Q36567 .
+
+mk:Q62360 a mko:Place ;
+    rdfs:label "Јагол Доленци"@mk ;
+    mko:locatedInCountry mk:Q221 ;
+    geo:asWKT "Point(21.0153 41.6278)" ;
+    rdfs:comment "село во Општина Кичево"@en ;
+    owl:sameAs wd:Q62360 .
+
+mk:Q83958 a mko:Place ;
+    rdfs:label "Античка Македонија"@mk ;
+    mko:locatedInCountry mk:Q83958 ;
+    geo:asWKT "Point(22.322759611 40.477965805)" ;
+    rdfs:comment "античка држава на Балканот"@en ;
+    owl:sameAs wd:Q83958 .
+
+mk:Q144465 a mko:Place ;
+    rdfs:label "Зајас"@mk ;
+    mko:locatedInCountry mk:Q221 ;
+    geo:asWKT "Point(20.93336389 41.60002222)" ;
+    rdfs:comment "село во Општина Кичево"@en ;
+    owl:sameAs wd:Q144465 .
+
+mk:Q162019 a mko:Place ;
+    rdfs:label "Македонска Каменица"@mk ;
+    mko:locatedInCountry mk:Q221 ;
+    geo:asWKT "Point(22.591666666 42.019722222)" ;
+    rdfs:comment "град во Општина Македонска Каменица"@en ;
+    owl:sameAs wd:Q162019 .
+
+mk:Q406 a mko:Place ;
+    rdfs:label "Истанбул"@mk ;
+    mko:locatedInCountry mk:Q43 ;
+    geo:asWKT "Point(28.960277777 41.01)" ;
+    rdfs:comment "largest city in Turkey"@en ;
+    owl:sameAs wd:Q406 .
+
+mk:Q1988099 a mko:Person ;
+    rdfs:label "Тодор Павлов"@mk ;
+    mko:birthDate "1890-02-14"^^xsd:date ;
+    mko:bornIn mk:Q147243 ;
+    mko:deathDate "1977-05-08"^^xsd:date ;
+    mko:occupation "aesthetician"@en ;
+    rdfs:comment "Regent of Bulgaria (1890–1977)"@en ;
+    owl:sameAs wd:Q1988099 .
+
+mko:HistoricalDocument a owl:Class ;
+    rdfs:label "Historical document"@en ;
+    rdfs:comment "A written primary source"@en .
+
+mk:Q36559 a mko:Place ;
+    rdfs:label "Горни Балван"@mk ;
+    mko:locatedInCountry mk:Q221 ;
+    geo:asWKT "Point(22.1992 41.8419)" ;
+    rdfs:comment "село во Општина Карбинци"@en ;
+    owl:sameAs wd:Q36559 .
+
+mk:Q103251 a mko:Place ;
+    rdfs:label "Македонија"@mk ;
+    mko:locatedInCountry mk:Q12560 ;
+    geo:asWKT "Point(22.508621075 41.32925475)" ;
+    rdfs:comment "географска и историска област"@en ;
+    owl:sameAs wd:Q103251 .
+
+mko:HistoricalEvent a owl:Class ;
+    rdfs:label "Historical event"@en ;
+    rdfs:comment "A discrete historical occurrence"@en .
+
+mk:MacedonianHistory1885_1910 a mko:Period ;
+    rdfs:label "Macedonian history 1885-1910"@en ;
+    mko:endDate "1910"^^xsd:gYear ;
+    mko:startDate "1885"^^xsd:gYear ;
+    time:hasTime [ a time:Interval ;
+            time:hasBeginning "1885"^^xsd:gYear ;
+            time:hasEnd "1910"^^xsd:gYear ] .
+
+mk:Q221320 a mko:Place ;
+    rdfs:label "Русиново"@mk ;
+    mko:locatedInCountry mk:Q221 ;
+    geo:asWKT "Point(22.8075 41.687222222)" ;
+    rdfs:comment "село во Општина Берово"@en ;
+    owl:sameAs wd:Q221320 .
+
+mk:Q162952 a mko:Place ;
+    rdfs:label "Пехчево"@mk ;
+    mko:locatedInCountry mk:Q221 ;
+    geo:asWKT "Point(22.890555555 41.759166666)" ;
+    rdfs:comment "град во Општина Пехчево"@en ;
+    owl:sameAs wd:Q162952 .
+
+mk:Q164954 a mko:Place ;
+    rdfs:label "Неготино"@mk ;
+    mko:locatedInCountry mk:Q221 ;
+    geo:asWKT "Point(22.089166666 41.483888888)" ;
+    rdfs:comment "град во Општина Неготино"@en ;
+    owl:sameAs wd:Q164954 .
+
+mko:Organization a owl:Class ;
+    rdfs:label "Organization"@en ;
+    rdfs:comment "A collective actor"@en .
+
+mk:Q214344 a mko:Place ;
+    rdfs:label "Кочани"@mk ;
+    mko:locatedInCountry mk:Q221 ;
+    geo:asWKT "Point(22.411388888 41.921111111)" ;
+    rdfs:comment "град во Општина Кочани"@en ;
+    owl:sameAs wd:Q214344 .
+
+mk:Q221 a mko:Place ;
+    rdfs:label "Македонија"@mk ;
+    mko:locatedInCountry mk:Q221 ;
+    geo:asWKT "Point(21.716667 41.65)" ;
+    rdfs:comment "земја во Југоисточна Европа"@en ;
+    owl:sameAs wd:Q221 .
+
+mko:Place a owl:Class ;
+    rdfs:label "Place"@en ;
+    rdfs:comment "A geographic location"@en .
+
+mk:Q54452 a mko:Place ;
+    rdfs:label "Куманово"@mk ;
+    mko:locatedInCountry mk:Q221 ;
+    geo:asWKT "Point(21.714444444 42.132222222)" ;
+    rdfs:comment "град и седиште на Општина Куманово, Македонија"@en ;
+    owl:sameAs wd:Q54452 .
+
+mk:Q161827 a mko:Place ;
+    rdfs:label "Ресен"@mk ;
+    mko:locatedInCountry mk:Q221 ;
+    geo:asWKT "Point(21.012222222 41.088888888)" ;
+    rdfs:comment "град во Општина Ресен"@en ;
+    owl:sameAs wd:Q161827 .
+
+mk:Q48814 a mko:Place ;
+    rdfs:label "Струмица"@mk ;
+    mko:locatedInCountry mk:Q221 ;
+    geo:asWKT "Point(22.643055555 41.4375)" ;
+    rdfs:comment "град во Македонија"@en ;
+    owl:sameAs wd:Q48814 .
+
+mk:Q156858 a mko:Place ;
+    rdfs:label "Струга"@mk ;
+    mko:locatedInCountry mk:Q221 ;
+    geo:asWKT "Point(20.678888888 41.1775)" ;
+    rdfs:comment "град во Општина Струга"@en ;
+    owl:sameAs wd:Q156858 .
+
+mk:Q384 a mko:Place ;
+    rdfs:label "Скопје"@mk ;
+    mko:locatedInCountry mk:Q221 ;
+    geo:asWKT "Point(21.431666666 41.996111111)" ;
+    rdfs:comment "главен град на Македонија"@en ;
+    owl:sameAs wd:Q384 .
+
+mk:Q147243 a mko:Place ;
+    rdfs:label "Штип"@mk ;
+    mko:locatedInCountry mk:Q221 ;
+    geo:asWKT "Point(22.191388888 41.735833333)" ;
+    rdfs:comment "град во Општина Штип"@en ;
+    owl:sameAs wd:Q147243 .
+
+mk:Q157246 a mko:Place ;
+    rdfs:label "Битола"@mk ;
+    mko:locatedInCountry mk:Q221 ;
+    geo:asWKT "Point(21.334722222 41.031944444)" ;
+    rdfs:comment "град и седиште на Општина Битола, Македонија"@en ;
+    owl:sameAs wd:Q157246 .
+
+mk:Q157032 a mko:Place ;
+    rdfs:label "Прилеп"@mk ;
+    mko:locatedInCountry mk:Q221 ;
+    geo:asWKT "Point(21.554166666 41.346388888)" ;
+    rdfs:comment "град во Македонија"@en ;
+    owl:sameAs wd:Q157032 .
+
+mko:Person a owl:Class ;
+    rdfs:label "Person"@en ;
+    rdfs:comment "A historical individual"@en .
 

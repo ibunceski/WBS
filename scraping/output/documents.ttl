@@ -5,9 +5,40 @@
 @prefix wd: <http://www.wikidata.org/entity/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-mk:Q56751727 a mko:HistoricalDocument ;
-    rdfs:label "Declaration of Vasil Shinanov on joining the Ilinden organization with notes about his revolutionary activities"@mk ;
-    mko:authoredBy mk:Q47462142 ;
-    mko:dateCreated "1933-01-01"^^xsd:date ;
-    owl:sameAs wd:Q56751727 .
+mk:Q121930764 a mko:HistoricalDocument ;
+    rdfs:label "Q121930764"@mk ;
+    mko:authoredBy mk:Q1988099 ;
+    mko:dateCreated "1950-01-01"^^xsd:date ;
+    mko:inLanguage "чешки јазик"@en ;
+    rdfs:comment "book edition published in 1950"@en ;
+    owl:sameAs wd:Q121930764 .
+
+mk:Q121930766 a mko:HistoricalDocument ;
+    rdfs:label "Q121930766"@mk ;
+    mko:authoredBy mk:Q1988099 ;
+    mko:dateCreated "1949-01-01"^^xsd:date ;
+    mko:inLanguage "чешки јазик"@en ;
+    rdfs:comment "book edition published in 1949"@en ;
+    owl:sameAs wd:Q121930766 .
+
+mk:Q121987911 a mko:HistoricalDocument ;
+    rdfs:label "Q121987911"@mk ;
+    mko:authoredBy mk:Q1988099 ;
+    mko:dateCreated "1950-01-01"^^xsd:date ;
+    mko:inLanguage "чешки јазик"@en ;
+    rdfs:comment "book edition published in 1950"@en ;
+    owl:sameAs wd:Q121987911 .
+
+mk:Q130476196 a mko:HistoricalDocument ;
+    rdfs:label "Q130476196"@mk ;
+    mko:authoredBy mk:Q12296175 ;
+    mko:inLanguage "романски јазик"@en ;
+    owl:sameAs wd:Q130476196 .
+
+mk:Q87902974 a mko:HistoricalDocument ;
+    rdfs:label "Q87902974"@mk ;
+    mko:authoredBy mk:Q12272362 ;
+    mko:dateCreated "1917-01-01"^^xsd:date ;
+    mko:inLanguage "бугарски јазик"@en ;
+    owl:sameAs wd:Q87902974 .
 

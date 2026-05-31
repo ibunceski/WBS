@@ -5,35 +5,61 @@
 @prefix wd: <http://www.wikidata.org/entity/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-mk:Q12280280 a mko:Organization ;
-    rdfs:label "Задгранично претставништво"@mk ;
-    mko:dissolutionDate "1928-01-01"^^xsd:date ;
-    mko:foundingDate "1896-01-01"^^xsd:date ;
-    rdfs:comment "Bulgarian revolutionary instituition"@en ;
-    owl:sameAs wd:Q12280280 .
-
-mk:Q12293031 a mko:Organization ;
-    rdfs:label "Зборна партизанска чета на МОО"@mk ;
-    owl:sameAs wd:Q12293031 .
-
-mk:Q1771831 a mko:Organization ;
-    rdfs:label "Крушевска Република"@mk ;
-    mko:dissolutionDate "1903-01-01"^^xsd:date ;
-    mko:foundingDate "1903-01-01"^^xsd:date ;
-    rdfs:comment "поранешна краткотрајна револуционерна држава во Македонија"@en ;
-    owl:sameAs wd:Q1771831 .
-
-mk:Q3404811 a mko:Organization ;
-    rdfs:label "Македонски научен институт"@mk ;
-    mko:foundingDate "1923-01-01"^^xsd:date ;
+mk:Q1003730 a mko:Organization ;
+    rdfs:label "Бугарска академија на науките"@mk ;
+    mko:foundingDate "1869-09-01"^^xsd:date ;
     mko:headquarteredIn mk:Q472 ;
-    rdfs:comment "research institute in Bulgaria"@en ;
-    owl:sameAs wd:Q3404811 .
+    rdfs:comment "academy of sciences"@en ;
+    owl:sameAs wd:Q1003730 .
 
-mk:Q407408 a mko:Organization ;
-    rdfs:label "Македонско-одрински доброволни чети"@mk ;
-    rdfs:comment "volunteer corps of the Bulgarian Army during the Balkan Wars"@en ;
-    owl:sameAs wd:Q407408 .
+mk:Q1132636 a mko:Organization ;
+    rdfs:label "Српска академија на науките и уметностите"@mk ;
+    mko:foundingDate "1841-11-07"^^xsd:date ;
+    mko:headquarteredIn mk:Q3711 ;
+    rdfs:comment "most prominent academic institution in Serbia"@en ;
+    owl:sameAs wd:Q1132636 .
+
+mk:Q12274352 a mko:Organization ;
+    rdfs:label "Q12274352"@mk ;
+    owl:sameAs wd:Q12274352 .
+
+mk:Q12295889 a mko:Organization ;
+    rdfs:label "Сојуз на македонските емигрантски организации"@mk ;
+    owl:sameAs wd:Q12295889 .
+
+mk:Q2466285 a mko:Organization ;
+    rdfs:label "Македонска академија на науките и уметностите"@mk ;
+    mko:foundingDate "1967-01-01"^^xsd:date ;
+    mko:headquarteredIn mk:Q384 ;
+    rdfs:comment "национална академија на науките и уметностите на Македонија"@en ;
+    owl:sameAs wd:Q2466285 .
+
+mk:Q266063 a mko:Organization ;
+    rdfs:label "Словенечка академија на науките и уметностите"@mk ;
+    mko:foundingDate "1938-01-01"^^xsd:date ;
+    mko:headquarteredIn mk:Q437 ;
+    rdfs:comment "national academy of Slovenia"@en ;
+    owl:sameAs wd:Q266063 .
+
+mk:Q3396942 a mko:Organization ;
+    rdfs:label "Македонски комитет"@mk ;
+    mko:dissolutionDate "1905-01-01"^^xsd:date ;
+    mko:foundingDate "1895-01-01"^^xsd:date ;
+    rdfs:comment "Bulgarian revolutionary organization"@en ;
+    owl:sameAs wd:Q3396942 .
+
+mk:Q396058 a mko:Organization ;
+    rdfs:label "Привремено претставништво на поранешната Внатрешна организација"@mk ;
+    mko:dissolutionDate "1920-01-01"^^xsd:date ;
+    mko:foundingDate "1919-01-01"^^xsd:date ;
+    rdfs:comment "organization"@en ;
+    owl:sameAs wd:Q396058 .
+
+mk:Q41726 a mko:Organization ;
+    rdfs:label "слободно ѕидарство"@mk ;
+    mko:foundingDate "1717-01-01"^^xsd:date ;
+    rdfs:comment "group of fraternal organizations"@en ;
+    owl:sameAs wd:Q41726 .
 
 mk:Q488297 a mko:Organization ;
     rdfs:label "Македонска револуционерна организација"@mk ;
@@ -41,4 +67,32 @@ mk:Q488297 a mko:Organization ;
     mko:foundingDate "1893-01-01"^^xsd:date ;
     rdfs:comment "revolutionary national liberation movement in Ottoman territories in Europe in the late 19th and early 20th centuries"@en ;
     owl:sameAs wd:Q488297 .
+
+mk:Q634186 a mko:Organization ;
+    rdfs:label "Филики Етерија"@mk ;
+    mko:dissolutionDate "1822-01-01"^^xsd:date ;
+    mko:foundingDate "1814-09-26"^^xsd:date ;
+    mko:headquarteredIn mk:Q406 ;
+    rdfs:comment "19th-century secret society opposing Ottoman rule in Greece"@en ;
+    owl:sameAs wd:Q634186 .
+
+mk:Q651690 a mko:Organization ;
+    rdfs:label "Полска академија на науките"@mk ;
+    mko:foundingDate "1951-10-30"^^xsd:date ;
+    mko:headquarteredIn mk:Q167566 ;
+    rdfs:comment "national academy of sciences for Poland"@en ;
+    owl:sameAs wd:Q651690 .
+
+mk:Q83172 a mko:Organization ;
+    rdfs:label "Руска академија на науките"@mk ;
+    mko:foundingDate "1724-02-08"^^xsd:date ;
+    mko:headquarteredIn mk:Q649 ;
+    rdfs:comment "academy of sciences"@en ;
+    owl:sameAs wd:Q83172 .
+
+mk:Q901677 a mko:Organization ;
+    rdfs:label "Романска академија"@mk ;
+    mko:foundingDate "1866-04-01"^^xsd:date ;
+    rdfs:comment "Romanian Academy of Sciences and Culture"@en ;
+    owl:sameAs wd:Q901677 .
 

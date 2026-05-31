@@ -5,19 +5,12 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix wd: <http://www.wikidata.org/entity/> .
 
-mk:Q11058060 a mko:Place ;
-    rdfs:label "Гаваљанци"@mk ;
-    mko:locatedInCountry mk:Q41 ;
-    geo:asWKT "Point(22.69504 41.04293)" ;
-    rdfs:comment "село во Кукушко, Грција"@en ;
-    owl:sameAs wd:Q11058060 .
-
-mk:Q1223508 a mko:Place ;
-    rdfs:label "Охрид"@mk ;
-    mko:locatedInCountry mk:Q221 ;
-    geo:asWKT "Point(20.801944444 41.116944444)" ;
-    rdfs:comment "град во Општина Охрид"@en ;
-    owl:sameAs wd:Q1223508 .
+mk:Q103251 a mko:Place ;
+    rdfs:label "Македонија"@mk ;
+    mko:locatedInCountry mk:Q12560 ;
+    geo:asWKT "Point(22.508621075 41.32925475)" ;
+    rdfs:comment "географска и историска област"@en ;
+    owl:sameAs wd:Q103251 .
 
 mk:Q12284481 a mko:Place ;
     rdfs:label "Крчово"@mk ;
@@ -26,12 +19,12 @@ mk:Q12284481 a mko:Place ;
     rdfs:comment "village in Serres, Greece"@en ;
     owl:sameAs wd:Q12284481 .
 
-mk:Q1290199 a mko:Place ;
-    rdfs:label "Галичник"@mk ;
+mk:Q144465 a mko:Place ;
+    rdfs:label "Зајас"@mk ;
     mko:locatedInCountry mk:Q221 ;
-    geo:asWKT "Point(20.653055555 41.594166666)" ;
-    rdfs:comment "село во Општина Маврово и Ростуше"@en ;
-    owl:sameAs wd:Q1290199 .
+    geo:asWKT "Point(20.93336389 41.60002222)" ;
+    rdfs:comment "село во Општина Кичево"@en ;
+    owl:sameAs wd:Q144465 .
 
 mk:Q147243 a mko:Place ;
     rdfs:label "Штип"@mk ;
@@ -40,19 +33,26 @@ mk:Q147243 a mko:Place ;
     rdfs:comment "град во Општина Штип"@en ;
     owl:sameAs wd:Q147243 .
 
+mk:Q156858 a mko:Place ;
+    rdfs:label "Струга"@mk ;
+    mko:locatedInCountry mk:Q221 ;
+    geo:asWKT "Point(20.678888888 41.1775)" ;
+    rdfs:comment "град во Општина Струга"@en ;
+    owl:sameAs wd:Q156858 .
+
+mk:Q157032 a mko:Place ;
+    rdfs:label "Прилеп"@mk ;
+    mko:locatedInCountry mk:Q221 ;
+    geo:asWKT "Point(21.554166666 41.346388888)" ;
+    rdfs:comment "град во Македонија"@en ;
+    owl:sameAs wd:Q157032 .
+
 mk:Q157034 a mko:Place ;
     rdfs:label "Крушево"@mk ;
     mko:locatedInCountry mk:Q221 ;
     geo:asWKT "Point(21.248333333 41.37)" ;
     rdfs:comment "град во Општина Крушево"@en ;
     owl:sameAs wd:Q157034 .
-
-mk:Q157050 a mko:Place ;
-    rdfs:label "Велес"@mk ;
-    mko:locatedInCountry mk:Q221 ;
-    geo:asWKT "Point(21.775277777 41.715277777)" ;
-    rdfs:comment "град и седиште на Општина Велес"@en ;
-    owl:sameAs wd:Q157050 .
 
 mk:Q157246 a mko:Place ;
     rdfs:label "Битола"@mk ;
@@ -68,124 +68,88 @@ mk:Q161827 a mko:Place ;
     rdfs:comment "град во Општина Ресен"@en ;
     owl:sameAs wd:Q161827 .
 
-mk:Q168057 a mko:Place ;
-    rdfs:label "Крајова"@mk ;
-    mko:locatedInCountry mk:Q218 ;
-    geo:asWKT "Point(23.816666666 44.333333333)" ;
-    rdfs:comment "city in Dolj County, Romania"@en ;
-    owl:sameAs wd:Q168057 .
-
-mk:Q2014187 a mko:Place ;
-    rdfs:label "Drabishna"@mk ;
-    mko:locatedInCountry mk:Q219 ;
-    geo:asWKT "Point(26.157114 41.502338)" ;
-    rdfs:comment "village in Ivaylovgrad municipality, Haskovo oblast, Bulgaria"@en ;
-    owl:sameAs wd:Q2014187 .
-
-mk:Q202272 a mko:Place ;
-    rdfs:label "Лерин"@mk ;
-    mko:locatedInCountry mk:Q41 ;
-    geo:asWKT "Point(21.408888888 40.782777777)" ;
-    rdfs:comment "град во Егејска Македонија, Грција"@en ;
-    owl:sameAs wd:Q202272 .
-
-mk:Q2924182 a mko:Place ;
-    rdfs:label "Браилово"@mk ;
+mk:Q162009 a mko:Place ;
+    rdfs:label "Македонски Брод"@mk ;
     mko:locatedInCountry mk:Q221 ;
-    geo:asWKT "Point(21.461666666 41.477222222)" ;
-    rdfs:comment "село во Општина Долнени"@en ;
-    owl:sameAs wd:Q2924182 .
+    geo:asWKT "Point(21.215277777 41.513333333)" ;
+    rdfs:comment "град во Општина Македонски Брод"@en ;
+    owl:sameAs wd:Q162009 .
 
-mk:Q2924818 a mko:Place ;
-    rdfs:label "Брезово"@mk ;
+mk:Q162019 a mko:Place ;
+    rdfs:label "Македонска Каменица"@mk ;
     mko:locatedInCountry mk:Q221 ;
-    geo:asWKT "Point(21.1272 41.3422)" ;
-    rdfs:comment "село во Општина Демир Хисар"@en ;
-    owl:sameAs wd:Q2924818 .
+    geo:asWKT "Point(22.591666666 42.019722222)" ;
+    rdfs:comment "град во Општина Македонска Каменица"@en ;
+    owl:sameAs wd:Q162019 .
 
-mk:Q2989458 a mko:Place ;
-    rdfs:label "Палат"@mk ;
-    mko:locatedInCountry mk:Q219 ;
-    geo:asWKT "Point(23.19032 41.59162)" ;
-    rdfs:comment "село во околината на Благоевград, (Пиринска Македонија) Бугарија"@en ;
-    owl:sameAs wd:Q2989458 .
-
-mk:Q3074547 a mko:Place ;
-    rdfs:label "Света"@mk ;
+mk:Q162952 a mko:Place ;
+    rdfs:label "Пехчево"@mk ;
     mko:locatedInCountry mk:Q221 ;
-    geo:asWKT "Point(21.2725 41.267222222)" ;
-    rdfs:comment "село во Општина Демир Хисар"@en ;
-    owl:sameAs wd:Q3074547 .
+    geo:asWKT "Point(22.890555555 41.759166666)" ;
+    rdfs:comment "град во Општина Пехчево"@en ;
+    owl:sameAs wd:Q162952 .
 
-mk:Q3084463 a mko:Place ;
-    rdfs:label "Могила"@mk ;
+mk:Q164741 a mko:Place ;
+    rdfs:label "Љубојно"@mk ;
     mko:locatedInCountry mk:Q221 ;
-    geo:asWKT "Point(21.378611111 41.108333333)" ;
-    rdfs:comment "село во Општина Могила"@en ;
-    owl:sameAs wd:Q3084463 .
+    geo:asWKT "Point(21.137777777 40.895)" ;
+    rdfs:comment "село во Општина Ресен"@en ;
+    owl:sameAs wd:Q164741 .
 
-mk:Q3136266 a mko:Place ;
-    rdfs:label "Воѓани"@mk ;
+mk:Q164954 a mko:Place ;
+    rdfs:label "Неготино"@mk ;
     mko:locatedInCountry mk:Q221 ;
-    geo:asWKT "Point(21.3394 41.2836)" ;
-    rdfs:comment "село во Општина Кривогаштани, Македонија"@en ;
-    owl:sameAs wd:Q3136266 .
+    geo:asWKT "Point(22.089166666 41.483888888)" ;
+    rdfs:comment "град во Општина Неготино"@en ;
+    owl:sameAs wd:Q164954 .
 
-mk:Q3136412 a mko:Place ;
-    rdfs:label "Смилево"@mk ;
+mk:Q168501 a mko:Place ;
+    rdfs:label "Косовски Вилает"@mk ;
+    mko:locatedInCountry mk:Q12560 ;
+    rdfs:comment "првостепена османлиска покраина"@en ;
+    owl:sameAs wd:Q168501 .
+
+mk:Q214344 a mko:Place ;
+    rdfs:label "Кочани"@mk ;
     mko:locatedInCountry mk:Q221 ;
-    geo:asWKT "Point(21.111111111 41.155)" ;
-    rdfs:comment "село во Општина Демир Хисар"@en ;
-    owl:sameAs wd:Q3136412 .
+    geo:asWKT "Point(22.411388888 41.921111111)" ;
+    rdfs:comment "град во Општина Кочани"@en ;
+    owl:sameAs wd:Q214344 .
 
-mk:Q3299907 a mko:Place ;
-    rdfs:label "Косинец"@mk ;
+mk:Q221320 a mko:Place ;
+    rdfs:label "Русиново"@mk ;
+    mko:locatedInCountry mk:Q221 ;
+    geo:asWKT "Point(22.8075 41.687222222)" ;
+    rdfs:comment "село во Општина Берово"@en ;
+    owl:sameAs wd:Q221320 .
+
+mk:Q3395964 a mko:Place ;
+    rdfs:label "Куфалово"@mk ;
     mko:locatedInCountry mk:Q41 ;
-    geo:asWKT "Point(21.07972222 40.57888889)" ;
-    rdfs:comment "село во Костурско, Егејскиот дел на Македонија"@en ;
-    owl:sameAs wd:Q3299907 .
+    geo:asWKT "Point(22.576666666 40.779166666)" ;
+    rdfs:comment "град во Солунско, Егејска Македонија, Грција"@en ;
+    owl:sameAs wd:Q3395964 .
 
-mk:Q3301467 a mko:Place ;
-    rdfs:label "Врбник"@mk ;
-    mko:locatedInCountry mk:Q222 ;
-    geo:asWKT "Point(21.02388889 40.64444444)" ;
-    rdfs:comment "village in Korçë, Albania"@en ;
-    owl:sameAs wd:Q3301467 .
+mk:Q36559 a mko:Place ;
+    rdfs:label "Горни Балван"@mk ;
+    mko:locatedInCountry mk:Q221 ;
+    geo:asWKT "Point(22.1992 41.8419)" ;
+    rdfs:comment "село во Општина Карбинци"@en ;
+    owl:sameAs wd:Q36559 .
 
-mk:Q3301607 a mko:Place ;
-    rdfs:label "Крчишта"@mk ;
-    mko:locatedInCountry mk:Q41 ;
-    geo:asWKT "Point(21.038888888 40.533888888)" ;
-    rdfs:comment "село во Костурско, Егејска Македонија"@en ;
-    owl:sameAs wd:Q3301607 .
+mk:Q36565 a mko:Place ;
+    rdfs:label "Горно Трогерци"@mk ;
+    mko:locatedInCountry mk:Q221 ;
+    geo:asWKT "Point(22.17 41.8578)" ;
+    rdfs:comment "село во Општина Карбинци"@en ;
+    owl:sameAs wd:Q36565 .
 
-mk:Q3403660 a mko:Place ;
-    rdfs:label "Арменско"@mk ;
-    mko:locatedInCountry mk:Q41 ;
-    geo:asWKT "Point(21.303333333 40.776944444)" ;
-    rdfs:comment "село во Леринско, Егејска Македонија"@en ;
-    owl:sameAs wd:Q3403660 .
-
-mk:Q3403675 a mko:Place ;
-    rdfs:label "Буф"@mk ;
-    mko:locatedInCountry mk:Q41 ;
-    geo:asWKT "Point(21.301111111 40.815555555)" ;
-    rdfs:comment "село во Леринско, Егејска Македонија, Грција"@en ;
-    owl:sameAs wd:Q3403675 .
-
-mk:Q3408293 a mko:Place ;
-    rdfs:label "Д’мбени"@mk ;
-    mko:locatedInCountry mk:Q41 ;
-    geo:asWKT "Point(21.143333333 40.582222222)" ;
-    rdfs:comment "село во Костурско, Егејска Македонија, Грција"@en ;
-    owl:sameAs wd:Q3408293 .
-
-mk:Q3657743 a mko:Place ;
-    rdfs:label "İnece"@mk ;
-    mko:locatedInCountry mk:Q43 ;
-    geo:asWKT "Point(27.0667 41.6833)" ;
-    rdfs:comment "town in Kırklareli Province, Turkey"@en ;
-    owl:sameAs wd:Q3657743 .
+mk:Q36567 a mko:Place ;
+    rdfs:label "Долно Трогерци"@mk ;
+    mko:locatedInCountry mk:Q221 ;
+    geo:asWKT "Point(22.1719 41.8383)" ;
+    rdfs:comment "село во Општина Карбинци"@en ;
+    owl:sameAs wd:Q36567 .
 
 mk:Q384 a mko:Place ;
     rdfs:label "Скопје"@mk ;
@@ -194,33 +158,12 @@ mk:Q384 a mko:Place ;
     rdfs:comment "главен град на Македонија"@en ;
     owl:sameAs wd:Q384 .
 
-mk:Q406064 a mko:Place ;
-    rdfs:label "Етрополе"@mk ;
-    mko:locatedInCountry mk:Q219 ;
-    geo:asWKT "Point(23.992376 42.828796)" ;
-    rdfs:comment "city in Etropole municipality, Sofia oblast, Bulgaria"@en ;
-    owl:sameAs wd:Q406064 .
-
-mk:Q406488 a mko:Place ;
-    rdfs:label "Мало Трново"@mk ;
-    mko:locatedInCountry mk:Q219 ;
-    geo:asWKT "Point(27.524269 41.980595)" ;
-    rdfs:comment "city in Malko Tarnovo municipality, Burgas oblast, Bulgaria"@en ;
-    owl:sameAs wd:Q406488 .
-
-mk:Q407340 a mko:Place ;
-    rdfs:label "Чирпан"@mk ;
-    mko:locatedInCountry mk:Q219 ;
-    geo:asWKT "Point(25.33043 42.19813)" ;
-    rdfs:comment "city in Chirpan municipality, Stara Zagora oblast, Bulgaria"@en ;
-    owl:sameAs wd:Q407340 .
-
-mk:Q474643 a mko:Place ;
-    rdfs:label "Баница"@mk ;
-    mko:locatedInCountry mk:Q41 ;
-    geo:asWKT "Point(21.61667 40.76667)" ;
-    rdfs:comment "село во Леринско, Егејска Македонија"@en ;
-    owl:sameAs wd:Q474643 .
+mk:Q406 a mko:Place ;
+    rdfs:label "Истанбул"@mk ;
+    mko:locatedInCountry mk:Q43 ;
+    geo:asWKT "Point(28.960277777 41.01)" ;
+    rdfs:comment "largest city in Turkey"@en ;
+    owl:sameAs wd:Q406 .
 
 mk:Q48814 a mko:Place ;
     rdfs:label "Струмица"@mk ;
@@ -229,12 +172,26 @@ mk:Q48814 a mko:Place ;
     rdfs:comment "град во Македонија"@en ;
     owl:sameAs wd:Q48814 .
 
-mk:Q515814 a mko:Place ;
-    rdfs:label "Зашле"@mk ;
+mk:Q54452 a mko:Place ;
+    rdfs:label "Куманово"@mk ;
     mko:locatedInCountry mk:Q221 ;
-    geo:asWKT "Point(21.143611111 41.372777777)" ;
-    rdfs:comment "село во Општина Демир Хисар"@en ;
-    owl:sameAs wd:Q515814 .
+    geo:asWKT "Point(21.714444444 42.132222222)" ;
+    rdfs:comment "град и седиште на Општина Куманово, Македонија"@en ;
+    owl:sameAs wd:Q54452 .
+
+mk:Q62360 a mko:Place ;
+    rdfs:label "Јагол Доленци"@mk ;
+    mko:locatedInCountry mk:Q221 ;
+    geo:asWKT "Point(21.0153 41.6278)" ;
+    rdfs:comment "село во Општина Кичево"@en ;
+    owl:sameAs wd:Q62360 .
+
+mk:Q83958 a mko:Place ;
+    rdfs:label "Античка Македонија"@mk ;
+    mko:locatedInCountry mk:Q83958 ;
+    geo:asWKT "Point(22.322759611 40.477965805)" ;
+    rdfs:comment "античка држава на Балканот"@en ;
+    owl:sameAs wd:Q83958 .
 
 mk:Q221 a mko:Place ;
     rdfs:label "Македонија"@mk ;
