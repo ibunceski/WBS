@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Macedonian History KG{% endblock %}</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/htmx.org@1.9.12"></script>
+  <link rel="stylesheet" href="{{ url_for('static', path='style.css') }}">
+</head>
+<body class="min-h-screen bg-stone-50 text-stone-900">
+  <header class="border-b border-stone-200 bg-white/90 backdrop-blur">
+    <nav class="mx-auto flex max-w-6xl flex-col gap-4 px-5 py-4 sm:flex-row sm:items-center sm:justify-between">
+      <a href="/" class="font-serif text-xl font-bold tracking-tight text-amber-950">Macedonian History KG</a>
+      <div class="flex flex-wrap gap-2 text-sm font-medium text-stone-700">
+        <a class="nav-link" href="/search">Search</a>
+        <a class="nav-link" href="/timeline">Timeline</a>
+        <a class="nav-link" href="/queries">Queries</a>
+        <a class="nav-link" href="/report">Report</a>
+      </div>
+    </nav>
+  </header>
+  <main class="mx-auto max-w-6xl px-5 py-8">
+    {% block content %}{% endblock %}
+  </main>
+  <footer class="mx-auto max-w-6xl px-5 pb-8 text-sm text-stone-500">
+    FastAPI, Jinja2, HTMX, Tailwind CDN, and Apache Jena Fuseki.
+  </footer>
+</body>
+</html>

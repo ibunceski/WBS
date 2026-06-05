@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block title %}Home | Macedonian History KG{% endblock %}
+{% block content %}
+<section class="hero-panel overflow-hidden rounded-3xl border border-amber-900/10 p-8 shadow-sm sm:p-12">
+  <p class="mb-3 text-sm font-semibold uppercase tracking-[0.28em] text-amber-800">University Knowledge Graph Demo</p>
+  <h1 class="max-w-3xl font-serif text-4xl font-bold leading-tight text-amber-950 sm:text-6xl">
+    Explore Macedonian history as linked data.
+  </h1>
+  <p class="mt-5 max-w-2xl text-lg leading-8 text-stone-700">
+    This demo presents a clean RDF knowledge graph of people, events, places, organizations,
+    historical documents, Wikidata links, and temporal facts through a simple academic web interface.
+  </p>
+  <div class="mt-8 flex flex-wrap gap-3">
+    <a class="primary-button" href="/search">Start Searching</a>
+    <a class="secondary-button" href="/timeline">View Timeline</a>
+  </div>
+</section>
+
+{% if error %}
+  <div class="alert mt-6">{{ error }}</div>
+{% endif %}
+
+<section class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+  <div class="stat-card"><span>Entities</span><strong>{{ stats.entities }}</strong><p>typed RDF resources</p></div>
+  <div class="stat-card"><span>Events</span><strong>{{ stats.events }}</strong><p>historical event nodes</p></div>
+  <div class="stat-card"><span>Places</span><strong>{{ stats.places }}</strong><p>geographic resources</p></div>
+  <div class="stat-card"><span>Wikidata</span><strong>{{ stats.wikidata }}</strong><p>external identity links</p></div>
+  <div class="stat-card"><span>Coverage</span><strong class="text-lg">{{ stats.coverage }}</strong><p>known date range</p></div>
+</section>
+
+<section class="mt-10 grid gap-5 md:grid-cols-4">
+  <a class="feature-card" href="/search"><h2>Search</h2><p>Find people, events, places, organizations, and documents by label.</p></a>
+  <a class="feature-card" href="/timeline"><h2>Timeline</h2><p>Browse dated events in chronological order with optional date filtering.</p></a>
+  <a class="feature-card" href="/queries"><h2>SPARQL Queries</h2><p>Run prepared query examples against the Fuseki endpoint.</p></a>
+  <a class="feature-card" href="/report"><h2>KG Report</h2><p>Read the generated graph report in a clean page layout.</p></a>
+</section>
+{% endblock %}

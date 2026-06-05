@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}Queries | Macedonian History KG{% endblock %}
+{% block content %}
+<section class="page-heading">
+  <p>SPARQL Examples</p>
+  <h1>Prepared graph queries</h1>
+  <span>Select a `.rq` file, inspect the query, and run it against Fuseki.</span>
+</section>
+
+<div class="panel">
+  {% if query_files %}
+    <select class="input" name="file" hx-get="/queries/select" hx-target="#query-workbench">
+      {% for file in query_files %}
+        <option value="{{ file }}" {% if file == selected %}selected{% endif %}>{{ file }}</option>
+      {% endfor %}
+    </select>
+    <div id="query-workbench" class="mt-5">
+      {% include "partials/query_results.html" %}
+    </div>
+  {% else %}
+    <div class="empty-state">No `.rq` files were found in the queries folder.</div>
+  {% endif %}
+</div>
+{% endblock %}

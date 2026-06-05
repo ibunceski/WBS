@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Timeline | Macedonian History KG{% endblock %}
+{% block content %}
+<section class="page-heading">
+  <p>Historical Events</p>
+  <h1>Chronological timeline</h1>
+  <span>Events are ordered by known start date and enriched with place and description when available.</span>
+</section>
+
+<form class="panel grid gap-4 sm:grid-cols-[1fr_1fr_auto]" hx-get="/timeline/results" hx-target="#timeline-results" hx-indicator="#timeline-loading">
+  <input class="input" type="text" name="start" placeholder="Start date, e.g. 1885-01-01">
+  <input class="input" type="text" name="end" placeholder="End date, e.g. 1910-12-31">
+  <button class="primary-button" type="submit">Filter</button>
+</form>
+<div id="timeline-loading" class="htmx-indicator mt-4 text-sm text-amber-800">Loading timeline...</div>
+<div id="timeline-results" class="mt-8" hx-get="/timeline/results" hx-trigger="load" hx-indicator="#timeline-loading"></div>
+{% endblock %}

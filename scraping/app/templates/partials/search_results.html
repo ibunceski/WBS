@@ -1,0 +1,25 @@
+{% if error %}
+  <div class="alert">{{ error }}</div>
+{% elif not q %}
+  <div class="empty-state">Type a search term to look up resources in the graph.</div>
+{% elif results %}
+  <div class="grid gap-4 md:grid-cols-2">
+    {% for item in results %}
+      <a class="result-card" href="{{ item.entity|entity_url }}">
+        <div class="flex items-start justify-between gap-3">
+          <div>
+            <p class="text-xs uppercase tracking-[0.18em] text-stone-500">{{ item.type|local_name }}</p>
+            <h3>{{ item.label or item.entity|local_name }}</h3>
+          </div>
+          {% if item.date %}<span class="date-pill">{{ item.date }}</span>{% endif %}
+        </div>
+        <p class="mt-3 break-all text-sm text-stone-500">{{ item.entity }}</p>
+        {% if item.wikidata %}
+          <p class="mt-3 text-sm text-amber-800">Wikidata: {{ item.wikidata|local_name }}</p>
+        {% endif %}
+      </a>
+    {% endfor %}
+  </div>
+{% else %}
+  <div class="empty-state">No results found for "{{ q }}". Try another spelling or a broader term.</div>
+{% endif %}
