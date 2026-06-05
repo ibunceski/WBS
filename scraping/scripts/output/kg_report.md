@@ -1,63 +1,54 @@
 # Macedonian History KG Report
 
 Source file: `output/mk_history_clean.ttl`
-Total triples: `3,920`
+Total triples: `3,356`
 
 ## Entity Counts
 
-- Persons: `500`
-- Events: `8`
-- Places: `28`
-- Organizations: `14`
-- Documents: `5`
+- Persons: `273`
+- Events: `7`
+- Places: `165`
+- Organizations: `18`
+- Documents: `19`
 - Periods: `1`
 
 ## Linking And Time
 
-- Wikidata `owl:sameAs` links: `555`
-- Subjects with temporal/date predicates: `526`
+- Wikidata `owl:sameAs` links: `482`
+- Subjects with temporal/date predicates: `291`
 
 ## Top Predicates
 
-- `rdf:type`: `584`
-- `rdfs:label`: `572`
-- `owl:sameAs`: `555`
-- `mko:bornIn`: `500`
-- `mko:birthDate`: `500`
-- `mko:deathDate`: `381`
-- `mko:occupation`: `371`
-- `rdfs:comment`: `317`
-- `mko:locatedInCountry`: `28`
-- `geo:asWKT`: `27`
-- `mko:foundingDate`: `12`
+- `rdf:type`: `510`
+- `rdfs:label`: `507`
+- `owl:sameAs`: `482`
+- `rdfs:comment`: `396`
+- `mko:bornIn`: `269`
+- `mko:occupation`: `256`
+- `mko:birthDate`: `248`
+- `mko:deathDate`: `237`
+- `mko:locatedInCountry`: `165`
+- `geo:asWKT`: `164`
+- `mko:dateCreated`: `19`
+- `mko:authoredBy`: `19`
+- `mko:inLanguage`: `17`
+- `mko:foundingDate`: `13`
 - `rdfs:range`: `9`
-- `mko:partOf`: `8`
-- `mko:tookPlaceIn`: `7`
-- `mko:headquarteredIn`: `7`
 
 ## Data Quality Signals
 
-- Entities missing `rdfs:label`: `7`
-- QID-only labels: `113`
+- Entities missing `rdfs:label`: `0`
+- QID-only labels: `38`
 - Literals that look mojibake-encoded: `0`
 
-### Missing Label Examples
-- `mk:Q1290184`
-- `mk:Q4872396`
-- `mk:Q1277369`
-- `mk:Q275683`
-- `mk:Q3127176`
-- `mk:Q31183905`
-- `mk:Q3401248`
-
 ### QID Label Examples
-- `mk:Q12280373` -> `Q12280373`
-- `mk:Q12271771` -> `Q12271771`
-- `mk:Q12276183` -> `Q12276183`
-- `mk:Q12296813` -> `Q12296813`
-- `mk:Q12278544` -> `Q12278544`
-- `mk:Q132459396` -> `Q132459396`
-- `mk:Q121930766` -> `Q121930766`
-- `mk:Q12283931` -> `Q12283931`
-- `mk:Q12286674` -> `Q12286674`
-- `mk:Q12296205` -> `Q12296205`
+- `mk:Q12272768` -> `Q12272768`
+- `mk:Q12298310` -> `Q12298310`
+- `mk:Q12293776` -> `Q12293776`
+- `mk:Q139257087` -> `Q139257087`
+- `mk:Q59709512` -> `Q59709512`
+- `mk:Q56218774` -> `Q56218774`
+- `mk:Q12298539` -> `Q12298539`
+- `mk:Q59709314` -> `Q59709314`
+- `mk:Q108570491` -> `Q108570491`
+- `mk:Q12284260` -> `Q12284260`

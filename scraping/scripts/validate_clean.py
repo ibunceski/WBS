@@ -361,8 +361,8 @@ def validate_shacl(data_graph: Graph) -> bool:
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--input", default="output/mk_history_full.ttl")
-    parser.add_argument("--output", default="output/mk_history_clean.ttl")
+    parser.add_argument("--input", default="../output/mk_history_full.ttl")
+    parser.add_argument("--output", default="../output/mk_history_clean.ttl")
     parser.add_argument("--audit-only", action="store_true")
     parser.add_argument("--no-fix-mojibake", action="store_true")
     parser.add_argument("--skip-shacl", action="store_true")
