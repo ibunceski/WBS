@@ -1,0 +1,12 @@
+PREFIX mko: <http://macedonian-kg.mk/ontology#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?event ?label ?start ?end ?place
+WHERE {
+  ?event a mko:HistoricalEvent .
+  OPTIONAL { ?event rdfs:label ?label }
+  OPTIONAL { ?event mko:startDate ?start }
+  OPTIONAL { ?event mko:endDate ?end }
+  OPTIONAL { ?event mko:tookPlaceIn ?place }
+}
+ORDER BY ?start ?label

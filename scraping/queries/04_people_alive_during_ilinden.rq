@@ -1,0 +1,16 @@
+PREFIX mk: <http://macedonian-kg.mk/resource/>
+PREFIX mko: <http://macedonian-kg.mk/ontology#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?person ?label ?birthDate ?deathDate
+WHERE {
+  ?person a mko:Person .
+  OPTIONAL { ?person rdfs:label ?label }
+  OPTIONAL { ?person mko:birthDate ?birthDate }
+  OPTIONAL { ?person mko:deathDate ?deathDate }
+  FILTER(BOUND(?birthDate) && STR(?birthDate) <= "1903-08-02")
+  FILTER(!BOUND(?deathDate) || STR(?deathDate) >= "1903-08-02")
+}
+ORDER BY ?birthDate ?label
+LIMIT 100

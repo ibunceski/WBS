@@ -1,0 +1,16 @@
+PREFIX mko: <http://macedonian-kg.mk/ontology#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?entity ?class
+WHERE {
+  VALUES ?class {
+    mko:Person
+    mko:HistoricalEvent
+    mko:Place
+    mko:Organization
+    mko:HistoricalDocument
+  }
+  ?entity a ?class .
+  FILTER NOT EXISTS { ?entity rdfs:label ?label }
+}
+ORDER BY ?class ?entity
