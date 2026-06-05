@@ -112,6 +112,52 @@ PERSON_SCOPE_DETAILS_TIMEOUT_SECONDS = int(os.getenv("PERSON_SCOPE_DETAILS_TIMEO
 PERSON_SCOPE_DETAILS_CHUNK_SIZE = int(
     os.getenv("PERSON_SCOPE_DETAILS_CHUNK_SIZE", os.getenv("VALUES_CHUNK_SIZE", "40"))
 )
+PERSON_CONTEXT_ENABLED = os.getenv("PERSON_CONTEXT_ENABLED", "1") == "1"
+PERSON_CONTEXT_LIMIT_PER_QUERY = int(os.getenv("PERSON_CONTEXT_LIMIT_PER_QUERY", "250"))
+PERSON_CONTEXT_RETRIES = int(os.getenv("PERSON_CONTEXT_RETRIES", "4"))
+PERSON_CONTEXT_TIMEOUT_SECONDS = int(os.getenv("PERSON_CONTEXT_TIMEOUT_SECONDS", "60"))
+PERSON_CONTEXT_SEARCH_LIMIT = int(os.getenv("PERSON_CONTEXT_SEARCH_LIMIT", "20"))
+PERSON_CONTEXT_SEARCH_PAGES = int(os.getenv("PERSON_CONTEXT_SEARCH_PAGES", "4"))
+PERSON_CONTEXT_TOPIC_LIMIT = int(os.getenv("PERSON_CONTEXT_TOPIC_LIMIT", "200"))
+PERSON_CONTEXT_TOPIC_CHUNK_SIZE = int(os.getenv("PERSON_CONTEXT_TOPIC_CHUNK_SIZE", "1"))
+PERSON_CONTEXT_RELATION_PROPERTIES = [
+    prop.strip()
+    for prop in os.getenv("PERSON_CONTEXT_RELATION_PROPERTIES", "P1344|P793|P463|P102|P108|P106").split("|")
+    if prop.strip()
+]
+PERSON_CONTEXT_SEARCH_LANGUAGES = [
+    lang.strip()
+    for lang in os.getenv("PERSON_CONTEXT_SEARCH_LANGUAGES", "en|mk|bg").split("|")
+    if lang.strip()
+]
+PERSON_CONTEXT_SEARCH_TERMS = [
+    term.strip()
+    for term in os.getenv(
+        "PERSON_CONTEXT_SEARCH_TERMS",
+        "Macedonian revolutionary|Macedonian revolutionary organization|"
+        "Internal Macedonian Revolutionary Organization|Ilinden Uprising|"
+        "Macedonian-Adrianopolitan revolutionary|Macedonian national liberation|"
+        "Bulgarian Macedonian revolutionary|Macedonian Bulgarian revolutionary|"
+        "Bulgarian revolutionary Macedonia|IMRO member|"
+        "Internal Macedonian Revolutionary Organization member|"
+        "македонски револуционер|ВМРО револуционер|Илинденско востание",
+    ).split("|")
+    if term.strip()
+]
+PERSON_CATEGORY_ENABLED = os.getenv("PERSON_CATEGORY_ENABLED", "1") == "1"
+PERSON_CATEGORY_LIMIT = int(os.getenv("PERSON_CATEGORY_LIMIT", "500"))
+PERSON_CATEGORY_TITLES = [
+    title.strip()
+    for title in os.getenv(
+        "PERSON_CATEGORY_TITLES",
+        "Category:Members of the Internal Macedonian Revolutionary Organization|"
+        "Category:Internal Macedonian Revolutionary Organization members|"
+        "Category:Macedonian revolutionaries|"
+        "Category:Bulgarian revolutionaries from Macedonia|"
+        "Category:People of the Ilinden-Preobrazhenie Uprising",
+    ).split("|")
+    if title.strip()
+]
 EVENTS_FROM_PERSONS_ENABLED = os.getenv("EVENTS_FROM_PERSONS_ENABLED", "1") == "1"
 EVENT_FROM_PERSON_LIMIT_PER_CHUNK = int(os.getenv("EVENT_FROM_PERSON_LIMIT_PER_CHUNK", "120"))
 
@@ -145,7 +191,8 @@ DOC_LIMIT = int(os.getenv("DOC_LIMIT", "250"))
 WIKIPEDIA_ENRICH_LIMIT = int(os.getenv("WIKIPEDIA_ENRICH_LIMIT", "20"))
 ENABLE_WIKIPEDIA_ENRICH = os.getenv("ENABLE_WIKIPEDIA_ENRICH", "1") == "1"
 
-OUTPUT_DIR = "../output"
+PROJECT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+OUTPUT_DIR = os.getenv("OUTPUT_DIR", os.path.join(PROJECT_DIR, "output"))
 PERIOD_RESOURCE_ID = f"MacedonianHistory{HISTORY_START_YEAR}_{HISTORY_END_YEAR}"
 
 
@@ -365,7 +412,7 @@ LIMIT {PERSON_LIMIT}
 
 QUERY_EVENTS = f"""
 SELECT DISTINCT
-  ?event ?eventLabel ?eventDescription
+  ?event ?eventLabel ?eventName ?eventDescription
   ?startDate ?endDate
   ?location ?locationLabel
   ?coords
@@ -381,6 +428,10 @@ WHERE {{
   ?event wdt:P276 ?location .
   {LOCATION_SCOPE_FILTER}
 
+  OPTIONAL {{
+    ?event rdfs:label ?eventName .
+    FILTER(LANG(?eventName) IN ("mk", "en"))
+  }}
   OPTIONAL {{ ?location wdt:P625 ?coords }}
   SERVICE wikibase:label {{ bd:serviceParam wikibase:language "mk,en" . }}
 }}
@@ -432,13 +483,17 @@ LIMIT {PLACE_LIMIT}
 
 QUERY_ORGANIZATIONS = f"""
 SELECT DISTINCT
-  ?org ?orgLabel ?orgDescription
+  ?org ?orgLabel ?orgName ?orgDescription
   ?foundingDate ?dissolutionDate
   ?headquarters ?headquartersLabel
   ?orgType ?orgTypeLabel
 WHERE {{
   ?org wdt:P31/wdt:P279* wd:Q43229 .
 
+  OPTIONAL {{
+    ?org rdfs:label ?orgName .
+    FILTER(LANG(?orgName) IN ("mk", "en"))
+  }}
   OPTIONAL {{ ?org wdt:P571 ?foundingDate }}
   OPTIONAL {{ ?org wdt:P576 ?dissolutionDate }}
   OPTIONAL {{ ?org wdt:P159 ?headquarters }}
@@ -485,11 +540,13 @@ LIMIT {ORG_LIMIT}
 QUERY_DOCUMENTS = f"""
 SELECT DISTINCT
   ?doc ?docLabel ?docDescription
+  ?title
   ?date
   ?author ?authorLabel
   ?language ?languageLabel
 WHERE {{
   ?doc wdt:P31/wdt:P279* wd:Q49848 .
+  OPTIONAL {{ ?doc wdt:P1476 ?title }}
   OPTIONAL {{ ?doc wdt:P577 ?date }}
   OPTIONAL {{ ?doc wdt:P50  ?author }}
   OPTIONAL {{ ?doc wdt:P407 ?language }}
@@ -616,9 +673,9 @@ def build_events_query_for_window(year_start: int, year_end: int, location_qids:
 """
     return f"""
 SELECT DISTINCT
-  ?event
+  ?event ?eventLabel ?eventName ?eventDescription
   ?startDate ?endDate
-  ?location
+  ?location ?locationLabel
 WHERE {{
   VALUES ?location {{ {values_clause} }}
   {{
@@ -632,10 +689,15 @@ WHERE {{
   OPTIONAL {{ ?event wdt:P580 ?startDate }}
   OPTIONAL {{ ?event wdt:P582 ?endDate }}
   OPTIONAL {{ ?event wdt:P585 ?pointInTime }}
+  OPTIONAL {{
+    ?event rdfs:label ?eventName .
+    FILTER(LANG(?eventName) IN ("mk", "en"))
+  }}
   BIND(COALESCE(?startDate, ?pointInTime, ?endDate) AS ?eventDate)
   FILTER(BOUND(?eventDate))
   FILTER(YEAR(?eventDate) >= {year_start} && YEAR(?eventDate) <= {year_end})
   {event_type_filter}
+  SERVICE wikibase:label {{ bd:serviceParam wikibase:language "mk,en" . }}
 }}
 LIMIT {EVENT_LIMIT_PER_WINDOW}
 """
@@ -816,6 +878,244 @@ WHERE {{
     return unique_bindings_by_key(all_rows, "person")
 
 
+def search_wikidata_entity_qids(client: WikidataClient, search_term: str) -> list[str]:
+    found: list[str] = []
+    for language in PERSON_CONTEXT_SEARCH_LANGUAGES:
+        next_continue: int | None = 0
+        page = 0
+        while next_continue is not None and page < PERSON_CONTEXT_SEARCH_PAGES:
+            page += 1
+            params = {
+                "action": "wbsearchentities",
+                "search": search_term,
+                "language": language,
+                "uselang": language,
+                "format": "json",
+                "limit": PERSON_CONTEXT_SEARCH_LIMIT,
+            }
+            if next_continue:
+                params["continue"] = str(next_continue)
+
+            data = client.get_json(
+                "https://www.wikidata.org/w/api.php",
+                params=params,
+                retries=PERSON_CONTEXT_RETRIES,
+                min_delay_seconds=WIKIDATA_MIN_DELAY_SECONDS,
+                timeout_seconds=DEFAULT_TIMEOUT_SECONDS,
+                context=f"Wikidata entity search '{search_term}' ({language}, page {page})",
+            )
+            if not data:
+                break
+
+            for item in data.get("search", []):
+                qid = item.get("id")
+                if qid:
+                    found.append(qid)
+
+            next_value = data.get("search-continue")
+            next_continue = int(next_value) if str(next_value).isdigit() else None
+
+    return list(dict.fromkeys(found))
+
+
+def filter_human_qids_via_api(client: WikidataClient, candidate_qids: list[str]) -> list[str]:
+    if not candidate_qids:
+        return []
+
+    human_qids: set[str] = set()
+    for idx, qid_chunk in enumerate(chunked_list(candidate_qids, 50), start=1):
+        data = client.get_json(
+            "https://www.wikidata.org/w/api.php",
+            params={
+                "action": "wbgetentities",
+                "ids": "|".join(qid_chunk),
+                "props": "claims",
+                "format": "json",
+            },
+            retries=PERSON_CONTEXT_RETRIES,
+            min_delay_seconds=WIKIDATA_MIN_DELAY_SECONDS,
+            timeout_seconds=DEFAULT_TIMEOUT_SECONDS,
+            context=f"Wikidata human validation chunk {idx}",
+        )
+        if not data:
+            continue
+
+        for qid, entity in data.get("entities", {}).items():
+            claims = entity.get("claims", {})
+            instance_claims = claims.get("P31", [])
+            for claim in instance_claims:
+                datavalue = claim.get("mainsnak", {}).get("datavalue", {})
+                value = datavalue.get("value", {})
+                if isinstance(value, dict) and value.get("id") == "Q5":
+                    human_qids.add(qid)
+                    break
+
+    return sorted(human_qids)
+
+
+def collect_person_ids_from_topic_qids(client: WikidataClient, topic_qids: list[str]) -> list[str]:
+    if not topic_qids:
+        return []
+
+    all_rows: list[dict] = []
+    topic_qids = topic_qids[:PERSON_CONTEXT_TOPIC_LIMIT]
+    topic_chunks = chunked_list(topic_qids, PERSON_CONTEXT_TOPIC_CHUNK_SIZE)
+
+    for prop in PERSON_CONTEXT_RELATION_PROPERTIES:
+        if not re.fullmatch(r"P\d+", prop):
+            print(f"    skipping invalid context property: {prop}")
+            continue
+
+        for idx, topic_chunk in enumerate(topic_chunks, start=1):
+            values_clause = values_clause_from_qids(topic_chunk)
+            sparql = f"""
+SELECT DISTINCT ?person WHERE {{
+  VALUES ?topic {{ {values_clause} }}
+  ?person wdt:P31 wd:Q5 ;
+          wdt:{prop} ?topic .
+  OPTIONAL {{ ?person wdt:P569 ?birthDate }}
+  OPTIONAL {{ ?person wdt:P570 ?deathDate }}
+  FILTER(!BOUND(?birthDate) || YEAR(?birthDate) <= {HISTORY_END_YEAR + 10})
+  FILTER(!BOUND(?deathDate) || YEAR(?deathDate) >= {HISTORY_START_YEAR})
+}}
+LIMIT {PERSON_CONTEXT_LIMIT_PER_QUERY}
+"""
+            print(
+                f"    persons-by-context {prop} topic chunk "
+                f"{idx}/{len(topic_chunks)} ({len(topic_chunk)} topics)"
+            )
+            rows = client.query(
+                sparql,
+                retries=PERSON_CONTEXT_RETRIES,
+                timeout_seconds=PERSON_CONTEXT_TIMEOUT_SECONDS,
+            )
+            if not rows and not client.last_query_succeeded:
+                print(f"      x context query failed for {prop} chunk {idx}; continuing")
+                continue
+            all_rows.extend(rows)
+
+    return sorted({
+        qid for qid in (
+            qid_from_wd_uri(safe_str(row, "person")) for row in all_rows
+        ) if qid
+    })
+
+
+def collect_wikipedia_category_pageids(client: WikidataClient, category_title: str) -> list[str]:
+    pageids: list[str] = []
+    continuation: str | None = ""
+
+    while continuation is not None and len(pageids) < PERSON_CATEGORY_LIMIT:
+        params = {
+            "action": "query",
+            "list": "categorymembers",
+            "cmtitle": category_title,
+            "cmnamespace": "0",
+            "cmlimit": "50",
+            "format": "json",
+        }
+        if continuation:
+            params["cmcontinue"] = continuation
+
+        data = client.get_json(
+            "https://en.wikipedia.org/w/api.php",
+            params=params,
+            retries=PERSON_CONTEXT_RETRIES,
+            min_delay_seconds=WIKIPEDIA_MIN_DELAY_SECONDS,
+            timeout_seconds=DEFAULT_TIMEOUT_SECONDS,
+            context=f"Wikipedia category members '{category_title}'",
+        )
+        if not data:
+            break
+
+        members = data.get("query", {}).get("categorymembers", [])
+        for member in members:
+            pageid = member.get("pageid")
+            if pageid:
+                pageids.append(str(pageid))
+                if len(pageids) >= PERSON_CATEGORY_LIMIT:
+                    break
+
+        continuation = data.get("continue", {}).get("cmcontinue")
+
+    return list(dict.fromkeys(pageids))
+
+
+def collect_wikidata_qids_for_wikipedia_pages(client: WikidataClient, pageids: list[str]) -> list[str]:
+    if not pageids:
+        return []
+
+    qids: set[str] = set()
+    for idx, pageid_chunk in enumerate(chunked_list(pageids, 50), start=1):
+        data = client.get_json(
+            "https://en.wikipedia.org/w/api.php",
+            params={
+                "action": "query",
+                "prop": "pageprops",
+                "ppprop": "wikibase_item",
+                "pageids": "|".join(pageid_chunk),
+                "format": "json",
+            },
+            retries=PERSON_CONTEXT_RETRIES,
+            min_delay_seconds=WIKIPEDIA_MIN_DELAY_SECONDS,
+            timeout_seconds=DEFAULT_TIMEOUT_SECONDS,
+            context=f"Wikipedia pageprops chunk {idx}",
+        )
+        if not data:
+            continue
+
+        pages = data.get("query", {}).get("pages", {})
+        for page in pages.values():
+            qid = page.get("pageprops", {}).get("wikibase_item")
+            if qid:
+                qids.add(qid)
+
+    return sorted(qids)
+
+
+def collect_person_ids_from_wikipedia_categories(client: WikidataClient) -> list[str]:
+    if not PERSON_CATEGORY_ENABLED:
+        return []
+
+    candidate_qids: set[str] = set()
+    for category_title in PERSON_CATEGORY_TITLES:
+        print(f"    category search: {category_title}")
+        pageids = collect_wikipedia_category_pageids(client, category_title)
+        print(f"      category pages discovered: {len(pageids)}")
+        candidate_qids.update(collect_wikidata_qids_for_wikipedia_pages(client, pageids))
+
+    person_qids = filter_human_qids_via_api(client, sorted(candidate_qids))
+    print(f"    category person IDs discovered: {len(person_qids)}")
+    return person_qids
+
+
+def collect_person_ids_by_context(client: WikidataClient) -> list[str]:
+    topic_qids: set[str] = set()
+    for term in PERSON_CONTEXT_SEARCH_TERMS:
+        print(f"    topic search: {term}")
+        topic_qids.update(search_wikidata_entity_qids(client, term))
+
+    print(f"    context topic QIDs discovered: {len(topic_qids)}")
+
+    person_qids: set[str] = set()
+    if topic_qids:
+        direct_person_qids = filter_human_qids_via_api(client, sorted(topic_qids))
+        print(f"    direct person QIDs from search: {len(direct_person_qids)}")
+        person_qids.update(direct_person_qids)
+
+    person_qids.update(collect_person_ids_from_wikipedia_categories(client))
+
+    if topic_qids:
+        person_qids.update(collect_person_ids_from_topic_qids(client, sorted(topic_qids)))
+
+    print(f"    context person IDs discovered: {len(person_qids)}")
+    return sorted(person_qids)
+
+
+def collect_persons_by_context(client: WikidataClient) -> list[dict]:
+    return collect_person_details(client, collect_person_ids_by_context(client))
+
+
 def collect_persons_by_scope(client: WikidataClient, location_qids: list[str]) -> list[dict]:
     if not location_qids:
         return []
@@ -852,9 +1152,9 @@ def collect_events_from_persons(client: WikidataClient, person_qids: list[str]) 
         values_clause = values_clause_from_qids(person_chunk)
         sparql = f"""
 SELECT DISTINCT
-  ?event
+  ?event ?eventLabel ?eventName ?eventDescription
   ?startDate ?endDate
-  ?location
+  ?location ?locationLabel
 WHERE {{
   VALUES ?person {{ {values_clause} }}
   {{
@@ -867,10 +1167,15 @@ WHERE {{
   OPTIONAL {{ ?event wdt:P582 ?endDate }}
   OPTIONAL {{ ?event wdt:P585 ?pointInTime }}
   OPTIONAL {{ ?event wdt:P276 ?location }}
+  OPTIONAL {{
+    ?event rdfs:label ?eventName .
+    FILTER(LANG(?eventName) IN ("mk", "en"))
+  }}
 
   BIND(COALESCE(?startDate, ?pointInTime, ?endDate) AS ?eventDate)
   FILTER(BOUND(?eventDate))
   FILTER(YEAR(?eventDate) >= {HISTORY_START_YEAR} && YEAR(?eventDate) <= {HISTORY_END_YEAR})
+  SERVICE wikibase:label {{ bd:serviceParam wikibase:language "mk,en" . }}
 }}
 LIMIT {EVENT_FROM_PERSON_LIMIT_PER_CHUNK}
 """
@@ -890,7 +1195,7 @@ def collect_event_details(client: WikidataClient, event_qids: list[str]) -> list
         values_clause = values_clause_from_qids(event_chunk)
         sparql = f"""
 SELECT DISTINCT
-  ?event ?eventLabel ?eventDescription
+  ?event ?eventLabel ?eventName ?eventDescription
   ?startDate ?endDate
   ?location ?locationLabel
   ?coords
@@ -899,6 +1204,10 @@ WHERE {{
   OPTIONAL {{ ?event wdt:P580 ?startDate }}
   OPTIONAL {{ ?event wdt:P582 ?endDate }}
   OPTIONAL {{ ?event wdt:P585 ?pointInTime }}
+  OPTIONAL {{
+    ?event rdfs:label ?eventName .
+    FILTER(LANG(?eventName) IN ("mk", "en"))
+  }}
   OPTIONAL {{
     ?event wdt:P276 ?location .
     OPTIONAL {{ ?location wdt:P625 ?coords }}
@@ -1026,12 +1335,16 @@ LIMIT {ORG_LIMIT_PER_CHUNK}
         values_clause = values_clause_from_qids(org_chunk)
         sparql = f"""
 SELECT DISTINCT
-  ?org ?orgLabel ?orgDescription
+  ?org ?orgLabel ?orgName ?orgDescription
   ?foundingDate ?dissolutionDate
   ?headquarters ?headquartersLabel
   ?orgType ?orgTypeLabel
 WHERE {{
   VALUES ?org {{ {values_clause} }}
+  OPTIONAL {{
+    ?org rdfs:label ?orgName .
+    FILTER(LANG(?orgName) IN ("mk", "en"))
+  }}
   OPTIONAL {{ ?org wdt:P571 ?foundingDate }}
   OPTIONAL {{ ?org wdt:P576 ?dissolutionDate }}
   OPTIONAL {{ ?org wdt:P159 ?headquarters }}
@@ -1053,6 +1366,7 @@ def collect_documents(client: WikidataClient, event_qids: list[str], person_qids
         sparql = f"""
 SELECT DISTINCT
   ?doc ?docLabel ?docDescription
+  ?title
   ?date
   ?author ?authorLabel
   ?language ?languageLabel
@@ -1064,6 +1378,7 @@ WHERE {{
   }} UNION {{
     ?doc wdt:P921 ?event .
   }}
+  OPTIONAL {{ ?doc wdt:P1476 ?title }}
   OPTIONAL {{ ?doc wdt:P577 ?date }}
   OPTIONAL {{ ?doc wdt:P50  ?author }}
   OPTIONAL {{ ?doc wdt:P407 ?language }}
@@ -1078,6 +1393,7 @@ LIMIT {DOC_LIMIT_PER_CHUNK}
         sparql = f"""
 SELECT DISTINCT
   ?doc ?docLabel ?docDescription
+  ?title
   ?date
   ?author ?authorLabel
   ?language ?languageLabel
@@ -1085,6 +1401,7 @@ WHERE {{
   VALUES ?author {{ {values_clause} }}
   ?doc wdt:P31/wdt:P279* wd:Q49848 ;
        wdt:P50 ?author .
+  OPTIONAL {{ ?doc wdt:P1476 ?title }}
   OPTIONAL {{ ?doc wdt:P577 ?date }}
   OPTIONAL {{ ?doc wdt:P407 ?language }}
   SERVICE wikibase:label {{ bd:serviceParam wikibase:language "mk,en" . }}
@@ -1104,6 +1421,19 @@ def safe_str(binding: dict, key: str) -> str | None:
 def wikidata_uri_to_local(wd_uri: str) -> URIRef:
     qid = wd_uri.rstrip("/").split("/")[-1]
     return MK[qid]
+
+
+def looks_like_qid(value: str | None) -> bool:
+    return bool(value and re.fullmatch(r"Q\d+", value.strip()))
+
+
+def first_readable_value(row: dict, keys: list[str], wd_uri: str | None = None) -> str | None:
+    qid = qid_from_wd_uri(wd_uri) if wd_uri else None
+    for key in keys:
+        value = safe_str(row, key)
+        if value and value != qid and not looks_like_qid(value):
+            return value
+    return None
 
 
 def add_label(g: Graph, subject: URIRef, label_str: str) -> None:
@@ -1198,7 +1528,7 @@ def convert_events(rows: list[dict], g: Graph) -> None:
         g.add((subject, OWL.sameAs, URIRef(wd_uri)))
         g.add((subject, MKO.partOf, MK[PERIOD_RESOURCE_ID]))
 
-        add_label(g, subject, safe_str(row, "eventLabel"))
+        add_label(g, subject, first_readable_value(row, ["eventLabel", "eventName"], wd_uri))
         desc = safe_str(row, "eventDescription")
         if desc:
             g.add((subject, RDFS.comment, Literal(desc, lang="en")))
@@ -1268,7 +1598,7 @@ def convert_organizations(rows: list[dict], g: Graph) -> None:
         g.add((subject, RDF.type, MKO.Organization))
         g.add((subject, OWL.sameAs, URIRef(wd_uri)))
 
-        add_label(g, subject, safe_str(row, "orgLabel"))
+        add_label(g, subject, first_readable_value(row, ["orgLabel", "orgName"], wd_uri))
         desc = safe_str(row, "orgDescription")
         if desc:
             g.add((subject, RDFS.comment, Literal(desc, lang="en")))
@@ -1295,7 +1625,7 @@ def convert_documents(rows: list[dict], g: Graph) -> None:
         g.add((subject, RDF.type, MKO.HistoricalDocument))
         g.add((subject, OWL.sameAs, URIRef(wd_uri)))
 
-        add_label(g, subject, safe_str(row, "docLabel"))
+        add_label(g, subject, first_readable_value(row, ["docLabel", "title"], wd_uri))
         desc = safe_str(row, "docDescription")
         if desc:
             g.add((subject, RDFS.comment, Literal(desc, lang="en")))
@@ -1459,12 +1789,18 @@ def main() -> None:
     location_qids = collect_scope_location_qids(client)
     print(f"    scope locations discovered: {len(location_qids)}")
 
+    context_person_rows: list[dict] = []
+    if PERSON_CONTEXT_ENABLED:
+        context_person_rows = collect_persons_by_context(client)
+    else:
+        print("    context person discovery disabled (PERSON_CONTEXT_ENABLED=0)")
+
     if PERSON_SCOPE_ENABLED:
         scope_person_rows = collect_persons_by_scope(client, location_qids)
-        results["persons"] = scope_person_rows[:PERSON_LIMIT]
+        results["persons"] = unique_bindings_by_key(context_person_rows + scope_person_rows, "person")[:PERSON_LIMIT]
     else:
         print("    person-scope collection disabled (PERSON_SCOPE_ENABLED=0)")
-        results["persons"] = []
+        results["persons"] = context_person_rows[:PERSON_LIMIT]
 
     person_qids = [
         qid for qid in (qid_from_wd_uri(safe_str(row, "person")) for row in results["persons"])
@@ -1489,7 +1825,7 @@ def main() -> None:
         seed_values = f"{SEED_ILINDEN_UPRISING} {SEED_KRUSEVO_REPUBLIC}"
         seed_query = f"""
 SELECT DISTINCT
-  ?event ?eventLabel ?eventDescription
+  ?event ?eventLabel ?eventName ?eventDescription
   ?startDate ?endDate
   ?location ?locationLabel
   ?coords
@@ -1497,6 +1833,10 @@ WHERE {{
   VALUES ?event {{ {seed_values} }}
   OPTIONAL {{ ?event wdt:P580 ?startDate }}
   OPTIONAL {{ ?event wdt:P582 ?endDate }}
+  OPTIONAL {{
+    ?event rdfs:label ?eventName .
+    FILTER(LANG(?eventName) IN ("mk", "en"))
+  }}
   OPTIONAL {{ ?event wdt:P276 ?location .
              OPTIONAL {{ ?location wdt:P625 ?coords }} }}
   SERVICE wikibase:label {{ bd:serviceParam wikibase:language "mk,en" . }}
