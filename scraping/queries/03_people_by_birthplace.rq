@@ -1,0 +1,13 @@
+PREFIX mko: <http://macedonian-kg.mk/ontology#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?person ?personLabel ?birthDate ?place ?placeLabel
+WHERE {
+  ?person a mko:Person ;
+          mko:bornIn ?place .
+  OPTIONAL { ?person rdfs:label ?personLabel }
+  OPTIONAL { ?person mko:birthDate ?birthDate }
+  OPTIONAL { ?place rdfs:label ?placeLabel }
+}
+ORDER BY ?placeLabel ?birthDate ?personLabel
+LIMIT 100

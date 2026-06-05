@@ -1,0 +1,12 @@
+PREFIX mko: <http://macedonian-kg.mk/ontology#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?organization ?label ?founded ?dissolved ?headquarters
+WHERE {
+  ?organization a mko:Organization .
+  OPTIONAL { ?organization rdfs:label ?label }
+  OPTIONAL { ?organization mko:foundingDate ?founded }
+  OPTIONAL { ?organization mko:dissolutionDate ?dissolved }
+  OPTIONAL { ?organization mko:headquarteredIn ?headquarters }
+}
+ORDER BY ?founded ?label

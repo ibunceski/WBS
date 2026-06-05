@@ -1,0 +1,17 @@
+PREFIX mko: <http://macedonian-kg.mk/ontology#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT ?class (COUNT(?entity) AS ?count)
+WHERE {
+  VALUES ?class {
+    mko:Person
+    mko:HistoricalEvent
+    mko:Place
+    mko:Organization
+    mko:HistoricalDocument
+    mko:Period
+  }
+  ?entity rdf:type ?class .
+}
+GROUP BY ?class
+ORDER BY DESC(?count)

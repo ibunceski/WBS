@@ -1,0 +1,12 @@
+PREFIX mko: <http://macedonian-kg.mk/ontology#>
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?place ?label ?country ?wkt
+WHERE {
+  ?place a mko:Place .
+  OPTIONAL { ?place rdfs:label ?label }
+  OPTIONAL { ?place mko:locatedInCountry ?country }
+  OPTIONAL { ?place geo:asWKT ?wkt }
+}
+ORDER BY ?label

@@ -1,0 +1,13 @@
+PREFIX mko: <http://macedonian-kg.mk/ontology#>
+PREFIX time: <http://www.w3.org/2006/time#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?event ?label ?beginning ?end
+WHERE {
+  ?event a mko:HistoricalEvent ;
+         time:hasTime ?interval .
+  OPTIONAL { ?event rdfs:label ?label }
+  OPTIONAL { ?interval time:hasBeginning ?beginning }
+  OPTIONAL { ?interval time:hasEnd ?end }
+}
+ORDER BY ?beginning ?label

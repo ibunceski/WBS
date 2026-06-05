@@ -1,0 +1,15 @@
+PREFIX mko: <http://macedonian-kg.mk/ontology#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?document ?documentLabel ?date ?author ?authorLabel ?language
+WHERE {
+  ?document a mko:HistoricalDocument .
+  OPTIONAL { ?document rdfs:label ?documentLabel }
+  OPTIONAL { ?document mko:dateCreated ?date }
+  OPTIONAL {
+    ?document mko:authoredBy ?author .
+    OPTIONAL { ?author rdfs:label ?authorLabel }
+  }
+  OPTIONAL { ?document mko:inLanguage ?language }
+}
+ORDER BY ?date ?documentLabel
