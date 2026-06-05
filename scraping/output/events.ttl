@@ -1,64 +1,69 @@
 @prefix mk: <http://macedonian-kg.mk/resource/> .
 @prefix mko: <http://macedonian-kg.mk/ontology#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix time: <http://www.w3.org/2006/time#> .
 @prefix wd: <http://www.wikidata.org/entity/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 mk:Q1145682 a mko:HistoricalEvent ;
+    rdfs:label "Илинденско востание"@mk ;
     mko:endDate "1903-10-01"^^xsd:date ;
     mko:partOf mk:MacedonianHistory1885_1910 ;
     mko:startDate "1903-08-02"^^xsd:date ;
     mko:tookPlaceIn mk:Q168501 ;
+    rdfs:comment "Revolt against the Ottoman Empire in Southeastern Europe 1903"@en ;
     owl:sameAs wd:Q1145682 ;
     time:hasTime [ a time:Interval ;
             time:hasBeginning "1903-08-02"^^xsd:date ;
             time:hasEnd "1903-10-01"^^xsd:date ] .
 
 mk:Q1277369 a mko:HistoricalEvent ;
+    rdfs:label "Борба за Македонија"@mk ;
     mko:endDate "1908-01-01"^^xsd:date ;
     mko:partOf mk:MacedonianHistory1885_1910 ;
     mko:startDate "1893-01-01"^^xsd:date ;
     mko:tookPlaceIn mk:Q103251 ;
+    rdfs:comment "Културен и воен судир меѓу Грците, Србите, Бугарите и Македонците во Македонија"@en ;
     owl:sameAs wd:Q1277369 ;
     time:hasTime [ a time:Interval ;
             time:hasBeginning "1893-01-01"^^xsd:date ;
             time:hasEnd "1908-01-01"^^xsd:date ] .
 
-mk:Q1290184 a mko:HistoricalEvent ;
-    mko:endDate "1908-11-22"^^xsd:date ;
+mk:Q19892449 a mko:HistoricalEvent ;
+    rdfs:label "Fight in Tabanovce"@mk ;
     mko:partOf mk:MacedonianHistory1885_1910 ;
-    mko:startDate "1908-11-14"^^xsd:date ;
-    mko:tookPlaceIn mk:Q157246 ;
-    owl:sameAs wd:Q1290184 ;
-    time:hasTime [ a time:Interval ;
-            time:hasBeginning "1908-11-14"^^xsd:date ;
-            time:hasEnd "1908-11-22"^^xsd:date ] .
-
-mk:Q275683 a mko:HistoricalEvent ;
-    mko:partOf mk:MacedonianHistory1885_1910 ;
-    owl:sameAs wd:Q275683 .
+    mko:tookPlaceIn mk:Q221 ;
+    rdfs:comment "1905 battle of the Macedonian Struggle"@en ;
+    owl:sameAs wd:Q19892449 .
 
 mk:Q31183905 a mko:HistoricalEvent ;
+    rdfs:label "Battle of Drenovo"@mk ;
     mko:partOf mk:MacedonianHistory1885_1910 ;
     mko:tookPlaceIn mk:Q221 ;
     owl:sameAs wd:Q31183905 .
 
 mk:Q3127176 a mko:HistoricalEvent ;
+    rdfs:label "Franck d.d."@mk ;
     mko:partOf mk:MacedonianHistory1885_1910 ;
     mko:startDate "1892-06-21"^^xsd:date ;
     mko:tookPlaceIn mk:Q221 ;
+    rdfs:comment "Croatian coffee and snacks limited company"@en ;
     owl:sameAs wd:Q3127176 ;
     time:hasTime [ a time:Interval ;
             time:hasBeginning "1892-06-21"^^xsd:date ] .
 
 mk:Q3401248 a mko:HistoricalEvent ;
+    rdfs:label "Битка кај Мечкин Камен"@mk ;
     mko:partOf mk:MacedonianHistory1885_1910 ;
-    mko:tookPlaceIn mk:Q157034 ;
+    mko:tookPlaceIn mk:Q221 ;
+    rdfs:comment "1903 battle in Kruševo"@en ;
     owl:sameAs wd:Q3401248 .
 
 mk:Q4872396 a mko:HistoricalEvent ;
+    rdfs:label "Битка кај Слива"@mk ;
     mko:partOf mk:MacedonianHistory1885_1910 ;
     mko:tookPlaceIn mk:Q221 ;
+    rdfs:comment "historical battle"@en ;
     owl:sameAs wd:Q4872396 .
 
