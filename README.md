@@ -26,7 +26,7 @@ Install these before running the demo:
 Python packages:
 
 ```powershell
-pip install rdflib requests python-dotenv fastapi uvicorn jinja2 markupsafe python-multipart markdown
+pip install -r requirements.txt
 ```
 
 If you are using the existing virtual environment:
