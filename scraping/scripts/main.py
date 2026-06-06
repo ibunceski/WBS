@@ -4,9 +4,10 @@ import os
 import random
 import re
 import time
+from collections import defaultdict
 from datetime import datetime, timezone
 from email.utils import parsedate_to_datetime
-from urllib.parse import urlparse
+from urllib.parse import quote, urlparse
 
 import requests
 from rdflib import BNode, Graph, Literal, Namespace, RDF, RDFS, OWL, URIRef, XSD
@@ -64,6 +65,16 @@ MKO = Namespace("http://macedonian-kg.mk/ontology#")
 WD = Namespace("http://www.wikidata.org/entity/")
 TIME = Namespace("http://www.w3.org/2006/time#")
 GEO = Namespace("http://www.opengis.net/ont/geosparql#")
+
+EXTERNAL_ID_URLS = {
+    "P214": ("VIAF", lambda value: f"https://viaf.org/viaf/{value}"),
+    "P213": ("ISNI", lambda value: f"https://isni.org/isni/{value.replace(' ', '')}"),
+    "P244": ("Library of Congress", lambda value: f"https://id.loc.gov/authorities/names/{value}"),
+    "P227": ("GND", lambda value: f"https://d-nb.info/gnd/{value}"),
+    "P268": ("BnF", lambda value: f"https://catalogue.bnf.fr/ark:/12148/cb{value}"),
+    "P269": ("IdRef", lambda value: f"https://www.idref.fr/{value}"),
+    "P1566": ("GeoNames", lambda value: f"https://sws.geonames.org/{value}/"),
+}
 
 load_dotenv()
 
@@ -1508,6 +1519,86 @@ def add_wikipedia_title_fallbacks(
     print(f"    Wikipedia title fallbacks added: {added}")
 
 
+def external_links_from_entity(entity: dict) -> list[tuple[str, str]]:
+    links: list[tuple[str, str]] = []
+
+    claims = entity.get("claims", {})
+    for prop, (database_name, url_builder) in EXTERNAL_ID_URLS.items():
+        for claim in claims.get(prop, []):
+            value = claim.get("mainsnak", {}).get("datavalue", {}).get("value")
+            if not isinstance(value, str) or not value.strip():
+                continue
+            try:
+                links.append((database_name, url_builder(value.strip())))
+            except Exception:
+                continue
+
+    enwiki_title = entity.get("sitelinks", {}).get("enwiki", {}).get("title")
+    if enwiki_title:
+        dbpedia_title = quote(enwiki_title.replace(" ", "_"), safe="()_.,-")
+        links.append(("DBpedia", f"https://dbpedia.org/resource/{dbpedia_title}"))
+
+    unique: list[tuple[str, str]] = []
+    seen: set[str] = set()
+    for database_name, url in links:
+        if url not in seen:
+            unique.append((database_name, url))
+            seen.add(url)
+    return unique
+
+
+def add_external_database_links(client: WikidataClient, rows: list[dict], entity_key: str) -> None:
+    qids: list[str] = []
+    rows_by_qid: dict[str, list[dict]] = defaultdict(list)
+
+    for row in rows:
+        qid = qid_from_wd_uri(safe_str(row, entity_key))
+        if not qid:
+            continue
+        qids.append(qid)
+        rows_by_qid[qid].append(row)
+
+    qids = list(dict.fromkeys(qids))
+    if not qids:
+        return
+
+    print(f"    external database lookup: {entity_key}s ({len(qids)} entities)")
+    added = 0
+    for idx, qid_chunk in enumerate(chunked_list(qids, 50), start=1):
+        data = client.get_json(
+            "https://www.wikidata.org/w/api.php",
+            params={
+                "action": "wbgetentities",
+                "ids": "|".join(qid_chunk),
+                "props": "claims|sitelinks",
+                "format": "json",
+            },
+            retries=PERSON_CONTEXT_RETRIES,
+            min_delay_seconds=WIKIDATA_MIN_DELAY_SECONDS,
+            timeout_seconds=DEFAULT_TIMEOUT_SECONDS,
+            context=f"Wikidata external IDs chunk {idx}",
+        )
+        if not data:
+            continue
+
+        for qid, entity in data.get("entities", {}).items():
+            external_links = external_links_from_entity(entity)
+            if not external_links:
+                continue
+            for row in rows_by_qid.get(qid, []):
+                row["_externalLinks"] = external_links
+                added += len(external_links)
+
+    print(f"    external database links added: {added}")
+
+
+def add_external_links_to_graph(g: Graph, subject: URIRef, row: dict) -> None:
+    for _, url in row.get("_externalLinks", []):
+        uri = URIRef(url)
+        g.add((subject, MKO.externalLink, uri))
+        g.add((subject, RDFS.seeAlso, uri))
+
+
 def add_label(g: Graph, subject: URIRef, label_str: str) -> None:
     if label_str:
         g.add((subject, RDFS.label, Literal(label_str, lang="mk")))
@@ -1570,6 +1661,7 @@ def convert_persons(rows: list[dict], g: Graph) -> None:
         subject = wikidata_uri_to_local(wd_uri)
         g.add((subject, RDF.type, MKO.Person))
         g.add((subject, OWL.sameAs, URIRef(wd_uri)))
+        add_external_links_to_graph(g, subject, row)
 
         add_label(g, subject, first_readable_value(row, ["personLabel", "wikiTitle"], wd_uri))
         desc = safe_str(row, "personDescription")
@@ -1599,6 +1691,7 @@ def convert_events(rows: list[dict], g: Graph) -> None:
         g.add((subject, RDF.type, MKO.HistoricalEvent))
         g.add((subject, OWL.sameAs, URIRef(wd_uri)))
         g.add((subject, MKO.partOf, MK[PERIOD_RESOURCE_ID]))
+        add_external_links_to_graph(g, subject, row)
 
         add_label(g, subject, first_readable_value(row, ["eventLabel", "eventName", "wikiTitle"], wd_uri))
         desc = safe_str(row, "eventDescription")
@@ -1641,6 +1734,7 @@ def convert_places(rows: list[dict], g: Graph) -> None:
 
         g.add((subject, RDF.type, MKO.Place))
         g.add((subject, OWL.sameAs, URIRef(wd_uri)))
+        add_external_links_to_graph(g, subject, row)
 
         add_label(g, subject, first_readable_value(row, ["placeLabel", "wikiTitle"], wd_uri))
         desc = safe_str(row, "placeDescription")
@@ -1669,6 +1763,7 @@ def convert_organizations(rows: list[dict], g: Graph) -> None:
 
         g.add((subject, RDF.type, MKO.Organization))
         g.add((subject, OWL.sameAs, URIRef(wd_uri)))
+        add_external_links_to_graph(g, subject, row)
 
         add_label(g, subject, first_readable_value(row, ["orgLabel", "orgName", "wikiTitle"], wd_uri))
         desc = safe_str(row, "orgDescription")
@@ -1696,6 +1791,7 @@ def convert_documents(rows: list[dict], g: Graph) -> None:
 
         g.add((subject, RDF.type, MKO.HistoricalDocument))
         g.add((subject, OWL.sameAs, URIRef(wd_uri)))
+        add_external_links_to_graph(g, subject, row)
 
         add_label(g, subject, first_readable_value(row, ["docLabel", "title", "wikiTitle"], wd_uri))
         desc = safe_str(row, "docDescription")
@@ -1736,6 +1832,7 @@ def add_ontology_triples(g: Graph) -> None:
         (MKO.headquarteredIn, "headquartered in"),
         (MKO.authoredBy, "authored by"),
         (MKO.locatedInCountry, "located in country"),
+        (MKO.externalLink, "external database link"),
     ]
     for prop, label in props:
         g.add((prop, RDF.type, OWL.ObjectProperty))
@@ -1974,6 +2071,13 @@ WHERE {{
     add_wikipedia_title_fallbacks(client, results["places"], "place", ["placeLabel"])
     add_wikipedia_title_fallbacks(client, results["organizations"], "org", ["orgLabel", "orgName"])
     add_wikipedia_title_fallbacks(client, results["documents"], "doc", ["docLabel", "title"])
+
+    print("\nAdding international database links ...")
+    add_external_database_links(client, results["persons"], "person")
+    add_external_database_links(client, results["events"], "event")
+    add_external_database_links(client, results["places"], "place")
+    add_external_database_links(client, results["organizations"], "org")
+    add_external_database_links(client, results["documents"], "doc")
 
     print("\nConverting to RDF ...")
     graphs: dict[str, Graph] = {}

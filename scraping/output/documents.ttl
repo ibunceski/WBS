@@ -11,6 +11,30 @@ mk:Q116676460 a mko:HistoricalDocument ;
     mko:dateCreated "1993-01-01"^^xsd:date ;
     owl:sameAs wd:Q116676460 .
 
+mk:Q121930764 a mko:HistoricalDocument ;
+    rdfs:label "Za vědu a mír"@mk ;
+    mko:authoredBy mk:Q1988099 ;
+    mko:dateCreated "1950-01-01"^^xsd:date ;
+    mko:inLanguage "чешки јазик"@en ;
+    rdfs:comment "book edition published in 1950"@en ;
+    owl:sameAs wd:Q121930764 .
+
+mk:Q121930766 a mko:HistoricalDocument ;
+    rdfs:label "Co je to socialistický realismus"@mk ;
+    mko:authoredBy mk:Q1988099 ;
+    mko:dateCreated "1949-01-01"^^xsd:date ;
+    mko:inLanguage "чешки јазик"@en ;
+    rdfs:comment "book edition published in 1949"@en ;
+    owl:sameAs wd:Q121930766 .
+
+mk:Q121987911 a mko:HistoricalDocument ;
+    rdfs:label "Za vědu a mír"@mk ;
+    mko:authoredBy mk:Q1988099 ;
+    mko:dateCreated "1950-01-01"^^xsd:date ;
+    mko:inLanguage "чешки јазик"@en ;
+    rdfs:comment "book edition published in 1950"@en ;
+    owl:sameAs wd:Q121987911 .
+
 mk:Q15730821 a mko:HistoricalDocument ;
     rdfs:label "Nuntempaj rakontoj"@mk ;
     mko:authoredBy mk:Q3623552 ;
@@ -22,7 +46,9 @@ mk:Q3406426 a mko:HistoricalDocument ;
     rdfs:label "Мајски манифест"@mk ;
     mko:authoredBy mk:Q2466136 ;
     mko:dateCreated "1924-05-06"^^xsd:date ;
+    mko:externalLink <https://dbpedia.org/resource/May_Manifesto> ;
     mko:inLanguage "бугарски јазик"@en ;
+    rdfs:seeAlso <https://dbpedia.org/resource/May_Manifesto> ;
     owl:sameAs wd:Q3406426 .
 
 mk:Q45900216 a mko:HistoricalDocument ;
@@ -31,6 +57,12 @@ mk:Q45900216 a mko:HistoricalDocument ;
     mko:dateCreated "1903-04-14"^^xsd:date ;
     mko:inLanguage "бугарски јазик"@en ;
     owl:sameAs wd:Q45900216 .
+
+mk:Q50323758 a mko:HistoricalDocument ;
+    rdfs:label "The Numismatic Treasure of Reka-Devnia (Marcianopolis)"@mk ;
+    mko:authoredBy mk:Q7035608 ;
+    rdfs:comment "catalog of the Reka Devnia hoard (Mushmov 1934)"@en ;
+    owl:sameAs wd:Q50323758 .
 
 mk:Q50605929 a mko:HistoricalDocument ;
     rdfs:label "Стотното сръбско изстъпление"@mk ;
@@ -122,6 +154,12 @@ mk:Q50608798 a mko:HistoricalDocument ;
     mko:dateCreated "1908-05-09"^^xsd:date ;
     mko:inLanguage "бугарски јазик"@en ;
     owl:sameAs wd:Q50608798 .
+
+mk:Q56751727 a mko:HistoricalDocument ;
+    rdfs:label "Declaration of Vasil Shinanov on joining the Ilinden organization with notes about his revolutionary activities"@mk ;
+    mko:authoredBy mk:Q47462142 ;
+    mko:dateCreated "1933-01-01"^^xsd:date ;
+    owl:sameAs wd:Q56751727 .
 
 mk:Q87279866 a mko:HistoricalDocument ;
     rdfs:label "Спомени"@mk ;

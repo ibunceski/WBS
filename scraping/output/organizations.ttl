@@ -7,21 +7,66 @@
 
 mk:Q1003730 a mko:Organization ;
     rdfs:label "Бугарска академија на науките"@mk ;
+    mko:externalLink <https://catalogue.bnf.fr/ark:/12148/cb11870573q>,
+        <https://d-nb.info/gnd/1003081-5>,
+        <https://dbpedia.org/resource/Bulgarian_Academy_of_Sciences>,
+        <https://id.loc.gov/authorities/names/n2022012782>,
+        <https://id.loc.gov/authorities/names/n2022012791>,
+        <https://isni.org/isni/0000000120973094>,
+        <https://viaf.org/viaf/123367933>,
+        <https://www.idref.fr/026461579> ;
     mko:foundingDate "1869-09-01"^^xsd:date ;
     mko:headquarteredIn mk:Q472 ;
     rdfs:comment "academy of sciences"@en ;
+    rdfs:seeAlso <https://catalogue.bnf.fr/ark:/12148/cb11870573q>,
+        <https://d-nb.info/gnd/1003081-5>,
+        <https://dbpedia.org/resource/Bulgarian_Academy_of_Sciences>,
+        <https://id.loc.gov/authorities/names/n2022012782>,
+        <https://id.loc.gov/authorities/names/n2022012791>,
+        <https://isni.org/isni/0000000120973094>,
+        <https://viaf.org/viaf/123367933>,
+        <https://www.idref.fr/026461579> ;
     owl:sameAs wd:Q1003730 .
 
 mk:Q1004028 a mko:Organization ;
     rdfs:label "Bulgarian Secret Central Revolutionary Committee"@mk ;
+    mko:externalLink <https://dbpedia.org/resource/Bulgarian_Secret_Central_Revolutionary_Committee>,
+        <https://id.loc.gov/authorities/names/no98088755>,
+        <https://viaf.org/viaf/123472755> ;
     rdfs:comment "organization"@en ;
+    rdfs:seeAlso <https://dbpedia.org/resource/Bulgarian_Secret_Central_Revolutionary_Committee>,
+        <https://id.loc.gov/authorities/names/no98088755>,
+        <https://viaf.org/viaf/123472755> ;
     owl:sameAs wd:Q1004028 .
+
+mk:Q1132636 a mko:Organization ;
+    rdfs:label "Српска академија на науките и уметностите"@mk ;
+    mko:externalLink <https://catalogue.bnf.fr/ark:/12148/cb118674779>,
+        <https://d-nb.info/gnd/1001140-7>,
+        <https://dbpedia.org/resource/Serbian_Academy_of_Sciences_and_Arts>,
+        <https://id.loc.gov/authorities/names/n80079597>,
+        <https://isni.org/isni/0000000121462771>,
+        <https://viaf.org/viaf/104719079>,
+        <https://www.idref.fr/029682959> ;
+    mko:foundingDate "1841-11-07"^^xsd:date ;
+    mko:headquarteredIn mk:Q3711 ;
+    rdfs:comment "most prominent academic institution in Serbia"@en ;
+    rdfs:seeAlso <https://catalogue.bnf.fr/ark:/12148/cb118674779>,
+        <https://d-nb.info/gnd/1001140-7>,
+        <https://dbpedia.org/resource/Serbian_Academy_of_Sciences_and_Arts>,
+        <https://id.loc.gov/authorities/names/n80079597>,
+        <https://isni.org/isni/0000000121462771>,
+        <https://viaf.org/viaf/104719079>,
+        <https://www.idref.fr/029682959> ;
+    owl:sameAs wd:Q1132636 .
 
 mk:Q12280280 a mko:Organization ;
     rdfs:label "Задгранично претставништво"@mk ;
     mko:dissolutionDate "1928-01-01"^^xsd:date ;
+    mko:externalLink <https://dbpedia.org/resource/Foreign_Representation_of_the_Internal_Macedonian_Revolutionary_Organization> ;
     mko:foundingDate "1896-01-01"^^xsd:date ;
     rdfs:comment "Bulgarian revolutionary instituition"@en ;
+    rdfs:seeAlso <https://dbpedia.org/resource/Foreign_Representation_of_the_Internal_Macedonian_Revolutionary_Organization> ;
     owl:sameAs wd:Q12280280 .
 
 mk:Q12293031 a mko:Organization ;
@@ -37,81 +82,306 @@ mk:Q12297517 a mko:Organization ;
     mko:foundingDate "1919-01-01"^^xsd:date ;
     owl:sameAs wd:Q12297517 .
 
+mk:Q192254 a mko:Organization ;
+    rdfs:label "Национално ослободителен фронт"@mk ;
+    mko:dissolutionDate "1946-01-01"^^xsd:date ;
+    mko:externalLink <https://d-nb.info/gnd/10100920-3>,
+        <https://dbpedia.org/resource/National_Liberation_Front_(Greece)>,
+        <https://id.loc.gov/authorities/names/n85101288>,
+        <https://viaf.org/viaf/147810423> ;
+    mko:foundingDate "1941-09-27"^^xsd:date ;
+    rdfs:comment "Greek resistance movement during World War II"@en ;
+    rdfs:seeAlso <https://d-nb.info/gnd/10100920-3>,
+        <https://dbpedia.org/resource/National_Liberation_Front_(Greece)>,
+        <https://id.loc.gov/authorities/names/n85101288>,
+        <https://viaf.org/viaf/147810423> ;
+    owl:sameAs wd:Q192254 .
+
+mk:Q2370801 a mko:Organization ;
+    rdfs:label "Академија на науките на СССР"@mk ;
+    mko:dissolutionDate "1991-11-21"^^xsd:date ;
+    mko:externalLink <https://catalogue.bnf.fr/ark:/12148/cb118728433>,
+        <https://d-nb.info/gnd/1000125-6>,
+        <https://d-nb.info/gnd/16273448-7>,
+        <https://d-nb.info/gnd/16290909-3>,
+        <https://dbpedia.org/resource/Academy_of_Sciences_of_the_Soviet_Union>,
+        <https://id.loc.gov/authorities/names/n79112261>,
+        <https://isni.org/isni/0000000121620960>,
+        <https://viaf.org/viaf/165583161>,
+        <https://viaf.org/viaf/195094305>,
+        <https://www.idref.fr/026489740> ;
+    mko:foundingDate "1925-07-27"^^xsd:date ;
+    mko:headquarteredIn mk:Q649 ;
+    rdfs:comment "scientific institution of the Soviet Union (1925–1991)"@en ;
+    rdfs:seeAlso <https://catalogue.bnf.fr/ark:/12148/cb118728433>,
+        <https://d-nb.info/gnd/1000125-6>,
+        <https://d-nb.info/gnd/16273448-7>,
+        <https://d-nb.info/gnd/16290909-3>,
+        <https://dbpedia.org/resource/Academy_of_Sciences_of_the_Soviet_Union>,
+        <https://id.loc.gov/authorities/names/n79112261>,
+        <https://isni.org/isni/0000000121620960>,
+        <https://viaf.org/viaf/165583161>,
+        <https://viaf.org/viaf/195094305>,
+        <https://www.idref.fr/026489740> ;
+    owl:sameAs wd:Q2370801 .
+
 mk:Q2466285 a mko:Organization ;
     rdfs:label "Македонска академија на науките и уметностите"@mk ;
+    mko:externalLink <https://catalogue.bnf.fr/ark:/12148/cb121970098>,
+        <https://d-nb.info/gnd/1018103-9>,
+        <https://dbpedia.org/resource/Macedonian_Academy_of_Sciences_and_Arts>,
+        <https://id.loc.gov/authorities/names/n82048907>,
+        <https://isni.org/isni/0000000121837908>,
+        <https://viaf.org/viaf/150116451>,
+        <https://www.idref.fr/030583799> ;
     mko:foundingDate "1967-01-01"^^xsd:date ;
     mko:headquarteredIn mk:Q384 ;
     rdfs:comment "национална академија на науките и уметностите на Македонија"@en ;
+    rdfs:seeAlso <https://catalogue.bnf.fr/ark:/12148/cb121970098>,
+        <https://d-nb.info/gnd/1018103-9>,
+        <https://dbpedia.org/resource/Macedonian_Academy_of_Sciences_and_Arts>,
+        <https://id.loc.gov/authorities/names/n82048907>,
+        <https://isni.org/isni/0000000121837908>,
+        <https://viaf.org/viaf/150116451>,
+        <https://www.idref.fr/030583799> ;
     owl:sameAs wd:Q2466285 .
+
+mk:Q266063 a mko:Organization ;
+    rdfs:label "Словенечка академија на науките и уметностите"@mk ;
+    mko:externalLink <https://catalogue.bnf.fr/ark:/12148/cb12060754j>,
+        <https://d-nb.info/gnd/1002856-0>,
+        <https://dbpedia.org/resource/Slovenian_Academy_of_Sciences_and_Arts>,
+        <https://id.loc.gov/authorities/names/n82074277>,
+        <https://isni.org/isni/0000000121949002>,
+        <https://viaf.org/viaf/159100019>,
+        <https://www.idref.fr/03023705X> ;
+    mko:foundingDate "1938-01-01"^^xsd:date ;
+    mko:headquarteredIn mk:Q437 ;
+    rdfs:comment "national academy of Slovenia"@en ;
+    rdfs:seeAlso <https://catalogue.bnf.fr/ark:/12148/cb12060754j>,
+        <https://d-nb.info/gnd/1002856-0>,
+        <https://dbpedia.org/resource/Slovenian_Academy_of_Sciences_and_Arts>,
+        <https://id.loc.gov/authorities/names/n82074277>,
+        <https://isni.org/isni/0000000121949002>,
+        <https://viaf.org/viaf/159100019>,
+        <https://www.idref.fr/03023705X> ;
+    owl:sameAs wd:Q266063 .
 
 mk:Q3092170 a mko:Organization ;
     rdfs:label "Socialist Workers' Federation"@mk ;
     mko:dissolutionDate "1918-01-01"^^xsd:date ;
+    mko:externalLink <https://dbpedia.org/resource/Socialist_Workers%27_Federation> ;
     mko:foundingDate "1909-01-01"^^xsd:date ;
     rdfs:comment "workers' federation in early 20th century Thessaloniki"@en ;
+    rdfs:seeAlso <https://dbpedia.org/resource/Socialist_Workers%27_Federation> ;
     owl:sameAs wd:Q3092170 .
 
 mk:Q3356091 a mko:Organization ;
     rdfs:label "Внатрешна македонска револуционерна организација (Обединета)"@mk ;
     mko:dissolutionDate "1937-01-01"^^xsd:date ;
+    mko:externalLink <https://dbpedia.org/resource/Internal_Macedonian_Revolutionary_Organization_(United)>,
+        <https://id.loc.gov/authorities/names/n85257706>,
+        <https://isni.org/isni/0000000123586655>,
+        <https://viaf.org/viaf/97100284> ;
     mko:foundingDate "1925-01-01"^^xsd:date ;
     rdfs:comment "Revolutionary and political organization"@en ;
+    rdfs:seeAlso <https://dbpedia.org/resource/Internal_Macedonian_Revolutionary_Organization_(United)>,
+        <https://id.loc.gov/authorities/names/n85257706>,
+        <https://isni.org/isni/0000000123586655>,
+        <https://viaf.org/viaf/97100284> ;
     owl:sameAs wd:Q3356091 .
 
 mk:Q3396942 a mko:Organization ;
     rdfs:label "Македонски комитет"@mk ;
     mko:dissolutionDate "1905-01-01"^^xsd:date ;
+    mko:externalLink <https://dbpedia.org/resource/Supreme_Macedonian-Adrianople_Committee> ;
     mko:foundingDate "1895-01-01"^^xsd:date ;
     rdfs:comment "Bulgarian revolutionary organization"@en ;
+    rdfs:seeAlso <https://dbpedia.org/resource/Supreme_Macedonian-Adrianople_Committee> ;
     owl:sameAs wd:Q3396942 .
 
 mk:Q3399641 a mko:Organization ;
     rdfs:label "Македонска федеративна организација"@mk ;
+    mko:externalLink <https://dbpedia.org/resource/Macedonian_Federative_Organization> ;
     mko:foundingDate "1921-01-01"^^xsd:date ;
     rdfs:comment "Bulgarian revolutionary organization"@en ;
+    rdfs:seeAlso <https://dbpedia.org/resource/Macedonian_Federative_Organization> ;
     owl:sameAs wd:Q3399641 .
 
 mk:Q3401184 a mko:Organization ;
     rdfs:label "Македонски таен револуционерен комитет"@mk ;
+    mko:externalLink <https://dbpedia.org/resource/Macedonian_Secret_Revolutionary_Committee> ;
     mko:headquarteredIn mk:Q71 ;
     rdfs:comment "Bulgarian revolutionary organization"@en ;
+    rdfs:seeAlso <https://dbpedia.org/resource/Macedonian_Secret_Revolutionary_Committee> ;
     owl:sameAs wd:Q3401184 .
 
 mk:Q3404811 a mko:Organization ;
     rdfs:label "Македонски научен институт"@mk ;
+    mko:externalLink <https://catalogue.bnf.fr/ark:/12148/cb12452640j>,
+        <https://dbpedia.org/resource/Macedonian_Scientific_Institute>,
+        <https://id.loc.gov/authorities/names/n85143622>,
+        <https://isni.org/isni/0000000121499048>,
+        <https://viaf.org/viaf/122472820>,
+        <https://www.idref.fr/242336841> ;
     mko:foundingDate "1923-01-01"^^xsd:date ;
     mko:headquarteredIn mk:Q472 ;
     rdfs:comment "research institute in Bulgaria"@en ;
+    rdfs:seeAlso <https://catalogue.bnf.fr/ark:/12148/cb12452640j>,
+        <https://dbpedia.org/resource/Macedonian_Scientific_Institute>,
+        <https://id.loc.gov/authorities/names/n85143622>,
+        <https://isni.org/isni/0000000121499048>,
+        <https://viaf.org/viaf/122472820>,
+        <https://www.idref.fr/242336841> ;
     owl:sameAs wd:Q3404811 .
+
+mk:Q3563543 a mko:Organization ;
+    rdfs:label "Political Committee of National Liberation"@mk ;
+    mko:dissolutionDate "1944-10-09"^^xsd:date ;
+    mko:externalLink <https://dbpedia.org/resource/Political_Committee_of_National_Liberation> ;
+    mko:foundingDate "1944-03-10"^^xsd:date ;
+    rdfs:comment "1944 communist-led provisional government in Greece"@en ;
+    rdfs:seeAlso <https://dbpedia.org/resource/Political_Committee_of_National_Liberation> ;
+    owl:sameAs wd:Q3563543 .
 
 mk:Q396058 a mko:Organization ;
     rdfs:label "Привремено претставништво на поранешната Внатрешна организација"@mk ;
     mko:dissolutionDate "1920-01-01"^^xsd:date ;
+    mko:externalLink <https://dbpedia.org/resource/Provisional_representation_of_the_former_United_Internal_Revolutionary_Organization> ;
     mko:foundingDate "1919-01-01"^^xsd:date ;
     rdfs:comment "organization"@en ;
+    rdfs:seeAlso <https://dbpedia.org/resource/Provisional_representation_of_the_former_United_Internal_Revolutionary_Organization> ;
     owl:sameAs wd:Q396058 .
 
 mk:Q407408 a mko:Organization ;
     rdfs:label "Македонско-одрински доброволни чети"@mk ;
+    mko:externalLink <https://dbpedia.org/resource/Macedonian-Adrianopolitan_Volunteer_Corps> ;
     rdfs:comment "volunteer corps of the Bulgarian Army during the Balkan Wars"@en ;
+    rdfs:seeAlso <https://dbpedia.org/resource/Macedonian-Adrianopolitan_Volunteer_Corps> ;
     owl:sameAs wd:Q407408 .
 
-mk:Q41726 a mko:Organization ;
-    rdfs:label "слободно ѕидарство"@mk ;
-    mko:foundingDate "1717-01-01"^^xsd:date ;
-    rdfs:comment "group of fraternal organizations"@en ;
-    owl:sameAs wd:Q41726 .
+mk:Q4345832 a mko:Organization ;
+    rdfs:label "Петербуршка академија на науките"@mk ;
+    mko:dissolutionDate "1917-01-01"^^xsd:date ;
+    mko:externalLink <https://d-nb.info/gnd/2034160-X>,
+        <https://dbpedia.org/resource/Saint_Petersburg_Academy_of_Sciences>,
+        <https://id.loc.gov/authorities/names/n81147417>,
+        <https://id.loc.gov/authorities/names/n82005589>,
+        <https://isni.org/isni/0000000122861395>,
+        <https://viaf.org/viaf/131268764>,
+        <https://www.idref.fr/026489740> ;
+    mko:foundingDate "1724-02-08"^^xsd:date ;
+    mko:headquarteredIn mk:Q656 ;
+    rdfs:comment "historical academy (1724–1917)"@en ;
+    rdfs:seeAlso <https://d-nb.info/gnd/2034160-X>,
+        <https://dbpedia.org/resource/Saint_Petersburg_Academy_of_Sciences>,
+        <https://id.loc.gov/authorities/names/n81147417>,
+        <https://id.loc.gov/authorities/names/n82005589>,
+        <https://isni.org/isni/0000000122861395>,
+        <https://viaf.org/viaf/131268764>,
+        <https://www.idref.fr/026489740> ;
+    owl:sameAs wd:Q4345832 .
 
 mk:Q488297 a mko:Organization ;
     rdfs:label "Македонска револуционерна организација"@mk ;
     mko:dissolutionDate "1934-01-01"^^xsd:date ;
+    mko:externalLink <https://dbpedia.org/resource/Internal_Macedonian_Revolutionary_Organization>,
+        <https://id.loc.gov/authorities/names/n85110726>,
+        <https://id.loc.gov/authorities/names/n91122940>,
+        <https://viaf.org/viaf/122204129>,
+        <https://viaf.org/viaf/97100284> ;
     mko:foundingDate "1893-01-01"^^xsd:date ;
     rdfs:comment "revolutionary national liberation movement in Ottoman territories in Europe in the late 19th and early 20th centuries"@en ;
+    rdfs:seeAlso <https://dbpedia.org/resource/Internal_Macedonian_Revolutionary_Organization>,
+        <https://id.loc.gov/authorities/names/n85110726>,
+        <https://id.loc.gov/authorities/names/n91122940>,
+        <https://viaf.org/viaf/122204129>,
+        <https://viaf.org/viaf/97100284> ;
     owl:sameAs wd:Q488297 .
 
 mk:Q520392 a mko:Organization ;
     rdfs:label "Внатрешна тракиска револуционерна организација"@mk ;
+    mko:externalLink <https://dbpedia.org/resource/Internal_Thracian_Revolutionary_Organisation> ;
     mko:foundingDate "1920-01-01"^^xsd:date ;
     rdfs:comment "Bulgarian revolutionary organisation"@en ;
+    rdfs:seeAlso <https://dbpedia.org/resource/Internal_Thracian_Revolutionary_Organisation> ;
     owl:sameAs wd:Q520392 .
+
+mk:Q634186 a mko:Organization ;
+    rdfs:label "Филики Етерија"@mk ;
+    mko:dissolutionDate "1822-01-01"^^xsd:date ;
+    mko:externalLink <https://d-nb.info/gnd/1234348-1>,
+        <https://dbpedia.org/resource/Filiki_Eteria>,
+        <https://id.loc.gov/authorities/names/n84084614>,
+        <https://isni.org/isni/0000000106947906>,
+        <https://viaf.org/viaf/140390086> ;
+    mko:foundingDate "1814-09-26"^^xsd:date ;
+    mko:headquarteredIn mk:Q406 ;
+    rdfs:comment "19th-century secret society opposing Ottoman rule in Greece"@en ;
+    rdfs:seeAlso <https://d-nb.info/gnd/1234348-1>,
+        <https://dbpedia.org/resource/Filiki_Eteria>,
+        <https://id.loc.gov/authorities/names/n84084614>,
+        <https://isni.org/isni/0000000106947906>,
+        <https://viaf.org/viaf/140390086> ;
+    owl:sameAs wd:Q634186 .
+
+mk:Q651690 a mko:Organization ;
+    rdfs:label "Полска академија на науките"@mk ;
+    mko:externalLink <https://catalogue.bnf.fr/ark:/12148/cb11866918x>,
+        <https://d-nb.info/gnd/1002317-3>,
+        <https://dbpedia.org/resource/Polish_Academy_of_Sciences>,
+        <https://id.loc.gov/authorities/names/n79046197>,
+        <https://isni.org/isni/0000000121846775>,
+        <https://viaf.org/viaf/123786762>,
+        <https://www.idref.fr/026418401> ;
+    mko:foundingDate "1951-10-30"^^xsd:date ;
+    mko:headquarteredIn mk:Q167566 ;
+    rdfs:comment "national academy of sciences for Poland"@en ;
+    rdfs:seeAlso <https://catalogue.bnf.fr/ark:/12148/cb11866918x>,
+        <https://d-nb.info/gnd/1002317-3>,
+        <https://dbpedia.org/resource/Polish_Academy_of_Sciences>,
+        <https://id.loc.gov/authorities/names/n79046197>,
+        <https://isni.org/isni/0000000121846775>,
+        <https://viaf.org/viaf/123786762>,
+        <https://www.idref.fr/026418401> ;
+    owl:sameAs wd:Q651690 .
+
+mk:Q83172 a mko:Organization ;
+    rdfs:label "Руска академија на науките"@mk ;
+    mko:externalLink <https://catalogue.bnf.fr/ark:/12148/cb12262054f>,
+        <https://d-nb.info/gnd/5052646-7>,
+        <https://dbpedia.org/resource/Russian_Academy_of_Sciences>,
+        <https://id.loc.gov/authorities/names/n81147418>,
+        <https://isni.org/isni/0000000121929124>,
+        <https://viaf.org/viaf/157037807>,
+        <https://www.idref.fr/031398871> ;
+    mko:foundingDate "1724-02-08"^^xsd:date ;
+    mko:headquarteredIn mk:Q649 ;
+    rdfs:comment "academy of sciences"@en ;
+    rdfs:seeAlso <https://catalogue.bnf.fr/ark:/12148/cb12262054f>,
+        <https://d-nb.info/gnd/5052646-7>,
+        <https://dbpedia.org/resource/Russian_Academy_of_Sciences>,
+        <https://id.loc.gov/authorities/names/n81147418>,
+        <https://isni.org/isni/0000000121929124>,
+        <https://viaf.org/viaf/157037807>,
+        <https://www.idref.fr/031398871> ;
+    owl:sameAs wd:Q83172 .
+
+mk:Q901677 a mko:Organization ;
+    rdfs:label "Романска академија"@mk ;
+    mko:externalLink <https://d-nb.info/gnd/25258-X>,
+        <https://dbpedia.org/resource/Romanian_Academy>,
+        <https://id.loc.gov/authorities/names/n87832899>,
+        <https://isni.org/isni/0000000419371389>,
+        <https://viaf.org/viaf/137679490>,
+        <https://www.idref.fr/20442030X> ;
+    mko:foundingDate "1866-04-01"^^xsd:date ;
+    rdfs:comment "Romanian Academy of Sciences and Culture"@en ;
+    rdfs:seeAlso <https://d-nb.info/gnd/25258-X>,
+        <https://dbpedia.org/resource/Romanian_Academy>,
+        <https://id.loc.gov/authorities/names/n87832899>,
+        <https://isni.org/isni/0000000419371389>,
+        <https://viaf.org/viaf/137679490>,
+        <https://www.idref.fr/20442030X> ;
+    owl:sameAs wd:Q901677 .
 
