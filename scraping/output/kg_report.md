@@ -1,6 +1,6 @@
 # Macedonian History KG Report
 
-Source file: `output/mk_history_clean.ttl`
+Source file: `../output/mk_history_clean.ttl`
 Total triples: `4,901`
 
 ## Entity Counts

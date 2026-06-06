@@ -41,8 +41,8 @@ def literal_has_mojibake(value: Literal) -> bool:
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--input", default="output/mk_history_clean.ttl")
-    parser.add_argument("--output", default="output/kg_report.md")
+    parser.add_argument("--input", default="../output/mk_history_clean.ttl")
+    parser.add_argument("--output", default="../output/kg_report.md")
     args = parser.parse_args()
 
     graph = Graph()

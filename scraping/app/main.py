@@ -14,7 +14,7 @@ from .sparql_client import SparqlError, binding_value, bindings, run_query
 BASE_DIR = Path(__file__).resolve().parent
 PROJECT_ROOT = BASE_DIR.parent
 QUERY_DIR = PROJECT_ROOT / "queries"
-REPORT_PATH = PROJECT_ROOT / "scripts" / "output" / "kg_report.md"
+REPORT_PATH = PROJECT_ROOT / "output" / "kg_report.md"
 
 app = FastAPI(title="Macedonian History Knowledge Graph Demo")
 app.mount("/static", StaticFiles(directory=BASE_DIR / "static"), name="static")
