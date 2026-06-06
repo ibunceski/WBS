@@ -67,6 +67,14 @@ mko:startDate a owl:DatatypeProperty ;
 mko:tookPlaceIn a owl:ObjectProperty ;
     rdfs:label "took place in"@en .
 
+mk:Q100320580 a mko:Person ;
+    rdfs:label "Andon Kostov"@mk ;
+    mko:birthDate "1879-05-15"^^xsd:date ;
+    mko:bornIn mk:Q162952 ;
+    mko:deathDate "http://www.wikidata.org/.well-known/genid/d68d9494ef8a7021f2ff7ae0d494d73a" ;
+    rdfs:comment "Bulgarian revolutionary"@en ;
+    owl:sameAs wd:Q100320580 .
+
 mk:Q1003730 a mko:Organization ;
     rdfs:label "Бугарска академија на науките"@mk ;
     mko:foundingDate "1869-09-01"^^xsd:date ;
@@ -78,6 +86,14 @@ mk:Q1004028 a mko:Organization ;
     rdfs:label "Bulgarian Secret Central Revolutionary Committee"@mk ;
     rdfs:comment "organization"@en ;
     owl:sameAs wd:Q1004028 .
+
+mk:Q100730505 a mko:Person ;
+    rdfs:label "Toma Kuyumdzhiev"@mk ;
+    mko:birthDate "1901-01-01"^^xsd:date ;
+    mko:bornIn mk:Q48814 ;
+    mko:deathDate "1927-12-12"^^xsd:date ;
+    rdfs:comment "Bulgarian revolutionary"@en ;
+    owl:sameAs wd:Q100730505 .
 
 mk:Q100797851 a mko:Person ;
     rdfs:label "Atanas Popvalchev"@mk ;
@@ -95,6 +111,31 @@ mk:Q100801656 a mko:Person ;
     mko:deathDate "1905-01-01"^^xsd:date ;
     owl:sameAs wd:Q100801656 .
 
+mk:Q100869666 a mko:Person ;
+    rdfs:label "Stoyan Georgiev"@mk ;
+    mko:birthDate "1883-01-01"^^xsd:date ;
+    mko:bornIn mk:Q162952 ;
+    mko:deathDate "1922-01-01"^^xsd:date ;
+    rdfs:comment "bulgarian revolutionary"@en ;
+    owl:sameAs wd:Q100869666 .
+
+mk:Q100935959 a mko:Person ;
+    rdfs:label "Тома Фиданчев"@mk ;
+    mko:birthDate "1896-03-25"^^xsd:date ;
+    mko:bornIn mk:Q48814 ;
+    mko:deathDate "http://www.wikidata.org/.well-known/genid/fe0ac16de179bb392c4d6ce5ca6b0817" ;
+    mko:occupation "лекар"@en ;
+    rdfs:comment "лекар и политичар"@en ;
+    owl:sameAs wd:Q100935959 .
+
+mk:Q101001285 a mko:Person ;
+    rdfs:label "Milan Ivanov"@mk ;
+    mko:birthDate "1900-04-10"^^xsd:date ;
+    mko:bornIn mk:Q221320 ;
+    mko:deathDate "1929-11-24"^^xsd:date ;
+    rdfs:comment "Bulgarian revolutionary"@en ;
+    owl:sameAs wd:Q101001285 .
+
 mk:Q101008746 a mko:Person ;
     rdfs:label "Stefan Petrov"@mk ;
     mko:birthDate "1874-01-01"^^xsd:date ;
@@ -102,6 +143,21 @@ mk:Q101008746 a mko:Person ;
     mko:deathDate "1940-01-01"^^xsd:date ;
     rdfs:comment "Bulgarian revolutionary"@en ;
     owl:sameAs wd:Q101008746 .
+
+mk:Q101245668 a mko:Person ;
+    rdfs:label "Arso Kuyumdzhiev"@mk ;
+    mko:birthDate "1899-01-01"^^xsd:date ;
+    mko:bornIn mk:Q48814 ;
+    mko:deathDate "1968-01-01"^^xsd:date ;
+    rdfs:comment "Bulgarian revolutionary and public figure"@en ;
+    owl:sameAs wd:Q101245668 .
+
+mk:Q104818380 a mko:Person ;
+    rdfs:label "Boris Velev"@mk ;
+    mko:birthDate "1901-07-17"^^xsd:date ;
+    mko:bornIn mk:Q161827 ;
+    mko:deathDate "1944-09-01"^^xsd:date ;
+    owl:sameAs wd:Q104818380 .
 
 mk:Q105742071 a mko:Person ;
     rdfs:label "Georgi Zaharinchev"@mk ;
@@ -120,6 +176,22 @@ mk:Q106096774 a mko:Person ;
     rdfs:comment "Bulgarian physician"@en ;
     owl:sameAs wd:Q106096774 .
 
+mk:Q106708276 a mko:Person ;
+    rdfs:label "Todor Popyordanov"@mk ;
+    mko:birthDate "1904-01-01"^^xsd:date ;
+    mko:bornIn mk:Q214344 ;
+    mko:deathDate "1927-06-27"^^xsd:date ;
+    rdfs:comment "Bulgarian revolutionary"@en ;
+    owl:sameAs wd:Q106708276 .
+
+mk:Q106763446 a mko:Person ;
+    rdfs:label "Georgi Changurov"@mk ;
+    mko:birthDate "1899-01-01"^^xsd:date ;
+    mko:bornIn mk:Q221320 ;
+    mko:deathDate "1929-09-14"^^xsd:date ;
+    rdfs:comment "Bulgarian revolutionary"@en ;
+    owl:sameAs wd:Q106763446 .
+
 mk:Q106767366 a mko:Person ;
     rdfs:label "Stavre Hristov"@mk ;
     mko:birthDate "1897-01-01"^^xsd:date ;
@@ -135,6 +207,21 @@ mk:Q106771660 a mko:Person ;
     mko:deathDate "1945-01-01"^^xsd:date ;
     rdfs:comment "Bulgarian revolutionary"@en ;
     owl:sameAs wd:Q106771660 .
+
+mk:Q107059606 a mko:Person ;
+    rdfs:label "Dimitar Natsev"@mk ;
+    mko:birthDate "1902-01-01"^^xsd:date ;
+    mko:bornIn mk:Q48814 ;
+    mko:deathDate "http://www.wikidata.org/.well-known/genid/caa7b1780e2035220b5d7c9983e9de56" ;
+    rdfs:comment "Bulgarian revolutionary"@en ;
+    owl:sameAs wd:Q107059606 .
+
+mk:Q107092119 a mko:Person ;
+    rdfs:label "Mihail Makashov"@mk ;
+    mko:birthDate "1884-01-01"^^xsd:date ;
+    mko:bornIn mk:Q161827 ;
+    mko:deathDate "http://www.wikidata.org/.well-known/genid/468ee87f4b55db8c3e6c8dee92f7d075" ;
+    owl:sameAs wd:Q107092119 .
 
 mk:Q107920095 a mko:Person ;
     rdfs:label "Yordan Vezenkov"@mk ;
@@ -154,7 +241,7 @@ mk:Q108428958 a mko:Person ;
     owl:sameAs wd:Q108428958 .
 
 mk:Q108570491 a mko:Person ;
-    rdfs:label "Q108570491"@mk ;
+    rdfs:label "Стою Курчистоев"@mk ;
     mko:bornIn mk:Q3657743 ;
     owl:sameAs wd:Q108570491 .
 
@@ -165,6 +252,67 @@ mk:Q108686807 a mko:Person ;
     rdfs:comment "Bulgarian politician and revolutionary"@en ;
     owl:sameAs wd:Q108686807 .
 
+mk:Q109287136 a mko:Person ;
+    rdfs:label "Kosta Chukarov"@mk ;
+    mko:birthDate "1882-01-01"^^xsd:date ;
+    mko:bornIn mk:Q221320 ;
+    mko:deathDate "1915-10-21"^^xsd:date ;
+    owl:sameAs wd:Q109287136 .
+
+mk:Q10950984 a mko:Person ;
+    rdfs:label "Пане Прошев"@mk ;
+    mko:birthDate "1866-01-01"^^xsd:date ;
+    mko:bornIn mk:Q147243 ;
+    mko:deathDate "http://www.wikidata.org/.well-known/genid/f0256e1d858914e71e431d4b7889fd4b" ;
+    mko:occupation "револуционер"@en ;
+    owl:sameAs wd:Q10950984 .
+
+mk:Q11012633 a mko:Person ;
+    rdfs:label "Спиро Килиманов"@mk ;
+    mko:birthDate "1900-01-01"^^xsd:date ;
+    mko:bornIn mk:Q147243 ;
+    mko:deathDate "1908-01-01"^^xsd:date ;
+    mko:occupation "револуционер"@en ;
+    owl:sameAs wd:Q11012633 .
+
+mk:Q11033734 a mko:Person ;
+    rdfs:label "Цвета Апостолска"@mk ;
+    mko:birthDate "1913-01-01"^^xsd:date ;
+    mko:bornIn mk:Q147243 ;
+    mko:deathDate "http://www.wikidata.org/.well-known/genid/dd8b566635779e6761ccff6a02da5e77" ;
+    owl:sameAs wd:Q11033734 .
+
+mk:Q11033845 a mko:Person ;
+    rdfs:label "Цеко Стефанов"@mk ;
+    mko:birthDate "1907-09-27"^^xsd:date ;
+    mko:bornIn mk:Q214344 ;
+    mko:deathDate "1944-09-20"^^xsd:date ;
+    mko:occupation "поет"@en ;
+    owl:sameAs wd:Q11033845 .
+
+mk:Q110379011 a mko:Person ;
+    rdfs:label "Anastas Neofitov"@mk ;
+    mko:birthDate "1874-05-15"^^xsd:date ;
+    mko:bornIn mk:Q157024 ;
+    mko:deathDate "http://www.wikidata.org/.well-known/genid/d16020ea146cb4d8d602e82e9291f124" ;
+    owl:sameAs wd:Q110379011 .
+
+mk:Q11039441 a mko:Person ;
+    rdfs:label "Јордан Бадев"@mk ;
+    mko:birthDate "1888-02-25"^^xsd:date ;
+    mko:bornIn mk:Q157246 ;
+    mko:deathDate "1944-09-20"^^xsd:date ;
+    mko:occupation "новинар"@en ;
+    rdfs:comment "Bulgarian writer (1888-1944)"@en ;
+    owl:sameAs wd:Q11039441 .
+
+mk:Q110411266 a mko:Person ;
+    rdfs:label "Александар Христов (академик)"@mk ;
+    mko:birthDate "1914-07-24"^^xsd:date ;
+    mko:bornIn mk:Q164954 ;
+    mko:deathDate "2000-08-02"^^xsd:date ;
+    owl:sameAs wd:Q110411266 .
+
 mk:Q11043272 a mko:Person ;
     rdfs:label "Алберт Сониксен"@mk ;
     mko:birthDate "1878-05-05"^^xsd:date ;
@@ -174,6 +322,61 @@ mk:Q11043272 a mko:Person ;
     rdfs:comment "American journalist (1878–1931)"@en ;
     owl:sameAs wd:Q11043272 .
 
+mk:Q11051363 a mko:Person ;
+    rdfs:label "Кочо Песнаџиев"@mk ;
+    mko:birthDate "1872-01-01"^^xsd:date ;
+    mko:bornIn mk:Q157246 ;
+    mko:deathDate "1903-05-21"^^xsd:date ;
+    mko:occupation "револуционер"@en ;
+    rdfs:comment "Bulgarian revolutionary"@en ;
+    owl:sameAs wd:Q11051363 .
+
+mk:Q11052138 a mko:Person ;
+    rdfs:label "Васил Папанчев"@mk ;
+    mko:birthDate "1857-01-01"^^xsd:date ;
+    mko:bornIn mk:Q147243 ;
+    mko:deathDate "1933-01-01"^^xsd:date ;
+    mko:occupation "револуционер"@en ;
+    owl:sameAs wd:Q11052138 .
+
+mk:Q11058387 a mko:Person ;
+    rdfs:label "Георги Гочев"@mk ;
+    mko:birthDate "1878-01-01"^^xsd:date ;
+    mko:bornIn mk:Q147243 ;
+    mko:deathDate "1942-03-07"^^xsd:date ;
+    mko:occupation "револуционер"@en ;
+    owl:sameAs wd:Q11058387 .
+
+mk:Q110713008 a mko:Person ;
+    rdfs:label "Petar Stankov"@mk ;
+    mko:birthDate "1873-06-29"^^xsd:date ;
+    mko:bornIn mk:Q157024 ;
+    mko:deathDate "http://www.wikidata.org/.well-known/genid/1ec4873b2ae577ac5d65503c16b91f1c" ;
+    owl:sameAs wd:Q110713008 .
+
+mk:Q11095852 a mko:Person ;
+    rdfs:label "Ѓорѓи Николов"@mk ;
+    mko:birthDate "1883-11-13"^^xsd:date ;
+    mko:bornIn mk:Q157246 ;
+    mko:deathDate "1916-10-18"^^xsd:date ;
+    mko:occupation "револуционер"@en ;
+    owl:sameAs wd:Q11095852 .
+
+mk:Q11106801 a mko:Person ;
+    rdfs:label "Антон Костадинов"@mk ;
+    mko:birthDate "1878-01-01"^^xsd:date ;
+    mko:bornIn mk:Q48814 ;
+    mko:deathDate "1936-04-19"^^xsd:date ;
+    mko:occupation "револуционер"@en ;
+    owl:sameAs wd:Q11106801 .
+
+mk:Q111759083 a mko:Person ;
+    rdfs:label "Maria Kostovska"@mk ;
+    mko:birthDate "1877-05-01"^^xsd:date ;
+    mko:bornIn mk:Q162952 ;
+    mko:deathDate "http://www.wikidata.org/.well-known/genid/08010ce6bae52d37deaf10435644a5a6" ;
+    owl:sameAs wd:Q111759083 .
+
 mk:Q111765627 a mko:Person ;
     rdfs:label "Yanko Stoychev"@mk ;
     mko:birthDate "1876-01-14"^^xsd:date ;
@@ -181,6 +384,55 @@ mk:Q111765627 a mko:Person ;
     mko:deathDate "1942-05-02"^^xsd:date ;
     mko:occupation "револуционер"@en ;
     owl:sameAs wd:Q111765627 .
+
+mk:Q111849788 a mko:Person ;
+    rdfs:label "Panteley Konstantinov"@mk ;
+    mko:birthDate "1870-02-04"^^xsd:date ;
+    mko:bornIn mk:Q48814 ;
+    mko:deathDate "http://www.wikidata.org/.well-known/genid/a37bc7fa9340d993ea6152c681c7f4a2" ;
+    rdfs:comment "Bulgarian public figure"@en ;
+    owl:sameAs wd:Q111849788 .
+
+mk:Q11185219 a mko:Person ;
+    rdfs:label "Лика Стојанова Беровска"@mk ;
+    mko:birthDate "1877-01-01"^^xsd:date ;
+    mko:bornIn mk:Q156858 ;
+    mko:deathDate "1955-07-15"^^xsd:date ;
+    mko:occupation "револуционер"@en ;
+    owl:sameAs wd:Q11185219 .
+
+mk:Q112508780 a mko:Person ;
+    rdfs:label "Hristina Stefanova"@mk ;
+    mko:birthDate "1880-03-01"^^xsd:date ;
+    mko:bornIn mk:Q161827 ;
+    mko:deathDate "http://www.wikidata.org/.well-known/genid/b3f3d4a37517990aaca8249c4a0e75b4" ;
+    rdfs:comment "Bulgarian revolutionary"@en ;
+    owl:sameAs wd:Q112508780 .
+
+mk:Q1125222 a mko:Person ;
+    rdfs:label "Michail Tatartschew"@mk ;
+    mko:birthDate "1864-01-01"^^xsd:date ;
+    mko:bornIn mk:Q161827 ;
+    mko:deathDate "1917-07-05"^^xsd:date ;
+    mko:occupation "политичар"@en ;
+    rdfs:comment "Bulgarian politician (1864-1917)"@en ;
+    owl:sameAs wd:Q1125222 .
+
+mk:Q112653318 a mko:Person ;
+    rdfs:label "Панде Мазнејков"@mk ;
+    mko:birthDate "1871-01-01"^^xsd:date ;
+    mko:bornIn mk:Q48814 ;
+    mko:deathDate "1953-01-01"^^xsd:date ;
+    rdfs:comment "македонски револуционер"@en ;
+    owl:sameAs wd:Q112653318 .
+
+mk:Q114194093 a mko:Person ;
+    rdfs:label "Kosta Nikolov"@mk ;
+    mko:birthDate "1853-01-01"^^xsd:date ;
+    mko:bornIn mk:Q161827 ;
+    mko:deathDate "1930-01-01"^^xsd:date ;
+    rdfs:comment "Bulgarian revolutionary"@en ;
+    owl:sameAs wd:Q114194093 .
 
 mk:Q1145682 a mko:HistoricalEvent ;
     rdfs:label "Ilinden Uprising"@en,
@@ -196,19 +448,49 @@ mk:Q1145682 a mko:HistoricalEvent ;
             time:hasBeginning "1903-08-02"^^xsd:date ;
             time:hasEnd "1903-10-01"^^xsd:date ] .
 
+mk:Q116450544 a mko:Person ;
+    rdfs:label "Димитар Тупаров"@mk ;
+    mko:birthDate "1880-01-01"^^xsd:date ;
+    mko:bornIn mk:Q48814 ;
+    owl:sameAs wd:Q116450544 .
+
 mk:Q116676460 a mko:HistoricalDocument ;
     rdfs:label "Предвестници на бурята"@mk ;
     mko:authoredBy mk:Q12290502 ;
     mko:dateCreated "1993-01-01"^^xsd:date ;
     owl:sameAs wd:Q116676460 .
 
-mk:Q116687584 a mko:Person ;
-    rdfs:label "Andrey Sadrazanov"@mk ;
-    mko:birthDate "1900-01-01"^^xsd:date ;
-    mko:bornIn mk:Q426114 ;
-    mko:deathDate "http://www.wikidata.org/.well-known/genid/64b6b680fa1ea0bd94bb3093e529abdd" ;
-    rdfs:comment "Bulgarian politician"@en ;
-    owl:sameAs wd:Q116687584 .
+mk:Q116687619 a mko:Person ;
+    rdfs:label "Dimitar Buyukliev"@mk ;
+    mko:birthDate "1877-01-01"^^xsd:date ;
+    mko:bornIn mk:Q48814 ;
+    mko:deathDate "1935-01-01"^^xsd:date ;
+    rdfs:comment "Bulgarian teacher"@en ;
+    owl:sameAs wd:Q116687619 .
+
+mk:Q116698030 a mko:Person ;
+    rdfs:label "Sazdo Popivanov"@mk ;
+    mko:birthDate "1876-01-01"^^xsd:date ;
+    mko:bornIn mk:Q214344 ;
+    mko:deathDate "1928-01-01"^^xsd:date ;
+    rdfs:comment "Bulgarian revolutionary"@en ;
+    owl:sameAs wd:Q116698030 .
+
+mk:Q116765889 a mko:Person ;
+    rdfs:label "Dimitar Raychanov"@mk ;
+    mko:birthDate "1865-01-01"^^xsd:date ;
+    mko:bornIn mk:Q161827 ;
+    mko:deathDate "http://www.wikidata.org/.well-known/genid/576452f6790bd806a92c57168192f0c3" ;
+    rdfs:comment "Bulgarian revolutionary"@en ;
+    owl:sameAs wd:Q116765889 .
+
+mk:Q116765952 a mko:Person ;
+    rdfs:label "Dimitar Dzhurov"@mk ;
+    mko:birthDate "1879-01-01"^^xsd:date ;
+    mko:bornIn mk:Q161827 ;
+    mko:deathDate "http://www.wikidata.org/.well-known/genid/9aa994f3e2ac1bdbcc9c192835df3545" ;
+    rdfs:comment "Bulgarian revolutionary"@en ;
+    owl:sameAs wd:Q116765952 .
 
 mk:Q117210267 a mko:Person ;
     rdfs:label "Nicolae Ciolacu"@mk ;
@@ -216,6 +498,159 @@ mk:Q117210267 a mko:Person ;
     mko:bornIn mk:Q103251 ;
     mko:deathDate "2000-08-31"^^xsd:date ;
     owl:sameAs wd:Q117210267 .
+
+mk:Q118366457 a mko:Person ;
+    rdfs:label "Hristo Babamov"@mk ;
+    mko:birthDate "1874-01-01"^^xsd:date ;
+    mko:bornIn mk:Q48814 ;
+    mko:deathDate "1902-01-01"^^xsd:date ;
+    rdfs:comment "Bulgarian revolutionary"@en ;
+    owl:sameAs wd:Q118366457 .
+
+mk:Q119860765 a mko:Person ;
+    rdfs:label "Halil Yaralı"@mk ;
+    mko:birthDate "1895-01-01"^^xsd:date ;
+    mko:bornIn mk:Q214344 ;
+    mko:deathDate "1935-11-06"^^xsd:date ;
+    mko:occupation "политичар"@en ;
+    rdfs:comment "Turkish farmer and statesperson (1895–1935)"@en ;
+    owl:sameAs wd:Q119860765 .
+
+mk:Q119949644 a mko:Person ;
+    rdfs:label "Grigor Trendov"@mk ;
+    mko:birthDate "1900-01-01"^^xsd:date ;
+    mko:bornIn mk:Q214344 ;
+    mko:deathDate "http://www.wikidata.org/.well-known/genid/58a03414ef05f0b9e62c0d507463c3fa" ;
+    rdfs:comment "Bulgarian clergymen"@en ;
+    owl:sameAs wd:Q119949644 .
+
+mk:Q121545925 a mko:Person ;
+    mko:birthDate "1888-10-27"^^xsd:date ;
+    mko:bornIn mk:Q48814 ;
+    mko:deathDate "1960-11-01"^^xsd:date ;
+    rdfs:comment "Turkish intellectual historian and writer (1888–1960)"@en ;
+    owl:sameAs wd:Q121545925 .
+
+mk:Q1226062 a mko:Person ;
+    rdfs:label "Димитрис Семсис"@mk ;
+    mko:birthDate "1883-01-01"^^xsd:date ;
+    mko:bornIn mk:Q48814 ;
+    mko:deathDate "1950-01-13"^^xsd:date ;
+    mko:occupation "пејач"@en ;
+    rdfs:comment "Greek musician"@en ;
+    owl:sameAs wd:Q1226062 .
+
+mk:Q12271045 a mko:Person ;
+    rdfs:label "Avkseni Georgiev"@mk ;
+    mko:birthDate "1869-01-01"^^xsd:date ;
+    mko:bornIn mk:Q54452 ;
+    mko:deathDate "1950-02-21"^^xsd:date ;
+    mko:occupation "револуционер"@en ;
+    owl:sameAs wd:Q12271045 .
+
+mk:Q12271429 a mko:Person ;
+    rdfs:label "Александър Василевски (партизанин)"@mk ;
+    mko:birthDate "1912-01-01"^^xsd:date ;
+    mko:bornIn mk:Q157246 ;
+    mko:deathDate "1944-10-11"^^xsd:date ;
+    owl:sameAs wd:Q12271429 .
+
+mk:Q12271446 a mko:Person ;
+    rdfs:label "Alexandar Georgiev"@mk ;
+    mko:birthDate "1878-01-01"^^xsd:date ;
+    mko:bornIn mk:Q147243 ;
+    mko:deathDate "1908-02-23"^^xsd:date ;
+    mko:occupation "револуционер"@en ;
+    rdfs:comment "Bulgarian revolutionary"@en ;
+    owl:sameAs wd:Q12271446 .
+
+mk:Q12271458 a mko:Person ;
+    rdfs:label "Александър Джолов"@mk ;
+    mko:birthDate "1881-01-01"^^xsd:date ;
+    mko:bornIn mk:Q157024 ;
+    owl:sameAs wd:Q12271458 .
+
+mk:Q12271470 a mko:Person ;
+    rdfs:label "Александар Евтимов"@mk ;
+    mko:birthDate "1874-01-01"^^xsd:date ;
+    mko:bornIn mk:Q157246 ;
+    mko:deathDate "http://www.wikidata.org/.well-known/genid/105bb50269add5a823dcac7cf5aad85f" ;
+    mko:occupation "револуционер"@en ;
+    rdfs:comment "Bulgarian revolutionary"@en ;
+    owl:sameAs wd:Q12271470 .
+
+mk:Q12271507 a mko:Person ;
+    rdfs:label "Александър Кралев"@mk ;
+    mko:birthDate "1882-01-01"^^xsd:date ;
+    mko:bornIn mk:Q147243 ;
+    mko:deathDate "1905-01-01"^^xsd:date ;
+    mko:occupation "револуционер"@en ;
+    owl:sameAs wd:Q12271507 .
+
+mk:Q12271512 a mko:Person ;
+    rdfs:label "Alexandar Manov"@mk ;
+    mko:birthDate "1875-08-15"^^xsd:date ;
+    mko:bornIn mk:Q214344 ;
+    mko:deathDate "1968-01-01"^^xsd:date ;
+    mko:occupation "офицер"@en ;
+    owl:sameAs wd:Q12271512 .
+
+mk:Q12271529 a mko:Person ;
+    rdfs:label "Александaр Ников"@mk ;
+    mko:birthDate "1873-01-01"^^xsd:date ;
+    mko:bornIn mk:Q157246 ;
+    mko:deathDate "1901-01-01"^^xsd:date ;
+    mko:occupation "револуционер"@en ;
+    rdfs:comment "Bulgarian revolutionary"@en ;
+    owl:sameAs wd:Q12271529 .
+
+mk:Q12271554 a mko:Person ;
+    rdfs:label "Александър Попорушев"@mk ;
+    mko:birthDate "1849-01-01"^^xsd:date ;
+    mko:bornIn mk:Q147243 ;
+    mko:deathDate "1897-01-01"^^xsd:date ;
+    mko:occupation "револуционер"@en ;
+    owl:sameAs wd:Q12271554 .
+
+mk:Q12271558 a mko:Person ;
+    rdfs:label "Alexandar Razvigorov"@mk ;
+    mko:birthDate "1874-01-01"^^xsd:date ;
+    mko:bornIn mk:Q147243 ;
+    mko:deathDate "1946-11-09"^^xsd:date ;
+    mko:occupation "револуционер"@en ;
+    owl:sameAs wd:Q12271558 .
+
+mk:Q12271572 a mko:Person ;
+    rdfs:label "Александар Станоев"@mk ;
+    mko:birthDate "1881-05-01"^^xsd:date ;
+    mko:bornIn mk:Q164954 ;
+    mko:deathDate "1907-11-22"^^xsd:date ;
+    mko:occupation "револуционер"@en ;
+    rdfs:comment "македонски револуционер"@en ;
+    owl:sameAs wd:Q12271572 .
+
+mk:Q12271594 a mko:Person ;
+    rdfs:label "Александар Чакаров"@mk ;
+    mko:birthDate "1869-01-01"^^xsd:date ;
+    mko:bornIn mk:Q156858 ;
+    mko:deathDate "1910-01-18"^^xsd:date ;
+    mko:occupation "револуционер"@en ;
+    owl:sameAs wd:Q12271594 .
+
+mk:Q12271768 a mko:Person ;
+    rdfs:label "Anastas Dudulov"@mk ;
+    mko:birthDate "1892-05-03"^^xsd:date ;
+    mko:bornIn mk:Q156858 ;
+    mko:deathDate "1971-04-25"^^xsd:date ;
+    mko:occupation "вајар"@en ;
+    rdfs:comment "Bulgarian sculptor"@en ;
+    owl:sameAs wd:Q12271768 .
+
+mk:Q12271771 a mko:Person ;
+    rdfs:label "Анастас Калайджиев"@mk ;
+    mko:birthDate "1837-01-01"^^xsd:date ;
+    mko:bornIn mk:Q156858 ;
+    owl:sameAs wd:Q12271771 .
 
 mk:Q12271778 a mko:Person ;
     rdfs:label "Анастас Лозанчев"@mk ;
@@ -226,6 +661,13 @@ mk:Q12271778 a mko:Person ;
     rdfs:comment "македонски револуционер"@en ;
     owl:sameAs wd:Q12271778 .
 
+mk:Q12271782 a mko:Person ;
+    rdfs:label "Анастас Наумов"@mk ;
+    mko:birthDate "1861-02-11"^^xsd:date ;
+    mko:bornIn mk:Q157246 ;
+    mko:deathDate "1920-09-14"^^xsd:date ;
+    owl:sameAs wd:Q12271782 .
+
 mk:Q12271793 a mko:Person ;
     rdfs:label "Anastas Cheshmedzhiev"@mk ;
     mko:birthDate "1879-02-01"^^xsd:date ;
@@ -234,21 +676,54 @@ mk:Q12271793 a mko:Person ;
     rdfs:comment "Bulgarian revolutionary"@en ;
     owl:sameAs wd:Q12271793 .
 
+mk:Q12271806 a mko:Person ;
+    rdfs:label "Анастасија Балтова"@mk ;
+    mko:birthDate "1872-01-01"^^xsd:date ;
+    mko:bornIn mk:Q157246 ;
+    mko:deathDate "1957-01-01"^^xsd:date ;
+    mko:occupation "револуционер"@en ;
+    rdfs:comment "македонска револуционерка"@en ;
+    owl:sameAs wd:Q12271806 .
+
+mk:Q12271844 a mko:Person ;
+    rdfs:label "Ангел Георгиев (революционер)"@mk ;
+    mko:birthDate "1880-07-06"^^xsd:date ;
+    mko:bornIn mk:Q384 ;
+    mko:occupation "револуционер"@en ;
+    owl:sameAs wd:Q12271844 .
+
+mk:Q12271967 a mko:Person ;
+    rdfs:label "Андон Лазаров"@mk ;
+    mko:birthDate "1871-01-01"^^xsd:date ;
+    mko:bornIn mk:Q48814 ;
+    mko:deathDate "1926-05-24"^^xsd:date ;
+    mko:occupation "револуционер"@en ;
+    owl:sameAs wd:Q12271967 .
+
+mk:Q12271996 a mko:Person ;
+    rdfs:label "Andrey Bashev"@mk ;
+    mko:birthDate "1858-11-16"^^xsd:date ;
+    mko:bornIn mk:Q161827 ;
+    mko:deathDate "1927-10-26"^^xsd:date ;
+    mko:occupation "политичар"@en ;
+    rdfs:comment "Bulgarian politician and lawyer"@en ;
+    owl:sameAs wd:Q12271996 .
+
+mk:Q12272010 a mko:Person ;
+    rdfs:label "Андреја Кожуваров"@mk ;
+    mko:birthDate "1875-01-01"^^xsd:date ;
+    mko:bornIn mk:Q384 ;
+    mko:deathDate "http://www.wikidata.org/.well-known/genid/6f757234d0dc6e7b6c3a38f6cb4ae58a" ;
+    mko:occupation "револуционер"@en ;
+    owl:sameAs wd:Q12272010 .
+
 mk:Q12272012 a mko:Person ;
-    rdfs:label "Q12272012"@mk ;
+    rdfs:label "Андрей Манов"@mk ;
     mko:birthDate "1897-01-01"^^xsd:date ;
     mko:bornIn mk:Q880098 ;
     mko:deathDate "1930-12-03"^^xsd:date ;
     mko:occupation "револуционер"@en ;
     owl:sameAs wd:Q12272012 .
-
-mk:Q12272017 a mko:Person ;
-    rdfs:label "Andrey Petrov"@mk ;
-    mko:birthDate "1861-01-01"^^xsd:date ;
-    mko:bornIn mk:Q856278 ;
-    mko:deathDate "1903-05-21"^^xsd:date ;
-    mko:occupation "револуционер"@en ;
-    owl:sameAs wd:Q12272017 .
 
 mk:Q12272114 a mko:Person ;
     rdfs:label "Антигон Хаџов"@mk ;
@@ -258,6 +733,37 @@ mk:Q12272114 a mko:Person ;
     mko:occupation "револуционер"@en ;
     rdfs:comment "Bulgarian revolutionary"@en ;
     owl:sameAs wd:Q12272114 .
+
+mk:Q12272155 a mko:Person ;
+    rdfs:label "Anton Kovatchev"@mk ;
+    mko:birthDate "1878-09-07"^^xsd:date ;
+    mko:bornIn mk:Q147243 ;
+    mko:deathDate "1931-10-04"^^xsd:date ;
+    mko:occupation "офицер"@en ;
+    owl:sameAs wd:Q12272155 .
+
+mk:Q12272371 a mko:Person ;
+    rdfs:label "Арсо Лазаров"@mk ;
+    mko:birthDate "1845-01-01"^^xsd:date ;
+    mko:bornIn mk:Q147243 ;
+    mko:occupation "револуционер"@en ;
+    owl:sameAs wd:Q12272371 .
+
+mk:Q12272470 a mko:Person ;
+    rdfs:label "Asen Tatarchev"@mk ;
+    mko:birthDate "1893-11-14"^^xsd:date ;
+    mko:bornIn mk:Q161827 ;
+    mko:deathDate "1970-08-09"^^xsd:date ;
+    mko:occupation "револуционер"@en ;
+    owl:sameAs wd:Q12272470 .
+
+mk:Q12272472 a mko:Person ;
+    rdfs:label "Асен Тодоров"@mk ;
+    mko:birthDate "1913-02-17"^^xsd:date ;
+    mko:bornIn mk:Q384 ;
+    mko:deathDate "1990-02-11"^^xsd:date ;
+    mko:occupation "новинар"@en ;
+    owl:sameAs wd:Q12272472 .
 
 mk:Q12272480 a mko:Person ;
     rdfs:label "Asen Cholakov"@mk ;
@@ -274,6 +780,21 @@ mk:Q12272528 a mko:Person ;
     mko:deathDate "1943-11-30"^^xsd:date ;
     mko:occupation "воено лице"@en ;
     owl:sameAs wd:Q12272528 .
+
+mk:Q12272530 a mko:Person ;
+    rdfs:label "Атанас Алтъпармаков"@mk ;
+    mko:birthDate "1862-01-01"^^xsd:date ;
+    mko:bornIn mk:Q157246 ;
+    mko:deathDate "1927-08-10"^^xsd:date ;
+    owl:sameAs wd:Q12272530 .
+
+mk:Q12272544 a mko:Person ;
+    rdfs:label "Атанас Белчев"@mk ;
+    mko:birthDate "1872-01-01"^^xsd:date ;
+    mko:bornIn mk:Q221320 ;
+    mko:deathDate "1912-12-01"^^xsd:date ;
+    mko:occupation "револуционер"@en ;
+    owl:sameAs wd:Q12272544 .
 
 mk:Q12272656 a mko:Person ;
     rdfs:label "Атанас Раздолов"@mk ;
@@ -294,12 +815,46 @@ mk:Q12272698 a mko:Person ;
     owl:sameAs wd:Q12272698 .
 
 mk:Q12272768 a mko:Person ;
-    rdfs:label "Q12272768"@mk ;
+    rdfs:label "Ахил Карадимчев"@mk ;
     mko:birthDate "1869-03-30"^^xsd:date ;
     mko:bornIn mk:Q1223508 ;
     mko:deathDate "1950-07-18"^^xsd:date ;
     mko:occupation "свештеник"@en ;
     owl:sameAs wd:Q12272768 .
+
+mk:Q12272790 a mko:Person ;
+    rdfs:label "Ацо Петровски"@mk ;
+    mko:birthDate "1901-01-01"^^xsd:date ;
+    mko:bornIn mk:Q384 ;
+    mko:occupation "политичар"@en ;
+    rdfs:comment "политичар"@en ;
+    owl:sameAs wd:Q12272790 .
+
+mk:Q12273377 a mko:Person ;
+    rdfs:label "Blagoy Puzderliev"@mk ;
+    mko:birthDate "1879-01-01"^^xsd:date ;
+    mko:bornIn mk:Q147243 ;
+    mko:deathDate "1905-05-26"^^xsd:date ;
+    mko:occupation "револуционер"@en ;
+    rdfs:comment "Bulgarian revolutionary"@en ;
+    owl:sameAs wd:Q12273377 .
+
+mk:Q12273438 a mko:Person ;
+    rdfs:label "Bogdan Barov"@mk ;
+    mko:birthDate "1885-11-07"^^xsd:date ;
+    mko:bornIn mk:Q384 ;
+    mko:deathDate "1941-09-09"^^xsd:date ;
+    mko:occupation "писател"@en ;
+    rdfs:comment "Bulgarian revolutionary"@en ;
+    owl:sameAs wd:Q12273438 .
+
+mk:Q12273523 a mko:Person ;
+    rdfs:label "Божин Талев"@mk ;
+    mko:birthDate "1875-01-01"^^xsd:date ;
+    mko:bornIn mk:Q157246 ;
+    mko:deathDate "1929-12-03"^^xsd:date ;
+    mko:occupation "револуционер"@en ;
+    owl:sameAs wd:Q12273523 .
 
 mk:Q12273525 a mko:Person ;
     rdfs:label "Bozhirad Tatarchev"@mk ;
@@ -310,14 +865,90 @@ mk:Q12273525 a mko:Person ;
     rdfs:comment "Bulgarian physician"@en ;
     owl:sameAs wd:Q12273525 .
 
-mk:Q12274589 a mko:Person ;
-    rdfs:label "Q12274589"@mk ;
-    mko:birthDate "http://www.wikidata.org/.well-known/genid/dc9e91b2a9e232a5eca7a484615ebfd2" ;
-    mko:bornIn mk:Q157034 ;
-    mko:deathDate "http://www.wikidata.org/.well-known/genid/b0683aee6f331539c176dc15f3d78b46" ;
+mk:Q12273655 a mko:Person ;
+    rdfs:label "Борис Атков"@mk ;
+    mko:birthDate "1904-12-06"^^xsd:date ;
+    mko:bornIn mk:Q384 ;
+    mko:deathDate "1989-12-07"^^xsd:date ;
+    mko:occupation "политичар"@en ;
+    rdfs:comment "политичар"@en ;
+    owl:sameAs wd:Q12273655 .
+
+mk:Q12273663 a mko:Person ;
+    rdfs:label "Борис Бунев"@mk ;
+    mko:birthDate "1895-01-01"^^xsd:date ;
+    mko:bornIn mk:Q157024 ;
+    mko:deathDate "1967-01-01"^^xsd:date ;
+    mko:occupation "офицер"@en ;
+    rdfs:comment "Bulgarian military officer"@en ;
+    owl:sameAs wd:Q12273663 .
+
+mk:Q12273687 a mko:Person ;
+    rdfs:label "Boris Zographov"@mk ;
+    mko:birthDate "1891-01-06"^^xsd:date ;
+    mko:bornIn mk:Q157246 ;
+    mko:deathDate "1957-01-01"^^xsd:date ;
+    mko:occupation "новинар"@en ;
+    rdfs:comment "Bulgarian journalist"@en ;
+    owl:sameAs wd:Q12273687 .
+
+mk:Q12273728 a mko:Person ;
+    rdfs:label "Boris Svetiev"@mk ;
+    mko:birthDate "1903-01-01"^^xsd:date ;
+    mko:bornIn mk:Q157246 ;
+    mko:deathDate "1986-01-01"^^xsd:date ;
+    mko:occupation "револуционер"@en ;
+    rdfs:comment "Bulgarian revolutionary"@en ;
+    owl:sameAs wd:Q12273728 .
+
+mk:Q12273740 a mko:Person ;
+    rdfs:label "Boris Strezov"@mk ;
+    mko:birthDate "1879-09-17"^^xsd:date ;
+    mko:bornIn mk:Q161827 ;
+    mko:deathDate "1947-07-07"^^xsd:date ;
+    mko:occupation "офицер"@en ;
+    owl:sameAs wd:Q12273740 .
+
+mk:Q12273748 a mko:Person ;
+    rdfs:label "Борис Филипов"@mk ;
+    mko:birthDate "1882-01-01"^^xsd:date ;
+    mko:bornIn mk:Q164954 ;
+    mko:deathDate "1905-11-07"^^xsd:date ;
+    mko:occupation "револуционер"@en ;
+    owl:sameAs wd:Q12273748 .
+
+mk:Q12273866 a mko:Person ;
+    rdfs:label "Боян Мирчев"@mk ;
+    mko:birthDate "1900-09-20"^^xsd:date ;
+    mko:bornIn mk:Q157246 ;
+    mko:deathDate "1992-07-20"^^xsd:date ;
+    mko:occupation "економист"@en ;
+    owl:sameAs wd:Q12273866 .
+
+mk:Q12273898 a mko:Person ;
+    rdfs:label "Branko Obradović"@mk ;
+    mko:birthDate "1907-06-10"^^xsd:date ;
+    mko:bornIn mk:Q384 ;
+    mko:deathDate "1983-09-01"^^xsd:date ;
     mko:occupation "воено лице"@en ;
-    rdfs:comment "Bulgarian military personnel"@en ;
-    owl:sameAs wd:Q12274589 .
+    owl:sameAs wd:Q12273898 .
+
+mk:Q12274580 a mko:Person ;
+    rdfs:label "Evangelos Koukoudeas"@mk ;
+    mko:birthDate "1850-01-01"^^xsd:date ;
+    mko:bornIn mk:Q48814 ;
+    mko:occupation "воено лице"@en ;
+    rdfs:comment "Greek soldier"@en ;
+    owl:sameAs wd:Q12274580 .
+
+mk:Q12274586 a mko:Person ;
+    rdfs:label "Вангел Чукалевски"@mk ;
+    mko:birthDate "1910-01-20"^^xsd:date ;
+    mko:bornIn mk:Q157246 ;
+    mko:deathDate "1983-01-08"^^xsd:date ;
+    mko:occupation "политичар"@en ;
+    rdfs:comment "македонски партизан, офицер и воен пилот"@en ;
+    owl:sameAs wd:Q12274586 .
 
 mk:Q12274659 a mko:Person ;
     rdfs:label "Vasil Angelov"@mk ;
@@ -328,6 +959,29 @@ mk:Q12274659 a mko:Person ;
     rdfs:comment "Bulgarian military officer/revolutionary"@en ;
     owl:sameAs wd:Q12274659 .
 
+mk:Q12274685 a mko:Person ;
+    rdfs:label "Васил Војнов"@mk ;
+    mko:birthDate "1876-01-01"^^xsd:date ;
+    mko:bornIn mk:Q157246 ;
+    mko:occupation "револуционер"@en ;
+    owl:sameAs wd:Q12274685 .
+
+mk:Q12274709 a mko:Person ;
+    rdfs:label "Васил Дилев"@mk ;
+    mko:birthDate "1913-01-01"^^xsd:date ;
+    mko:bornIn mk:Q384 ;
+    mko:deathDate "2011-10-17"^^xsd:date ;
+    mko:occupation "фудбалски тренер"@en ;
+    owl:sameAs wd:Q12274709 .
+
+mk:Q12274782 a mko:Person ;
+    rdfs:label "Васил Мишайков"@mk ;
+    mko:birthDate "1840-01-01"^^xsd:date ;
+    mko:bornIn mk:Q157246 ;
+    mko:deathDate "1897-01-01"^^xsd:date ;
+    mko:occupation "правник"@en ;
+    owl:sameAs wd:Q12274782 .
+
 mk:Q12274871 a mko:Person ;
     rdfs:label "Vassil Shanov"@mk ;
     mko:birthDate "1874-10-12"^^xsd:date ;
@@ -335,6 +989,21 @@ mk:Q12274871 a mko:Person ;
     mko:deathDate "1953-09-07"^^xsd:date ;
     mko:occupation "наставник"@en ;
     owl:sameAs wd:Q12274871 .
+
+mk:Q12274891 a mko:Person ;
+    rdfs:label "Василиос Агорастос"@mk ;
+    mko:birthDate "1864-01-01"^^xsd:date ;
+    mko:bornIn mk:Q157246 ;
+    mko:deathDate "1925-01-01"^^xsd:date ;
+    owl:sameAs wd:Q12274891 .
+
+mk:Q12275014 a mko:Person ;
+    rdfs:label "Велко Мандарчев"@mk ;
+    mko:birthDate "1874-05-20"^^xsd:date ;
+    mko:bornIn mk:Q384 ;
+    mko:deathDate "http://www.wikidata.org/.well-known/genid/1031cee82b2aa0d7fdab135c603d1f28" ;
+    mko:occupation "воено лице"@en ;
+    owl:sameAs wd:Q12275014 .
 
 mk:Q12275018 a mko:Person ;
     rdfs:label "Веле Марков"@mk ;
@@ -345,6 +1014,88 @@ mk:Q12275018 a mko:Person ;
     rdfs:comment "Macedoninan Revolutionary (VMRO)"@en ;
     owl:sameAs wd:Q12275018 .
 
+mk:Q12275097 a mko:Person ;
+    rdfs:label "Вера Недкова"@mk ;
+    mko:birthDate "1906-11-16"^^xsd:date ;
+    mko:bornIn mk:Q384 ;
+    mko:deathDate "1996-07-07"^^xsd:date ;
+    mko:occupation "сликар"@en ;
+    rdfs:comment "бугарска сликарка"@en ;
+    owl:sameAs wd:Q12275097 .
+
+mk:Q12275258 a mko:Person ;
+    rdfs:label "Виктор Аќимовиќ"@mk ;
+    mko:birthDate "1915-05-15"^^xsd:date ;
+    mko:bornIn mk:Q157024 ;
+    mko:deathDate "1987-12-21"^^xsd:date ;
+    mko:occupation "новинар"@en ;
+    rdfs:comment "Macedonian journalist, photographer and filmmaker"@en ;
+    owl:sameAs wd:Q12275258 .
+
+mk:Q12275406 a mko:Person ;
+    rdfs:label "Vladimir Bachvarov"@mk ;
+    mko:birthDate "1896-08-23"^^xsd:date ;
+    mko:bornIn mk:Q162952 ;
+    mko:deathDate "1955-01-29"^^xsd:date ;
+    mko:occupation "офицер"@en ;
+    owl:sameAs wd:Q12275406 .
+
+mk:Q12275430 a mko:Person ;
+    rdfs:label "Vladimir Zhivkov"@mk ;
+    mko:birthDate "1875-01-01"^^xsd:date ;
+    mko:bornIn mk:Q147243 ;
+    mko:deathDate "1910-07-01"^^xsd:date ;
+    mko:occupation "револуционер"@en ;
+    owl:sameAs wd:Q12275430 .
+
+mk:Q12275440 a mko:Person ;
+    rdfs:label "Владимир Каваев"@mk ;
+    mko:birthDate "1880-01-01"^^xsd:date ;
+    mko:bornIn mk:Q156858 ;
+    mko:deathDate "1931-01-01"^^xsd:date ;
+    mko:occupation "лекар"@en ;
+    owl:sameAs wd:Q12275440 .
+
+mk:Q12275447 a mko:Person ;
+    rdfs:label "Vladimir Ketsarov"@mk ;
+    mko:birthDate "1893-10-10"^^xsd:date ;
+    mko:bornIn mk:Q157246 ;
+    mko:deathDate "1960-08-17"^^xsd:date ;
+    mko:occupation "воено лице"@en ;
+    owl:sameAs wd:Q12275447 .
+
+mk:Q12275448 a mko:Person ;
+    rdfs:label "Владимир Ковачев"@mk ;
+    mko:birthDate "1875-01-05"^^xsd:date ;
+    mko:bornIn mk:Q147243 ;
+    mko:deathDate "1910-08-03"^^xsd:date ;
+    mko:occupation "офицер"@en ;
+    owl:sameAs wd:Q12275448 .
+
+mk:Q12275492 a mko:Person ;
+    rdfs:label "Vladimir Slankov"@mk ;
+    mko:birthDate "1889-01-01"^^xsd:date ;
+    mko:bornIn mk:Q147243 ;
+    mko:deathDate "1914-08-26"^^xsd:date ;
+    mko:occupation "револуционер"@en ;
+    owl:sameAs wd:Q12275492 .
+
+mk:Q12275500 a mko:Person ;
+    rdfs:label "Vladimir Hadjinikolov"@mk ;
+    mko:birthDate "1878-01-01"^^xsd:date ;
+    mko:bornIn mk:Q214344 ;
+    mko:deathDate "http://www.wikidata.org/.well-known/genid/5769293afa6e39e1229cdadda6763bf4" ;
+    mko:occupation "револуционер"@en ;
+    rdfs:comment "Bulgarian revolutionary"@en ;
+    owl:sameAs wd:Q12275500 .
+
+mk:Q12275505 a mko:Person ;
+    rdfs:label "Vladimir Yanev"@mk ;
+    mko:birthDate "1877-05-28"^^xsd:date ;
+    mko:bornIn mk:Q147243 ;
+    mko:deathDate "http://www.wikidata.org/.well-known/genid/52a1187e7d13634001b121ba6ea38d64" ;
+    owl:sameAs wd:Q12275505 .
+
 mk:Q12275513 a mko:Person ;
     rdfs:label "Vladislav Kanazirev"@mk ;
     mko:birthDate "1876-10-21"^^xsd:date ;
@@ -353,6 +1104,47 @@ mk:Q12275513 a mko:Person ;
     mko:occupation "политичар"@en ;
     rdfs:comment "Bulgarian politician"@en ;
     owl:sameAs wd:Q12275513 .
+
+mk:Q12275517 a mko:Person ;
+    rdfs:label "Владислав Ковачев"@mk ;
+    mko:birthDate "1875-01-05"^^xsd:date ;
+    mko:bornIn mk:Q384 ;
+    mko:deathDate "1924-09-13"^^xsd:date ;
+    mko:occupation "политичар"@en ;
+    rdfs:comment "Bulgarian military and revolutionary"@en ;
+    owl:sameAs wd:Q12275517 .
+
+mk:Q12275925 a mko:Person ;
+    rdfs:label "Архиепископ Охридски и Македонски г.г. Гаврил II"@mk ;
+    mko:birthDate "1912-04-07"^^xsd:date ;
+    mko:bornIn mk:Q384 ;
+    mko:deathDate "1996-03-04"^^xsd:date ;
+    mko:occupation "православен свештеник"@en ;
+    owl:sameAs wd:Q12275925 .
+
+mk:Q12276183 a mko:Person ;
+    rdfs:label "Гена Църнушанова"@mk ;
+    mko:birthDate "1902-01-01"^^xsd:date ;
+    mko:bornIn mk:Q384 ;
+    mko:deathDate "1979-01-01"^^xsd:date ;
+    mko:occupation "револуционер"@en ;
+    owl:sameAs wd:Q12276183 .
+
+mk:Q12276458 a mko:Person ;
+    rdfs:label "Георги Икономов (Струга)"@mk ;
+    mko:birthDate "1836-01-01"^^xsd:date ;
+    mko:bornIn mk:Q156858 ;
+    mko:deathDate "1914-01-01"^^xsd:date ;
+    owl:sameAs wd:Q12276458 .
+
+mk:Q12276475 a mko:Person ;
+    rdfs:label "Георги Калатинов"@mk ;
+    mko:birthDate "1853-01-01"^^xsd:date ;
+    mko:bornIn mk:Q48814 ;
+    mko:deathDate "1908-07-25"^^xsd:date ;
+    mko:occupation "политичар"@en ;
+    rdfs:comment "Bulgarian politician"@en ;
+    owl:sameAs wd:Q12276475 .
 
 mk:Q12276479 a mko:Person ;
     rdfs:label "Georgi Kaloyanov"@mk ;
@@ -370,6 +1162,22 @@ mk:Q12276590 a mko:Person ;
     rdfs:comment "Aromanian revolutionary in Ottoman Macedonia"@en ;
     owl:sameAs wd:Q12276590 .
 
+mk:Q12276652 a mko:Person ;
+    rdfs:label "Georgi Popov"@mk ;
+    mko:birthDate "1874-01-01"^^xsd:date ;
+    mko:bornIn mk:Q214344 ;
+    mko:deathDate "1907-08-18"^^xsd:date ;
+    mko:occupation "револуционер"@en ;
+    owl:sameAs wd:Q12276652 .
+
+mk:Q12276667 a mko:Person ;
+    rdfs:label "Георги Попянев"@mk ;
+    mko:birthDate "1886-01-01"^^xsd:date ;
+    mko:bornIn mk:Q147243 ;
+    mko:deathDate "1960-03-06"^^xsd:date ;
+    mko:occupation "револуционер"@en ;
+    owl:sameAs wd:Q12276667 .
+
 mk:Q12276818 a mko:Person ;
     rdfs:label "Георги Чуранов"@mk ;
     mko:birthDate "1860-01-01"^^xsd:date ;
@@ -379,6 +1187,103 @@ mk:Q12276818 a mko:Person ;
     rdfs:comment "Bulgarian military personnel"@en ;
     owl:sameAs wd:Q12276818 .
 
+mk:Q12276859 a mko:Person ;
+    rdfs:label "Georgios Modis"@mk ;
+    mko:birthDate "1887-05-14"^^xsd:date ;
+    mko:bornIn mk:Q157246 ;
+    mko:deathDate "1975-06-18"^^xsd:date ;
+    mko:occupation "писател"@en ;
+    rdfs:comment "новинар, Грција"@en ;
+    owl:sameAs wd:Q12276859 .
+
+mk:Q12276868 a mko:Person ;
+    rdfs:label "Georgios Sagiaksis"@mk ;
+    mko:birthDate "1874-01-01"^^xsd:date ;
+    mko:bornIn mk:Q157246 ;
+    mko:deathDate "1941-09-29"^^xsd:date ;
+    mko:occupation "поет"@en ;
+    rdfs:comment "Greek poet"@en ;
+    owl:sameAs wd:Q12276868 .
+
+mk:Q12277369 a mko:Person ;
+    rdfs:label "Григор Гърличков"@mk ;
+    mko:birthDate "1861-01-17"^^xsd:date ;
+    mko:bornIn mk:Q147243 ;
+    mko:deathDate "1935-11-13"^^xsd:date ;
+    mko:occupation "воено лице"@en ;
+    owl:sameAs wd:Q12277369 .
+
+mk:Q12277401 a mko:Person ;
+    rdfs:label "Grigor Hadzhiserafimov"@mk ;
+    mko:birthDate "1845-01-01"^^xsd:date ;
+    mko:bornIn mk:Q157024 ;
+    rdfs:comment "Bulgarian public figure"@en ;
+    owl:sameAs wd:Q12277401 .
+
+mk:Q12277418 a mko:Person ;
+    rdfs:label "Gregory Popdimitrov"@mk ;
+    mko:birthDate "1864-05-26"^^xsd:date ;
+    mko:bornIn mk:Q164954 ;
+    mko:deathDate "1941-12-21"^^xsd:date ;
+    owl:sameAs wd:Q12277418 .
+
+mk:Q12277515 a mko:Person ;
+    rdfs:label "Гьоро Борозан"@mk ;
+    mko:birthDate "1835-01-01"^^xsd:date ;
+    mko:bornIn mk:Q54452 ;
+    mko:deathDate "1874-01-01"^^xsd:date ;
+    owl:sameAs wd:Q12277515 .
+
+mk:Q12277703 a mko:Person ;
+    rdfs:label "Дафко Данаилов"@mk ;
+    mko:birthDate "1896-01-01"^^xsd:date ;
+    mko:bornIn mk:Q36565 ;
+    mko:deathDate "1982-11-06"^^xsd:date ;
+    mko:occupation "револуционер"@en ;
+    rdfs:comment "Bulgarian revolutionary"@en ;
+    owl:sameAs wd:Q12277703 .
+
+mk:Q12278058 a mko:Person ;
+    rdfs:label "Дијамандија Мишајков"@mk ;
+    mko:birthDate "1872-03-15"^^xsd:date ;
+    mko:bornIn mk:Q157246 ;
+    mko:deathDate "1953-01-01"^^xsd:date ;
+    rdfs:comment "Macedonian journalist (1872–1953)"@en ;
+    owl:sameAs wd:Q12278058 .
+
+mk:Q12278115 a mko:Person ;
+    rdfs:label "Диме Николов"@mk ;
+    mko:birthDate "1831-01-01"^^xsd:date ;
+    mko:bornIn mk:Q384 ;
+    mko:deathDate "http://www.wikidata.org/.well-known/genid/742c24a02763dfdd53ca9e149a46a1e0" ;
+    owl:sameAs wd:Q12278115 .
+
+mk:Q12278262 a mko:Person ;
+    rdfs:label "Dimitar Vladov"@mk ;
+    mko:birthDate "1873-04-03"^^xsd:date ;
+    mko:bornIn mk:Q161827 ;
+    mko:deathDate "1917-01-15"^^xsd:date ;
+    mko:occupation "револуционер"@en ;
+    owl:sameAs wd:Q12278262 .
+
+mk:Q12278332 a mko:Person ;
+    rdfs:label "Dimitar Domazetov"@mk ;
+    mko:birthDate "1904-03-10"^^xsd:date ;
+    mko:bornIn mk:Q147243 ;
+    mko:deathDate "1925-01-01"^^xsd:date ;
+    mko:occupation "револуционер"@en ;
+    rdfs:comment "Bulgarian revolutionary"@en ;
+    owl:sameAs wd:Q12278332 .
+
+mk:Q12278336 a mko:Person ;
+    rdfs:label "Dimitar Dudulov"@mk ;
+    mko:birthDate "1894-10-07"^^xsd:date ;
+    mko:bornIn mk:Q156858 ;
+    mko:deathDate "1980-01-01"^^xsd:date ;
+    mko:occupation "астроном"@en ;
+    rdfs:comment "Bulgarian astronomer"@en ;
+    owl:sameAs wd:Q12278336 .
+
 mk:Q12278480 a mko:Person ;
     rdfs:label "Theophylact Malincheff"@mk ;
     mko:birthDate "1884-03-09"^^xsd:date ;
@@ -386,6 +1291,109 @@ mk:Q12278480 a mko:Person ;
     mko:deathDate "1949-04-30"^^xsd:date ;
     mko:occupation "револуционер"@en ;
     owl:sameAs wd:Q12278480 .
+
+mk:Q12278501 a mko:Person ;
+    rdfs:label "Димитар Миовски"@mk ;
+    mko:birthDate "1913-09-01"^^xsd:date ;
+    mko:bornIn mk:Q384 ;
+    mko:deathDate "1982-05-25"^^xsd:date ;
+    mko:occupation "политичар"@en ;
+    rdfs:comment "политичар"@en ;
+    owl:sameAs wd:Q12278501 .
+
+mk:Q12278502 a mko:Person ;
+    rdfs:label "Димитар Мирасчиев"@mk ;
+    mko:birthDate "1872-08-01"^^xsd:date ;
+    mko:bornIn mk:Q147243 ;
+    mko:deathDate "1934-09-28"^^xsd:date ;
+    mko:occupation "револуционер"@en ;
+    owl:sameAs wd:Q12278502 .
+
+mk:Q12278509 a mko:Person ;
+    rdfs:label "Dimitar Mihaylov"@mk ;
+    mko:birthDate "1873-10-12"^^xsd:date ;
+    mko:bornIn mk:Q157246 ;
+    mko:deathDate "1932-05-16"^^xsd:date ;
+    owl:sameAs wd:Q12278509 .
+
+mk:Q12278526 a mko:Person ;
+    rdfs:label "Димитър Наков"@mk ;
+    mko:birthDate "1884-01-01"^^xsd:date ;
+    mko:bornIn mk:Q214344 ;
+    mko:deathDate "http://www.wikidata.org/.well-known/genid/076960741f72eaeed86a07fcb1be9132" ;
+    mko:occupation "револуционер"@en ;
+    owl:sameAs wd:Q12278526 .
+
+mk:Q12278530 a mko:Person ;
+    rdfs:label "Димитър Недков"@mk ;
+    mko:birthDate "1883-11-16"^^xsd:date ;
+    mko:bornIn mk:Q147243 ;
+    mko:deathDate "1977-04-19"^^xsd:date ;
+    mko:occupation "револуционер"@en ;
+    owl:sameAs wd:Q12278530 .
+
+mk:Q12278531 a mko:Person ;
+    rdfs:label "Димитар Несторов"@mk ;
+    mko:birthDate "1890-06-10"^^xsd:date ;
+    mko:bornIn mk:Q156858 ;
+    mko:deathDate "1968-02-07"^^xsd:date ;
+    mko:occupation "политичар"@en ;
+    rdfs:comment "политичар"@en ;
+    owl:sameAs wd:Q12278531 .
+
+mk:Q12278544 a mko:Person ;
+    rdfs:label "Димитър Павлов (общественик)"@mk ;
+    mko:birthDate "1840-11-08"^^xsd:date ;
+    mko:bornIn mk:Q147243 ;
+    mko:deathDate "1919-03-03"^^xsd:date ;
+    mko:occupation "пејач"@en ;
+    owl:sameAs wd:Q12278544 .
+
+mk:Q12278571 a mko:Person ;
+    rdfs:label "Димитар Поп Илиев"@mk ;
+    mko:birthDate "1878-01-16"^^xsd:date ;
+    mko:bornIn mk:Q48814 ;
+    mko:occupation "револуционер"@en ;
+    owl:sameAs wd:Q12278571 .
+
+mk:Q12278574 a mko:Person ;
+    rdfs:label "Dimitar Popov"@mk ;
+    mko:birthDate "1890-08-14"^^xsd:date ;
+    mko:bornIn mk:Q156858 ;
+    mko:deathDate "1979-04-21"^^xsd:date ;
+    owl:sameAs wd:Q12278574 .
+
+mk:Q12278640 a mko:Person ;
+    rdfs:label "Димитър Титизов"@mk ;
+    mko:birthDate "1902-01-01"^^xsd:date ;
+    mko:bornIn mk:Q384 ;
+    mko:deathDate "1929-01-01"^^xsd:date ;
+    mko:occupation "правник"@en ;
+    owl:sameAs wd:Q12278640 .
+
+mk:Q12278699 a mko:Person ;
+    rdfs:label "Dimitar Shalev"@mk ;
+    mko:birthDate "1896-07-03"^^xsd:date ;
+    mko:bornIn mk:Q384 ;
+    mko:deathDate "1960-08-06"^^xsd:date ;
+    mko:occupation "правник"@en ;
+    owl:sameAs wd:Q12278699 .
+
+mk:Q12278754 a mko:Person ;
+    rdfs:label "Димче Цветанов"@mk ;
+    mko:birthDate "1878-01-01"^^xsd:date ;
+    mko:bornIn mk:Q384 ;
+    mko:deathDate "1906-10-08"^^xsd:date ;
+    mko:occupation "револуционер"@en ;
+    owl:sameAs wd:Q12278754 .
+
+mk:Q12278783 a mko:Person ;
+    rdfs:label "Dionisius Popyanchev"@mk ;
+    mko:birthDate "1850-01-01"^^xsd:date ;
+    mko:bornIn mk:Q156858 ;
+    mko:deathDate "1944-01-01"^^xsd:date ;
+    rdfs:comment "Bulgarian priest"@en ;
+    owl:sameAs wd:Q12278783 .
 
 mk:Q12278864 a mko:Person ;
     rdfs:label "Добри Даскалов"@mk ;
@@ -423,6 +1431,46 @@ mk:Q12279025 a mko:Person ;
     rdfs:comment "Macedonian Bulgarian revolutionary"@en ;
     owl:sameAs wd:Q12279025 .
 
+mk:Q12279072 a mko:Person ;
+    rdfs:label "Dragan Petkov"@mk ;
+    mko:birthDate "1879-07-24"^^xsd:date ;
+    mko:bornIn mk:Q161827 ;
+    mko:deathDate "http://www.wikidata.org/.well-known/genid/57cc9f47bc14b703898b44c416ba7106" ;
+    mko:occupation "револуционер"@en ;
+    rdfs:comment "Bulgarian revolutionary"@en ;
+    owl:sameAs wd:Q12279072 .
+
+mk:Q12279406 a mko:Person ;
+    rdfs:label "Eulogius"@mk ;
+    mko:birthDate "1878-01-01"^^xsd:date ;
+    mko:bornIn mk:Q157246 ;
+    mko:deathDate "1913-06-20"^^xsd:date ;
+    owl:sameAs wd:Q12279406 .
+
+mk:Q12279457 a mko:Person ;
+    rdfs:label "Евтим Кушев"@mk ;
+    mko:birthDate "1888-01-01"^^xsd:date ;
+    mko:bornIn mk:Q221320 ;
+    mko:deathDate "http://www.wikidata.org/.well-known/genid/158408f10467c13c070703b945e82dff" ;
+    mko:occupation "револуционер"@en ;
+    owl:sameAs wd:Q12279457 .
+
+mk:Q12279458 a mko:Person ;
+    rdfs:label "Евтим Наков"@mk ;
+    mko:birthDate "1870-04-23"^^xsd:date ;
+    mko:bornIn mk:Q214344 ;
+    mko:deathDate "1929-01-01"^^xsd:date ;
+    mko:occupation "револуционер"@en ;
+    owl:sameAs wd:Q12279458 .
+
+mk:Q12279459 a mko:Person ;
+    rdfs:label "Evtim Lyapchev"@mk ;
+    mko:birthDate "1858-01-01"^^xsd:date ;
+    mko:bornIn mk:Q161827 ;
+    mko:deathDate "http://www.wikidata.org/.well-known/genid/c7a8e6b9bc4cf6d85f9ff18e7b746b47" ;
+    rdfs:comment "Bulgarian public figure"@en ;
+    owl:sameAs wd:Q12279459 .
+
 mk:Q12279584 a mko:Person ;
     rdfs:label "Екатерина Паница"@mk ;
     mko:birthDate "1884-11-02"^^xsd:date ;
@@ -432,12 +1480,111 @@ mk:Q12279584 a mko:Person ;
     rdfs:comment "Bulgarian teacher"@en ;
     owl:sameAs wd:Q12279584 .
 
+mk:Q12279586 a mko:Person ;
+    rdfs:label "Екатерина Симидчиева"@mk ;
+    mko:birthDate "1872-01-01"^^xsd:date ;
+    mko:bornIn mk:Q384 ;
+    mko:deathDate "1899-08-24"^^xsd:date ;
+    mko:occupation "наставник"@en ;
+    rdfs:comment "Bulgarian teacher"@en ;
+    owl:sameAs wd:Q12279586 .
+
+mk:Q12279746 a mko:Person ;
+    rdfs:label "Elisaveta Shapkareva"@mk ;
+    mko:birthDate "1846-01-01"^^xsd:date ;
+    mko:bornIn mk:Q156858 ;
+    mko:deathDate "1870-03-13"^^xsd:date ;
+    rdfs:comment "Bulgarian educator"@en ;
+    owl:sameAs wd:Q12279746 .
+
+mk:Q12279795 a mko:Person ;
+    rdfs:label "Emanuil Razvigorov"@mk ;
+    mko:birthDate "1886-01-01"^^xsd:date ;
+    mko:bornIn mk:Q147243 ;
+    mko:deathDate "1919-09-17"^^xsd:date ;
+    rdfs:comment "Bulgarian revolutionary"@en ;
+    owl:sameAs wd:Q12279795 .
+
+mk:Q12279917 a mko:Person ;
+    rdfs:label "Епаминонда поп Андонов"@mk ;
+    mko:birthDate "1898-11-02"^^xsd:date ;
+    mko:bornIn mk:Q48814 ;
+    mko:deathDate "1968-01-01"^^xsd:date ;
+    mko:occupation "политичар"@en ;
+    rdfs:comment "политичар"@en ;
+    owl:sameAs wd:Q12279917 .
+
+mk:Q12280021 a mko:Person ;
+    rdfs:label "Ефрем Чучков"@mk ;
+    mko:birthDate "1870-11-21"^^xsd:date ;
+    mko:bornIn mk:Q147243 ;
+    mko:deathDate "1923-10-01"^^xsd:date ;
+    mko:occupation "револуционер"@en ;
+    rdfs:comment "македонски револуционер"@en ;
+    owl:sameAs wd:Q12280021 .
+
+mk:Q12280030 a mko:Person ;
+    rdfs:label "Ефтим Филипович"@mk ;
+    mko:birthDate "1842-08-01"^^xsd:date ;
+    mko:bornIn mk:Q161827 ;
+    mko:deathDate "1917-01-01"^^xsd:date ;
+    mko:occupation "револуционер"@en ;
+    owl:sameAs wd:Q12280030 .
+
 mk:Q12280280 a mko:Organization ;
     rdfs:label "Задгранично претставништво"@mk ;
     mko:dissolutionDate "1928-01-01"^^xsd:date ;
     mko:foundingDate "1896-01-01"^^xsd:date ;
     rdfs:comment "Bulgarian revolutionary instituition"@en ;
     owl:sameAs wd:Q12280280 .
+
+mk:Q12280368 a mko:Person ;
+    rdfs:label "Зафир Димков"@mk ;
+    mko:birthDate "1866-01-01"^^xsd:date ;
+    mko:bornIn mk:Q54452 ;
+    mko:deathDate "1941-11-03"^^xsd:date ;
+    mko:occupation "револуционер"@en ;
+    owl:sameAs wd:Q12280368 .
+
+mk:Q12280373 a mko:Person ;
+    rdfs:label "Зафир Тасев"@mk ;
+    mko:birthDate "1846-01-01"^^xsd:date ;
+    mko:bornIn mk:Q54452 ;
+    mko:deathDate "http://www.wikidata.org/.well-known/genid/ef56c3c95db613f13dabc14c2aaa375f" ;
+    owl:sameAs wd:Q12280373 .
+
+mk:Q12280377 a mko:Person ;
+    rdfs:label "Захари Ѓорев"@mk ;
+    mko:birthDate "1871-04-08"^^xsd:date ;
+    mko:bornIn mk:Q54452 ;
+    mko:deathDate "1943-03-08"^^xsd:date ;
+    mko:occupation "револуционер"@en ;
+    owl:sameAs wd:Q12280377 .
+
+mk:Q12280723 a mko:Person ;
+    rdfs:label "Иван Ачков"@mk ;
+    mko:birthDate "1876-07-27"^^xsd:date ;
+    mko:bornIn mk:Q156858 ;
+    mko:deathDate "1939-12-21"^^xsd:date ;
+    mko:occupation "револуционер"@en ;
+    owl:sameAs wd:Q12280723 .
+
+mk:Q12280739 a mko:Person ;
+    rdfs:label "Иван Белчев"@mk ;
+    mko:birthDate "1867-01-01"^^xsd:date ;
+    mko:bornIn mk:Q221320 ;
+    mko:deathDate "1921-01-24"^^xsd:date ;
+    mko:occupation "револуционер"@en ;
+    owl:sameAs wd:Q12280739 .
+
+mk:Q12280764 a mko:Person ;
+    rdfs:label "Иван Јанев-Брло"@mk ;
+    mko:birthDate "1877-01-01"^^xsd:date ;
+    mko:bornIn mk:Q36559 ;
+    mko:deathDate "1925-08-28"^^xsd:date ;
+    mko:occupation "воено лице"@en ;
+    rdfs:comment "Bulgarian revolutionary"@en ;
+    owl:sameAs wd:Q12280764 .
 
 mk:Q12280814 a mko:Person ;
     rdfs:label "Јован Гиновски"@mk ;
@@ -449,7 +1596,7 @@ mk:Q12280814 a mko:Person ;
     owl:sameAs wd:Q12280814 .
 
 mk:Q12280940 a mko:Person ;
-    rdfs:label "Q12280940"@mk ;
+    rdfs:label "Иван Йосифчев"@mk ;
     mko:birthDate "1873-01-23"^^xsd:date ;
     mko:bornIn mk:Q1223508 ;
     mko:deathDate "1955-01-01"^^xsd:date ;
@@ -461,9 +1608,16 @@ mk:Q12280948 a mko:Person ;
     mko:birthDate "1872-01-01"^^xsd:date ;
     mko:bornIn mk:Q929605 ;
     mko:deathDate "1920-10-16"^^xsd:date ;
-    mko:occupation "трговец"@en ;
+    mko:occupation "претприемач"@en ;
     rdfs:comment "(1872-1920)"@en ;
     owl:sameAs wd:Q12280948 .
+
+mk:Q12280953 a mko:Person ;
+    rdfs:label "Иван Карайовов"@mk ;
+    mko:birthDate "1900-01-01"^^xsd:date ;
+    mko:bornIn mk:Q384 ;
+    mko:deathDate "http://www.wikidata.org/.well-known/genid/9ae9a1b0dad91977e2b9f041ad7b6614" ;
+    owl:sameAs wd:Q12280953 .
 
 mk:Q12281076 a mko:Person ;
     rdfs:label "Ivan Nelchinov"@mk ;
@@ -472,6 +1626,63 @@ mk:Q12281076 a mko:Person ;
     mko:deathDate "1944-01-27"^^xsd:date ;
     mko:occupation "револуционер"@en ;
     owl:sameAs wd:Q12281076 .
+
+mk:Q12281101 a mko:Person ;
+    rdfs:label "Ivan Paraspurov"@mk ;
+    mko:birthDate "1888-01-01"^^xsd:date ;
+    mko:bornIn mk:Q147243 ;
+    mko:deathDate "1933-04-25"^^xsd:date ;
+    mko:occupation "револуционер"@en ;
+    owl:sameAs wd:Q12281101 .
+
+mk:Q12281136 a mko:Person ;
+    rdfs:label "Ivan Popov"@mk ;
+    mko:birthDate "1882-01-01"^^xsd:date ;
+    mko:bornIn mk:Q156858 ;
+    owl:sameAs wd:Q12281136 .
+
+mk:Q12281278 a mko:Person ;
+    rdfs:label "Ivan Hadzhov"@mk ;
+    mko:birthDate "1885-07-24"^^xsd:date ;
+    mko:bornIn mk:Q156858 ;
+    mko:deathDate "1956-11-25"^^xsd:date ;
+    mko:occupation "филолог"@en ;
+    rdfs:comment "Bulgarian literary historian and linguist"@en ;
+    owl:sameAs wd:Q12281278 .
+
+mk:Q12281560 a mko:Person ;
+    rdfs:label "Илия Арев"@mk ;
+    mko:birthDate "1914-11-03"^^xsd:date ;
+    mko:bornIn mk:Q147243 ;
+    mko:deathDate "1977-01-12"^^xsd:date ;
+    mko:occupation "глумец"@en ;
+    rdfs:comment "actor (1914-1977)"@en ;
+    owl:sameAs wd:Q12281560 .
+
+mk:Q12281630 a mko:Person ;
+    rdfs:label "Iliya Lilinkov"@mk ;
+    mko:birthDate "1902-01-01"^^xsd:date ;
+    mko:bornIn mk:Q147243 ;
+    mko:deathDate "1927-10-10"^^xsd:date ;
+    mko:occupation "револуционер"@en ;
+    owl:sameAs wd:Q12281630 .
+
+mk:Q12281814 a mko:Person ;
+    rdfs:label "Ипократ Развигоров"@mk ;
+    mko:birthDate "1900-01-01"^^xsd:date ;
+    mko:bornIn mk:Q147243 ;
+    mko:deathDate "1927-10-10"^^xsd:date ;
+    mko:occupation "револуционер"@en ;
+    owl:sameAs wd:Q12281814 .
+
+mk:Q12282053 a mko:Person ;
+    rdfs:label "Ioannis Sontis"@mk ;
+    mko:birthDate "1907-01-01"^^xsd:date ;
+    mko:bornIn mk:Q157246 ;
+    mko:deathDate "1982-03-18"^^xsd:date ;
+    mko:occupation "политичар"@en ;
+    rdfs:comment "универзитетски професор, Грција"@en ;
+    owl:sameAs wd:Q12282053 .
 
 mk:Q12282072 a mko:Person ;
     rdfs:label "Јован Крстев Терзиев"@mk ;
@@ -482,6 +1693,30 @@ mk:Q12282072 a mko:Person ;
     rdfs:comment "македонски револуционер"@en ;
     owl:sameAs wd:Q12282072 .
 
+mk:Q12282129 a mko:Person ;
+    rdfs:label "Yordan Vitoshanski"@mk ;
+    mko:birthDate "1879-01-01"^^xsd:date ;
+    mko:bornIn mk:Q147243 ;
+    mko:deathDate "1903-04-01"^^xsd:date ;
+    mko:occupation "револуционер"@en ;
+    owl:sameAs wd:Q12282129 .
+
+mk:Q12282136 a mko:Person ;
+    rdfs:label "Yordan Gyurkov"@mk ;
+    mko:birthDate "1891-10-13"^^xsd:date ;
+    mko:bornIn mk:Q147243 ;
+    mko:deathDate "1931-02-08"^^xsd:date ;
+    mko:occupation "воено лице"@en ;
+    owl:sameAs wd:Q12282136 .
+
+mk:Q12282140 a mko:Person ;
+    rdfs:label "Yordan Ivanov"@mk ;
+    mko:birthDate "1886-01-01"^^xsd:date ;
+    mko:bornIn mk:Q54452 ;
+    mko:deathDate "1911-08-08"^^xsd:date ;
+    mko:occupation "револуционер"@en ;
+    owl:sameAs wd:Q12282140 .
+
 mk:Q12282209 a mko:Person ;
     rdfs:label "Yordan Tsitsonkov"@mk ;
     mko:birthDate "1901-09-09"^^xsd:date ;
@@ -491,6 +1726,111 @@ mk:Q12282209 a mko:Person ;
     rdfs:comment "Bulgarian revolutionary"@en ;
     owl:sameAs wd:Q12282209 .
 
+mk:Q12282241 a mko:Person ;
+    rdfs:label "Yosif Kavaev"@mk ;
+    mko:birthDate "1840-01-01"^^xsd:date ;
+    mko:bornIn mk:Q156858 ;
+    mko:deathDate "http://www.wikidata.org/.well-known/genid/f4028b1d380273ebbb77ba63bae6a2bb" ;
+    owl:sameAs wd:Q12282241 .
+
+mk:Q12282259 a mko:Person ;
+    rdfs:label "Јосиф Чешмеџиев"@mk ;
+    mko:birthDate "1890-12-08"^^xsd:date ;
+    mko:bornIn mk:Q384 ;
+    mko:deathDate "1964-04-28"^^xsd:date ;
+    mko:occupation "диригент"@en ;
+    rdfs:comment "Bulgarian composer"@en ;
+    owl:sameAs wd:Q12282259 .
+
+mk:Q12282418 a mko:Person ;
+    rdfs:label "Калистрат Зографски"@mk ;
+    mko:birthDate "1830-05-03"^^xsd:date ;
+    mko:bornIn mk:Q156858 ;
+    mko:deathDate "1913-01-01"^^xsd:date ;
+    mko:occupation "свештеник"@en ;
+    rdfs:comment "Christian composer"@en ;
+    owl:sameAs wd:Q12282418 .
+
+mk:Q12282456 a mko:Person ;
+    rdfs:label "Калчо Стоянов"@mk ;
+    mko:birthDate "1842-01-01"^^xsd:date ;
+    mko:bornIn mk:Q161827 ;
+    mko:deathDate "http://www.wikidata.org/.well-known/genid/49eeea6bc6c26a259e0e7c22d1cd4b09" ;
+    mko:occupation "револуционер"@en ;
+    owl:sameAs wd:Q12282456 .
+
+mk:Q12283006 a mko:Person ;
+    rdfs:label "Kiril Gligorov"@mk ;
+    mko:birthDate "1903-01-01"^^xsd:date ;
+    mko:bornIn mk:Q147243 ;
+    mko:deathDate "1925-08-30"^^xsd:date ;
+    mko:occupation "револуционер"@en ;
+    owl:sameAs wd:Q12283006 .
+
+mk:Q12283035 a mko:Person ;
+    rdfs:label "Кирил Лозанчев"@mk ;
+    mko:birthDate "1873-01-01"^^xsd:date ;
+    mko:bornIn mk:Q157246 ;
+    mko:deathDate "1950-01-01"^^xsd:date ;
+    mko:occupation "револуционер"@en ;
+    owl:sameAs wd:Q12283035 .
+
+mk:Q12283036 a mko:Person ;
+    rdfs:label "Кирил Миљовски"@mk ;
+    mko:birthDate "1912-05-27"^^xsd:date ;
+    mko:bornIn mk:Q161827 ;
+    mko:deathDate "1983-04-27"^^xsd:date ;
+    mko:occupation "економист"@en ;
+    rdfs:comment "Macedonian politician"@en ;
+    owl:sameAs wd:Q12283036 .
+
+mk:Q12283038 a mko:Person ;
+    rdfs:label "Kiril Mirchev"@mk ;
+    mko:birthDate "1902-11-03"^^xsd:date ;
+    mko:bornIn mk:Q157246 ;
+    mko:deathDate "1975-12-21"^^xsd:date ;
+    mko:occupation "Bulgarist"@en ;
+    rdfs:comment "Bulgarian linguist"@en ;
+    owl:sameAs wd:Q12283038 .
+
+mk:Q12283062 a mko:Person ;
+    rdfs:label "Kiril Sovichanov"@mk ;
+    mko:birthDate "1878-04-01"^^xsd:date ;
+    mko:bornIn mk:Q157246 ;
+    mko:deathDate "1961-09-25"^^xsd:date ;
+    mko:occupation "револуционер"@en ;
+    owl:sameAs wd:Q12283062 .
+
+mk:Q12283096 a mko:Person ;
+    rdfs:label "Киро Бурназовски"@mk ;
+    mko:birthDate "1907-01-31"^^xsd:date ;
+    mko:bornIn mk:Q54452 ;
+    mko:deathDate "1941-10-14"^^xsd:date ;
+    owl:sameAs wd:Q12283096 .
+
+mk:Q12283097 a mko:Person ;
+    rdfs:label "Киро Димитровски"@mk ;
+    mko:birthDate "1912-05-05"^^xsd:date ;
+    mko:bornIn mk:Q157246 ;
+    mko:deathDate "1942-05-01"^^xsd:date ;
+    owl:sameAs wd:Q12283097 .
+
+mk:Q12283200 a mko:Person ;
+    rdfs:label "Kliment Kochovski"@mk ;
+    mko:birthDate "1873-01-01"^^xsd:date ;
+    mko:bornIn mk:Q161827 ;
+    mko:deathDate "1905-10-12"^^xsd:date ;
+    mko:occupation "револуционер"@en ;
+    rdfs:comment "Bulgarian revolutionary"@en ;
+    owl:sameAs wd:Q12283200 .
+
+mk:Q12283205 a mko:Person ;
+    rdfs:label "Kliment Hadzhov"@mk ;
+    mko:birthDate "1878-01-01"^^xsd:date ;
+    mko:bornIn mk:Q156858 ;
+    mko:deathDate "1948-01-01"^^xsd:date ;
+    owl:sameAs wd:Q12283205 .
+
 mk:Q12283342 a mko:Person ;
     rdfs:label "Кола Нича"@mk ;
     mko:birthDate "1886-01-01"^^xsd:date ;
@@ -499,14 +1839,158 @@ mk:Q12283342 a mko:Person ;
     rdfs:comment "Aromanian revolutionary in Ottoman Macedonia"@en ;
     owl:sameAs wd:Q12283342 .
 
+mk:Q12283528 a mko:Person ;
+    rdfs:label "Konstantin Gruev"@mk ;
+    mko:birthDate "1869-10-30"^^xsd:date ;
+    mko:bornIn mk:Q157246 ;
+    mko:deathDate "1933-03-21"^^xsd:date ;
+    mko:occupation "револуционер"@en ;
+    rdfs:comment "Bulgarian revolutionary"@en ;
+    owl:sameAs wd:Q12283528 .
+
+mk:Q12283546 a mko:Person ;
+    rdfs:label "Konstantin Ivanov Robev"@mk ;
+    mko:birthDate "1897-04-14"^^xsd:date ;
+    mko:bornIn mk:Q157246 ;
+    mko:deathDate "1977-02-17"^^xsd:date ;
+    owl:sameAs wd:Q12283546 .
+
+mk:Q12283585 a mko:Person ;
+    rdfs:label "Константин Николов Робев"@mk ;
+    mko:birthDate "1871-02-05"^^xsd:date ;
+    mko:bornIn mk:Q157246 ;
+    mko:deathDate "1946-01-01"^^xsd:date ;
+    mko:occupation "лекар"@en ;
+    rdfs:comment "Bulgarian physician"@en ;
+    owl:sameAs wd:Q12283585 .
+
+mk:Q12283794 a mko:Person ;
+    rdfs:label "Коста Мазнејков"@mk ;
+    mko:birthDate "1882-01-01"^^xsd:date ;
+    mko:bornIn mk:Q48814 ;
+    mko:deathDate "1903-05-24"^^xsd:date ;
+    mko:occupation "револуционер"@en ;
+    rdfs:comment "revolutionary"@en ;
+    owl:sameAs wd:Q12283794 .
+
+mk:Q12283795 a mko:Person ;
+    rdfs:label "Kosta Milchinov"@mk ;
+    mko:birthDate "1840-01-01"^^xsd:date ;
+    mko:bornIn mk:Q156858 ;
+    mko:deathDate "1911-01-01"^^xsd:date ;
+    rdfs:comment "Bulgarian public figure"@en ;
+    owl:sameAs wd:Q12283795 .
+
+mk:Q12283801 a mko:Person ;
+    rdfs:label "Kosta Nikolov"@mk ;
+    mko:birthDate "1872-02-25"^^xsd:date ;
+    mko:bornIn mk:Q161827 ;
+    mko:deathDate "1957-01-01"^^xsd:date ;
+    mko:occupation "наставник"@en ;
+    owl:sameAs wd:Q12283801 .
+
+mk:Q12283830 a mko:Person ;
+    rdfs:label "Коста Јашмаков"@mk ;
+    mko:birthDate "1912-10-29"^^xsd:date ;
+    mko:bornIn mk:Q157246 ;
+    mko:deathDate "http://www.wikidata.org/.well-known/genid/08038a17018dac9fae0ebe69a38bee87" ;
+    mko:occupation "политичар"@en ;
+    rdfs:comment "политичар"@en ;
+    owl:sameAs wd:Q12283830 .
+
+mk:Q12283848 a mko:Person ;
+    rdfs:label "Kostadin Zelnikov"@mk ;
+    mko:birthDate "1869-01-01"^^xsd:date ;
+    mko:bornIn mk:Q221320 ;
+    mko:deathDate "1906-01-01"^^xsd:date ;
+    mko:occupation "револуционер"@en ;
+    rdfs:comment "Bulgarian revolutuionary"@en ;
+    owl:sameAs wd:Q12283848 .
+
+mk:Q12283886 a mko:Person ;
+    rdfs:label "Костадин войвода"@mk ;
+    mko:birthDate "1900-01-01"^^xsd:date ;
+    mko:bornIn mk:Q147243 ;
+    mko:deathDate "1900-01-01"^^xsd:date ;
+    owl:sameAs wd:Q12283886 .
+
+mk:Q12283887 a mko:Person ;
+    rdfs:label "Kostadina Hadzhova"@mk ;
+    mko:birthDate "1879-01-01"^^xsd:date ;
+    mko:bornIn mk:Q156858 ;
+    mko:deathDate "1907-03-03"^^xsd:date ;
+    mko:occupation "револуционер"@en ;
+    rdfs:comment "Bulgarian revolutionary"@en ;
+    owl:sameAs wd:Q12283887 .
+
+mk:Q12283929 a mko:Person ;
+    rdfs:label "Kotse Gochev"@mk ;
+    mko:birthDate "1848-01-01"^^xsd:date ;
+    mko:bornIn mk:Q147243 ;
+    mko:deathDate "1918-07-24"^^xsd:date ;
+    mko:occupation "револуционер"@en ;
+    rdfs:comment "Bulgarian revolutionary"@en ;
+    owl:sameAs wd:Q12283929 .
+
+mk:Q12283933 a mko:Person ;
+    rdfs:label "Коце Лазаров"@mk ;
+    mko:birthDate "1883-01-01"^^xsd:date ;
+    mko:bornIn mk:Q147243 ;
+    mko:deathDate "1903-03-12"^^xsd:date ;
+    mko:occupation "револуционер"@en ;
+    owl:sameAs wd:Q12283933 .
+
+mk:Q12283936 a mko:Person ;
+    rdfs:label "Коце Стојановски - Металец"@mk ;
+    mko:birthDate "1914-05-12"^^xsd:date ;
+    mko:bornIn mk:Q384 ;
+    mko:deathDate "1944-06-12"^^xsd:date ;
+    owl:sameAs wd:Q12283936 .
+
+mk:Q12283965 a mko:Person ;
+    rdfs:label "Kocho Hadzhimanov"@mk ;
+    mko:birthDate "1881-01-01"^^xsd:date ;
+    mko:bornIn mk:Q48814 ;
+    mko:occupation "револуционер"@en ;
+    owl:sameAs wd:Q12283965 .
+
+mk:Q12283993 a mko:Person ;
+    rdfs:label "Kralyo Markov"@mk ;
+    mko:birthDate "1839-01-01"^^xsd:date ;
+    mko:bornIn mk:Q384 ;
+    owl:sameAs wd:Q12283993 .
+
+mk:Q12284124 a mko:Person ;
+    rdfs:label "Krum Boyadzhiev"@mk ;
+    mko:birthDate "1904-10-16"^^xsd:date ;
+    mko:bornIn mk:Q384 ;
+    mko:deathDate "1974-06-20"^^xsd:date ;
+    mko:occupation "диригент"@en ;
+    owl:sameAs wd:Q12284124 .
+
 mk:Q12284146 a mko:Person ;
-    rdfs:label "Q12284146"@mk ;
+    rdfs:label "Крум Чапрашиков"@mk ;
     mko:birthDate "1882-07-06"^^xsd:date ;
     mko:bornIn mk:Q405279 ;
     mko:deathDate "1934-09-15"^^xsd:date ;
     mko:occupation "политичар"@en ;
     rdfs:comment "Bulgarian politician"@en ;
     owl:sameAs wd:Q12284146 .
+
+mk:Q12284147 a mko:Person ;
+    rdfs:label "Круме Наумовски"@mk ;
+    mko:birthDate "1914-01-01"^^xsd:date ;
+    mko:bornIn mk:Q157024 ;
+    mko:deathDate "1995-05-12"^^xsd:date ;
+    owl:sameAs wd:Q12284147 .
+
+mk:Q12284182 a mko:Person ;
+    rdfs:label "Кръсте Калайджиев"@mk ;
+    mko:birthDate "1900-01-01"^^xsd:date ;
+    mko:bornIn mk:Q156858 ;
+    mko:deathDate "1912-10-28"^^xsd:date ;
+    mko:occupation "револуционер"@en ;
+    owl:sameAs wd:Q12284182 .
 
 mk:Q12284200 a mko:Person ;
     rdfs:label "Крсто Алексов"@mk ;
@@ -517,13 +2001,39 @@ mk:Q12284200 a mko:Person ;
     rdfs:comment "Bulgarian revolutionary"@en ;
     owl:sameAs wd:Q12284200 .
 
-mk:Q12284260 a mko:Person ;
-    rdfs:label "Q12284260"@mk ;
-    mko:birthDate "1871-01-01"^^xsd:date ;
-    mko:bornIn mk:Q856278 ;
-    mko:deathDate "1906-07-26"^^xsd:date ;
-    mko:occupation "револуционер"@en ;
-    owl:sameAs wd:Q12284260 .
+mk:Q12284593 a mko:Person ;
+    rdfs:label "Лазар Калајџиски"@mk ;
+    mko:birthDate "1913-03-25"^^xsd:date ;
+    mko:bornIn mk:Q164954 ;
+    mko:deathDate "1987-12-06"^^xsd:date ;
+    mko:occupation "политичар"@en ;
+    rdfs:comment "политичар"@en ;
+    owl:sameAs wd:Q12284593 .
+
+mk:Q12284597 a mko:Person ;
+    rdfs:label "Лазар Кльонков"@mk ;
+    mko:birthDate "1880-02-18"^^xsd:date ;
+    mko:bornIn mk:Q147243 ;
+    mko:deathDate "1956-01-09"^^xsd:date ;
+    mko:occupation "воено лице"@en ;
+    owl:sameAs wd:Q12284597 .
+
+mk:Q12284615 a mko:Person ;
+    rdfs:label "Лазар Тодоров"@mk ;
+    mko:birthDate "1885-01-01"^^xsd:date ;
+    mko:bornIn mk:Q147243 ;
+    mko:deathDate "1923-01-01"^^xsd:date ;
+    mko:occupation "воено лице"@en ;
+    rdfs:comment "Bulgarian revolutionary"@en ;
+    owl:sameAs wd:Q12284615 .
+
+mk:Q12284699 a mko:Person ;
+    rdfs:label "Lev Popov"@mk ;
+    mko:birthDate "1865-01-01"^^xsd:date ;
+    mko:bornIn mk:Q156858 ;
+    mko:deathDate "1935-08-05"^^xsd:date ;
+    mko:occupation "воено лице"@en ;
+    owl:sameAs wd:Q12284699 .
 
 mk:Q12284834 a mko:Person ;
     rdfs:label "Lefter Mechev"@mk ;
@@ -532,6 +2042,106 @@ mk:Q12284834 a mko:Person ;
     mko:deathDate "1959-08-08"^^xsd:date ;
     owl:sameAs wd:Q12284834 .
 
+mk:Q12285098 a mko:Person ;
+    rdfs:label "Лука Ѓеров"@mk ;
+    mko:birthDate "1870-10-27"^^xsd:date ;
+    mko:bornIn mk:Q157246 ;
+    mko:deathDate "1948-11-20"^^xsd:date ;
+    mko:occupation "револуционер"@en ;
+    rdfs:comment "македонски револуционер"@en ;
+    owl:sameAs wd:Q12285098 .
+
+mk:Q12285344 a mko:Person ;
+    rdfs:label "Lyuben Dimitrov"@mk ;
+    mko:birthDate "1903-04-23"^^xsd:date ;
+    mko:bornIn mk:Q157246 ;
+    mko:deathDate "1962-10-14"^^xsd:date ;
+    mko:occupation "правник"@en ;
+    rdfs:comment "Bulgarian public figure and journalist"@en ;
+    owl:sameAs wd:Q12285344 .
+
+mk:Q12285734 a mko:Person ;
+    rdfs:label "Малина Попиванова"@mk ;
+    mko:birthDate "1902-01-01"^^xsd:date ;
+    mko:bornIn mk:Q214344 ;
+    mko:deathDate "1954-07-19"^^xsd:date ;
+    mko:occupation "политичар"@en ;
+    rdfs:comment "Macedonian communist (1902–1954)"@en ;
+    owl:sameAs wd:Q12285734 .
+
+mk:Q12285810 a mko:Person ;
+    rdfs:label "Мане Накашев"@mk ;
+    mko:birthDate "1888-11-21"^^xsd:date ;
+    mko:bornIn mk:Q147243 ;
+    mko:deathDate "1933-02-21"^^xsd:date ;
+    mko:occupation "револуционер"@en ;
+    owl:sameAs wd:Q12285810 .
+
+mk:Q12285879 a mko:Person ;
+    rdfs:label "Маргарит Нале"@mk ;
+    mko:birthDate "1895-11-15"^^xsd:date ;
+    mko:bornIn mk:Q157246 ;
+    mko:deathDate "1970-01-01"^^xsd:date ;
+    mko:occupation "лекар"@en ;
+    owl:sameAs wd:Q12285879 .
+
+mk:Q12286293 a mko:Person ;
+    rdfs:label "Матеј Геров"@mk ;
+    mko:birthDate "1871-10-14"^^xsd:date ;
+    mko:bornIn mk:Q157024 ;
+    mko:deathDate "1918-08-20"^^xsd:date ;
+    mko:occupation "политичар"@en ;
+    rdfs:comment "Bulgarian journalist"@en ;
+    owl:sameAs wd:Q12286293 .
+
+mk:Q12286438 a mko:Person ;
+    rdfs:label "Meletius of Veles"@mk ;
+    mko:birthDate "1868-02-22"^^xsd:date ;
+    mko:bornIn mk:Q157246 ;
+    mko:deathDate "1924-08-14"^^xsd:date ;
+    owl:sameAs wd:Q12286438 .
+
+mk:Q12286439 a mko:Person ;
+    rdfs:label "Meletius of Sofia"@mk ;
+    mko:birthDate "1832-01-01"^^xsd:date ;
+    mko:bornIn mk:Q48814 ;
+    mko:deathDate "1891-05-06"^^xsd:date ;
+    mko:occupation "политичар"@en ;
+    rdfs:comment "Bulgarian politician"@en ;
+    owl:sameAs wd:Q12286439 .
+
+mk:Q12286569 a mko:Person ;
+    rdfs:label "Методий Устичков"@mk ;
+    mko:birthDate "1867-06-15"^^xsd:date ;
+    mko:bornIn mk:Q147243 ;
+    mko:deathDate "1932-08-25"^^xsd:date ;
+    owl:sameAs wd:Q12286569 .
+
+mk:Q12286570 a mko:Person ;
+    rdfs:label "Metodi Yanchulev"@mk ;
+    mko:birthDate "1900-04-25"^^xsd:date ;
+    mko:bornIn mk:Q157246 ;
+    mko:deathDate "1987-01-01"^^xsd:date ;
+    mko:occupation "политичар"@en ;
+    rdfs:comment "Bulgarian jurist"@en ;
+    owl:sameAs wd:Q12286570 .
+
+mk:Q12286607 a mko:Person ;
+    rdfs:label "Мехмед Мехмеди"@mk ;
+    mko:birthDate "1911-01-01"^^xsd:date ;
+    mko:bornIn mk:Q144465 ;
+    mko:deathDate "1945-07-01"^^xsd:date ;
+    mko:occupation "политичар"@en ;
+    rdfs:comment "политичар"@en ;
+    owl:sameAs wd:Q12286607 .
+
+mk:Q12286609 a mko:Person ;
+    rdfs:label "Мехмед Назиф паша"@mk ;
+    mko:birthDate "1832-01-01"^^xsd:date ;
+    mko:bornIn mk:Q157246 ;
+    mko:deathDate "1889-11-01"^^xsd:date ;
+    owl:sameAs wd:Q12286609 .
+
 mk:Q12286684 a mko:Person ;
     rdfs:label "Milan Konstantinov"@mk ;
     mko:birthDate "1881-01-01"^^xsd:date ;
@@ -539,6 +2149,115 @@ mk:Q12286684 a mko:Person ;
     mko:deathDate "1935-01-01"^^xsd:date ;
     mko:occupation "револуционер"@en ;
     owl:sameAs wd:Q12286684 .
+
+mk:Q12286688 a mko:Person ;
+    rdfs:label "Милан Несторов"@mk ;
+    mko:birthDate "1870-01-01"^^xsd:date ;
+    mko:bornIn mk:Q156858 ;
+    mko:deathDate "1928-04-17"^^xsd:date ;
+    mko:occupation "револуционер"@en ;
+    owl:sameAs wd:Q12286688 .
+
+mk:Q12286700 a mko:Person ;
+    rdfs:label "Миле Гайдаджиев"@mk ;
+    mko:birthDate "1879-11-13"^^xsd:date ;
+    mko:bornIn mk:Q157246 ;
+    mko:occupation "револуционер"@en ;
+    owl:sameAs wd:Q12286700 .
+
+mk:Q12286745 a mko:Person ;
+    rdfs:label "Милица Икономова"@mk ;
+    mko:birthDate "1846-01-01"^^xsd:date ;
+    mko:bornIn mk:Q156858 ;
+    mko:deathDate "http://www.wikidata.org/.well-known/genid/a555c82eca837c6ff7cc02715113750d" ;
+    owl:sameAs wd:Q12286745 .
+
+mk:Q12286977 a mko:Person ;
+    rdfs:label "Mite Hadzhimishev"@mk ;
+    mko:birthDate "1873-10-12"^^xsd:date ;
+    mko:bornIn mk:Q147243 ;
+    mko:deathDate "1953-01-25"^^xsd:date ;
+    mko:occupation "револуционер"@en ;
+    rdfs:comment "Bulgarian revolutionary"@en ;
+    owl:sameAs wd:Q12286977 .
+
+mk:Q12287025 a mko:Person ;
+    rdfs:label "Михаил Байловски"@mk ;
+    mko:birthDate "1840-01-01"^^xsd:date ;
+    mko:bornIn mk:Q54452 ;
+    owl:sameAs wd:Q12287025 .
+
+mk:Q12287059 a mko:Person ;
+    rdfs:label "Михаил Джеров"@mk ;
+    mko:birthDate "1879-09-27"^^xsd:date ;
+    mko:bornIn mk:Q157246 ;
+    mko:deathDate "1944-11-30"^^xsd:date ;
+    mko:occupation "правник"@en ;
+    owl:sameAs wd:Q12287059 .
+
+mk:Q12287060 a mko:Person ;
+    rdfs:label "Михаил Димев"@mk ;
+    mko:birthDate "1878-08-15"^^xsd:date ;
+    mko:bornIn mk:Q157246 ;
+    mko:deathDate "http://www.wikidata.org/.well-known/genid/b9021fcadd1ba2eb7c5e64db9319b3e8" ;
+    mko:occupation "револуционер"@en ;
+    rdfs:comment "Bulgarian revolutionary"@en ;
+    owl:sameAs wd:Q12287060 .
+
+mk:Q12287076 a mko:Person ;
+    rdfs:label "Mihailo \"Mikajle\" Josifović"@mk ;
+    mko:birthDate "1870-01-01"^^xsd:date ;
+    mko:bornIn mk:Q162009 ;
+    mko:deathDate "1941-04-01"^^xsd:date ;
+    rdfs:comment "Serbian military commander"@en ;
+    owl:sameAs wd:Q12287076 .
+
+mk:Q12287077 a mko:Person ;
+    rdfs:label "Михаил Каламатиев"@mk ;
+    mko:birthDate "1896-04-12"^^xsd:date ;
+    mko:bornIn mk:Q147243 ;
+    mko:deathDate "http://www.wikidata.org/.well-known/genid/88e75490becd1bbedc58f5fcd30811e1" ;
+    owl:sameAs wd:Q12287077 .
+
+mk:Q12287083 a mko:Person ;
+    rdfs:label "Михаил Ковачев"@mk ;
+    mko:birthDate "1842-01-01"^^xsd:date ;
+    mko:bornIn mk:Q147243 ;
+    mko:deathDate "1908-05-29"^^xsd:date ;
+    mko:occupation "револуционер"@en ;
+    rdfs:comment "Bulgarian revolutionary"@en ;
+    owl:sameAs wd:Q12287083 .
+
+mk:Q12287085 a mko:Person ;
+    rdfs:label "Mihail Kostentsev"@mk ;
+    mko:birthDate "1832-01-01"^^xsd:date ;
+    mko:bornIn mk:Q147243 ;
+    mko:deathDate "1929-02-26"^^xsd:date ;
+    owl:sameAs wd:Q12287085 .
+
+mk:Q12287100 a mko:Person ;
+    rdfs:label "Mihail Markov"@mk ;
+    mko:birthDate "1876-01-01"^^xsd:date ;
+    mko:bornIn mk:Q147243 ;
+    mko:occupation "револуционер"@en ;
+    owl:sameAs wd:Q12287100 .
+
+mk:Q12287137 a mko:Person ;
+    rdfs:label "Mihail Rakidzhiev"@mk ;
+    mko:birthDate "1878-01-01"^^xsd:date ;
+    mko:bornIn mk:Q157246 ;
+    mko:deathDate "1935-01-01"^^xsd:date ;
+    mko:occupation "револуционер"@en ;
+    owl:sameAs wd:Q12287137 .
+
+mk:Q12287161 a mko:Person ;
+    rdfs:label "Михаил Врабец"@mk ;
+    mko:birthDate "1881-09-16"^^xsd:date ;
+    mko:bornIn mk:Q157246 ;
+    mko:deathDate "http://www.wikidata.org/.well-known/genid/9c7149b3c200575cda643c59e4018276" ;
+    mko:occupation "револуционер"@en ;
+    rdfs:comment "Bulgarian revolutionary"@en ;
+    owl:sameAs wd:Q12287161 .
 
 mk:Q12287168 a mko:Person ;
     rdfs:label "Михаил Шкартов"@mk ;
@@ -549,6 +2268,52 @@ mk:Q12287168 a mko:Person ;
     rdfs:comment "македонски револуционер и војвода"@en ;
     owl:sameAs wd:Q12287168 .
 
+mk:Q12287170 a mko:Person ;
+    rdfs:label "Михаил Шуманов"@mk ;
+    mko:birthDate "1875-01-01"^^xsd:date ;
+    mko:bornIn mk:Q54452 ;
+    mko:occupation "револуционер"@en ;
+    owl:sameAs wd:Q12287170 .
+
+mk:Q12287208 a mko:Person ;
+    rdfs:label "Мише Анчев"@mk ;
+    mko:birthDate "1879-01-01"^^xsd:date ;
+    mko:bornIn mk:Q147243 ;
+    mko:deathDate "1925-01-01"^^xsd:date ;
+    mko:occupation "револуционер"@en ;
+    owl:sameAs wd:Q12287208 .
+
+mk:Q12287210 a mko:Person ;
+    rdfs:label "Мише Развигоров"@mk ;
+    mko:birthDate "1873-10-28"^^xsd:date ;
+    mko:bornIn mk:Q147243 ;
+    mko:deathDate "1907-03-21"^^xsd:date ;
+    mko:occupation "револуционер"@en ;
+    rdfs:comment "македонски револуционер"@en ;
+    owl:sameAs wd:Q12287210 .
+
+mk:Q12287232 a mko:Person ;
+    rdfs:label "Младен Дальов"@mk ;
+    mko:birthDate "1847-01-01"^^xsd:date ;
+    mko:bornIn mk:Q157024 ;
+    owl:sameAs wd:Q12287232 .
+
+mk:Q12287691 a mko:Person ;
+    rdfs:label "Нанчо Витларов"@mk ;
+    mko:birthDate "1901-11-01"^^xsd:date ;
+    mko:bornIn mk:Q147243 ;
+    mko:deathDate "1930-11-01"^^xsd:date ;
+    mko:occupation "револуционер"@en ;
+    owl:sameAs wd:Q12287691 .
+
+mk:Q12287776 a mko:Person ;
+    rdfs:label "Насто Илиев"@mk ;
+    mko:birthDate "1837-01-01"^^xsd:date ;
+    mko:bornIn mk:Q157024 ;
+    mko:deathDate "http://www.wikidata.org/.well-known/genid/382aa07098f845a976a455b017a3d5fc" ;
+    mko:occupation "деец"@en ;
+    owl:sameAs wd:Q12287776 .
+
 mk:Q12287823 a mko:Person ;
     rdfs:label "Наум Томалевски"@mk ;
     mko:birthDate "1882-09-26"^^xsd:date ;
@@ -557,6 +2322,64 @@ mk:Q12287823 a mko:Person ;
     mko:occupation "политичар"@en ;
     rdfs:comment "Bulgarian revolutionary (1882-1930)"@en ;
     owl:sameAs wd:Q12287823 .
+
+mk:Q12287824 a mko:Person ;
+    rdfs:label "Наум Туфекчиев"@mk ;
+    mko:birthDate "1864-06-29"^^xsd:date ;
+    mko:bornIn mk:Q161827 ;
+    mko:deathDate "1916-02-25"^^xsd:date ;
+    mko:occupation "револуционер"@en ;
+    rdfs:comment "revolutionary, explosives expert, and anarchist arms dealer (1864–1916)"@en ;
+    owl:sameAs wd:Q12287824 .
+
+mk:Q12287827 a mko:Person ;
+    rdfs:label "Наум Чакаров"@mk ;
+    mko:birthDate "1869-01-01"^^xsd:date ;
+    mko:bornIn mk:Q156858 ;
+    mko:deathDate "1903-05-21"^^xsd:date ;
+    mko:occupation "револуционер"@en ;
+    rdfs:comment "македонски учител и револуционер"@en ;
+    owl:sameAs wd:Q12287827 .
+
+mk:Q12288058 a mko:Person ;
+    rdfs:label "Недко Варимесов"@mk ;
+    mko:birthDate "1870-01-01"^^xsd:date ;
+    mko:bornIn mk:Q384 ;
+    mko:occupation "револуционер"@en ;
+    owl:sameAs wd:Q12288058 .
+
+mk:Q12288075 a mko:Person ;
+    rdfs:label "Неделко Дамјанов"@mk ;
+    mko:birthDate "1869-01-01"^^xsd:date ;
+    mko:bornIn mk:Q157246 ;
+    mko:occupation "револуционер"@en ;
+    rdfs:comment "Bulgarian revolutionary"@en ;
+    owl:sameAs wd:Q12288075 .
+
+mk:Q12288257 a mko:Person ;
+    rdfs:label "Nicodemus of Tiberiopolis"@mk ;
+    mko:birthDate "1864-01-01"^^xsd:date ;
+    mko:bornIn mk:Q384 ;
+    mko:deathDate "1932-04-26"^^xsd:date ;
+    owl:sameAs wd:Q12288257 .
+
+mk:Q12288295 a mko:Person ;
+    rdfs:label "Nikola Balabanov"@mk ;
+    mko:birthDate "1898-12-25"^^xsd:date ;
+    mko:bornIn mk:Q147243 ;
+    mko:deathDate "1969-02-14"^^xsd:date ;
+    mko:occupation "глумец"@en ;
+    rdfs:comment "actor"@en ;
+    owl:sameAs wd:Q12288295 .
+
+mk:Q12288327 a mko:Person ;
+    rdfs:label "Никола Вражалски"@mk ;
+    mko:birthDate "1914-05-12"^^xsd:date ;
+    mko:bornIn mk:Q214344 ;
+    mko:deathDate "1997-01-01"^^xsd:date ;
+    mko:occupation "политичар"@en ;
+    rdfs:comment "политичар"@en ;
+    owl:sameAs wd:Q12288327 .
 
 mk:Q12288369 a mko:Person ;
     rdfs:label "Никола Дечев"@mk ;
@@ -567,17 +2390,51 @@ mk:Q12288369 a mko:Person ;
     rdfs:comment "Bulgarian revolutionary"@en ;
     owl:sameAs wd:Q12288369 .
 
-mk:Q12288530 a mko:Person ;
-    rdfs:label "Q12288530"@mk ;
-    mko:birthDate "1884-02-23"^^xsd:date ;
-    mko:bornIn mk:Q1223508 ;
-    mko:deathDate "http://www.wikidata.org/.well-known/genid/9d0aa11a26f39e84409a24e7b1825890" ;
-    mko:occupation "воено лице"@en ;
-    rdfs:comment "Bulgarian military personnel"@en ;
-    owl:sameAs wd:Q12288530 .
+mk:Q12288462 a mko:Person ;
+    rdfs:label "Nikola Maykov"@mk ;
+    mko:birthDate "1870-03-20"^^xsd:date ;
+    mko:bornIn mk:Q157246 ;
+    mko:deathDate "http://www.wikidata.org/.well-known/genid/947e87a489692bbcb9fd74c280f61fe9" ;
+    mko:occupation "револуционер"@en ;
+    owl:sameAs wd:Q12288462 .
+
+mk:Q12288494 a mko:Person ;
+    rdfs:label "Никола Наумов"@mk ;
+    mko:birthDate "1871-01-01"^^xsd:date ;
+    mko:bornIn mk:Q147243 ;
+    mko:deathDate "1927-10-08"^^xsd:date ;
+    mko:occupation "наставник"@en ;
+    rdfs:comment "Bulgarian politician"@en ;
+    owl:sameAs wd:Q12288494 .
+
+mk:Q12288507 a mko:Person ;
+    rdfs:label "Никола Павлов"@mk ;
+    mko:birthDate "1903-01-01"^^xsd:date ;
+    mko:bornIn mk:Q157024 ;
+    mko:deathDate "1945-01-01"^^xsd:date ;
+    mko:occupation "правник"@en ;
+    owl:sameAs wd:Q12288507 .
+
+mk:Q12288541 a mko:Person ;
+    rdfs:label "Nikola Rizov"@mk ;
+    mko:birthDate "1872-11-21"^^xsd:date ;
+    mko:bornIn mk:Q157246 ;
+    mko:deathDate "1942-03-04"^^xsd:date ;
+    mko:occupation "политичар"@en ;
+    rdfs:comment "Bulgarian diplomat and journalist"@en ;
+    owl:sameAs wd:Q12288541 .
+
+mk:Q12288547 a mko:Person ;
+    rdfs:label "Никола Петров Русински"@mk ;
+    mko:birthDate "1875-11-21"^^xsd:date ;
+    mko:bornIn mk:Q221320 ;
+    mko:deathDate "1942-06-14"^^xsd:date ;
+    mko:occupation "политичар"@en ;
+    rdfs:comment "Socialist revolutionary"@en ;
+    owl:sameAs wd:Q12288547 .
 
 mk:Q12288567 a mko:Person ;
-    rdfs:label "Q12288567"@mk ;
+    rdfs:label "Никола Стойков"@mk ;
     mko:birthDate "1878-01-01"^^xsd:date ;
     mko:bornIn mk:Q157034 ;
     mko:deathDate "1932-01-01"^^xsd:date ;
@@ -600,6 +2457,143 @@ mk:Q12289645 a mko:Person ;
     mko:occupation "нередовна војска"@en ;
     owl:sameAs wd:Q12289645 .
 
+mk:Q12289776 a mko:Person ;
+    rdfs:label "Панайот Манов"@mk ;
+    mko:birthDate "1867-01-01"^^xsd:date ;
+    mko:bornIn mk:Q147243 ;
+    mko:deathDate "1931-11-03"^^xsd:date ;
+    mko:occupation "револуционер"@en ;
+    owl:sameAs wd:Q12289776 .
+
+mk:Q12289841 a mko:Person ;
+    rdfs:label "Пандо Николов"@mk ;
+    mko:birthDate "1898-01-01"^^xsd:date ;
+    mko:bornIn mk:Q48814 ;
+    mko:deathDate "1928-07-28"^^xsd:date ;
+    mko:occupation "револуционер"@en ;
+    rdfs:comment "Bulgarian revolutionary"@en ;
+    owl:sameAs wd:Q12289841 .
+
+mk:Q12289854 a mko:Person ;
+    rdfs:label "Пано Измирлиев"@mk ;
+    mko:birthDate "1872-01-01"^^xsd:date ;
+    mko:bornIn mk:Q164954 ;
+    mko:deathDate "1928-11-01"^^xsd:date ;
+    mko:occupation "револуционер"@en ;
+    owl:sameAs wd:Q12289854 .
+
+mk:Q12289859 a mko:Person ;
+    rdfs:label "Пано Младчев"@mk ;
+    mko:birthDate "1880-01-01"^^xsd:date ;
+    mko:bornIn mk:Q147243 ;
+    mko:occupation "револуционер"@en ;
+    owl:sameAs wd:Q12289859 .
+
+mk:Q12289888 a mko:Person ;
+    rdfs:label "Панче Неделковски"@mk ;
+    mko:birthDate "1912-04-24"^^xsd:date ;
+    mko:bornIn mk:Q384 ;
+    mko:deathDate "1945-10-11"^^xsd:date ;
+    mko:occupation "политичар"@en ;
+    owl:sameAs wd:Q12289888 .
+
+mk:Q12289897 a mko:Person ;
+    rdfs:label "Панчо Михайлов (белетрист)"@mk ;
+    mko:birthDate "1896-06-20"^^xsd:date ;
+    mko:bornIn mk:Q147243 ;
+    mko:deathDate "1965-02-17"^^xsd:date ;
+    mko:occupation "новинар"@en ;
+    owl:sameAs wd:Q12289897 .
+
+mk:Q12289898 a mko:Person ;
+    rdfs:label "Панчо Михајлов"@mk ;
+    mko:birthDate "1891-01-01"^^xsd:date ;
+    mko:bornIn mk:Q147243 ;
+    mko:deathDate "1925-06-14"^^xsd:date ;
+    mko:occupation "фолклорист"@en ;
+    owl:sameAs wd:Q12289898 .
+
+mk:Q12289899 a mko:Person ;
+    rdfs:label "Pancho Nakashev"@mk ;
+    mko:birthDate "1881-07-15"^^xsd:date ;
+    mko:bornIn mk:Q147243 ;
+    mko:deathDate "1962-09-26"^^xsd:date ;
+    mko:occupation "воено лице"@en ;
+    owl:sameAs wd:Q12289899 .
+
+mk:Q12289902 a mko:Person ;
+    rdfs:label "Pancho Toshev"@mk ;
+    mko:birthDate "1894-07-12"^^xsd:date ;
+    mko:bornIn mk:Q147243 ;
+    mko:deathDate "1942-08-22"^^xsd:date ;
+    mko:occupation "правник"@en ;
+    rdfs:comment "Bulgarian lawyer"@en ;
+    owl:sameAs wd:Q12289902 .
+
+mk:Q12290319 a mko:Person ;
+    rdfs:label "Петре Богданов - Кочко"@mk ;
+    mko:birthDate "1913-03-12"^^xsd:date ;
+    mko:bornIn mk:Q384 ;
+    mko:deathDate "1998-02-22"^^xsd:date ;
+    mko:occupation "политичар"@en ;
+    rdfs:comment "политичар"@en ;
+    owl:sameAs wd:Q12290319 .
+
+mk:Q12290342 a mko:Person ;
+    rdfs:label "Петруш Шагманов"@mk ;
+    mko:birthDate "1851-01-01"^^xsd:date ;
+    mko:bornIn mk:Q384 ;
+    owl:sameAs wd:Q12290342 .
+
+mk:Q12290363 a mko:Person ;
+    rdfs:label "Peter Atzeff"@mk ;
+    mko:birthDate "1903-06-01"^^xsd:date ;
+    mko:bornIn mk:Q384 ;
+    mko:deathDate "1982-09-07"^^xsd:date ;
+    owl:sameAs wd:Q12290363 .
+
+mk:Q12290395 a mko:Person ;
+    rdfs:label "Петар Георгиев"@mk ;
+    mko:birthDate "1880-01-01"^^xsd:date ;
+    mko:bornIn mk:Q157246 ;
+    mko:deathDate "1905-04-11"^^xsd:date ;
+    mko:occupation "револуционер"@en ;
+    owl:sameAs wd:Q12290395 .
+
+mk:Q12290442 a mko:Person ;
+    rdfs:label "Петар Железаров"@mk ;
+    mko:birthDate "1875-01-01"^^xsd:date ;
+    mko:bornIn mk:Q157246 ;
+    mko:deathDate "1905-03-20"^^xsd:date ;
+    mko:occupation "револуционер"@en ;
+    owl:sameAs wd:Q12290442 .
+
+mk:Q12290445 a mko:Person ;
+    rdfs:label "Петар Здравев"@mk ;
+    mko:birthDate "1883-06-25"^^xsd:date ;
+    mko:bornIn mk:Q157024 ;
+    mko:deathDate "1960-01-01"^^xsd:date ;
+    mko:occupation "лекар"@en ;
+    owl:sameAs wd:Q12290445 .
+
+mk:Q12290511 a mko:Person ;
+    rdfs:label "Петър Мирчев"@mk ;
+    mko:birthDate "1907-01-01"^^xsd:date ;
+    mko:bornIn mk:Q157246 ;
+    mko:deathDate "1991-01-01"^^xsd:date ;
+    mko:occupation "писател"@en ;
+    rdfs:comment "Bulgarian writer"@en ;
+    owl:sameAs wd:Q12290511 .
+
+mk:Q12290578 a mko:Person ;
+    rdfs:label "Пешо Самарџиев"@mk ;
+    mko:birthDate "1877-01-01"^^xsd:date ;
+    mko:bornIn mk:Q164954 ;
+    mko:deathDate "1906-06-21"^^xsd:date ;
+    mko:occupation "револуционер"@en ;
+    rdfs:comment "македонски револуционер"@en ;
+    owl:sameAs wd:Q12290578 .
+
 mk:Q12290587 a mko:Person ;
     rdfs:label "Петар Соколов"@mk ;
     mko:birthDate "1870-01-01"^^xsd:date ;
@@ -617,6 +2611,14 @@ mk:Q12290607 a mko:Person ;
     mko:occupation "политичар"@en ;
     rdfs:comment "Bulgarian military officer, and politician"@en ;
     owl:sameAs wd:Q12290607 .
+
+mk:Q12292082 a mko:Person ;
+    rdfs:label "Рајна Алексова"@mk ;
+    mko:birthDate "1882-12-25"^^xsd:date ;
+    mko:bornIn mk:Q157246 ;
+    mko:deathDate "1959-02-23"^^xsd:date ;
+    rdfs:comment "македонски фармацевт"@en ;
+    owl:sameAs wd:Q12292082 .
 
 mk:Q12292166 a mko:Person ;
     rdfs:label "Рафаел Камхи"@mk ;
@@ -640,12 +2642,14 @@ mk:Q12293031 a mko:Organization ;
     rdfs:label "Зборна партизанска чета на МОО"@mk ;
     owl:sameAs wd:Q12293031 .
 
-mk:Q12293776 a mko:Person ;
-    rdfs:label "Q12293776"@mk ;
-    mko:birthDate "1880-08-25"^^xsd:date ;
-    mko:bornIn mk:Q856278 ;
-    mko:occupation "револуционер"@en ;
-    owl:sameAs wd:Q12293776 .
+mk:Q12293592 a mko:Person ;
+    rdfs:label "Serafim Barutchiyski"@mk ;
+    mko:birthDate "1869-01-04"^^xsd:date ;
+    mko:bornIn mk:Q214344 ;
+    mko:deathDate "1939-07-04"^^xsd:date ;
+    mko:occupation "head teacher"@en ;
+    rdfs:comment "Bulgarian philologist"@en ;
+    owl:sameAs wd:Q12293592 .
 
 mk:Q12293950 a mko:Person ;
     rdfs:label "Славе Мерџанов"@mk ;
@@ -655,6 +2659,15 @@ mk:Q12293950 a mko:Person ;
     mko:occupation "наставник"@en ;
     rdfs:comment "Bulgarian revolutionary (1876–1901)"@en ;
     owl:sameAs wd:Q12293950 .
+
+mk:Q12293979 a mko:Person ;
+    rdfs:label "Славчо Кљамбов"@mk ;
+    mko:birthDate "1879-01-01"^^xsd:date ;
+    mko:bornIn mk:Q48814 ;
+    mko:deathDate "http://www.wikidata.org/.well-known/genid/45ad158b713c85e5ac257c031b184699" ;
+    mko:occupation "револуционер"@en ;
+    rdfs:comment "Bulgarian revolutionary"@en ;
+    owl:sameAs wd:Q12293979 .
 
 mk:Q12294077 a mko:Person ;
     rdfs:label "Смиле Војданов"@mk ;
@@ -673,6 +2686,31 @@ mk:Q12294459 a mko:Person ;
     rdfs:comment "Bulgarian revolutionary"@en ;
     owl:sameAs wd:Q12294459 .
 
+mk:Q12294516 a mko:Person ;
+    rdfs:label "Спас Мартинов"@mk ;
+    mko:birthDate "1872-06-23"^^xsd:date ;
+    mko:bornIn mk:Q157246 ;
+    mko:deathDate "1937-12-30"^^xsd:date ;
+    mko:occupation "револуционер"@en ;
+    owl:sameAs wd:Q12294516 .
+
+mk:Q12294576 a mko:Person ;
+    rdfs:label "Spiro Gaydardhiev"@mk ;
+    mko:birthDate "1874-12-06"^^xsd:date ;
+    mko:bornIn mk:Q384 ;
+    mko:deathDate "1962-02-14"^^xsd:date ;
+    mko:occupation "револуционер"@en ;
+    owl:sameAs wd:Q12294576 .
+
+mk:Q12294579 a mko:Person ;
+    rdfs:label "Spiro Dilyov"@mk ;
+    mko:birthDate "1881-01-01"^^xsd:date ;
+    mko:bornIn mk:Q384 ;
+    mko:deathDate "http://www.wikidata.org/.well-known/genid/3666d1e94a8e39e4f8eb56bb13682ea9" ;
+    mko:occupation "воено лице"@en ;
+    rdfs:comment "Bulgarian revolutionary"@en ;
+    owl:sameAs wd:Q12294579 .
+
 mk:Q12294583 a mko:Person ;
     rdfs:label "Спиро Китинчев"@mk ;
     mko:birthDate "1895-01-01"^^xsd:date ;
@@ -681,6 +2719,15 @@ mk:Q12294583 a mko:Person ;
     mko:occupation "политичар"@en ;
     rdfs:comment "македонски политичар"@en ;
     owl:sameAs wd:Q12294583 .
+
+mk:Q12294595 a mko:Person ;
+    rdfs:label "Spiro Ristiç"@mk ;
+    mko:birthDate "1879-01-01"^^xsd:date ;
+    mko:bornIn mk:Q157024 ;
+    mko:deathDate "1938-01-01"^^xsd:date ;
+    mko:occupation "политичар"@en ;
+    rdfs:comment "политичар"@en ;
+    owl:sameAs wd:Q12294595 .
 
 mk:Q12294878 a mko:Person ;
     rdfs:label "Сребра Апостолова"@mk ;
@@ -691,15 +2738,6 @@ mk:Q12294878 a mko:Person ;
     rdfs:comment "Macedonian Bulgarian revolutionary (1886–1942)"@en ;
     owl:sameAs wd:Q12294878 .
 
-mk:Q12295255 a mko:Person ;
-    rdfs:label "Stefan Nedić"@mk ;
-    mko:birthDate "1875-01-01"^^xsd:date ;
-    mko:bornIn mk:Q856278 ;
-    mko:deathDate "1923-07-23"^^xsd:date ;
-    mko:occupation "воено лице"@en ;
-    rdfs:comment "Macedonian Serb Chetnik"@en ;
-    owl:sameAs wd:Q12295255 .
-
 mk:Q12295476 a mko:Person ;
     rdfs:label "Stoyan Bozhov"@mk ;
     mko:birthDate "1864-04-07"^^xsd:date ;
@@ -708,15 +2746,6 @@ mk:Q12295476 a mko:Person ;
     mko:occupation "револуционер"@en ;
     rdfs:comment "Bulgarian teacher"@en ;
     owl:sameAs wd:Q12295476 .
-
-mk:Q12295597 a mko:Person ;
-    rdfs:label "Stoyan Sekulov"@mk ;
-    mko:birthDate "1883-01-01"^^xsd:date ;
-    mko:bornIn mk:Q856278 ;
-    mko:deathDate "1918-01-01"^^xsd:date ;
-    mko:occupation "воено лице"@en ;
-    rdfs:comment "Bulgarian revolutionary"@en ;
-    owl:sameAs wd:Q12295597 .
 
 mk:Q12295889 a mko:Organization ;
     rdfs:label "Сојуз на македонските емигрантски организации"@mk ;
@@ -781,26 +2810,12 @@ mk:Q12298212 a mko:Person ;
     owl:sameAs wd:Q12298212 .
 
 mk:Q12298246 a mko:Person ;
-    rdfs:label "Q12298246"@mk ;
+    rdfs:label "Христо Влахов"@mk ;
     mko:birthDate "1871-03-25"^^xsd:date ;
     mko:bornIn mk:Q214347 ;
     mko:deathDate "1957-04-11"^^xsd:date ;
     mko:occupation "револуционер"@en ;
     owl:sameAs wd:Q12298246 .
-
-mk:Q12298310 a mko:Person ;
-    rdfs:label "Q12298310"@mk ;
-    mko:birthDate "1878-01-01"^^xsd:date ;
-    mko:bornIn mk:Q856278 ;
-    mko:occupation "револуционер"@en ;
-    owl:sameAs wd:Q12298310 .
-
-mk:Q12298539 a mko:Person ;
-    rdfs:label "Q12298539"@mk ;
-    mko:birthDate "1880-10-25"^^xsd:date ;
-    mko:bornIn mk:Q856278 ;
-    mko:occupation "револуционер"@en ;
-    owl:sameAs wd:Q12298539 .
 
 mk:Q12299732 a mko:Person ;
     rdfs:label "Јанка Каневчева"@mk ;
@@ -831,13 +2846,17 @@ mk:Q1277369 a mko:HistoricalEvent ;
             time:hasBeginning "1893-01-01"^^xsd:date ;
             time:hasEnd "1908-01-01"^^xsd:date ] .
 
-mk:Q12875512 a mko:Person ;
-    rdfs:label "Q12875512"@mk ;
-    mko:birthDate "1900-01-01"^^xsd:date ;
-    mko:bornIn mk:Q103251 ;
-    mko:deathDate "1879-10-01"^^xsd:date ;
-    mko:occupation "воено лице"@en ;
-    owl:sameAs wd:Q12875512 .
+mk:Q1290184 a mko:HistoricalEvent ;
+    rdfs:label "Битолски конгрес"@mk ;
+    mko:endDate "1908-11-22"^^xsd:date ;
+    mko:partOf mk:MacedonianHistory1885_1910 ;
+    mko:startDate "1908-11-14"^^xsd:date ;
+    mko:tookPlaceIn mk:Q157246 ;
+    rdfs:comment "one-time academic conference held in the city of Monastir with the goal of standardizing the Albanian alphabet"@en ;
+    owl:sameAs wd:Q1290184 ;
+    time:hasTime [ a time:Interval ;
+            time:hasBeginning "1908-11-14"^^xsd:date ;
+            time:hasEnd "1908-11-22"^^xsd:date ] .
 
 mk:Q12904801 a mko:Person ;
     rdfs:label "Алексо Мартулков"@mk ;
@@ -847,13 +2866,6 @@ mk:Q12904801 a mko:Person ;
     mko:occupation "политичар"@en ;
     rdfs:comment "Македонски политичар и социјалист"@en ;
     owl:sameAs wd:Q12904801 .
-
-mk:Q130397546 a mko:Person ;
-    rdfs:label "Q130397546"@mk ;
-    mko:birthDate "1881-05-27"^^xsd:date ;
-    mko:bornIn mk:Q1422453 ;
-    mko:deathDate "http://www.wikidata.org/.well-known/genid/320f9b7d91642baf4b21d2ec2704d545" ;
-    owl:sameAs wd:Q130397546 .
 
 mk:Q131539970 a mko:Person ;
     rdfs:label "Kotse Seizov"@mk ;
@@ -897,7 +2909,7 @@ mk:Q136716664 a mko:Person ;
     owl:sameAs wd:Q136716664 .
 
 mk:Q137269896 a mko:Person ;
-    rdfs:label "Q137269896"@mk ;
+    rdfs:label "Стефан Маджиров"@mk ;
     mko:bornIn mk:Q804311 ;
     mko:occupation "револуционер"@en ;
     owl:sameAs wd:Q137269896 .
@@ -909,35 +2921,10 @@ mk:Q137970079 a mko:Person ;
     rdfs:comment "македонски револуционер"@en ;
     owl:sameAs wd:Q137970079 .
 
-mk:Q138010692 a mko:Person ;
-    rdfs:label "Благуна Биљаноска"@mk ;
-    mko:birthDate "1910-01-01"^^xsd:date ;
-    mko:bornIn mk:Q749618 ;
-    mko:occupation "партизан"@en ;
-    rdfs:comment "учесник во НОВ на Македонија"@en ;
-    owl:sameAs wd:Q138010692 .
-
 mk:Q138017989 a mko:Person ;
-    rdfs:label "Q138017989"@mk ;
+    rdfs:label "Тодор Прошев"@mk ;
     mko:occupation "револуционер"@en ;
     owl:sameAs wd:Q138017989 .
-
-mk:Q138779925 a mko:Person ;
-    rdfs:label "Драга Добреска"@mk ;
-    mko:birthDate "1895-01-01"^^xsd:date ;
-    mko:bornIn mk:Q749618 ;
-    mko:deathDate "1973-01-01"^^xsd:date ;
-    mko:occupation "партизан"@en ;
-    rdfs:comment "учесник во НОВ на Македонија"@en ;
-    owl:sameAs wd:Q138779925 .
-
-mk:Q138969122 a mko:Person ;
-    rdfs:label "Нахире Емуш"@mk ;
-    mko:birthDate "1894-01-01"^^xsd:date ;
-    mko:bornIn mk:Q749618 ;
-    mko:occupation "партизан"@en ;
-    rdfs:comment "учесник во НОВ на Македонија"@en ;
-    owl:sameAs wd:Q138969122 .
 
 mk:Q139256949 a mko:Person ;
     rdfs:label "Петар Попиванов"@mk ;
@@ -946,22 +2933,14 @@ mk:Q139256949 a mko:Person ;
     rdfs:comment "македонски револуционер"@en ;
     owl:sameAs wd:Q139256949 .
 
-mk:Q139257087 a mko:Person ;
-    rdfs:label "Q139257087"@mk ;
-    mko:birthDate "1892-08-15"^^xsd:date ;
-    mko:bornIn mk:Q3395964 ;
-    mko:deathDate "1971-08-15"^^xsd:date ;
-    mko:occupation "адвокат"@en ;
-    owl:sameAs wd:Q139257087 .
-
 mk:Q139387249 a mko:Person ;
-    rdfs:label "Q139387249"@mk ;
+    rdfs:label "Пара Пацулова"@mk ;
     mko:bornIn mk:Q156858 ;
     mko:occupation "деец"@en ;
     owl:sameAs wd:Q139387249 .
 
 mk:Q139387287 a mko:Person ;
-    rdfs:label "Q139387287"@mk ;
+    rdfs:label "Мара Китанова"@mk ;
     mko:bornIn mk:Q156858 ;
     mko:occupation "деец"@en ;
     owl:sameAs wd:Q139387287 .
@@ -991,15 +2970,6 @@ mk:Q15730821 a mko:HistoricalDocument ;
     mko:inLanguage "есперанто"@en ;
     owl:sameAs wd:Q15730821 .
 
-mk:Q16331374 a mko:Person ;
-    rdfs:label "Konstantinos Ischomachos"@mk ;
-    mko:birthDate "1838-01-01"^^xsd:date ;
-    mko:bornIn mk:Q103251 ;
-    mko:deathDate "1888-06-09"^^xsd:date ;
-    mko:occupation "политичар"@en ;
-    rdfs:comment "Greek politician and soldier"@en ;
-    owl:sameAs wd:Q16331374 .
-
 mk:Q1671915 a mko:Person ;
     rdfs:label "Никола Киров Мајски"@mk ;
     mko:birthDate "1880-06-28"^^xsd:date ;
@@ -1027,23 +2997,6 @@ mk:Q1851948 a mko:Person ;
     rdfs:comment "Македонски револуционер"@en ;
     owl:sameAs wd:Q1851948 .
 
-mk:Q18545240 a mko:Person ;
-    rdfs:label "Paul Craja"@mk ;
-    mko:birthDate "1911-01-01"^^xsd:date ;
-    mko:bornIn mk:Q103251 ;
-    mko:deathDate "1939-09-21"^^xsd:date ;
-    mko:occupation "политичар"@en ;
-    rdfs:comment "политичар"@en ;
-    owl:sameAs wd:Q18545240 .
-
-mk:Q18591262 a mko:Person ;
-    rdfs:label "Q18591262"@mk ;
-    mko:birthDate "1894-10-18"^^xsd:date ;
-    mko:bornIn mk:Q1992701 ;
-    mko:deathDate "1947-09-15"^^xsd:date ;
-    mko:occupation "воено лице"@en ;
-    owl:sameAs wd:Q18591262 .
-
 mk:Q19204142 a mko:Person ;
     rdfs:label "Tanasi Nastu"@mk ;
     mko:birthDate "1879-07-24"^^xsd:date ;
@@ -1052,23 +3005,6 @@ mk:Q19204142 a mko:Person ;
     mko:occupation "државен службеник"@en ;
     rdfs:comment "Aromanian revolutionary"@en ;
     owl:sameAs wd:Q19204142 .
-
-mk:Q19204692 a mko:Person ;
-    rdfs:label "Q19204692"@mk ;
-    mko:birthDate "http://www.wikidata.org/.well-known/genid/356353da9c07665f117f8d6cd4e96eef" ;
-    mko:bornIn mk:Q2924182 ;
-    mko:deathDate "http://www.wikidata.org/.well-known/genid/552757279ee559564b86888da9149751" ;
-    mko:occupation "револуционер"@en ;
-    owl:sameAs wd:Q19204692 .
-
-mk:Q19205008 a mko:Person ;
-    rdfs:label "Захарина Димитрова"@mk ;
-    mko:birthDate "1873-11-26"^^xsd:date ;
-    mko:bornIn mk:Q740591 ;
-    mko:deathDate "1940-04-14"^^xsd:date ;
-    mko:occupation "хистолог"@en ;
-    rdfs:comment "прва лекарка од Македонија"@en ;
-    owl:sameAs wd:Q19205008 .
 
 mk:Q19892449 a mko:HistoricalEvent ;
     rdfs:label "Fight in Tabanovce"@mk ;
@@ -1120,15 +3056,6 @@ mk:Q22674981 a mko:Person ;
     mko:occupation "револуционер"@en ;
     owl:sameAs wd:Q22674981 .
 
-mk:Q2314696 a mko:Person ;
-    rdfs:label "Spyro Kyropoulos"@mk ;
-    mko:birthDate "1887-04-26"^^xsd:date ;
-    mko:bornIn mk:Q103251 ;
-    mko:deathDate "1967-01-01"^^xsd:date ;
-    mko:occupation "физичар"@en ;
-    rdfs:comment "German physicist (1887-1967)"@en ;
-    owl:sameAs wd:Q2314696 .
-
 mk:Q2466285 a mko:Organization ;
     rdfs:label "Македонска академија на науките и уметностите"@mk ;
     mko:foundingDate "1967-01-01"^^xsd:date ;
@@ -1144,14 +3071,6 @@ mk:Q2497361 a mko:Person ;
     mko:occupation "политичар"@en ;
     rdfs:comment "македонски револуционер"@en ;
     owl:sameAs wd:Q2497361 .
-
-mk:Q25477634 a mko:Person ;
-    rdfs:label "Q25477634"@mk ;
-    mko:birthDate "1905-01-01"^^xsd:date ;
-    mko:bornIn mk:Q103251 ;
-    mko:occupation "политичар"@en ;
-    rdfs:comment "Bulgarian politician"@en ;
-    owl:sameAs wd:Q25477634 .
 
 mk:Q256838 a mko:Person ;
     rdfs:label "Данаил Крапчев"@mk ;
@@ -1181,7 +3100,7 @@ mk:Q267120 a mko:Person ;
     owl:sameAs wd:Q267120 .
 
 mk:Q28060025 a mko:Person ;
-    rdfs:label "Q28060025"@mk ;
+    rdfs:label "Илия Златанов"@mk ;
     mko:birthDate "1895-01-01"^^xsd:date ;
     mko:bornIn mk:Q3038111 ;
     mko:deathDate "1924-07-12"^^xsd:date ;
@@ -1482,7 +3401,7 @@ mk:Q3401226 a mko:Person ;
 mk:Q3401248 a mko:HistoricalEvent ;
     rdfs:label "Битка кај Мечкин Камен"@mk ;
     mko:partOf mk:MacedonianHistory1885_1910 ;
-    mko:tookPlaceIn mk:Q221 ;
+    mko:tookPlaceIn mk:Q157034 ;
     rdfs:comment "1903 battle in Kruševo"@en ;
     owl:sameAs wd:Q3401248 .
 
@@ -1719,6 +3638,12 @@ mk:Q407408 a mko:Organization ;
     rdfs:comment "volunteer corps of the Bulgarian Army during the Balkan Wars"@en ;
     owl:sameAs wd:Q407408 .
 
+mk:Q41726 a mko:Organization ;
+    rdfs:label "слободно ѕидарство"@mk ;
+    mko:foundingDate "1717-01-01"^^xsd:date ;
+    rdfs:comment "group of fraternal organizations"@en ;
+    owl:sameAs wd:Q41726 .
+
 mk:Q439762 a mko:Person ;
     rdfs:label "Михаил Герџиков"@mk ;
     mko:birthDate "1877-01-26"^^xsd:date ;
@@ -1740,7 +3665,7 @@ mk:Q4602838 a mko:Person ;
     mko:birthDate "1885-09-21"^^xsd:date ;
     mko:bornIn mk:Q956963 ;
     mko:deathDate "1974-09-27"^^xsd:date ;
-    mko:occupation "политичар"@en ;
+    mko:occupation "револуционер"@en ;
     rdfs:comment "правник, Отоманско Царство"@en ;
     owl:sameAs wd:Q4602838 .
 
@@ -1813,7 +3738,7 @@ mk:Q488297 a mko:Organization ;
     owl:sameAs wd:Q488297 .
 
 mk:Q49025553 a mko:Person ;
-    rdfs:label "Q49025553"@mk ;
+    rdfs:label "Павел Калпакчиев"@mk ;
     mko:birthDate "1867-06-01"^^xsd:date ;
     mko:bornIn mk:Q406064 ;
     mko:deathDate "1929-10-13"^^xsd:date ;
@@ -2012,22 +3937,6 @@ mk:Q56181262 a mko:Person ;
     rdfs:comment "Bulgarian teacher (1876-1964)"@en ;
     owl:sameAs wd:Q56181262 .
 
-mk:Q56218774 a mko:Person ;
-    rdfs:label "Q56218774"@mk ;
-    mko:birthDate "http://www.wikidata.org/.well-known/genid/2eecc79ef0010e9a758adf212488fd91" ;
-    mko:bornIn mk:Q2924818 ;
-    mko:deathDate "http://www.wikidata.org/.well-known/genid/a3433165383a66361bc8dab0aca6d695" ;
-    mko:occupation "револуционер"@en ;
-    owl:sameAs wd:Q56218774 .
-
-mk:Q56218981 a mko:Person ;
-    rdfs:label "Q56218981"@mk ;
-    mko:birthDate "http://www.wikidata.org/.well-known/genid/70e61fcaceff8488b6ace7b3841655ae" ;
-    mko:bornIn mk:Q515814 ;
-    mko:deathDate "http://www.wikidata.org/.well-known/genid/d0e00f6a5d073c1895354c24105d9e4f" ;
-    mko:occupation "револуционер"@en ;
-    owl:sameAs wd:Q56218981 .
-
 mk:Q56254180 a mko:Person ;
     rdfs:label "Dine K. Gogoff"@mk ;
     mko:birthDate "1888-01-01"^^xsd:date ;
@@ -2043,14 +3952,6 @@ mk:Q56259274 a mko:Person ;
     mko:deathDate "1955-08-01"^^xsd:date ;
     mko:occupation "револуционер"@en ;
     owl:sameAs wd:Q56259274 .
-
-mk:Q56259310 a mko:Person ;
-    rdfs:label "Q56259310"@mk ;
-    mko:birthDate "http://www.wikidata.org/.well-known/genid/f77e6b9a0d39ba649079cff6ac06a23e" ;
-    mko:bornIn mk:Q3136266 ;
-    mko:deathDate "http://www.wikidata.org/.well-known/genid/f38756ba6634c8cdf35fd58f1a43266e" ;
-    mko:occupation "револуционер"@en ;
-    owl:sameAs wd:Q56259310 .
 
 mk:Q56292308 a mko:Person ;
     rdfs:label "Anastas Lazaroff"@mk ;
@@ -2070,45 +3971,14 @@ mk:Q56426085 a mko:Person ;
     rdfs:comment "Bulgarian priest"@en ;
     owl:sameAs wd:Q56426085 .
 
-mk:Q56751512 a mko:Person ;
-    rdfs:label "Q56751512"@mk ;
-    mko:birthDate "http://www.wikidata.org/.well-known/genid/aa7db32cc1efbc120f46a4808456b147" ;
-    mko:bornIn mk:Q3299907 ;
-    mko:deathDate "http://www.wikidata.org/.well-known/genid/9df7a6a4c78df61cf120b068a57576a7" ;
-    mko:occupation "револуционер"@en ;
-    owl:sameAs wd:Q56751512 .
-
-mk:Q56751727 a mko:HistoricalDocument ;
-    rdfs:label "Declaration of Vasil Shinanov on joining the Ilinden organization with notes about his revolutionary activities"@mk ;
-    mko:authoredBy mk:Q47462142 ;
-    mko:dateCreated "1933-01-01"^^xsd:date ;
-    owl:sameAs wd:Q56751727 .
-
 mk:Q57315608 a mko:Person ;
-    rdfs:label "Q57315608"@mk ;
+    rdfs:label "Ангел Трайчев"@mk ;
     mko:birthDate "1887-01-01"^^xsd:date ;
     mko:bornIn mk:Q2884091 ;
     mko:deathDate "1921-04-01"^^xsd:date ;
     mko:occupation "воено лице"@en ;
     rdfs:comment "Bulgarian military personnel"@en ;
     owl:sameAs wd:Q57315608 .
-
-mk:Q57778571 a mko:Person ;
-    rdfs:label "Q57778571"@mk ;
-    mko:birthDate "http://www.wikidata.org/.well-known/genid/75e43571953fdd965d9006145997d3b1" ;
-    mko:bornIn mk:Q406488 ;
-    mko:deathDate "http://www.wikidata.org/.well-known/genid/d4b1f11710742c5b7f0898f1763fb4d9" ;
-    mko:occupation "трговец"@en ;
-    owl:sameAs wd:Q57778571 .
-
-mk:Q59195628 a mko:Person ;
-    rdfs:label "Nikola Meshkov"@mk ;
-    mko:birthDate "1845-01-01"^^xsd:date ;
-    mko:bornIn mk:Q3084463 ;
-    mko:deathDate "http://www.wikidata.org/.well-known/genid/1815000619f7956bb3c749837349b91c" ;
-    mko:occupation "револуционер"@en ;
-    rdfs:comment "Bulgarian revolutionary"@en ;
-    owl:sameAs wd:Q59195628 .
 
 mk:Q59262385 a mko:Person ;
     rdfs:label "Trayko Trapkov"@mk ;
@@ -2120,14 +3990,14 @@ mk:Q59262385 a mko:Person ;
     owl:sameAs wd:Q59262385 .
 
 mk:Q59709314 a mko:Person ;
-    rdfs:label "Q59709314"@mk ;
+    rdfs:label "Иван Хаджигенчев"@mk ;
     mko:birthDate "1876-10-13"^^xsd:date ;
     mko:bornIn mk:Q170415 ;
     mko:deathDate "1941-07-12"^^xsd:date ;
     owl:sameAs wd:Q59709314 .
 
 mk:Q59709512 a mko:Person ;
-    rdfs:label "Q59709512"@mk ;
+    rdfs:label "Иван Хаджистоенчев"@mk ;
     mko:birthDate "1877-01-07"^^xsd:date ;
     mko:bornIn mk:Q170415 ;
     mko:deathDate "1902-08-02"^^xsd:date ;
@@ -2238,25 +4108,8 @@ mk:Q63343779 a mko:Person ;
     rdfs:comment "Bulgarian revolutionary"@en ;
     owl:sameAs wd:Q63343779 .
 
-mk:Q634186 a mko:Organization ;
-    rdfs:label "Филики Етерија"@mk ;
-    mko:dissolutionDate "1822-01-01"^^xsd:date ;
-    mko:foundingDate "1814-09-26"^^xsd:date ;
-    mko:headquarteredIn mk:Q406 ;
-    rdfs:comment "19th-century secret society opposing Ottoman rule in Greece"@en ;
-    owl:sameAs wd:Q634186 .
-
-mk:Q63714821 a mko:Person ;
-    rdfs:label "Ivan Shteryov"@mk ;
-    mko:birthDate "1888-01-01"^^xsd:date ;
-    mko:bornIn mk:Q856278 ;
-    mko:deathDate "1939-07-14"^^xsd:date ;
-    mko:occupation "револуционер"@en ;
-    rdfs:comment "Bulgarian revolutionary"@en ;
-    owl:sameAs wd:Q63714821 .
-
 mk:Q64138923 a mko:Person ;
-    rdfs:label "Q64138923"@mk ;
+    rdfs:label "Стойо Смилков"@mk ;
     mko:birthDate "1870-01-01"^^xsd:date ;
     mko:bornIn mk:Q11058060 ;
     mko:deathDate "1946-01-01"^^xsd:date ;
@@ -2362,7 +4215,7 @@ mk:Q65093907 a mko:Person ;
     owl:sameAs wd:Q65093907 .
 
 mk:Q65924652 a mko:Person ;
-    rdfs:label "Q65924652"@mk ;
+    rdfs:label "Георги Титянов"@mk ;
     mko:birthDate "1884-01-01"^^xsd:date ;
     mko:bornIn mk:Q12283266 ;
     mko:deathDate "1913-08-09"^^xsd:date ;
@@ -2404,13 +4257,6 @@ mk:Q6824193 a mko:Person ;
     mko:occupation "воено лице"@en ;
     rdfs:comment "Bulgarian revolutionary"@en ;
     owl:sameAs wd:Q6824193 .
-
-mk:Q69462314 a mko:Person ;
-    rdfs:label "Q69462314"@mk ;
-    mko:birthDate "http://www.wikidata.org/.well-known/genid/84ebb09c0cbae15ad1feaf16b4424619" ;
-    mko:bornIn mk:Q2274800 ;
-    mko:deathDate "http://www.wikidata.org/.well-known/genid/50099ea5bbd7db504ada38ad1c57672e" ;
-    owl:sameAs wd:Q69462314 .
 
 mk:Q7035483 a mko:Person ;
     rdfs:label "Никола Симеонов Андреев"@mk ;
@@ -2542,14 +4388,6 @@ mk:Q83830551 a mko:Person ;
     rdfs:comment "Bulgarian revolutionary and priest"@en ;
     owl:sameAs wd:Q83830551 .
 
-mk:Q87251666 a mko:Person ;
-    rdfs:label "Q87251666"@mk ;
-    mko:birthDate "1894-08-04"^^xsd:date ;
-    mko:bornIn mk:Q2041219 ;
-    mko:deathDate "1968-12-22"^^xsd:date ;
-    mko:occupation "готвач"@en ;
-    owl:sameAs wd:Q87251666 .
-
 mk:Q87279866 a mko:HistoricalDocument ;
     rdfs:label "Спомени"@mk ;
     mko:authoredBy mk:Q672922 ;
@@ -2557,14 +4395,12 @@ mk:Q87279866 a mko:HistoricalDocument ;
     mko:inLanguage "бугарски јазик"@en ;
     owl:sameAs wd:Q87279866 .
 
-mk:Q924865 a mko:Person ;
-    rdfs:label "Никола Мартиноски"@mk ;
-    mko:birthDate "1903-08-18"^^xsd:date ;
-    mko:bornIn mk:Q2476159 ;
-    mko:deathDate "1973-02-07"^^xsd:date ;
-    mko:occupation "сликар"@en ;
-    rdfs:comment "македонски сликар"@en ;
-    owl:sameAs wd:Q924865 .
+mk:Q87902974 a mko:HistoricalDocument ;
+    rdfs:label "Спомени на Арсени Костенцев"@mk ;
+    mko:authoredBy mk:Q12272362 ;
+    mko:dateCreated "1917-01-01"^^xsd:date ;
+    mko:inLanguage "бугарски јазик"@en ;
+    owl:sameAs wd:Q87902974 .
 
 mk:Q943128 a mko:Person ;
     rdfs:label "Стамат Икономов"@mk ;
@@ -2645,7 +4481,7 @@ mk:Q983917 a mko:Person ;
     owl:sameAs wd:Q983917 .
 
 mk:Q99391195 a mko:Person ;
-    rdfs:label "Q99391195"@mk ;
+    rdfs:label "Петър Чанов"@mk ;
     mko:bornIn mk:Q3074970 ;
     owl:sameAs wd:Q99391195 .
 
@@ -2700,6 +4536,14 @@ mk:Q11058060 a mko:Place ;
     geo:asWKT "Point(22.69504 41.04293)" ;
     rdfs:comment "село во Кукушко, Грција"@en ;
     owl:sameAs wd:Q11058060 .
+
+mk:Q12272362 a mko:Person ;
+    rdfs:label "Арсени Костенцев"@mk ;
+    mko:birthDate "1842-08-15"^^xsd:date ;
+    mko:bornIn mk:Q147243 ;
+    mko:deathDate "1921-11-06"^^xsd:date ;
+    mko:occupation "писател"@en ;
+    owl:sameAs wd:Q12272362 .
 
 mk:Q12284302 a mko:Place ;
     rdfs:label "Куманич"@mk ;
@@ -2766,19 +4610,12 @@ mk:Q132572 a mko:Place ;
     rdfs:comment "city in Moldova"@en ;
     owl:sameAs wd:Q132572 .
 
-mk:Q1422453 a mko:Place ;
-    rdfs:label "Општина Крива Паланка"@mk ;
+mk:Q144465 a mko:Place ;
+    rdfs:label "Зајас"@mk ;
     mko:locatedInCountry mk:Q221 ;
-    geo:asWKT "Point(22.33 42.22)" ;
-    rdfs:comment "општина во Македонија"@en ;
-    owl:sameAs wd:Q1422453 .
-
-mk:Q157024 a mko:Place ;
-    rdfs:label "Тетово"@mk ;
-    mko:locatedInCountry mk:Q221 ;
-    geo:asWKT "Point(20.971388888 42.010277777)" ;
-    rdfs:comment "град во Македонија"@en ;
-    owl:sameAs wd:Q157024 .
+    geo:asWKT "Point(20.93336389 41.60002222)" ;
+    rdfs:comment "село во Општина Кичево"@en ;
+    owl:sameAs wd:Q144465 .
 
 mk:Q160173 a mko:Place ;
     rdfs:label "Русе"@mk ;
@@ -2787,12 +4624,12 @@ mk:Q160173 a mko:Place ;
     rdfs:comment "city in Ruse municipality, Ruse oblast, Bulgaria"@en ;
     owl:sameAs wd:Q160173 .
 
-mk:Q162952 a mko:Place ;
-    rdfs:label "Пехчево"@mk ;
+mk:Q162009 a mko:Place ;
+    rdfs:label "Македонски Брод"@mk ;
     mko:locatedInCountry mk:Q221 ;
-    geo:asWKT "Point(22.890555555 41.759166666)" ;
-    rdfs:comment "град во Општина Пехчево"@en ;
-    owl:sameAs wd:Q162952 .
+    geo:asWKT "Point(21.215277777 41.513333333)" ;
+    rdfs:comment "град во Општина Македонски Брод"@en ;
+    owl:sameAs wd:Q162009 .
 
 mk:Q168057 a mko:Place ;
     rdfs:label "Крајова"@mk ;
@@ -2828,13 +4665,6 @@ mk:Q1977737 a mko:Place ;
     rdfs:comment "град во Македонија"@en ;
     owl:sameAs wd:Q1977737 .
 
-mk:Q1992701 a mko:Place ;
-    rdfs:label "Општина Градско"@mk ;
-    mko:locatedInCountry mk:Q221 ;
-    geo:asWKT "Point(21.9333 41.5667)" ;
-    rdfs:comment "општина во Македонија"@en ;
-    owl:sameAs wd:Q1992701 .
-
 mk:Q2013100 a mko:Place ;
     rdfs:label "Vrachesh"@mk ;
     mko:locatedInCountry mk:Q219 ;
@@ -2856,13 +4686,6 @@ mk:Q2018965 a mko:Place ;
     rdfs:comment "општина во Македонија"@en ;
     owl:sameAs wd:Q2018965 .
 
-mk:Q2041219 a mko:Place ;
-    rdfs:label "Општина Македонска Каменица"@mk ;
-    mko:locatedInCountry mk:Q221 ;
-    geo:asWKT "Point(22.58 42.01)" ;
-    rdfs:comment "општина во Македонија"@en ;
-    owl:sameAs wd:Q2041219 .
-
 mk:Q206903 a mko:Place ;
     rdfs:label "Лозенград"@mk ;
     mko:locatedInCountry mk:Q43 ;
@@ -2883,13 +4706,6 @@ mk:Q21080017 a mko:Place ;
     geo:asWKT "Point(23.580833333 41.141944444)" ;
     rdfs:comment "село во Серско, Егејска Македонија"@en ;
     owl:sameAs wd:Q21080017 .
-
-mk:Q2274800 a mko:Place ;
-    rdfs:label "Нестрам"@mk ;
-    mko:locatedInCountry mk:Q41 ;
-    geo:asWKT "Point(21.061666666 40.412222222)" ;
-    rdfs:comment "село во Костурско, Грција"@en ;
-    owl:sameAs wd:Q2274800 .
 
 mk:Q2416162 a mko:Place ;
     rdfs:label "Бојмица"@mk ;
@@ -2927,13 +4743,6 @@ mk:Q2467099 a mko:Place ;
     geo:asWKT "Point(23.383175 41.460053)" ;
     rdfs:comment "village in Sandanski municipality, Blagoevgrad oblast, Bulgaria"@en ;
     owl:sameAs wd:Q2467099 .
-
-mk:Q2476159 a mko:Place ;
-    rdfs:label "Општина Крушево"@mk ;
-    mko:locatedInCountry mk:Q221 ;
-    geo:asWKT "Point(21.26 41.14)" ;
-    rdfs:comment "општина во Македонија"@en ;
-    owl:sameAs wd:Q2476159 .
 
 mk:Q251439 a mko:Place ;
     rdfs:label "Копривштица"@mk ;
@@ -3019,20 +4828,6 @@ mk:Q2921708 a mko:Place ;
     rdfs:comment "село во Општина Гази Баба"@en ;
     owl:sameAs wd:Q2921708 .
 
-mk:Q2924182 a mko:Place ;
-    rdfs:label "Браилово"@mk ;
-    mko:locatedInCountry mk:Q221 ;
-    geo:asWKT "Point(21.461666666 41.477222222)" ;
-    rdfs:comment "село во Општина Долнени"@en ;
-    owl:sameAs wd:Q2924182 .
-
-mk:Q2924818 a mko:Place ;
-    rdfs:label "Брезово"@mk ;
-    mko:locatedInCountry mk:Q221 ;
-    geo:asWKT "Point(21.1272 41.3422)" ;
-    rdfs:comment "село во Општина Демир Хисар"@en ;
-    owl:sameAs wd:Q2924818 .
-
 mk:Q2989419 a mko:Place ;
     rdfs:label "Левуново"@mk ;
     mko:locatedInCountry mk:Q219 ;
@@ -3096,6 +4891,13 @@ mk:Q3075921 a mko:Place ;
     rdfs:comment "село во Општина Гостивар"@en ;
     owl:sameAs wd:Q3075921 .
 
+mk:Q3084463 a mko:Place ;
+    rdfs:label "Могила"@mk ;
+    mko:locatedInCountry mk:Q221 ;
+    geo:asWKT "Point(21.378611111 41.108333333)" ;
+    rdfs:comment "село во Општина Могила"@en ;
+    owl:sameAs wd:Q3084463 .
+
 mk:Q3084622 a mko:Place ;
     rdfs:label "Лера"@mk ;
     mko:locatedInCountry mk:Q221 ;
@@ -3116,13 +4918,6 @@ mk:Q312132 a mko:Place ;
     geo:asWKT "Point(22.2433 41.6694)" ;
     rdfs:comment "село во Општина Штип"@en ;
     owl:sameAs wd:Q312132 .
-
-mk:Q3136266 a mko:Place ;
-    rdfs:label "Воѓани"@mk ;
-    mko:locatedInCountry mk:Q221 ;
-    geo:asWKT "Point(21.3394 41.2836)" ;
-    rdfs:comment "село во Општина Кривогаштани, Македонија"@en ;
-    owl:sameAs wd:Q3136266 .
 
 mk:Q3136277 a mko:Place ;
     rdfs:label "Ваташа"@mk ;
@@ -3151,20 +4946,6 @@ mk:Q3136738 a mko:Place ;
     geo:asWKT "Point(20.7231 41.5611)" ;
     rdfs:comment "село во Општина Маврово и Ростуше"@en ;
     owl:sameAs wd:Q3136738 .
-
-mk:Q3299907 a mko:Place ;
-    rdfs:label "Косинец"@mk ;
-    mko:locatedInCountry mk:Q41 ;
-    geo:asWKT "Point(21.07972222 40.57888889)" ;
-    rdfs:comment "село во Костурско, Егејскиот дел на Македонија"@en ;
-    owl:sameAs wd:Q3299907 .
-
-mk:Q3301467 a mko:Place ;
-    rdfs:label "Врбник"@mk ;
-    mko:locatedInCountry mk:Q222 ;
-    geo:asWKT "Point(21.02388889 40.64444444)" ;
-    rdfs:comment "village in Korçë, Albania"@en ;
-    owl:sameAs wd:Q3301467 .
 
 mk:Q3301607 a mko:Place ;
     rdfs:label "Крчишта"@mk ;
@@ -3214,6 +4995,13 @@ mk:Q3395958 a mko:Place ;
     geo:asWKT "Point(21.62333333 40.68916667)" ;
     rdfs:comment "село во Леринско, Егејска Македонија, Грција"@en ;
     owl:sameAs wd:Q3395958 .
+
+mk:Q3395964 a mko:Place ;
+    rdfs:label "Куфалово"@mk ;
+    mko:locatedInCountry mk:Q41 ;
+    geo:asWKT "Point(22.576666666 40.779166666)" ;
+    rdfs:comment "град во Солунско, Егејска Македонија, Грција"@en ;
+    owl:sameAs wd:Q3395964 .
 
 mk:Q3396823 a mko:Place ;
     rdfs:label "Долно Шел"@mk ;
@@ -3301,12 +5089,12 @@ mk:Q3623552 a mko:Person ;
     rdfs:comment "Bulgarian writer (1869-1942)"@en ;
     owl:sameAs wd:Q3623552 .
 
-mk:Q36559 a mko:Place ;
-    rdfs:label "Горни Балван"@mk ;
+mk:Q36565 a mko:Place ;
+    rdfs:label "Горно Трогерци"@mk ;
     mko:locatedInCountry mk:Q221 ;
-    geo:asWKT "Point(22.1992 41.8419)" ;
+    geo:asWKT "Point(22.17 41.8578)" ;
     rdfs:comment "село во Општина Карбинци"@en ;
-    owl:sameAs wd:Q36559 .
+    owl:sameAs wd:Q36565 .
 
 mk:Q3657743 a mko:Place ;
     rdfs:label "İnece"@mk ;
@@ -3349,6 +5137,13 @@ mk:Q405654 a mko:Place ;
     geo:asWKT "Point(24.185707 42.701084)" ;
     rdfs:comment "city in Pirdop municipality, Sofia oblast, Bulgaria"@en ;
     owl:sameAs wd:Q405654 .
+
+mk:Q406 a mko:Place ;
+    rdfs:label "Истанбул"@mk ;
+    mko:locatedInCountry mk:Q43 ;
+    geo:asWKT "Point(28.960277777 41.01)" ;
+    rdfs:comment "largest city in Turkey"@en ;
+    owl:sameAs wd:Q406 .
 
 mk:Q406064 a mko:Place ;
     rdfs:label "Етрополе"@mk ;
@@ -3399,13 +5194,6 @@ mk:Q4101547 a mko:Place ;
     rdfs:comment "village in Malko Tarnovo municipality, Burgas oblast, Bulgaria"@en ;
     owl:sameAs wd:Q4101547 .
 
-mk:Q426114 a mko:Place ;
-    rdfs:label "Општина Пехчево"@mk ;
-    mko:locatedInCountry mk:Q221 ;
-    geo:asWKT "Point(22.88 41.76)" ;
-    rdfs:comment "општина во Македонија"@en ;
-    owl:sameAs wd:Q426114 .
-
 mk:Q457141 a mko:Place ;
     rdfs:label "Неврокоп"@mk ;
     mko:locatedInCountry mk:Q219 ;
@@ -3419,35 +5207,6 @@ mk:Q459 a mko:Place ;
     geo:asWKT "Point(24.741454 42.142086)" ;
     rdfs:comment "city in Plovdiv municipality, Plovdiv oblast, Bulgaria"@en ;
     owl:sameAs wd:Q459 .
-
-mk:Q47462142 a mko:Person ;
-    rdfs:label "Vasil Shinanov"@mk ;
-    mko:birthDate "1868-01-01"^^xsd:date ;
-    mko:bornIn mk:Q3301467 ;
-    mko:deathDate "http://www.wikidata.org/.well-known/genid/e93a8a418b0f1798f5905dc77f51b998" ;
-    mko:occupation "револуционер"@en ;
-    owl:sameAs wd:Q47462142 .
-
-mk:Q48814 a mko:Place ;
-    rdfs:label "Струмица"@mk ;
-    mko:locatedInCountry mk:Q221 ;
-    geo:asWKT "Point(22.643055555 41.4375)" ;
-    rdfs:comment "град во Македонија"@en ;
-    owl:sameAs wd:Q48814 .
-
-mk:Q515814 a mko:Place ;
-    rdfs:label "Зашле"@mk ;
-    mko:locatedInCountry mk:Q221 ;
-    geo:asWKT "Point(21.143611111 41.372777777)" ;
-    rdfs:comment "село во Општина Демир Хисар"@en ;
-    owl:sameAs wd:Q515814 .
-
-mk:Q54452 a mko:Place ;
-    rdfs:label "Куманово"@mk ;
-    mko:locatedInCountry mk:Q221 ;
-    geo:asWKT "Point(21.714444444 42.132222222)" ;
-    rdfs:comment "град и седиште на Општина Куманово, Македонија"@en ;
-    owl:sameAs wd:Q54452 .
 
 mk:Q55527372 a mko:Place ;
     rdfs:label "Плугар"@mk ;
@@ -3500,12 +5259,12 @@ mk:Q7252010 a mko:Place ;
     rdfs:comment "village in Greece"@en ;
     owl:sameAs wd:Q7252010 .
 
-mk:Q740591 a mko:Place ;
-    rdfs:label "Општина Ресен"@mk ;
+mk:Q749618 a mko:Place ;
+    rdfs:label "Општина Струга"@mk ;
     mko:locatedInCountry mk:Q221 ;
-    geo:asWKT "Point(21.0122 41.0889)" ;
+    geo:asWKT "Point(20.68 41.18)" ;
     rdfs:comment "општина во Македонија"@en ;
-    owl:sameAs wd:Q740591 .
+    owl:sameAs wd:Q749618 .
 
 mk:Q804311 a mko:Place ;
     rdfs:label "Благоевградска област"@mk ;
@@ -3556,6 +5315,13 @@ mk:Q991318 a mko:Place ;
     rdfs:comment "град во Македонија"@en ;
     owl:sameAs wd:Q991318 .
 
+mk:Q103251 a mko:Place ;
+    rdfs:label "Македонија"@mk ;
+    mko:locatedInCountry mk:Q12560 ;
+    geo:asWKT "Point(22.508621075 41.32925475)" ;
+    rdfs:comment "географска и историска област"@en ;
+    owl:sameAs wd:Q103251 .
+
 mk:Q12283266 a mko:Place ;
     rdfs:label "Кобалишта"@mk ;
     mko:locatedInCountry mk:Q41 ;
@@ -3598,26 +5364,12 @@ mk:Q2464850 a mko:Place ;
     rdfs:comment "село во Грција"@en ;
     owl:sameAs wd:Q2464850 .
 
-mk:Q3084463 a mko:Place ;
-    rdfs:label "Могила"@mk ;
-    mko:locatedInCountry mk:Q221 ;
-    geo:asWKT "Point(21.378611111 41.108333333)" ;
-    rdfs:comment "село во Општина Могила"@en ;
-    owl:sameAs wd:Q3084463 .
-
 mk:Q3135577 a mko:Place ;
     rdfs:label "Ораовец"@mk ;
     mko:locatedInCountry mk:Q221 ;
     geo:asWKT "Point(21.7594 41.6353)" ;
     rdfs:comment "село во Општина Велес"@en ;
     owl:sameAs wd:Q3135577 .
-
-mk:Q3395964 a mko:Place ;
-    rdfs:label "Куфалово"@mk ;
-    mko:locatedInCountry mk:Q41 ;
-    geo:asWKT "Point(22.576666666 40.779166666)" ;
-    rdfs:comment "град во Солунско, Егејска Македонија, Грција"@en ;
-    owl:sameAs wd:Q3395964 .
 
 mk:Q3396096 a mko:Place ;
     rdfs:label "Загоричани"@mk ;
@@ -3633,12 +5385,12 @@ mk:Q3408293 a mko:Place ;
     rdfs:comment "село во Костурско, Егејска Македонија, Грција"@en ;
     owl:sameAs wd:Q3408293 .
 
-mk:Q384 a mko:Place ;
-    rdfs:label "Скопје"@mk ;
+mk:Q36559 a mko:Place ;
+    rdfs:label "Горни Балван"@mk ;
     mko:locatedInCountry mk:Q221 ;
-    geo:asWKT "Point(21.431666666 41.996111111)" ;
-    rdfs:comment "главен град на Македонија"@en ;
-    owl:sameAs wd:Q384 .
+    geo:asWKT "Point(22.1992 41.8419)" ;
+    rdfs:comment "село во Општина Карбинци"@en ;
+    owl:sameAs wd:Q36559 .
 
 mk:Q405789 a mko:Place ;
     rdfs:label "Svilengrad"@mk ;
@@ -3646,13 +5398,6 @@ mk:Q405789 a mko:Place ;
     geo:asWKT "Point(26.202976 41.765243)" ;
     rdfs:comment "city in Svilengrad municipality, Haskovo oblast, Bulgaria"@en ;
     owl:sameAs wd:Q405789 .
-
-mk:Q406 a mko:Place ;
-    rdfs:label "Истанбул"@mk ;
-    mko:locatedInCountry mk:Q43 ;
-    geo:asWKT "Point(28.960277777 41.01)" ;
-    rdfs:comment "largest city in Turkey"@en ;
-    owl:sameAs wd:Q406 .
 
 mk:Q407340 a mko:Place ;
     rdfs:label "Чирпан"@mk ;
@@ -3688,13 +5433,6 @@ mk:Q939235 a mko:Place ;
     geo:asWKT "Point(25.954166666 41.0175)" ;
     rdfs:comment "village in Evros, Greece"@en ;
     owl:sameAs wd:Q939235 .
-
-mk:Q161827 a mko:Place ;
-    rdfs:label "Ресен"@mk ;
-    mko:locatedInCountry mk:Q221 ;
-    geo:asWKT "Point(21.012222222 41.088888888)" ;
-    rdfs:comment "град во Општина Ресен"@en ;
-    owl:sameAs wd:Q161827 .
 
 mk:Q186254 a mko:Place ;
     rdfs:label "Хасково"@mk ;
@@ -3738,26 +5476,12 @@ mk:Q6312454 a mko:Place ;
     rdfs:comment "општина во Македонија"@en ;
     owl:sameAs wd:Q6312454 .
 
-mk:Q147243 a mko:Place ;
-    rdfs:label "Штип"@mk ;
-    mko:locatedInCountry mk:Q221 ;
-    geo:asWKT "Point(22.191388888 41.735833333)" ;
-    rdfs:comment "град во Општина Штип"@en ;
-    owl:sameAs wd:Q147243 .
-
-mk:Q749618 a mko:Place ;
-    rdfs:label "Општина Струга"@mk ;
-    mko:locatedInCountry mk:Q221 ;
-    geo:asWKT "Point(20.68 41.18)" ;
-    rdfs:comment "општина во Македонија"@en ;
-    owl:sameAs wd:Q749618 .
-
-mk:Q156858 a mko:Place ;
-    rdfs:label "Струга"@mk ;
-    mko:locatedInCountry mk:Q221 ;
-    geo:asWKT "Point(20.678888888 41.1775)" ;
-    rdfs:comment "град во Општина Струга"@en ;
-    owl:sameAs wd:Q156858 .
+mk:Q406488 a mko:Place ;
+    rdfs:label "Мало Трново"@mk ;
+    mko:locatedInCountry mk:Q219 ;
+    geo:asWKT "Point(27.524269 41.980595)" ;
+    rdfs:comment "city in Malko Tarnovo municipality, Burgas oblast, Bulgaria"@en ;
+    owl:sameAs wd:Q406488 .
 
 mk:Q157032 a mko:Place ;
     rdfs:label "Прилеп"@mk ;
@@ -3773,12 +5497,12 @@ mk:Q157050 a mko:Place ;
     rdfs:comment "град и седиште на Општина Велес"@en ;
     owl:sameAs wd:Q157050 .
 
-mk:Q406488 a mko:Place ;
-    rdfs:label "Мало Трново"@mk ;
-    mko:locatedInCountry mk:Q219 ;
-    geo:asWKT "Point(27.524269 41.980595)" ;
-    rdfs:comment "city in Malko Tarnovo municipality, Burgas oblast, Bulgaria"@en ;
-    owl:sameAs wd:Q406488 .
+mk:Q162952 a mko:Place ;
+    rdfs:label "Пехчево"@mk ;
+    mko:locatedInCountry mk:Q221 ;
+    geo:asWKT "Point(22.890555555 41.759166666)" ;
+    rdfs:comment "град во Општина Пехчево"@en ;
+    owl:sameAs wd:Q162952 .
 
 mk:Q472 a mko:Place ;
     rdfs:label "Софија"@mk ;
@@ -3787,19 +5511,19 @@ mk:Q472 a mko:Place ;
     rdfs:comment "главен град на Бугарија"@en ;
     owl:sameAs wd:Q472 .
 
-mk:Q157246 a mko:Place ;
-    rdfs:label "Битола"@mk ;
-    mko:locatedInCountry mk:Q221 ;
-    geo:asWKT "Point(21.334722222 41.031944444)" ;
-    rdfs:comment "град и седиште на Општина Битола, Македонија"@en ;
-    owl:sameAs wd:Q157246 .
-
 mk:Q170415 a mko:Place ;
     rdfs:label "Стара Загора"@mk ;
     mko:locatedInCountry mk:Q219 ;
     geo:asWKT "Point(25.634595 42.425668)" ;
     rdfs:comment "city in Stara Zagora municipality, Stara Zagora oblast, Bulgaria"@en ;
     owl:sameAs wd:Q170415 .
+
+mk:Q164954 a mko:Place ;
+    rdfs:label "Неготино"@mk ;
+    mko:locatedInCountry mk:Q221 ;
+    geo:asWKT "Point(22.089166666 41.483888888)" ;
+    rdfs:comment "град во Општина Неготино"@en ;
+    owl:sameAs wd:Q164954 .
 
 mko:HistoricalEvent a owl:Class ;
     rdfs:label "Historical event"@en ;
@@ -3813,19 +5537,12 @@ mk:MacedonianHistory1885_1910 a mko:Period ;
             time:hasBeginning "1885"^^xsd:gYear ;
             time:hasEnd "1910"^^xsd:gYear ] .
 
-mk:Q103251 a mko:Place ;
-    rdfs:label "Македонија"@mk ;
-    mko:locatedInCountry mk:Q12560 ;
-    geo:asWKT "Point(22.508621075 41.32925475)" ;
-    rdfs:comment "географска и историска област"@en ;
-    owl:sameAs wd:Q103251 .
-
-mk:Q856278 a mko:Place ;
-    rdfs:label "Општина Демир Хисар"@mk ;
+mk:Q221320 a mko:Place ;
+    rdfs:label "Русиново"@mk ;
     mko:locatedInCountry mk:Q221 ;
-    geo:asWKT "Point(21.203972222 41.223916666)" ;
-    rdfs:comment "општина во Македонија"@en ;
-    owl:sameAs wd:Q856278 .
+    geo:asWKT "Point(22.8075 41.687222222)" ;
+    rdfs:comment "село во Општина Берово"@en ;
+    owl:sameAs wd:Q221320 .
 
 mk:Q157034 a mko:Place ;
     rdfs:label "Крушево"@mk ;
@@ -3841,12 +5558,33 @@ mk:Q214347 a mko:Place ;
     rdfs:comment "град во Егејска Македонија, Грција"@en ;
     owl:sameAs wd:Q214347 .
 
+mk:Q54452 a mko:Place ;
+    rdfs:label "Куманово"@mk ;
+    mko:locatedInCountry mk:Q221 ;
+    geo:asWKT "Point(21.714444444 42.132222222)" ;
+    rdfs:comment "град и седиште на Општина Куманово, Македонија"@en ;
+    owl:sameAs wd:Q54452 .
+
 mk:Q1223508 a mko:Place ;
     rdfs:label "Охрид"@mk ;
     mko:locatedInCountry mk:Q221 ;
     geo:asWKT "Point(20.801944444 41.116944444)" ;
     rdfs:comment "град во Општина Охрид"@en ;
     owl:sameAs wd:Q1223508 .
+
+mk:Q214344 a mko:Place ;
+    rdfs:label "Кочани"@mk ;
+    mko:locatedInCountry mk:Q221 ;
+    geo:asWKT "Point(22.411388888 41.921111111)" ;
+    rdfs:comment "град во Општина Кочани"@en ;
+    owl:sameAs wd:Q214344 .
+
+mk:Q157024 a mko:Place ;
+    rdfs:label "Тетово"@mk ;
+    mko:locatedInCountry mk:Q221 ;
+    geo:asWKT "Point(20.971388888 42.010277777)" ;
+    rdfs:comment "град во Македонија"@en ;
+    owl:sameAs wd:Q157024 .
 
 mk:Q738566 a mko:Person ;
     rdfs:label "Пејо Јаворов"@mk ;
@@ -3865,6 +5603,34 @@ mko:HistoricalDocument a owl:Class ;
     rdfs:label "Historical document"@en ;
     rdfs:comment "A written primary source"@en .
 
+mk:Q161827 a mko:Place ;
+    rdfs:label "Ресен"@mk ;
+    mko:locatedInCountry mk:Q221 ;
+    geo:asWKT "Point(21.012222222 41.088888888)" ;
+    rdfs:comment "град во Општина Ресен"@en ;
+    owl:sameAs wd:Q161827 .
+
+mk:Q48814 a mko:Place ;
+    rdfs:label "Струмица"@mk ;
+    mko:locatedInCountry mk:Q221 ;
+    geo:asWKT "Point(22.643055555 41.4375)" ;
+    rdfs:comment "град во Македонија"@en ;
+    owl:sameAs wd:Q48814 .
+
+mk:Q156858 a mko:Place ;
+    rdfs:label "Струга"@mk ;
+    mko:locatedInCountry mk:Q221 ;
+    geo:asWKT "Point(20.678888888 41.1775)" ;
+    rdfs:comment "град во Општина Струга"@en ;
+    owl:sameAs wd:Q156858 .
+
+mk:Q384 a mko:Place ;
+    rdfs:label "Скопје"@mk ;
+    mko:locatedInCountry mk:Q221 ;
+    geo:asWKT "Point(21.431666666 41.996111111)" ;
+    rdfs:comment "главен град на Македонија"@en ;
+    owl:sameAs wd:Q384 .
+
 mk:Q41 a mko:Place ;
     rdfs:label "Грција"@mk ;
     mko:locatedInCountry mk:Q41 ;
@@ -3872,12 +5638,26 @@ mk:Q41 a mko:Place ;
     rdfs:comment "земја во Југоисточна Европа"@en ;
     owl:sameAs wd:Q41 .
 
+mk:Q157246 a mko:Place ;
+    rdfs:label "Битола"@mk ;
+    mko:locatedInCountry mk:Q221 ;
+    geo:asWKT "Point(21.334722222 41.031944444)" ;
+    rdfs:comment "град и седиште на Општина Битола, Македонија"@en ;
+    owl:sameAs wd:Q157246 .
+
 mk:Q221 a mko:Place ;
     rdfs:label "Македонија"@mk ;
     mko:locatedInCountry mk:Q221 ;
     geo:asWKT "Point(21.716667 41.65)" ;
     rdfs:comment "земја во Југоисточна Европа"@en ;
     owl:sameAs wd:Q221 .
+
+mk:Q147243 a mko:Place ;
+    rdfs:label "Штип"@mk ;
+    mko:locatedInCountry mk:Q221 ;
+    geo:asWKT "Point(22.191388888 41.735833333)" ;
+    rdfs:comment "град во Општина Штип"@en ;
+    owl:sameAs wd:Q147243 .
 
 mko:Place a owl:Class ;
     rdfs:label "Place"@en ;

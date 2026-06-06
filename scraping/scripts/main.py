@@ -1436,6 +1436,78 @@ def first_readable_value(row: dict, keys: list[str], wd_uri: str | None = None) 
     return None
 
 
+def literal_binding(value: str, lang: str | None = None) -> dict:
+    binding = {"type": "literal", "value": value}
+    if lang:
+        binding["xml:lang"] = lang
+    return binding
+
+
+def wikipedia_title_from_sitelinks(sitelinks: dict) -> tuple[str | None, str | None]:
+    for site, lang in [("mkwiki", "mk"), ("enwiki", "en"), ("bgwiki", "bg")]:
+        title = sitelinks.get(site, {}).get("title")
+        if title:
+            return title.replace("_", " "), lang
+    return None, None
+
+
+def add_wikipedia_title_fallbacks(
+    client: WikidataClient,
+    rows: list[dict],
+    entity_key: str,
+    readable_keys: list[str],
+) -> None:
+    qids = []
+    for row in rows:
+        wd_uri = safe_str(row, entity_key)
+        if wd_uri and not first_readable_value(row, readable_keys + ["wikiTitle"], wd_uri):
+            qid = qid_from_wd_uri(wd_uri)
+            if qid:
+                qids.append(qid)
+
+    qids = list(dict.fromkeys(qids))
+    if not qids:
+        return
+
+    print(f"    Wikipedia title fallback lookup: {entity_key}s ({len(qids)} entities)")
+    titles_by_qid: dict[str, tuple[str, str | None]] = {}
+    for idx, qid_chunk in enumerate(chunked_list(qids, 50), start=1):
+        data = client.get_json(
+            "https://www.wikidata.org/w/api.php",
+            params={
+                "action": "wbgetentities",
+                "ids": "|".join(qid_chunk),
+                "props": "sitelinks",
+                "format": "json",
+            },
+            retries=PERSON_CONTEXT_RETRIES,
+            min_delay_seconds=WIKIDATA_MIN_DELAY_SECONDS,
+            timeout_seconds=DEFAULT_TIMEOUT_SECONDS,
+            context=f"Wikidata sitelink title fallback chunk {idx}",
+        )
+        if not data:
+            continue
+
+        for qid, entity in data.get("entities", {}).items():
+            title, lang = wikipedia_title_from_sitelinks(entity.get("sitelinks", {}))
+            if title:
+                titles_by_qid[qid] = (title, lang)
+
+    added = 0
+    for row in rows:
+        wd_uri = safe_str(row, entity_key)
+        qid = qid_from_wd_uri(wd_uri)
+        if not qid or qid not in titles_by_qid:
+            continue
+        if first_readable_value(row, readable_keys + ["wikiTitle"], wd_uri):
+            continue
+        title, lang = titles_by_qid[qid]
+        row["wikiTitle"] = literal_binding(title, lang)
+        added += 1
+
+    print(f"    Wikipedia title fallbacks added: {added}")
+
+
 def add_label(g: Graph, subject: URIRef, label_str: str) -> None:
     if label_str:
         g.add((subject, RDFS.label, Literal(label_str, lang="mk")))
@@ -1499,7 +1571,7 @@ def convert_persons(rows: list[dict], g: Graph) -> None:
         g.add((subject, RDF.type, MKO.Person))
         g.add((subject, OWL.sameAs, URIRef(wd_uri)))
 
-        add_label(g, subject, safe_str(row, "personLabel"))
+        add_label(g, subject, first_readable_value(row, ["personLabel", "wikiTitle"], wd_uri))
         desc = safe_str(row, "personDescription")
         if desc:
             g.add((subject, RDFS.comment, Literal(desc, lang="en")))
@@ -1528,7 +1600,7 @@ def convert_events(rows: list[dict], g: Graph) -> None:
         g.add((subject, OWL.sameAs, URIRef(wd_uri)))
         g.add((subject, MKO.partOf, MK[PERIOD_RESOURCE_ID]))
 
-        add_label(g, subject, first_readable_value(row, ["eventLabel", "eventName"], wd_uri))
+        add_label(g, subject, first_readable_value(row, ["eventLabel", "eventName", "wikiTitle"], wd_uri))
         desc = safe_str(row, "eventDescription")
         if desc:
             g.add((subject, RDFS.comment, Literal(desc, lang="en")))
@@ -1570,7 +1642,7 @@ def convert_places(rows: list[dict], g: Graph) -> None:
         g.add((subject, RDF.type, MKO.Place))
         g.add((subject, OWL.sameAs, URIRef(wd_uri)))
 
-        add_label(g, subject, safe_str(row, "placeLabel"))
+        add_label(g, subject, first_readable_value(row, ["placeLabel", "wikiTitle"], wd_uri))
         desc = safe_str(row, "placeDescription")
         if desc:
             g.add((subject, RDFS.comment, Literal(desc, lang="en")))
@@ -1598,7 +1670,7 @@ def convert_organizations(rows: list[dict], g: Graph) -> None:
         g.add((subject, RDF.type, MKO.Organization))
         g.add((subject, OWL.sameAs, URIRef(wd_uri)))
 
-        add_label(g, subject, first_readable_value(row, ["orgLabel", "orgName"], wd_uri))
+        add_label(g, subject, first_readable_value(row, ["orgLabel", "orgName", "wikiTitle"], wd_uri))
         desc = safe_str(row, "orgDescription")
         if desc:
             g.add((subject, RDFS.comment, Literal(desc, lang="en")))
@@ -1625,7 +1697,7 @@ def convert_documents(rows: list[dict], g: Graph) -> None:
         g.add((subject, RDF.type, MKO.HistoricalDocument))
         g.add((subject, OWL.sameAs, URIRef(wd_uri)))
 
-        add_label(g, subject, first_readable_value(row, ["docLabel", "title"], wd_uri))
+        add_label(g, subject, first_readable_value(row, ["docLabel", "title", "wikiTitle"], wd_uri))
         desc = safe_str(row, "docDescription")
         if desc:
             g.add((subject, RDFS.comment, Literal(desc, lang="en")))
@@ -1895,6 +1967,13 @@ WHERE {{
 
     print("[5/5] Querying Wikidata for documents ...")
     results["documents"] = collect_documents(client, event_qids, person_qids)[:DOC_LIMIT]
+
+    print("\nAdding Wikipedia title fallbacks for missing labels ...")
+    add_wikipedia_title_fallbacks(client, results["persons"], "person", ["personLabel"])
+    add_wikipedia_title_fallbacks(client, results["events"], "event", ["eventLabel", "eventName"])
+    add_wikipedia_title_fallbacks(client, results["places"], "place", ["placeLabel"])
+    add_wikipedia_title_fallbacks(client, results["organizations"], "org", ["orgLabel", "orgName"])
+    add_wikipedia_title_fallbacks(client, results["documents"], "doc", ["docLabel", "title"])
 
     print("\nConverting to RDF ...")
     graphs: dict[str, Graph] = {}
