@@ -96,6 +96,12 @@ mk:Q407408 a mko:Organization ;
     rdfs:comment "volunteer corps of the Bulgarian Army during the Balkan Wars"@en ;
     owl:sameAs wd:Q407408 .
 
+mk:Q41726 a mko:Organization ;
+    rdfs:label "слободно ѕидарство"@mk ;
+    mko:foundingDate "1717-01-01"^^xsd:date ;
+    rdfs:comment "group of fraternal organizations"@en ;
+    owl:sameAs wd:Q41726 .
+
 mk:Q488297 a mko:Organization ;
     rdfs:label "Македонска револуционерна организација"@mk ;
     mko:dissolutionDate "1934-01-01"^^xsd:date ;
@@ -108,12 +114,4 @@ mk:Q520392 a mko:Organization ;
     mko:foundingDate "1920-01-01"^^xsd:date ;
     rdfs:comment "Bulgarian revolutionary organisation"@en ;
     owl:sameAs wd:Q520392 .
-
-mk:Q634186 a mko:Organization ;
-    rdfs:label "Филики Етерија"@mk ;
-    mko:dissolutionDate "1822-01-01"^^xsd:date ;
-    mko:foundingDate "1814-09-26"^^xsd:date ;
-    mko:headquarteredIn mk:Q406 ;
-    rdfs:comment "19th-century secret society opposing Ottoman rule in Greece"@en ;
-    owl:sameAs wd:Q634186 .
 

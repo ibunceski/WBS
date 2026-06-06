@@ -30,6 +30,18 @@ mk:Q1277369 a mko:HistoricalEvent ;
             time:hasBeginning "1893-01-01"^^xsd:date ;
             time:hasEnd "1908-01-01"^^xsd:date ] .
 
+mk:Q1290184 a mko:HistoricalEvent ;
+    rdfs:label "Битолски конгрес"@mk ;
+    mko:endDate "1908-11-22"^^xsd:date ;
+    mko:partOf mk:MacedonianHistory1885_1910 ;
+    mko:startDate "1908-11-14"^^xsd:date ;
+    mko:tookPlaceIn mk:Q157246 ;
+    rdfs:comment "one-time academic conference held in the city of Monastir with the goal of standardizing the Albanian alphabet"@en ;
+    owl:sameAs wd:Q1290184 ;
+    time:hasTime [ a time:Interval ;
+            time:hasBeginning "1908-11-14"^^xsd:date ;
+            time:hasEnd "1908-11-22"^^xsd:date ] .
+
 mk:Q19892449 a mko:HistoricalEvent ;
     rdfs:label "Fight in Tabanovce"@mk ;
     mko:partOf mk:MacedonianHistory1885_1910 ;
@@ -56,7 +68,7 @@ mk:Q3127176 a mko:HistoricalEvent ;
 mk:Q3401248 a mko:HistoricalEvent ;
     rdfs:label "Битка кај Мечкин Камен"@mk ;
     mko:partOf mk:MacedonianHistory1885_1910 ;
-    mko:tookPlaceIn mk:Q221 ;
+    mko:tookPlaceIn mk:Q157034 ;
     rdfs:comment "1903 battle in Kruševo"@en ;
     owl:sameAs wd:Q3401248 .
 
