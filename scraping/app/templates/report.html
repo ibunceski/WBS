@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Report | Macedonian History KG{% endblock %}
+{% block content %}
+<section class="page-heading">
+  <p>Knowledge Graph Report</p>
+  <h1>Graph build summary</h1>
+  <span>Rendered from <code>scripts/output/kg_report.md</code> when that file exists.</span>
+</section>
+
+<article class="panel prose-report">
+  {% if missing %}
+    <div class="empty-state">The report file was not found at {{ report_path }}.</div>
+  {% else %}
+    {{ report_html }}
+  {% endif %}
+</article>
+{% endblock %}

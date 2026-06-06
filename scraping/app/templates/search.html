@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}Search | Macedonian History KG{% endblock %}
+{% block content %}
+<section class="page-heading">
+  <p>Entity Lookup</p>
+  <h1>Search the graph</h1>
+  <span>Search by person, event, place, organization, document, or period label.</span>
+</section>
+
+<div class="panel">
+  <input
+    class="input"
+    type="search"
+    name="q"
+    placeholder="Try Ilinden, Skopje, Goce Delchev..."
+    hx-get="/search/results"
+    hx-trigger="keyup changed delay:350ms, search"
+    hx-target="#search-results"
+    hx-indicator="#search-loading"
+    autofocus>
+  <div id="search-loading" class="htmx-indicator mt-3 text-sm text-amber-800">Searching Fuseki...</div>
+  <div id="search-results" class="mt-6">
+    {% include "partials/search_results.html" %}
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,32 @@
+<form hx-post="/queries/run" hx-target="#query-workbench" hx-indicator="#query-loading">
+  <input type="hidden" name="selected" value="{{ selected }}">
+  <label class="mb-2 block text-sm font-semibold text-stone-700">SPARQL query</label>
+  <textarea class="query-box" name="query" rows="14">{{ query_text }}</textarea>
+  <div class="mt-4 flex flex-wrap items-center gap-3">
+    <button class="primary-button" type="submit">Run query</button>
+    <span id="query-loading" class="htmx-indicator text-sm text-amber-800">Querying Fuseki...</span>
+  </div>
+</form>
+
+{% if error %}
+  <div class="alert mt-5">{{ error }}</div>
+{% elif rows %}
+  <div class="mt-6 overflow-x-auto rounded-2xl border border-stone-200 bg-white">
+    <table class="data-table">
+      <thead>
+        <tr>{% for header in headers %}<th>{{ header }}</th>{% endfor %}</tr>
+      </thead>
+      <tbody>
+        {% for row in rows %}
+          <tr>
+            {% for header in headers %}
+              <td>{{ row.get(header, "") }}</td>
+            {% endfor %}
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+{% elif headers %}
+  <div class="empty-state mt-5">The query ran successfully but returned no rows.</div>
+{% endif %}
