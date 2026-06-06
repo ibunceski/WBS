@@ -1,4 +1,4 @@
-# Macedonian History Knowledge Graph Demo
+﻿# Macedonian History Knowledge Graph Demo
 
 This project collects data about Macedonian history, converts it to RDF/Turtle, loads it into Apache Jena Fuseki, and exposes a small web demo for searching, browsing, and running SPARQL queries.
 
@@ -14,6 +14,8 @@ Project topic:
 - `output/mk_history_clean.ttl` - the cleaned graph that should be loaded into Fuseki.
 - `queries/` - example SPARQL queries.
 - `app/` - FastAPI web demo.
+
+The graph is linked with international databases through `owl:sameAs` Wikidata URIs and, when available, additional external links such as VIAF, ISNI, Library of Congress, GND, BnF, IdRef, GeoNames, and DBpedia. These links are stored in the RDF as `mko:externalLink` and `rdfs:seeAlso`.
 
 ## Requirements
 
@@ -189,6 +191,7 @@ The most useful ones for the demo are:
 - `07_documents_and_authors.rq`
 - `09_missing_labels.rq`
 - `10_temporal_intervals.rq`
+- `11_external_database_links.rq`
 
 You can run them either in Fuseki or from the web app's Queries page.
 
@@ -224,3 +227,4 @@ If graph generation is slow or Wikidata returns 429/502/504:
 3. Run one simple SPARQL query in Fuseki.
 4. Start the web app.
 5. Show Search, Timeline, Entity details, Queries, and Report.
+
