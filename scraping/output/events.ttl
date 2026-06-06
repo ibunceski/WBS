@@ -9,10 +9,16 @@
 mk:Q1145682 a mko:HistoricalEvent ;
     rdfs:label "Илинденско востание"@mk ;
     mko:endDate "1903-10-01"^^xsd:date ;
+    mko:externalLink <https://d-nb.info/gnd/4255109-2>,
+        <https://dbpedia.org/resource/Ilinden%E2%80%93Preobrazhenie_Uprising>,
+        <https://id.loc.gov/authorities/names/sh85079274> ;
     mko:partOf mk:MacedonianHistory1885_1910 ;
     mko:startDate "1903-08-02"^^xsd:date ;
     mko:tookPlaceIn mk:Q168501 ;
     rdfs:comment "Revolt against the Ottoman Empire in Southeastern Europe 1903"@en ;
+    rdfs:seeAlso <https://d-nb.info/gnd/4255109-2>,
+        <https://dbpedia.org/resource/Ilinden%E2%80%93Preobrazhenie_Uprising>,
+        <https://id.loc.gov/authorities/names/sh85079274> ;
     owl:sameAs wd:Q1145682 ;
     time:hasTime [ a time:Interval ;
             time:hasBeginning "1903-08-02"^^xsd:date ;
@@ -21,61 +27,61 @@ mk:Q1145682 a mko:HistoricalEvent ;
 mk:Q1277369 a mko:HistoricalEvent ;
     rdfs:label "Борба за Македонија"@mk ;
     mko:endDate "1908-01-01"^^xsd:date ;
+    mko:externalLink <https://dbpedia.org/resource/Macedonian_Struggle> ;
     mko:partOf mk:MacedonianHistory1885_1910 ;
     mko:startDate "1893-01-01"^^xsd:date ;
     mko:tookPlaceIn mk:Q103251 ;
     rdfs:comment "Културен и воен судир меѓу Грците, Србите, Бугарите и Македонците во Македонија"@en ;
+    rdfs:seeAlso <https://dbpedia.org/resource/Macedonian_Struggle> ;
     owl:sameAs wd:Q1277369 ;
     time:hasTime [ a time:Interval ;
             time:hasBeginning "1893-01-01"^^xsd:date ;
             time:hasEnd "1908-01-01"^^xsd:date ] .
 
-mk:Q1290184 a mko:HistoricalEvent ;
-    rdfs:label "Битолски конгрес"@mk ;
-    mko:endDate "1908-11-22"^^xsd:date ;
-    mko:partOf mk:MacedonianHistory1885_1910 ;
-    mko:startDate "1908-11-14"^^xsd:date ;
-    mko:tookPlaceIn mk:Q157246 ;
-    rdfs:comment "one-time academic conference held in the city of Monastir with the goal of standardizing the Albanian alphabet"@en ;
-    owl:sameAs wd:Q1290184 ;
-    time:hasTime [ a time:Interval ;
-            time:hasBeginning "1908-11-14"^^xsd:date ;
-            time:hasEnd "1908-11-22"^^xsd:date ] .
-
 mk:Q19892449 a mko:HistoricalEvent ;
     rdfs:label "Fight in Tabanovce"@mk ;
+    mko:externalLink <https://dbpedia.org/resource/Battle_of_Tabanovce> ;
     mko:partOf mk:MacedonianHistory1885_1910 ;
     mko:tookPlaceIn mk:Q221 ;
     rdfs:comment "1905 battle of the Macedonian Struggle"@en ;
+    rdfs:seeAlso <https://dbpedia.org/resource/Battle_of_Tabanovce> ;
     owl:sameAs wd:Q19892449 .
 
 mk:Q31183905 a mko:HistoricalEvent ;
     rdfs:label "Battle of Drenovo"@mk ;
+    mko:externalLink <https://dbpedia.org/resource/Battle_of_Drenovo> ;
     mko:partOf mk:MacedonianHistory1885_1910 ;
     mko:tookPlaceIn mk:Q221 ;
+    rdfs:seeAlso <https://dbpedia.org/resource/Battle_of_Drenovo> ;
     owl:sameAs wd:Q31183905 .
 
 mk:Q3127176 a mko:HistoricalEvent ;
     rdfs:label "Franck d.d."@mk ;
+    mko:externalLink <https://dbpedia.org/resource/Franck_(company)> ;
     mko:partOf mk:MacedonianHistory1885_1910 ;
     mko:startDate "1892-06-21"^^xsd:date ;
     mko:tookPlaceIn mk:Q221 ;
     rdfs:comment "Croatian coffee and snacks limited company"@en ;
+    rdfs:seeAlso <https://dbpedia.org/resource/Franck_(company)> ;
     owl:sameAs wd:Q3127176 ;
     time:hasTime [ a time:Interval ;
             time:hasBeginning "1892-06-21"^^xsd:date ] .
 
 mk:Q3401248 a mko:HistoricalEvent ;
     rdfs:label "Битка кај Мечкин Камен"@mk ;
+    mko:externalLink <https://dbpedia.org/resource/Battle_of_Me%C4%8Dkin_Kamen> ;
     mko:partOf mk:MacedonianHistory1885_1910 ;
     mko:tookPlaceIn mk:Q157034 ;
     rdfs:comment "1903 battle in Kruševo"@en ;
+    rdfs:seeAlso <https://dbpedia.org/resource/Battle_of_Me%C4%8Dkin_Kamen> ;
     owl:sameAs wd:Q3401248 .
 
 mk:Q4872396 a mko:HistoricalEvent ;
     rdfs:label "Битка кај Слива"@mk ;
+    mko:externalLink <https://dbpedia.org/resource/Battle_of_Sliva> ;
     mko:partOf mk:MacedonianHistory1885_1910 ;
     mko:tookPlaceIn mk:Q221 ;
     rdfs:comment "historical battle"@en ;
+    rdfs:seeAlso <https://dbpedia.org/resource/Battle_of_Sliva> ;
     owl:sameAs wd:Q4872396 .
 

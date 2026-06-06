@@ -4,6 +4,7 @@ import os
 import random
 import re
 import time
+from collections import defaultdict
 from datetime import datetime, timezone
 from email.utils import parsedate_to_datetime
 from urllib.parse import quote, urlparse

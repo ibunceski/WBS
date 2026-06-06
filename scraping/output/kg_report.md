@@ -1,39 +1,39 @@
 # Macedonian History KG Report
 
 Source file: `../output/mk_history_clean.ttl`
-Total triples: `4,901`
+Total triples: `6,877`
 
 ## Entity Counts
 
-- Persons: `500`
-- Events: `8`
-- Places: `157`
-- Organizations: `18`
-- Documents: `19`
+- Persons: `427`
+- Events: `7`
+- Places: `166`
+- Organizations: `27`
+- Documents: `24`
 - Periods: `1`
 
 ## Linking And Time
 
-- Wikidata `owl:sameAs` links: `702`
-- Subjects with temporal/date predicates: `528`
+- Wikidata `owl:sameAs` links: `651`
+- Subjects with temporal/date predicates: `458`
 
 ## Top Predicates
 
-- `rdf:type`: `731`
-- `rdfs:label`: `726`
-- `owl:sameAs`: `702`
-- `mko:bornIn`: `496`
-- `rdfs:comment`: `486`
-- `mko:birthDate`: `483`
-- `mko:deathDate`: `424`
-- `mko:occupation`: `412`
-- `mko:locatedInCountry`: `157`
-- `geo:asWKT`: `156`
-- `mko:authoredBy`: `19`
-- `mko:dateCreated`: `19`
-- `mko:inLanguage`: `18`
-- `mko:foundingDate`: `13`
-- `rdfs:range`: `9`
+- `mko:externalLink`: `1,157`
+- `rdfs:seeAlso`: `1,157`
+- `rdf:type`: `680`
+- `rdfs:label`: `676`
+- `owl:sameAs`: `651`
+- `rdfs:comment`: `499`
+- `mko:bornIn`: `423`
+- `mko:birthDate`: `402`
+- `mko:occupation`: `383`
+- `mko:deathDate`: `364`
+- `mko:locatedInCountry`: `166`
+- `geo:asWKT`: `165`
+- `mko:authoredBy`: `24`
+- `mko:dateCreated`: `23`
+- `mko:foundingDate`: `22`
 
 ## Data Quality Signals
 
@@ -42,4 +42,4 @@ Total triples: `4,901`
 - Literals that look mojibake-encoded: `0`
 
 ### Missing Label Examples
-- `mk:Q121545925`
+- `mk:Q12875512`
