@@ -123,16 +123,17 @@ mk:Q50608798 a mko:HistoricalDocument ;
     mko:inLanguage "бугарски јазик"@en ;
     owl:sameAs wd:Q50608798 .
 
-mk:Q56751727 a mko:HistoricalDocument ;
-    rdfs:label "Declaration of Vasil Shinanov on joining the Ilinden organization with notes about his revolutionary activities"@mk ;
-    mko:authoredBy mk:Q47462142 ;
-    mko:dateCreated "1933-01-01"^^xsd:date ;
-    owl:sameAs wd:Q56751727 .
-
 mk:Q87279866 a mko:HistoricalDocument ;
     rdfs:label "Спомени"@mk ;
     mko:authoredBy mk:Q672922 ;
     mko:dateCreated "1958-01-01"^^xsd:date ;
     mko:inLanguage "бугарски јазик"@en ;
     owl:sameAs wd:Q87279866 .
+
+mk:Q87902974 a mko:HistoricalDocument ;
+    rdfs:label "Спомени на Арсени Костенцев"@mk ;
+    mko:authoredBy mk:Q12272362 ;
+    mko:dateCreated "1917-01-01"^^xsd:date ;
+    mko:inLanguage "бугарски јазик"@en ;
+    owl:sameAs wd:Q87902974 .
 
