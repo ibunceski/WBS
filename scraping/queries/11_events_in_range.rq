@@ -1,0 +1,28 @@
+# Query name: Events in date range
+# Allen relation implemented: interval overlap
+# Description: Find all events whose intervals overlap the example date range.
+
+PREFIX mko:  <http://macedonian-history.mk/ontology#>
+PREFIX mkr:  <http://macedonian-history.mk/resource/>
+PREFIX mkc:  <http://macedonian-history.mk/context/>
+PREFIX time: <http://www.w3.org/2006/time#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?event ?eventLabel ?startDate ?endDate
+WHERE {
+  VALUES ?fromDate { "1903-08-01"^^xsd:date }
+  VALUES ?toDate { "1903-08-31"^^xsd:date }
+
+  ?ctx a time:Interval ;
+       time:hasBeginning/time:inXSDDate ?startDate ;
+       time:hasEnd/time:inXSDDate ?endDate .
+
+  FILTER(?startDate <= ?toDate && ?endDate >= ?fromDate)
+
+  GRAPH ?ctx {
+    ?event rdfs:label ?eventLabel .
+    FILTER(LANGMATCHES(LANG(?eventLabel), "mk"))
+  }
+}
+ORDER BY ?startDate ?eventLabel

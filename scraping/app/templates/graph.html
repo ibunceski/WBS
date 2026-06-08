@@ -1,0 +1,697 @@
+{% extends "base.html" %}
+
+{% block title %}Graph Explorer · Macedonian History KG{% endblock %}
+
+{% block content %}
+<section class="page-heading">
+  <p>Knowledge Graph</p>
+  <h1>Graph Explorer</h1>
+  <span>Explore people, events, places, and organizations through the temporal named graph dataset.</span>
+</section>
+
+<section class="panel graph-shell">
+  <div class="graph-toolbar">
+    <label class="control-label">
+      Depth
+      <select id="depth-select" class="graph-select" aria-label="Graph depth">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3" selected>3</option>
+      </select>
+    </label>
+
+    <label class="control-label">
+      Limit
+      <select id="limit-select" class="graph-select" aria-label="Graph node limit">
+        <option value="150">150</option>
+        <option value="300">300</option>
+        <option value="500">500</option>
+        <option value="900" selected>900</option>
+      </select>
+    </label>
+
+    <div class="type-filter" aria-label="Entity type filters">
+      <label><input type="checkbox" value="HistoricalPerson" checked> Person</label>
+      <label><input type="checkbox" value="HistoricalEvent" checked> Event</label>
+      <label><input type="checkbox" value="HistoricalPlace" checked> Place</label>
+      <label><input type="checkbox" value="Organization" checked> Organization</label>
+      <label><input type="checkbox" value="HistoricalDocument" checked> Document</label>
+      <label><input type="checkbox" value="Entity" checked> Other</label>
+    </div>
+
+    <label class="control-label search-control">
+      Search
+      <input id="graph-search" class="input" type="search" placeholder="Search labels">
+    </label>
+
+    <button id="reset-graph" class="secondary-button" type="button">Reset</button>
+  </div>
+
+  <div class="temporal-toolbar">
+    <label class="control-label">
+      From
+      <input id="from-date" class="graph-date" type="date" value="1893-01-01">
+    </label>
+    <label class="control-label">
+      To
+      <input id="to-date" class="graph-date" type="date" value="1908-12-31">
+    </label>
+    <label class="temporal-check">
+      <input id="active-only" type="checkbox">
+      Active events only
+    </label>
+    <button id="play-time" class="secondary-button" type="button">Play</button>
+    <div class="time-readout">
+      <strong id="time-window">1893-01-01 to 1908-12-31</strong>
+      <span>Event nodes active in this range are highlighted.</span>
+    </div>
+  </div>
+
+  <div class="graph-layout">
+    <div class="graph-stage">
+      <div id="graph-loading" class="graph-loading" hidden>
+        <span class="spinner"></span>
+      </div>
+      <svg id="graph-svg" role="img" aria-label="Force-directed knowledge graph"></svg>
+    </div>
+
+    <aside id="graph-sidebar" class="graph-sidebar">
+      <h2>Entity</h2>
+      <p class="sidebar-muted">Select a node to inspect it.</p>
+      <dl id="node-details" hidden>
+        <dt>Label</dt>
+        <dd id="detail-label"></dd>
+        <dt>Type</dt>
+        <dd id="detail-type"></dd>
+        <dt>Wikidata</dt>
+        <dd id="detail-wikidata"></dd>
+        <dt id="detail-interval-label" hidden>Interval</dt>
+        <dd id="detail-interval" hidden></dd>
+        <dt id="detail-context-label" hidden>Named Graph</dt>
+        <dd id="detail-context" hidden></dd>
+        <dt>Entity Page</dt>
+        <dd><a id="detail-link" class="text-link" href="#">Open entity</a></dd>
+      </dl>
+      <dl id="relation-details" hidden>
+        <dt>Relation</dt>
+        <dd id="relation-name"></dd>
+        <dt>Meaning</dt>
+        <dd id="relation-description"></dd>
+        <dt>Direction</dt>
+        <dd id="relation-direction"></dd>
+      </dl>
+    </aside>
+  </div>
+
+  <div class="graph-legend" aria-label="Legend">
+    <span><i style="background:#4a90d9"></i> Person</span>
+    <span><i style="background:#e8892a"></i> Event</span>
+    <span><i style="background:#4caf82"></i> Place</span>
+    <span><i style="background:#c0392b"></i> Organization</span>
+    <span><i style="background:#7c5cc4"></i> Document</span>
+    <span><i style="background:#78716c"></i> Other</span>
+  </div>
+</section>
+
+<style>
+  .graph-shell {
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-left: calc(50% - 48vw);
+    margin-right: calc(50% - 48vw);
+    width: 96vw;
+  }
+
+  .graph-toolbar {
+    align-items: end;
+    display: grid;
+    gap: 0.8rem;
+    grid-template-columns: auto auto 1fr minmax(12rem, 18rem) auto;
+    margin-bottom: 1rem;
+  }
+
+  .temporal-toolbar {
+    align-items: end;
+    border-top: 1px solid #e7e5e4;
+    display: grid;
+    gap: 0.8rem;
+    grid-template-columns: auto auto auto auto 1fr;
+    margin-bottom: 1rem;
+    padding-top: 1rem;
+  }
+
+  .control-label {
+    color: #57534e;
+    display: grid;
+    font-size: 0.78rem;
+    font-weight: 800;
+    gap: 0.35rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .graph-select {
+    border: 1px solid #d6d3d1;
+    border-radius: 0.5rem;
+    background: #fffdf7;
+    min-height: 2.75rem;
+    padding: 0 0.7rem;
+  }
+
+  .graph-date {
+    border: 1px solid #d6d3d1;
+    border-radius: 0.5rem;
+    background: #fffdf7;
+    min-height: 2.75rem;
+    padding: 0 0.7rem;
+  }
+
+  .temporal-check {
+    align-items: center;
+    color: #44403c;
+    display: inline-flex;
+    font-size: 0.9rem;
+    gap: 0.4rem;
+    min-height: 2.75rem;
+  }
+
+  .time-readout {
+    color: #78716c;
+    font-size: 0.88rem;
+  }
+
+  .time-readout strong {
+    color: #451a03;
+    display: block;
+  }
+
+  .type-filter {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    min-height: 2.75rem;
+  }
+
+  .type-filter label {
+    align-items: center;
+    color: #44403c;
+    display: inline-flex;
+    font-size: 0.9rem;
+    gap: 0.35rem;
+  }
+
+  .search-control .input {
+    border-radius: 0.5rem;
+    min-height: 2.75rem;
+    padding: 0 0.75rem;
+  }
+
+  .graph-layout {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: minmax(0, 1fr) 22rem;
+  }
+
+  .graph-stage {
+    background: #fffdf7;
+    border: 1px solid #e7e5e4;
+    border-radius: 0.5rem;
+    min-height: min(84vh, 62rem);
+    overflow: hidden;
+    position: relative;
+  }
+
+  #graph-svg {
+    display: block;
+    height: min(84vh, 62rem);
+    min-height: 50rem;
+    width: 100%;
+  }
+
+  .graph-loading {
+    align-items: center;
+    background: rgba(255, 253, 247, 0.74);
+    display: flex;
+    inset: 0;
+    justify-content: center;
+    position: absolute;
+    z-index: 5;
+  }
+
+  .graph-loading[hidden] {
+    display: none;
+  }
+
+  .spinner {
+    animation: spin 900ms linear infinite;
+    border: 4px solid #fef3c7;
+    border-top-color: #92400e;
+    border-radius: 999px;
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+
+  .graph-sidebar {
+    border-left: 1px solid #e7e5e4;
+    padding-left: 1rem;
+  }
+
+  .graph-sidebar h2 {
+    color: #451a03;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.4rem;
+    font-weight: 800;
+  }
+
+  .sidebar-muted {
+    color: #78716c;
+    margin-top: 0.5rem;
+  }
+
+  #node-details {
+    margin-top: 1rem;
+  }
+
+  #node-details dd,
+  #relation-details dd {
+    overflow-wrap: anywhere;
+  }
+
+  #relation-details {
+    border-top: 1px solid #e7e5e4;
+    margin-top: 1rem;
+    padding-top: 1rem;
+  }
+
+  .graph-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .graph-legend span {
+    align-items: center;
+    color: #57534e;
+    display: inline-flex;
+    font-size: 0.9rem;
+    gap: 0.35rem;
+  }
+
+  .graph-legend i {
+    border-radius: 999px;
+    display: inline-block;
+    height: 0.75rem;
+    width: 0.75rem;
+  }
+
+  .edge-label {
+    fill: #57534e;
+    font: 11px ui-sans-serif, system-ui, sans-serif;
+    opacity: 0;
+    pointer-events: none;
+    paint-order: stroke;
+    stroke: #fffdf7;
+    stroke-width: 3px;
+  }
+
+  .edge-hit {
+    cursor: pointer;
+    opacity: 0;
+    stroke: transparent;
+    stroke-width: 12;
+  }
+
+  .node-label {
+    fill: #292524;
+    font: 12px ui-sans-serif, system-ui, sans-serif;
+    pointer-events: none;
+    paint-order: stroke;
+    stroke: #fffdf7;
+    stroke-width: 4px;
+  }
+
+  @media (max-width: 900px) {
+    .graph-shell {
+      margin-left: 0;
+      margin-right: 0;
+      width: auto;
+    }
+
+    .graph-toolbar,
+    .temporal-toolbar,
+    .graph-layout {
+      grid-template-columns: 1fr;
+    }
+
+    .graph-sidebar {
+      border-left: 0;
+      border-top: 1px solid #e7e5e4;
+      padding-left: 0;
+      padding-top: 1rem;
+    }
+  }
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+<script>
+  const colors = {
+    HistoricalPerson: "#4a90d9",
+    HistoricalEvent: "#e8892a",
+    HistoricalPlace: "#4caf82",
+    Organization: "#c0392b",
+    HistoricalDocument: "#7c5cc4",
+    Entity: "#78716c"
+  };
+
+  const svg = d3.select("#graph-svg");
+  const stage = document.querySelector(".graph-stage");
+  const loading = document.querySelector("#graph-loading");
+  const depthSelect = document.querySelector("#depth-select");
+  const limitSelect = document.querySelector("#limit-select");
+  const searchInput = document.querySelector("#graph-search");
+  const resetButton = document.querySelector("#reset-graph");
+  const fromDateInput = document.querySelector("#from-date");
+  const toDateInput = document.querySelector("#to-date");
+  const activeOnlyInput = document.querySelector("#active-only");
+  const playButton = document.querySelector("#play-time");
+  const timeWindow = document.querySelector("#time-window");
+  const typeInputs = Array.from(document.querySelectorAll(".type-filter input"));
+  const width = () => stage.clientWidth;
+  const height = () => stage.clientHeight;
+  let currentCenter = null;
+  let graphData = { nodes: [], edges: [] };
+  let simulation = null;
+  let playTimer = null;
+  let selectedEdgeKey = null;
+
+  const relationDescriptions = {
+    bornIn: "Links a person to their birthplace.",
+    locatedInCountry: "Links a place to the country or larger political geography it belongs to.",
+    authoredBy: "Links a historical document to the person who authored it.",
+    headquarteredIn: "Links an organization to the place where it was headquartered.",
+    tookPlaceIn: "Links a historical event to the place where it occurred.",
+    partOf: "Links an entity or event to a broader period, organization, or historical whole.",
+    participatedIn: "Links a person or organization to an event they participated in.",
+    memberOf: "Links a person to an organization they belonged to.",
+    ledBy: "Links an organization or event to a leader."
+  };
+
+  const root = svg.append("g");
+  svg.call(
+    d3.zoom().scaleExtent([0.25, 4]).on("zoom", (event) => {
+      root.attr("transform", event.transform);
+    })
+  );
+
+  function radius(node) {
+    return Math.max(6, Math.min(18, 6 + Number(node.degree || 0) * 1.5));
+  }
+
+  function activeTypes() {
+    return new Set(typeInputs.filter((input) => input.checked).map((input) => input.value));
+  }
+
+  function overlapsWindow(node) {
+    if (!node.startDate || !node.endDate) {
+      return false;
+    }
+    return node.startDate <= toDateInput.value && node.endDate >= fromDateInput.value;
+  }
+
+  function edgeKey(edge) {
+    const source = typeof edge.source === "string" ? edge.source : edge.source.id;
+    const target = typeof edge.target === "string" ? edge.target : edge.target.id;
+    return `${source}|${edge.predicate}|${target}`;
+  }
+
+  function updateTimeReadout() {
+    timeWindow.textContent = `${fromDateInput.value} to ${toDateInput.value}`;
+  }
+
+  function filteredData() {
+    const enabled = activeTypes();
+    const byId = new Map(graphData.nodes.map((node) => [node.id, node]));
+    let nodes = graphData.nodes.filter((node) => enabled.has(node.type));
+    if (activeOnlyInput.checked) {
+      const activeEventIds = new Set(nodes.filter((node) => node.type === "HistoricalEvent" && overlapsWindow(node)).map((node) => node.id));
+      const relevantEdges = graphData.edges.filter((edge) => activeEventIds.has(edge.source) || activeEventIds.has(edge.target));
+      const relevantIds = new Set(activeEventIds);
+      relevantEdges.forEach((edge) => {
+        relevantIds.add(edge.source);
+        relevantIds.add(edge.target);
+      });
+      nodes = nodes.filter((node) => relevantIds.has(node.id) && (!byId.has(node.id) || enabled.has(node.type)));
+    }
+    const nodeIds = new Set(nodes.map((node) => node.id));
+    const edges = graphData.edges.filter((edge) => nodeIds.has(edge.source) && nodeIds.has(edge.target));
+    return { nodes: nodes.map((node) => ({ ...node, activeInWindow: overlapsWindow(node) })), edges: edges.map((edge) => ({ ...edge })) };
+  }
+
+  function highlightSearch() {
+    const q = searchInput.value.trim().toLowerCase();
+    root.selectAll(".node")
+      .attr("stroke", (node) => {
+        const matches = q && `${node.label} ${node.labelEn}`.toLowerCase().includes(q);
+        return matches || node.activeInWindow ? "#451a03" : "#fffdf7";
+      })
+      .attr("stroke-width", (node) => {
+        const matches = q && `${node.label} ${node.labelEn}`.toLowerCase().includes(q);
+        return matches || node.activeInWindow ? 4 : 1.5;
+      });
+  }
+
+  function showNode(node) {
+    document.querySelector(".sidebar-muted").hidden = true;
+    document.querySelector("#node-details").hidden = false;
+    document.querySelector("#relation-details").hidden = true;
+    document.querySelector("#detail-label").textContent = node.label || node.labelEn || node.id;
+    document.querySelector("#detail-type").textContent = node.type || "Entity";
+    const wikidata = document.querySelector("#detail-wikidata");
+    if (node.wikidataId) {
+      wikidata.innerHTML = `<a class="text-link" href="https://www.wikidata.org/wiki/${node.wikidataId}" target="_blank" rel="noopener">${node.wikidataId}</a>`;
+    } else {
+      wikidata.textContent = "Not available";
+    }
+    const link = document.querySelector("#detail-link");
+    link.href = `/entity/${encodeURIComponent(node.id)}`;
+
+    const hasInterval = Boolean(node.startDate || node.endDate);
+    document.querySelector("#detail-interval-label").hidden = !hasInterval;
+    document.querySelector("#detail-interval").hidden = !hasInterval;
+    document.querySelector("#detail-interval").textContent = hasInterval
+      ? `${node.startDate || "?"} to ${node.endDate || "?"}${node.dateConfidence ? ` (${node.dateConfidence})` : ""}`
+      : "";
+
+    const hasContext = Boolean(node.context);
+    document.querySelector("#detail-context-label").hidden = !hasContext;
+    document.querySelector("#detail-context").hidden = !hasContext;
+    document.querySelector("#detail-context").textContent = node.context || "";
+  }
+
+  function showRelation(edge) {
+    const source = typeof edge.source === "string" ? edge.source : edge.source.id;
+    const target = typeof edge.target === "string" ? edge.target : edge.target.id;
+    const sourceNode = graphData.nodes.find((node) => node.id === source);
+    const targetNode = graphData.nodes.find((node) => node.id === target);
+    document.querySelector(".sidebar-muted").hidden = true;
+    document.querySelector("#node-details").hidden = true;
+    document.querySelector("#relation-details").hidden = false;
+    document.querySelector("#relation-name").textContent = edge.predicate;
+    document.querySelector("#relation-description").textContent = relationDescriptions[edge.predicate] || "A semantic relationship between two KG entities.";
+    document.querySelector("#relation-direction").textContent = `${sourceNode?.label || source} -> ${targetNode?.label || target}`;
+    selectedEdgeKey = edgeKey(edge);
+    root.selectAll(".edge-label").attr("opacity", (label) => edgeKey(label) === selectedEdgeKey ? 1 : 0);
+  }
+
+  function render() {
+    const data = filteredData();
+    root.selectAll("*").remove();
+    if (simulation) {
+      simulation.stop();
+    }
+
+    const edgeGroup = root.append("g").attr("stroke", "#d6d3d1").attr("stroke-opacity", 0.85);
+    const hitGroup = root.append("g");
+    const labelGroup = root.append("g");
+    const nodeGroup = root.append("g");
+
+    const edgeLines = edgeGroup.selectAll(".edge-line")
+      .data(data.edges)
+      .join("line")
+      .attr("class", "edge-line")
+      .attr("stroke-width", 1.2)
+      .on("mouseenter", (_, edge) => {
+        labelGroup.selectAll("text").filter((label) => label === edge).attr("opacity", 1);
+      })
+      .on("mouseleave", (_, edge) => {
+        labelGroup.selectAll("text").filter((label) => label === edge && edgeKey(label) !== selectedEdgeKey).attr("opacity", 0);
+      });
+
+    const edgeHits = hitGroup.selectAll(".edge-hit")
+      .data(data.edges)
+      .join("line")
+      .attr("class", "edge-hit")
+      .on("mouseenter", (_, edge) => {
+        labelGroup.selectAll("text").filter((label) => label === edge).attr("opacity", 1);
+      })
+      .on("mouseleave", (_, edge) => {
+        labelGroup.selectAll("text").filter((label) => label === edge && edgeKey(label) !== selectedEdgeKey).attr("opacity", 0);
+      })
+      .on("click", (_, edge) => showRelation(edge));
+
+    const edgeLabels = labelGroup.selectAll(".edge-label")
+      .data(data.edges)
+      .join("text")
+      .attr("class", "edge-label")
+      .attr("opacity", (edge) => edgeKey(edge) === selectedEdgeKey ? 1 : 0)
+      .text((edge) => edge.predicate);
+
+    const nodes = nodeGroup.selectAll(".node")
+      .data(data.nodes)
+      .join("circle")
+      .attr("class", "node")
+      .attr("r", radius)
+      .attr("fill", (node) => colors[node.type] || "#78716c")
+      .attr("stroke", (node) => node.activeInWindow ? "#451a03" : "#fffdf7")
+      .attr("stroke-width", (node) => node.activeInWindow ? 4 : 1.5)
+      .on("click", (_, node) => showNode(node))
+      .on("dblclick", (event, node) => {
+        event.stopPropagation();
+        currentCenter = node.id;
+        fetchGraph();
+      })
+      .call(d3.drag()
+        .on("start", dragStarted)
+        .on("drag", dragged)
+        .on("end", dragEnded));
+
+    const nodeLabels = nodeGroup.selectAll(".node-label")
+      .data(data.nodes)
+      .join("text")
+      .attr("class", "node-label")
+      .attr("x", (node) => radius(node) + 4)
+      .attr("dy", "0.35em")
+      .text((node) => node.label || node.labelEn || "");
+
+    simulation = d3.forceSimulation(data.nodes)
+      .force("link", d3.forceLink(data.edges).id((node) => node.id).distance(95).strength(0.35))
+      .force("charge", d3.forceManyBody().strength(-260))
+      .force("center", d3.forceCenter(width() / 2, height() / 2))
+      .force("collision", d3.forceCollide().radius((node) => radius(node) + 16))
+      .on("tick", () => {
+        edgeLines
+          .attr("x1", (edge) => edge.source.x)
+          .attr("y1", (edge) => edge.source.y)
+          .attr("x2", (edge) => edge.target.x)
+          .attr("y2", (edge) => edge.target.y);
+
+        edgeHits
+          .attr("x1", (edge) => edge.source.x)
+          .attr("y1", (edge) => edge.source.y)
+          .attr("x2", (edge) => edge.target.x)
+          .attr("y2", (edge) => edge.target.y);
+
+        edgeLabels
+          .attr("x", (edge) => (edge.source.x + edge.target.x) / 2)
+          .attr("y", (edge) => (edge.source.y + edge.target.y) / 2);
+
+        nodes
+          .attr("cx", (node) => node.x)
+          .attr("cy", (node) => node.y);
+
+        nodeLabels
+          .attr("x", (node) => node.x + radius(node) + 4)
+          .attr("y", (node) => node.y);
+      });
+
+    highlightSearch();
+  }
+
+  function dragStarted(event, node) {
+    if (!event.active) simulation.alphaTarget(0.3).restart();
+    node.fx = node.x;
+    node.fy = node.y;
+  }
+
+  function dragged(event, node) {
+    node.fx = event.x;
+    node.fy = event.y;
+  }
+
+  function dragEnded(event, node) {
+    if (!event.active) simulation.alphaTarget(0);
+    node.fx = null;
+    node.fy = null;
+  }
+
+  async function fetchGraph() {
+    loading.hidden = false;
+    const params = new URLSearchParams({
+      depth: depthSelect.value,
+      limit: limitSelect.value
+    });
+    if (currentCenter) {
+      params.set("center_uri", currentCenter);
+    }
+    try {
+      const response = await fetch(`/api/graph?${params.toString()}`);
+      if (!response.ok) {
+        throw new Error("Graph request failed");
+      }
+      graphData = await response.json();
+      updateTimeReadout();
+      render();
+    } finally {
+      loading.hidden = true;
+    }
+  }
+
+  depthSelect.addEventListener("change", fetchGraph);
+  limitSelect.addEventListener("change", fetchGraph);
+  fromDateInput.addEventListener("change", () => { updateTimeReadout(); render(); });
+  toDateInput.addEventListener("change", () => { updateTimeReadout(); render(); });
+  activeOnlyInput.addEventListener("change", render);
+  playButton.addEventListener("click", () => {
+    if (playTimer) {
+      clearInterval(playTimer);
+      playTimer = null;
+      playButton.textContent = "Play";
+      return;
+    }
+    let year = Number(fromDateInput.value.slice(0, 4)) || 1893;
+    playButton.textContent = "Pause";
+    playTimer = setInterval(() => {
+      if (year > 1908) {
+        clearInterval(playTimer);
+        playTimer = null;
+        playButton.textContent = "Play";
+        return;
+      }
+      fromDateInput.value = `${year}-01-01`;
+      toDateInput.value = `${year}-12-31`;
+      updateTimeReadout();
+      render();
+      year += 1;
+    }, 900);
+  });
+  searchInput.addEventListener("input", highlightSearch);
+  typeInputs.forEach((input) => input.addEventListener("change", render));
+  resetButton.addEventListener("click", () => {
+    currentCenter = null;
+    fetchGraph();
+  });
+  window.addEventListener("resize", () => {
+    if (simulation) {
+      simulation.force("center", d3.forceCenter(width() / 2, height() / 2)).alpha(0.25).restart();
+    }
+  });
+
+  fetchGraph();
+</script>
+{% endblock %}

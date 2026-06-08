@@ -31,7 +31,7 @@ Output files (./output):
 
 Usage:
   pip install rdflib requests
-  python main.py
+  python 1. scrape.py
 
 Optional environment variables:
   WIKIDATA_CONTACT_EMAIL=you@example.com
