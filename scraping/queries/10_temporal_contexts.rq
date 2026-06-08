@@ -1,0 +1,24 @@
+# Query name: Temporal contexts
+# Allen relation implemented: none
+# Description: List every temporal named graph context with its Macedonian event label, start date, end date, and confidence.
+
+PREFIX mko:  <http://macedonian-history.mk/ontology#>
+PREFIX mkr:  <http://macedonian-history.mk/resource/>
+PREFIX mkc:  <http://macedonian-history.mk/context/>
+PREFIX time: <http://www.w3.org/2006/time#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?ctx ?event ?eventLabel ?startDate ?endDate ?confidence
+WHERE {
+  ?ctx a time:Interval ;
+       time:hasBeginning/time:inXSDDate ?startDate ;
+       time:hasEnd/time:inXSDDate ?endDate ;
+       mko:dateConfidence ?confidence .
+
+  GRAPH ?ctx {
+    ?event rdfs:label ?eventLabel .
+    FILTER(LANGMATCHES(LANG(?eventLabel), "mk"))
+  }
+}
+ORDER BY ?startDate ?eventLabel

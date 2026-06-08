@@ -1,0 +1,35 @@
+# Query name: Allen during
+# Allen relation implemented: DURING
+# Description: Find events that occurred entirely during another event, such as Krusevo Republic during Ilinden Uprising.
+
+PREFIX mko:  <http://macedonian-history.mk/ontology#>
+PREFIX mkr:  <http://macedonian-history.mk/resource/>
+PREFIX mkc:  <http://macedonian-history.mk/context/>
+PREFIX time: <http://www.w3.org/2006/time#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?event1 ?label1 ?start1 ?end1 ?event2 ?label2 ?start2 ?end2
+WHERE {
+  ?ctx1 a time:Interval ;
+        time:hasBeginning/time:inXSDDate ?start1 ;
+        time:hasEnd/time:inXSDDate ?end1 .
+
+  ?ctx2 a time:Interval ;
+        time:hasBeginning/time:inXSDDate ?start2 ;
+        time:hasEnd/time:inXSDDate ?end2 .
+
+  FILTER(?ctx1 != ?ctx2)
+  FILTER(?start1 > ?start2 && ?end1 < ?end2)
+
+  GRAPH ?ctx1 {
+    ?event1 rdfs:label ?label1 .
+    FILTER(LANGMATCHES(LANG(?label1), "mk"))
+  }
+
+  GRAPH ?ctx2 {
+    ?event2 rdfs:label ?label2 .
+    FILTER(LANGMATCHES(LANG(?label2), "mk"))
+  }
+}
+ORDER BY ?start2 ?start1 ?label2 ?label1
