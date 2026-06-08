@@ -1,3 +1,4 @@
+import re
 from pathlib import Path
 from urllib.parse import quote, unquote
 
@@ -53,9 +54,12 @@ PREFIX mko: <http://macedonian-history.mk/ontology#>
 PREFIX mkr: <http://macedonian-history.mk/resource/>
 PREFIX oldmko: <http://macedonian-kg.mk/ontology#>
 PREFIX oldmkr: <http://macedonian-kg.mk/resource/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <http://schema.org/>
 PREFIX time: <http://www.w3.org/2006/time#>
 """
 
@@ -332,6 +336,108 @@ def rows_from_bindings(raw_rows: list[dict]) -> list[dict[str, str]]:
     return [{key: value.get("value", "") for key, value in row.items()} for row in raw_rows]
 
 
+def coordinates_from_row(row: dict[str, str]) -> tuple[float, float] | None:
+    lat = row.get("latitude", "")
+    lon = row.get("longitude", "")
+    if lat and lon:
+        try:
+            return float(lat), float(lon)
+        except ValueError:
+            pass
+
+    match = re.search(r"Point\s*\(\s*([+-]?\d+(?:\.\d+)?)\s+([+-]?\d+(?:\.\d+)?)\s*\)", row.get("wkt", ""))
+    if not match:
+        return None
+    longitude, latitude = match.groups()
+    return float(latitude), float(longitude)
+
+
+def map_places_query() -> str:
+    return GRAPH_PREFIXES + f"""
+SELECT ?place
+       (SAMPLE(?mkLabelValue) AS ?label_mk)
+       (SAMPLE(?enLabelValue) AS ?label_en)
+       (SAMPLE(?ottomanNameValue) AS ?ottoman_name)
+       (SAMPLE(?latValue) AS ?latitude)
+       (SAMPLE(?lonValue) AS ?longitude)
+       (SAMPLE(?wktValue) AS ?wkt)
+       (SAMPLE(?wikidataValue) AS ?wikidata)
+       (SAMPLE(?descriptionValue) AS ?description)
+WHERE {{
+  VALUES ?placeType {{ mko:HistoricalPlace mko:Place oldmko:Place }}
+  {any_triple("?place", "rdf:type", "?placeType", "?placeTypeGraph")}
+
+  OPTIONAL {{
+    VALUES ?latPredicate {{ mko:latitude oldmko:latitude }}
+    {any_triple("?place", "?latPredicate", "?latValue", "?latGraph")}
+  }}
+  OPTIONAL {{
+    VALUES ?lonPredicate {{ mko:longitude oldmko:longitude }}
+    {any_triple("?place", "?lonPredicate", "?lonValue", "?lonGraph")}
+  }}
+  OPTIONAL {{
+    {any_triple("?place", "geo:asWKT", "?wktValue", "?wktGraph")}
+  }}
+  FILTER((BOUND(?latValue) && BOUND(?lonValue)) || BOUND(?wktValue))
+
+  OPTIONAL {{
+    {any_triple("?place", "rdfs:label", "?mkLabelValue", "?mkLabelGraph")}
+    FILTER(LANGMATCHES(LANG(?mkLabelValue), "mk") || LANG(?mkLabelValue) = "")
+  }}
+  OPTIONAL {{
+    {any_triple("?place", "rdfs:label", "?enLabelValue", "?enLabelGraph")}
+    FILTER(LANGMATCHES(LANG(?enLabelValue), "en"))
+  }}
+  OPTIONAL {{
+    {any_triple("?place", "mko:ottomanName", "?ottomanNameValue", "?ottomanGraph")}
+  }}
+  OPTIONAL {{
+    {any_triple("?place", "owl:sameAs", "?wikidataValue", "?sameAsGraph")}
+    FILTER(STRSTARTS(STR(?wikidataValue), "http://www.wikidata.org/entity/"))
+  }}
+  OPTIONAL {{
+    VALUES ?descriptionPredicate {{ rdfs:comment schema:description dcterms:description }}
+    {any_triple("?place", "?descriptionPredicate", "?descriptionValue", "?descriptionGraph")}
+  }}
+}}
+GROUP BY ?place
+ORDER BY ?place
+"""
+
+
+def map_events_at_place_query(place_uri: str) -> str:
+    place = sparql_iri(place_uri)
+    return GRAPH_PREFIXES + f"""
+SELECT ?event
+       (SAMPLE(?mkLabelValue) AS ?label_mk)
+       (SAMPLE(?enLabelValue) AS ?label_en)
+       (SAMPLE(?startValue) AS ?start_date)
+       (SAMPLE(?endValue) AS ?end_date)
+       (SAMPLE(?dateValue) AS ?date)
+WHERE {{
+  BIND({place} AS ?place)
+  VALUES ?eventType {{ mko:HistoricalEvent oldmko:HistoricalEvent }}
+  VALUES ?placePredicate {{ mko:tookPlaceIn oldmko:tookPlaceIn }}
+  {any_triple("?event", "rdf:type", "?eventType", "?eventTypeGraph")}
+  {any_triple("?event", "?placePredicate", "?place", "?placeGraph")}
+
+  OPTIONAL {{
+    {any_triple("?event", "rdfs:label", "?mkLabelValue", "?mkLabelGraph")}
+    FILTER(LANGMATCHES(LANG(?mkLabelValue), "mk") || LANG(?mkLabelValue) = "")
+  }}
+  OPTIONAL {{
+    {any_triple("?event", "rdfs:label", "?enLabelValue", "?enLabelGraph")}
+    FILTER(LANGMATCHES(LANG(?enLabelValue), "en"))
+  }}
+  OPTIONAL {{ {any_triple("?event", "mko:startDate", "?startValue", "?startGraph")} }}
+  OPTIONAL {{ {any_triple("?event", "mko:endDate", "?endValue", "?endGraph")} }}
+  OPTIONAL {{ {any_triple("?event", "mko:date", "?dateValue", "?dateGraph")} }}
+}}
+GROUP BY ?event
+ORDER BY ?event
+"""
+
+
 @app.get("/", response_class=HTMLResponse)
 def home(request: Request):
     stats = {
@@ -402,6 +508,70 @@ def timeline_results(request: Request, start: str = "", end: str = ""):
 @app.get("/graph", response_class=HTMLResponse)
 def graph_page(request: Request):
     return templates.TemplateResponse(request, "graph.html")
+
+
+@app.get("/map", response_class=HTMLResponse)
+def map_page(request: Request):
+    return templates.TemplateResponse(request, "map.html")
+
+
+@app.get("/api/map/places")
+def map_places():
+    try:
+        rows = rows_from_bindings(bindings(map_places_query()))
+    except SparqlError as exc:
+        raise HTTPException(status_code=503, detail=str(exc)) from exc
+
+    places = []
+    for row in rows:
+        coordinates = coordinates_from_row(row)
+        if coordinates is None:
+            continue
+        latitude, longitude = coordinates
+        uri = row.get("place", "")
+        places.append(
+            {
+                "uri": uri,
+                "label_mk": row.get("label_mk", ""),
+                "label_en": row.get("label_en", ""),
+                "ottoman_name": row.get("ottoman_name", ""),
+                "latitude": latitude,
+                "longitude": longitude,
+                "wikidata": row.get("wikidata", ""),
+                "description": row.get("description", ""),
+                "details_url": entity_url(uri),
+            }
+        )
+    places.sort(key=lambda place: (place["label_mk"] or place["label_en"] or place["uri"]).lower())
+    return places
+
+
+@app.get("/api/map/events_at_place")
+def map_events_at_place(place_uri: str = Query(..., min_length=1)):
+    try:
+        rows = rows_from_bindings(bindings(map_events_at_place_query(place_uri)))
+    except SparqlError as exc:
+        raise HTTPException(status_code=503, detail=str(exc)) from exc
+
+    events = [
+        {
+            "uri": row.get("event", ""),
+            "label_mk": row.get("label_mk", ""),
+            "label_en": row.get("label_en", ""),
+            "start_date": row.get("start_date", ""),
+            "end_date": row.get("end_date", ""),
+            "date": row.get("date", ""),
+            "details_url": entity_url(row.get("event", "")),
+        }
+        for row in rows
+    ]
+    events.sort(
+        key=lambda event: (
+            event["start_date"] or event["date"],
+            (event["label_mk"] or event["label_en"] or event["uri"]).lower(),
+        )
+    )
+    return events
 
 
 @app.get("/api/graph")

@@ -1,0 +1,395 @@
+{% extends "base.html" %}
+
+{% block title %}Map | Macedonian History KG{% endblock %}
+
+{% block content %}
+<section class="page-heading">
+  <p>Historical Places</p>
+  <h1>Map</h1>
+  <span>Places with coordinates from the knowledge graph, linked to the events that happened there.</span>
+</section>
+
+<section class="map-shell">
+  <aside class="map-sidebar">
+    <div class="map-search-wrap">
+      <input id="map-search" class="input" type="search" placeholder="Search places" autocomplete="off">
+      <span id="place-count">0 places</span>
+    </div>
+    <div id="map-error" class="alert" hidden></div>
+    <ul id="place-list" class="place-list" aria-label="Places"></ul>
+  </aside>
+
+  <div class="map-stage">
+    <div id="map"></div>
+    <div class="map-legend" aria-label="Legend">
+      <span><i style="background:#2563eb"></i> Cities and towns</span>
+      <span><i style="background:#dc2626"></i> Battle sites</span>
+      <span><i style="background:#16a34a"></i> Villages</span>
+    </div>
+  </div>
+</section>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.min.css">
+<script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.min.js"></script>
+
+<style>
+  .map-shell {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: minmax(17rem, 22rem) minmax(0, 1fr);
+    margin-left: calc(50% - 48vw);
+    margin-right: calc(50% - 48vw);
+    width: 96vw;
+  }
+
+  .map-sidebar,
+  .map-stage {
+    border: 1px solid #e7e5e4;
+    border-radius: 0.5rem;
+    background: rgba(255, 255, 255, 0.86);
+    box-shadow: 0 12px 32px rgba(68, 64, 60, 0.06);
+  }
+
+  .map-sidebar {
+    display: grid;
+    grid-template-rows: auto auto minmax(0, 1fr);
+    min-height: 38rem;
+    overflow: hidden;
+  }
+
+  .map-search-wrap {
+    border-bottom: 1px solid #e7e5e4;
+    display: grid;
+    gap: 0.6rem;
+    padding: 1rem;
+  }
+
+  .map-search-wrap .input {
+    border-radius: 0.5rem;
+    min-height: 2.7rem;
+    padding: 0 0.8rem;
+  }
+
+  #place-count {
+    color: #78716c;
+    font-size: 0.88rem;
+  }
+
+  .place-list {
+    overflow: auto;
+    padding: 0.5rem;
+  }
+
+  .place-button {
+    border-radius: 0.5rem;
+    display: grid;
+    gap: 0.15rem;
+    padding: 0.75rem;
+    text-align: left;
+    width: 100%;
+  }
+
+  .place-button:hover,
+  .place-button.is-active {
+    background: #fef3c7;
+  }
+
+  .place-button strong {
+    color: #451a03;
+    font-size: 0.96rem;
+    line-height: 1.25;
+  }
+
+  .place-button span {
+    color: #78716c;
+    font-size: 0.82rem;
+    line-height: 1.25;
+  }
+
+  .map-stage {
+    min-height: 38rem;
+    overflow: hidden;
+    position: relative;
+  }
+
+  #map {
+    height: min(74vh, 48rem);
+    min-height: 38rem;
+    width: 100%;
+  }
+
+  .map-legend {
+    align-items: center;
+    background: rgba(255, 253, 247, 0.94);
+    border: 1px solid #e7e5e4;
+    border-radius: 0.5rem;
+    bottom: 1rem;
+    box-shadow: 0 10px 24px rgba(68, 64, 60, 0.12);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    left: 1rem;
+    padding: 0.7rem 0.85rem;
+    position: absolute;
+    z-index: 500;
+  }
+
+  .map-legend span {
+    align-items: center;
+    color: #57534e;
+    display: inline-flex;
+    font-size: 0.86rem;
+    gap: 0.35rem;
+  }
+
+  .map-legend i {
+    border: 2px solid rgba(255, 255, 255, 0.9);
+    border-radius: 999px;
+    display: inline-block;
+    height: 0.85rem;
+    width: 0.85rem;
+  }
+
+  .map-popup {
+    color: #292524;
+    min-width: 14rem;
+  }
+
+  .map-popup h2 {
+    color: #451a03;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.05rem;
+    font-weight: 800;
+    margin: 0 0 0.25rem;
+  }
+
+  .map-popup em {
+    color: #57534e;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  .map-popup ul {
+    margin: 0.45rem 0;
+    padding-left: 1.1rem;
+  }
+
+  .map-popup li {
+    margin: 0.25rem 0;
+  }
+
+  .map-popup .popup-muted {
+    color: #78716c;
+  }
+
+  @media (max-width: 900px) {
+    .map-shell {
+      grid-template-columns: 1fr;
+      margin-left: 0;
+      margin-right: 0;
+      width: auto;
+    }
+
+    .map-sidebar {
+      min-height: 18rem;
+      max-height: 24rem;
+    }
+  }
+</style>
+
+<script>
+  const map = L.map("map", { scrollWheelZoom: true }).setView([41.6, 21.7], 8);
+  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    attribution: "&copy; OpenStreetMap contributors",
+    maxZoom: 19
+  }).addTo(map);
+
+  const markerColors = {
+    city: "#2563eb",
+    battle: "#dc2626",
+    village: "#16a34a"
+  };
+
+  const placesByUri = new Map();
+  const markersByUri = new Map();
+  const list = document.querySelector("#place-list");
+  const search = document.querySelector("#map-search");
+  const count = document.querySelector("#place-count");
+  const errorBox = document.querySelector("#map-error");
+  let activeUri = "";
+
+  function escapeHtml(value) {
+    return String(value || "").replace(/[&<>"']/g, (char) => ({
+      "&": "&amp;",
+      "<": "&lt;",
+      ">": "&gt;",
+      "\"": "&quot;",
+      "'": "&#39;"
+    }[char]));
+  }
+
+  function displayName(place) {
+    return place.label_mk || place.label_en || place.uri.split(/[\/#]/).pop();
+  }
+
+  function markerType(place) {
+    const text = `${place.label_mk || ""} ${place.label_en || ""}`.toLowerCase();
+    if (text.includes("kamen") || text.includes("\u0431\u0438\u0442\u043a\u0430") || text.includes("battle")) {
+      return "battle";
+    }
+    if (text.includes("village") || text.includes("\u0441\u0435\u043b\u043e")) {
+      return "village";
+    }
+    return "city";
+  }
+
+  function markerStyle(place, selected = false) {
+    const color = markerColors[markerType(place)];
+    return {
+      color: selected ? "#451a03" : "#ffffff",
+      fillColor: color,
+      fillOpacity: 0.86,
+      opacity: 1,
+      radius: selected ? 10 : 7,
+      weight: selected ? 3 : 2
+    };
+  }
+
+  function dateText(event) {
+    if (event.start_date || event.end_date) {
+      return `${event.start_date || "?"}${event.end_date ? ` to ${event.end_date}` : ""}`;
+    }
+    return event.date || "";
+  }
+
+  function popupSkeleton(place) {
+    const ottoman = place.ottoman_name ? `<em>${escapeHtml(place.ottoman_name)}</em>` : "";
+    return `
+      <div class="map-popup">
+        <h2>${escapeHtml(displayName(place))}</h2>
+        ${ottoman}
+        <div class="popup-events"><span class="popup-muted">Loading events...</span></div>
+        <a class="text-link" href="/entity/${encodeURIComponent(place.uri)}">View details</a>
+      </div>
+    `;
+  }
+
+  function eventsHtml(events) {
+    if (!events.length) {
+      return `<p class="popup-muted">No events found.</p>`;
+    }
+    const items = events.map((event) => {
+      const label = escapeHtml(event.label_mk || event.label_en || event.uri.split(/[\/#]/).pop());
+      const date = dateText(event);
+      return `<li>${date ? `<span class="popup-muted">${escapeHtml(date)}</span> ` : ""}${label}</li>`;
+    }).join("");
+    return `<ul>${items}</ul>`;
+  }
+
+  async function fillEvents(place, marker) {
+    const popup = marker.getPopup();
+    const container = popup.getElement();
+    const target = container?.querySelector(".popup-events");
+    if (!target) {
+      return;
+    }
+    try {
+      const params = new URLSearchParams({ place_uri: place.uri });
+      const response = await fetch(`/api/map/events_at_place?${params.toString()}`);
+      if (!response.ok) {
+        throw new Error("Events request failed");
+      }
+      target.innerHTML = eventsHtml(await response.json());
+    } catch (error) {
+      target.innerHTML = `<p class="popup-muted">Events unavailable.</p>`;
+    }
+  }
+
+  function setActive(uri, openPopup = true) {
+    if (activeUri && markersByUri.has(activeUri)) {
+      markersByUri.get(activeUri).setStyle(markerStyle(placesByUri.get(activeUri)));
+    }
+    activeUri = uri;
+    const place = placesByUri.get(uri);
+    const marker = markersByUri.get(uri);
+    if (!place || !marker) {
+      return;
+    }
+    marker.setStyle(markerStyle(place, true));
+    map.setView(marker.getLatLng(), Math.max(map.getZoom(), 10), { animate: true });
+    if (openPopup) {
+      marker.openPopup();
+    }
+    document.querySelectorAll(".place-button").forEach((button) => {
+      button.classList.toggle("is-active", button.dataset.uri === uri);
+    });
+  }
+
+  function renderList(places) {
+    list.innerHTML = "";
+    places.forEach((place) => {
+      const item = document.createElement("li");
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "place-button";
+      button.dataset.uri = place.uri;
+      button.innerHTML = `
+        <strong>${escapeHtml(displayName(place))}</strong>
+        <span>${escapeHtml(place.label_en || place.ottoman_name || "")}</span>
+      `;
+      button.addEventListener("click", () => setActive(place.uri));
+      item.appendChild(button);
+      list.appendChild(item);
+    });
+    count.textContent = `${places.length} ${places.length === 1 ? "place" : "places"}`;
+  }
+
+  function applyFilter() {
+    const q = search.value.trim().toLowerCase();
+    const visible = [];
+    placesByUri.forEach((place, uri) => {
+      const haystack = `${place.label_mk || ""} ${place.label_en || ""} ${place.ottoman_name || ""}`.toLowerCase();
+      const match = !q || haystack.includes(q);
+      const marker = markersByUri.get(uri);
+      if (marker) {
+        if (match && !map.hasLayer(marker)) {
+          marker.addTo(map);
+        } else if (!match && map.hasLayer(marker)) {
+          marker.remove();
+        }
+      }
+      if (match) {
+        visible.push(place);
+      }
+    });
+    visible.sort((left, right) => displayName(left).localeCompare(displayName(right), "mk"));
+    renderList(visible);
+  }
+
+  async function loadPlaces() {
+    try {
+      const response = await fetch("/api/map/places");
+      if (!response.ok) {
+        throw new Error("Places request failed");
+      }
+      const places = await response.json();
+      places.forEach((place) => {
+        placesByUri.set(place.uri, place);
+        const marker = L.circleMarker([place.latitude, place.longitude], markerStyle(place))
+          .bindPopup(popupSkeleton(place))
+          .on("click", () => setActive(place.uri, false))
+          .on("popupopen", () => fillEvents(place, marker))
+          .addTo(map);
+        markersByUri.set(place.uri, marker);
+      });
+      applyFilter();
+    } catch (error) {
+      errorBox.hidden = false;
+      errorBox.textContent = "Map places are unavailable. Check the Fuseki connection and loaded RDF graph.";
+    }
+  }
+
+  search.addEventListener("input", applyFilter);
+  loadPlaces();
+</script>
+{% endblock %}
