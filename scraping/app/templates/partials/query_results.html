@@ -5,6 +5,9 @@
   <div class="mt-4 flex flex-wrap items-center gap-3">
     <button class="primary-button" type="submit">Run query</button>
     <span id="query-loading" class="htmx-indicator text-sm text-amber-800">Querying Fuseki...</span>
+    {% if rows %}
+      <button type="button" class="secondary-button" onclick="downloadCsv()">Download CSV</button>
+    {% endif %}
   </div>
 </form>
 
@@ -29,4 +32,24 @@
   </div>
 {% elif headers %}
   <div class="empty-state mt-5">The query ran successfully but returned no rows.</div>
+{% endif %}
+
+{% if rows %}
+<script>
+function downloadCsv() {
+  const table = document.querySelector('.data-table');
+  if (!table) return;
+  const rows = Array.from(table.querySelectorAll('tr')).map(tr =>
+    Array.from(tr.querySelectorAll('th,td'))
+      .map(cell => '"' + cell.textContent.replace(/"/g, '""') + '"')
+      .join(',')
+  );
+  const blob = new Blob([rows.join('\r\n')], { type: 'text/csv' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'sparql-results.csv';
+  a.click();
+  URL.revokeObjectURL(a.href);
+}
+</script>
 {% endif %}

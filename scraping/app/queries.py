@@ -48,7 +48,7 @@ SELECT ?entity ?label ?type ?date ?wikidata
 WHERE {
   ?entity rdf:type ?type ;
           rdfs:label ?label .
-  VALUES ?type { mko:Person mko:HistoricalEvent mko:Place mko:Organization mko:HistoricalDocument mko:Period }
+  VALUES ?type { %s }
   FILTER(CONTAINS(LCASE(STR(?label)), LCASE("%s")))
   OPTIONAL { ?entity owl:sameAs ?wikidata }
   OPTIONAL {

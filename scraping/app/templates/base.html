@@ -28,5 +28,23 @@
   <footer class="mx-auto max-w-6xl px-5 pb-8 text-sm text-stone-500">
     FastAPI, Jinja2, HTMX, Tailwind CDN, and Apache Jena Fuseki.
   </footer>
+  <button id="back-top" type="button" aria-label="Back to top"
+          onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">↑</button>
+  <script>
+    const backTop = document.getElementById('back-top');
+    window.addEventListener('scroll', () => {
+      backTop.classList.toggle('back-top-visible', window.scrollY > 400);
+    }, { passive: true });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key !== '/') return;
+      const tag = document.activeElement?.tagName;
+      if (['INPUT', 'TEXTAREA', 'SELECT'].includes(tag)) return;
+      e.preventDefault();
+      const input = document.querySelector('input[type="search"], input[name="q"]');
+      if (input) { input.focus(); input.select(); }
+      else window.location.href = '/search';
+    });
+  </script>
 </body>
 </html>

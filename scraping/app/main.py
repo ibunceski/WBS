@@ -63,6 +63,16 @@ PREFIX schema: <http://schema.org/>
 PREFIX time: <http://www.w3.org/2006/time#>
 """
 
+SEARCH_TYPE_MAP = {
+    "Person": "mko:Person",
+    "HistoricalEvent": "mko:HistoricalEvent",
+    "Place": "mko:Place",
+    "Organization": "mko:Organization",
+    "HistoricalDocument": "mko:HistoricalDocument",
+    "Period": "mko:Period",
+}
+ALL_SEARCH_TYPES = "mko:Person mko:HistoricalEvent mko:Place mko:Organization mko:HistoricalDocument mko:Period"
+
 app = FastAPI(title="Macedonian History Knowledge Graph Demo")
 app.mount("/static", StaticFiles(directory=BASE_DIR / "static"), name="static")
 templates = Jinja2Templates(directory=BASE_DIR / "templates")
@@ -464,12 +474,14 @@ def search_page(request: Request):
 
 
 @app.get("/search/results", response_class=HTMLResponse)
-def search_results(request: Request, q: str = ""):
+def search_results(request: Request, q: str = "", types: list[str] = Query(default=[])):
     error = None
     results = []
     if q.strip():
+        allowed = [SEARCH_TYPE_MAP[t] for t in types if t in SEARCH_TYPE_MAP]
+        type_values = " ".join(allowed) if allowed else ALL_SEARCH_TYPES
         try:
-            query = queries.SEARCH % sparql_literal(q.strip())
+            query = queries.SEARCH % (type_values, sparql_literal(q.strip()))
             results = rows_from_bindings(bindings(query))
         except SparqlError as exc:
             error = str(exc)
