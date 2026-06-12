@@ -1,22 +1,3 @@
-"""
-wiki_triple_extractor.py
-========================
-Извлекува RDF тројки од Wikipedia текст на македонски јазик,
-користејќи Ollama (локален LLM) за NLP екстракција.
-
-Се интегрира со постоечкиот WBS проект во scraping/ директориумот.
-
-Употреба:
-    extractor = WikiTripleExtractor()
-    triples, entities = extractor.process_wikipedia_page(url)
-    extractor.save_to_turtle(triples, entities, "output/extracted.ttl")
-
-Зависности:
-    pip install ollama requests beautifulsoup4 rdflib
-    + инсталиран Ollama: https://ollama.com
-    + симнат модел: ollama pull llama3.2
-"""
-
 import re
 import json
 import time
@@ -31,7 +12,6 @@ from bs4 import BeautifulSoup
 from rdflib import Graph, Literal, Namespace, URIRef
 from rdflib.namespace import RDF, RDFS, OWL, XSD
 
-# ── Logging ──────────────────────────────────────────────────────────────────
 
 logging.basicConfig(
     level=logging.INFO,
@@ -39,21 +19,18 @@ logging.basicConfig(
 )
 log = logging.getLogger(__name__)
 
-# ── Namespaces ────────────────────────────────────────────────────────────────
 
 MKO = Namespace("http://macedonian-history.mk/ontology/")
 MKR = Namespace("http://macedonian-history.mk/resource/")
 SCHEMA = Namespace("https://schema.org/")
 
-# ── Dataclasses ───────────────────────────────────────────────────────────────
 
 
 @dataclass
 class RDFTriple:
-    """Претставува една RDF тројка со изворен контекст."""
-    subject: str          # напр. "Goce_Delcev"
-    predicate: str        # напр. "participatedIn"
-    obj: str              # напр. "Solunski_Kongres" или литерал
+    subject: str
+    predicate: str
+    obj: str
     obj_is_literal: bool = False
     obj_lang: str = "mk"
     confidence: float = 1.0
@@ -62,22 +39,14 @@ class RDFTriple:
 
 @dataclass
 class KnownEntity:
-    """Ентитет за кој знаеме дека постои во графот."""
-    local_name: str           # напр. "Goce_Delcev"
-    label_mk: str             # напр. "Гоце Делчев"
-    entity_type: str          # Person / Place / Organization / Event / Document
-    source_page: str = ""     # Wikipedia URL од каде е извлечен
-    wikidata_id: str = ""     # напр. "Q193377"
-
-
-# ── Helper: Wikipedia text fetch ─────────────────────────────────────────────
+    local_name: str
+    label_mk: str
+    entity_type: str
+    source_page: str = ""
+    wikidata_id: str = ""
 
 
 def fetch_wikipedia_text(url: str) -> tuple[str, str]:
-    """
-    Превземи чист текст и наслов од Wikipedia страна.
-    Враќа (title, plain_text).
-    """
     if "wikipedia.org/wiki/" in url:
         base = url.split("/wiki/")[0]
         page_title = url.split("/wiki/")[1]
@@ -100,20 +69,12 @@ def fetch_wikipedia_text(url: str) -> tuple[str, str]:
     return title, text
 
 
-# ── Helper: slugify ───────────────────────────────────────────────────────────
-
 
 def slugify(text: str) -> str:
-    """
-    Претвори македонски текст во валиден URI локален дел.
-    напр. "Гоце Делчев" -> "Goce_Delcev"  (транслитерација + замена на празни места)
-    """
+
     slug = re.sub(r"\s+", "_", text.strip())
     slug = re.sub(r"[^\w\-]", "", slug, flags=re.UNICODE)
     return slug
-
-
-# ── Core: Ollama-based triple extractor ──────────────────────────────────────
 
 
 SYSTEM_PROMPT = """Ti si ekspert za ekstrakcija na RDF trojki od tekst za makedonska istorija.
@@ -166,16 +127,10 @@ Format na odgovor (SAMO JSON, bez nikakov drug tekst):
 
 
 class WikiTripleExtractor:
-    """
-    Главна класа за екстракција на RDF тројки од Wikipedia текст.
-
-    Чува регистар на познати ентитети за да се осигура дека
-    ентитетите споменати во тројки ќе бидат и декларирани во графот.
-    """
 
     def __init__(
         self,
-        model: str = "llama3.2",  # ПРОМЕНЕТО: наместо anthropic_api_key
+        model: str = "llama3.2",
         chunk_size: int = 2000,
         delay_between_chunks: float = 1.0,
     ):
@@ -183,22 +138,18 @@ class WikiTripleExtractor:
         self.chunk_size = chunk_size
         self.delay = delay_between_chunks
 
-        # Глобален регистар на ентитети (label -> KnownEntity)
         self.entity_registry: dict[str, KnownEntity] = {}
 
-    # ── Internal: call Ollama ─────────────────────────────────────────────
 
     def _extract_from_chunk(
         self, chunk: str, page_title: str
     ) -> tuple[list[RDFTriple], list[KnownEntity]]:
-        """Повикај Ollama за еден текстуален chunk, врати тројки + ентитети."""
         user_msg = (
             f"Страна: {page_title}\n\n"
             f"Текст:\n{chunk}\n\n"
             "Извлечи ги сите RDF тројки и ентитети од овој текст."
         )
 
-        # ПРОМЕНЕТО: ollama.chat наместо anthropic client
         try:
             response = ollama.chat(
                 model=self.model,
@@ -212,7 +163,6 @@ class WikiTripleExtractor:
             log.error("Ollama грешка: %s", e)
             return [], []
 
-        # Почисти евентуални Markdown огради
         raw = re.sub(r"^```json\s*", "", raw)
         raw = re.sub(r"\s*```$", "", raw)
 
@@ -225,7 +175,6 @@ class WikiTripleExtractor:
         triples: list[RDFTriple] = []
         entities: list[KnownEntity] = []
 
-        # Парсирај ентитети
         for ent in data.get("entities", []):
             label = ent.get("label", "").strip()
             etype = ent.get("type", "Thing")
@@ -241,7 +190,6 @@ class WikiTripleExtractor:
                 self.entity_registry[label] = known
                 entities.append(known)
 
-        # Парсирај тројки
         for t in data.get("triples", []):
             subj = t.get("subject", "").strip()
             pred = t.get("predicate", "").strip()
@@ -275,15 +223,10 @@ class WikiTripleExtractor:
 
         return triples, entities
 
-    # ── Public: process one Wikipedia page ───────────────────────────────
-
     def process_wikipedia_page(
         self, url: str
     ) -> tuple[list[RDFTriple], list[KnownEntity]]:
-        """
-        Превземи Wikipedia страна и извлечи тројки + ентитети.
-        Враќа (all_triples, new_entities).
-        """
+
         log.info("Превземање страна: %s", url)
         title, text = fetch_wikipedia_text(url)
         log.info("Страна '%s' — %d знаци", title, len(text))
@@ -311,7 +254,6 @@ class WikiTripleExtractor:
         )
         return all_triples, all_entities
 
-    # ── Public: save to Turtle ────────────────────────────────────────────
 
     def save_to_turtle(
         self,
@@ -319,10 +261,6 @@ class WikiTripleExtractor:
         entities: list[KnownEntity],
         output_path: str,
     ) -> None:
-        """
-        Запиши ги тројките и ентитетите во Turtle (.ttl) формат,
-        компатибилен со постоечкиот WBS граф.
-        """
         g = Graph()
         g.bind("mko", MKO)
         g.bind("mkr", MKR)
@@ -375,35 +313,19 @@ class WikiTripleExtractor:
         g.serialize(destination=output_path, format="turtle")
         log.info("Зачувано во: %s (%d тројки вкупно)", output_path, len(g))
 
-    # ── Public: get entity summary ────────────────────────────────────────
 
     def entity_summary(self) -> dict[str, int]:
-        """Врати бројач на ентитети по тип."""
         counts: dict[str, int] = {}
         for ent in self.entity_registry.values():
             counts[ent.entity_type] = counts.get(ent.entity_type, 0) + 1
         return counts
 
 
-# ── Integration helper: process multiple pages ───────────────────────────────
-
-
 def process_page_list(
     urls: list[str],
     output_ttl: str = "output/wiki_extracted.ttl",
-    model: str = "llama3.2",  # ПРОМЕНЕТО: наместо anthropic_api_key
+    model: str = "llama3.2",
 ) -> None:
-    """
-    Обработи листа од Wikipedia URL-ови и запиши ги сите
-    тројки во еден Turtle фајл.
-
-    Пример:
-        urls = [
-            "https://mk.wikipedia.org/wiki/Гоце_Делчев",
-            "https://mk.wikipedia.org/wiki/Илинденско_востание",
-        ]
-        process_page_list(urls, "output/wiki_extracted.ttl")
-    """
     extractor = WikiTripleExtractor(model=model)
     all_triples: list[RDFTriple] = []
     all_entities: list[KnownEntity] = []
@@ -423,8 +345,6 @@ def process_page_list(
     log.info("Резиме на ентитети: %s", summary)
     log.info("Вкупно тројки: %d", len(all_triples))
 
-
-# ── CLI ───────────────────────────────────────────────────────────────────────
 
 
 if __name__ == "__main__":
@@ -446,7 +366,7 @@ if __name__ == "__main__":
     )
     parser.add_argument(
         "--model",
-        default="llama3.2",  # ПРОМЕНЕТО: наместо --api-key
+        default="llama3.2",
         help="Ollama модел за користење (default: llama3.2)",
     )
     parser.add_argument(
