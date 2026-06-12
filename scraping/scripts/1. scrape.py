@@ -172,8 +172,8 @@ PERSON_CATEGORY_TITLES = [
 EVENTS_FROM_PERSONS_ENABLED = os.getenv("EVENTS_FROM_PERSONS_ENABLED", "1") == "1"
 EVENT_FROM_PERSON_LIMIT_PER_CHUNK = int(os.getenv("EVENT_FROM_PERSON_LIMIT_PER_CHUNK", "120"))
 
-HISTORY_START_YEAR = int(os.getenv("HISTORY_START_YEAR", "1885"))
-HISTORY_END_YEAR = int(os.getenv("HISTORY_END_YEAR", "1910"))
+HISTORY_START_YEAR = int(os.getenv("HISTORY_START_YEAR", "976"))
+HISTORY_END_YEAR = int(os.getenv("HISTORY_END_YEAR", "1903"))
 PERSON_SCOPE_BIRTH_FROM_YEAR = int(
     os.getenv("PERSON_SCOPE_BIRTH_FROM_YEAR", str(HISTORY_START_YEAR - 70))
 )
@@ -192,12 +192,13 @@ MACEDONIA_REGION = "wd:Q103251"
 MACEDONIA_REGION_ANCIENT = "wd:Q83958"
 SEED_ILINDEN_UPRISING = "wd:Q1145682"
 SEED_KRUSEVO_REPUBLIC = "wd:Q1771831"
+SEED_SAMUIL_EMPIRE = "wd:Q208812"
 
-PERSON_LIMIT = int(os.getenv("PERSON_LIMIT", "500"))
-EVENT_LIMIT = int(os.getenv("EVENT_LIMIT", "350"))
-PLACE_LIMIT = int(os.getenv("PLACE_LIMIT", "400"))
-ORG_LIMIT = int(os.getenv("ORG_LIMIT", "250"))
-DOC_LIMIT = int(os.getenv("DOC_LIMIT", "250"))
+PERSON_LIMIT = int(os.getenv("PERSON_LIMIT", "800"))
+EVENT_LIMIT = int(os.getenv("EVENT_LIMIT", "600"))
+PLACE_LIMIT = int(os.getenv("PLACE_LIMIT", "600"))
+ORG_LIMIT = int(os.getenv("ORG_LIMIT", "400"))
+DOC_LIMIT = int(os.getenv("DOC_LIMIT", "400"))
 
 WIKIPEDIA_ENRICH_LIMIT = int(os.getenv("WIKIPEDIA_ENRICH_LIMIT", "20"))
 ENABLE_WIKIPEDIA_ENRICH = os.getenv("ENABLE_WIKIPEDIA_ENRICH", "1") == "1"
@@ -1883,6 +1884,16 @@ def add_ontology_triples(g: Graph) -> None:
     g.add((uprising, MKO.startDate, Literal("1903-08-02", datatype=XSD.date)))
     g.add((uprising, MKO.endDate, Literal("1903-10-03", datatype=XSD.date)))
     g.add((uprising, MKO.partOf, period))
+
+    # Samuil's Empire — anchor for the early end of the period.
+    samuil = MK[SEED_SAMUIL_EMPIRE.split(":", 1)[1]]
+    g.add((samuil, RDF.type, MKO.HistoricalEvent))
+    g.add((samuil, RDFS.label, Literal("Samuil's Empire", lang="en")))
+    g.add((samuil, RDFS.label, Literal("Царство на Самоил", lang="mk")))
+    g.add((samuil, OWL.sameAs, URIRef("http://www.wikidata.org/entity/Q208812")))
+    g.add((samuil, MKO.startDate, Literal("976", datatype=XSD.gYear)))
+    g.add((samuil, MKO.endDate, Literal("1018", datatype=XSD.gYear)))
+    g.add((samuil, MKO.partOf, period))
 
 
 def enrich_from_mk_wikipedia(g: Graph, entity_uris: list[str], client: WikidataClient) -> None:
