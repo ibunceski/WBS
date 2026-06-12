@@ -45,6 +45,10 @@
     </label>
 
     <button id="reset-graph" class="secondary-button" type="button">Reset</button>
+    <div id="graph-counts" class="time-readout ml-auto" aria-live="polite">
+      <strong id="count-nodes">–</strong>
+      <span id="count-edges">–</span>
+    </div>
   </div>
 
   <div class="temporal-toolbar">
@@ -511,6 +515,10 @@
 
   function render() {
     const data = filteredData();
+    document.querySelector('#count-nodes').textContent =
+      `${data.nodes.length.toLocaleString()} node${data.nodes.length !== 1 ? 's' : ''}`;
+    document.querySelector('#count-edges').textContent =
+      `${data.edges.length.toLocaleString()} edge${data.edges.length !== 1 ? 's' : ''}`;
     root.selectAll("*").remove();
     if (simulation) {
       simulation.stop();

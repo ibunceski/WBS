@@ -17,10 +17,48 @@
     hx-trigger="keyup changed delay:350ms, search"
     hx-target="#search-results"
     hx-indicator="#search-loading"
+    hx-include="#type-hidden-inputs"
     autofocus>
+
+  <div id="type-chips" class="mt-4 flex flex-wrap gap-2">
+    <button type="button" class="type-chip is-active" data-type="Person">Person</button>
+    <button type="button" class="type-chip is-active" data-type="HistoricalEvent">Event</button>
+    <button type="button" class="type-chip is-active" data-type="Place">Place</button>
+    <button type="button" class="type-chip is-active" data-type="Organization">Organization</button>
+    <button type="button" class="type-chip is-active" data-type="HistoricalDocument">Document</button>
+    <button type="button" class="type-chip is-active" data-type="Period">Period</button>
+  </div>
+  <div id="type-hidden-inputs"></div>
+
   <div id="search-loading" class="htmx-indicator mt-3 text-sm text-amber-800">Searching Fuseki...</div>
   <div id="search-results" class="mt-6">
     {% include "partials/search_results.html" %}
   </div>
 </div>
+
+<script>
+const chips = document.querySelectorAll('.type-chip');
+const hiddenWrap = document.querySelector('#type-hidden-inputs');
+const searchInput = document.querySelector('input[name="q"]');
+
+function syncHidden() {
+  hiddenWrap.innerHTML = '';
+  chips.forEach(chip => {
+    if (chip.classList.contains('is-active')) {
+      const inp = document.createElement('input');
+      inp.type = 'hidden'; inp.name = 'types'; inp.value = chip.dataset.type;
+      hiddenWrap.appendChild(inp);
+    }
+  });
+}
+
+chips.forEach(chip => {
+  chip.addEventListener('click', () => {
+    chip.classList.toggle('is-active');
+    syncHidden();
+    if (searchInput.value.trim()) htmx.trigger(searchInput, 'keyup');
+  });
+});
+syncHidden();
+</script>
 {% endblock %}

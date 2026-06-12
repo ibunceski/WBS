@@ -3,6 +3,9 @@
 {% elif not q %}
   <div class="empty-state">Type a search term to look up resources in the graph.</div>
 {% elif results %}
+  <p class="mb-4 text-sm text-stone-500">
+    {{ results|length }} result{{ "s" if results|length != 1 else "" }}{% if results|length == 40 %} (showing first 40){% endif %}
+  </p>
   <div class="grid gap-4 md:grid-cols-2">
     {% for item in results %}
       <a class="result-card" href="{{ item.entity|entity_url }}">

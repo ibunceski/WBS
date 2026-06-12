@@ -18,6 +18,26 @@ body {
   color: #78350f;
 }
 
+.nav-link.is-active {
+  background: #78350f;
+  color: #fffdf7;
+}
+
+.nav-link.is-active:hover {
+  background: #78350f;
+  color: #fffdf7;
+}
+
+.control-label {
+  color: #57534e;
+  display: grid;
+  font-size: 0.78rem;
+  font-weight: 800;
+  gap: 0.35rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
 .hero-panel {
   background:
     radial-gradient(circle at top right, rgba(217, 119, 6, 0.18), transparent 32rem),
@@ -268,4 +288,48 @@ dd {
 .prose-report li {
   color: #44403c;
   line-height: 1.75;
+}
+
+/* Jump to top button */
+#back-top {
+  background: #78350f;
+  border-radius: 999px;
+  bottom: 1.5rem;
+  box-shadow: 0 8px 20px rgba(120, 53, 15, 0.28);
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 700;
+  height: 2.8rem;
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  right: 1.5rem;
+  transition: opacity 200ms ease;
+  width: 2.8rem;
+  z-index: 900;
+}
+
+#back-top.back-top-visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Search type filter chips */
+.type-chip {
+  border: 1px solid #d6d3d1;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 0.3rem 0.8rem;
+  cursor: pointer;
+  background: #fffdf7;
+  color: #78716c;
+  transition: background 120ms, border-color 120ms, color 120ms;
+}
+
+.type-chip.is-active {
+  background: #fef3c7;
+  border-color: #d97706;
+  color: #92400e;
 }
