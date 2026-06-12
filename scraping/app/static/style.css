@@ -18,6 +18,26 @@ body {
   color: #78350f;
 }
 
+.nav-link.is-active {
+  background: #78350f;
+  color: #fffdf7;
+}
+
+.nav-link.is-active:hover {
+  background: #78350f;
+  color: #fffdf7;
+}
+
+.control-label {
+  color: #57534e;
+  display: grid;
+  font-size: 0.78rem;
+  font-weight: 800;
+  gap: 0.35rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
 .hero-panel {
   background:
     radial-gradient(circle at top right, rgba(217, 119, 6, 0.18), transparent 32rem),

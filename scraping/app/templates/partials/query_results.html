@@ -7,6 +7,7 @@
     <span id="query-loading" class="htmx-indicator text-sm text-amber-800">Querying Fuseki...</span>
     {% if rows %}
       <button type="button" class="secondary-button" onclick="downloadCsv()">Download CSV</button>
+      <span class="text-sm text-stone-500">{{ rows|length }} row{{ "s" if rows|length != 1 else "" }}</span>
     {% endif %}
   </div>
 </form>

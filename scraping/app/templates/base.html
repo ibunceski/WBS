@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% block title %}Macedonian History KG{% endblock %}</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%2378350f'/><text x='16' y='23' font-family='Georgia,serif' font-size='20' font-weight='700' text-anchor='middle' fill='%23fef3c7'>М</text></svg>">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/htmx.org@1.9.12"></script>
   <link rel="stylesheet" href="{{ url_for('static', path='style.css') }}">
@@ -12,13 +13,16 @@
   <header class="border-b border-stone-200 bg-white/90 backdrop-blur">
     <nav class="mx-auto flex max-w-6xl flex-col gap-4 px-5 py-4 sm:flex-row sm:items-center sm:justify-between">
       <a href="/" class="font-serif text-xl font-bold tracking-tight text-amber-950">Macedonian History KG</a>
+      {% set path = request.url.path %}
       <div class="flex flex-wrap gap-2 text-sm font-medium text-stone-700">
-        <a class="nav-link" href="/search">Search</a>
-        <a class="nav-link" href="/timeline">Timeline</a>
-        <a class="nav-link" href="/graph">Graph</a>
-        <a class="nav-link" href="/map">Map</a>
-        <a class="nav-link" href="/queries">Queries</a>
-        <a class="nav-link" href="/report">Report</a>
+        {% for href, label in [
+          ('/search', 'Search'), ('/timeline', 'Timeline'), ('/graph', 'Graph'),
+          ('/map', 'Map'), ('/queries', 'Queries'), ('/report', 'Report')
+        ] %}
+          {% set active = path == href %}
+          <a class="nav-link{% if active %} is-active{% endif %}" href="{{ href }}"
+             {% if active %}aria-current="page"{% endif %}>{{ label }}</a>
+        {% endfor %}
       </div>
     </nav>
   </header>

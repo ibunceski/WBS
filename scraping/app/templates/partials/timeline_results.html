@@ -1,6 +1,9 @@
 {% if error %}
   <div class="alert">{{ error }}</div>
 {% elif results %}
+  <p class="mb-4 text-sm text-stone-500">
+    {{ results|length }} event{{ "s" if results|length != 1 else "" }}{% if results|length == 120 %} (showing first 120){% endif %}
+  </p>
   <div class="timeline">
     {% for event in results %}
       <article class="timeline-item">
